@@ -104,6 +104,38 @@ header p {
 </style>
 
 </head>
+    <style>
+  /* ===== BOXED CENTERED NAV ===== */
+  .boxed-nav {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+  }
+
+  .boxed-nav a {
+    border: 2px solid #d4af37; /* Gold */
+    padding: 8px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #0b2c4d; /* Navy */
+    border-radius: 4px;
+  }
+
+  .boxed-nav a:hover {
+    background-color: #b11226; /* Red */
+    color: white;
+    border-color: #b11226;
+  }
+
+  .boxed-nav a[href="blog.html"] {
+    background-color: #0b2c4d;
+    color: white;
+    border-color: #0b2c4d;
+  }
+</style>
+
 
    
   <nav class="boxed-nav">
@@ -112,40 +144,6 @@ header p {
   <a href="index.html#about">About</a>
   <a href="index.html#contact">Contact</a>
 </nav>
-    /* ===== BOXED CENTERED NAV ===== */
-.boxed-nav {
-  display: flex;
-  justify-content: center;
-  gap: 14px;
-  margin-top: 15px;
-  flex-wrap: wrap;
-}
-
-.boxed-nav a {
-  border: 2px solid #d4af37; /* Gold */
-  padding: 8px 16px;
-  text-decoration: none;
-  font-weight: bold;
-  color: #0b2c4d; /* Navy */
-  border-radius: 4px;
-  transition: all 0.2s ease;
-}
-
-.boxed-nav a:hover {
-  background-color: #b11226; /* Red */
-  color: #ffffff;
-  border-color: #b11226;
-}
-
-/* Active page indicator */
-.boxed-nav a[href="blog.html"] {
-  background-color: #0b2c4d;
-  color: #ffffff;
-  border-color: #0b2c4d;
-}
-
-
-
 
 </div>
 
