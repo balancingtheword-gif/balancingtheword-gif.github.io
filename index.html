@@ -1,14 +1,142 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport"content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Balancing the Word Ministry</title>
+  <style>
+    :root{
+      --navy:#0b1f3a;
+      --red:#b0122a;
+      --gold:#caa24a;
+      --bg:#ffffff;
+      --text:#111827;
+      --muted:#4b5563;
+      --card:#f8fafc;
+      --border:#e5e7eb;
+      --max:980px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.5}
+    a{color:var(--navy);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .topbar{border-top:6px solid var(--gold)}
+    header{border-bottom:1px solid var(--border)}
+    .wrap{max-width:var(--max);margin:0 auto;padding:18px}
+    .brand{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+    .title{display:flex;flex-direction:column;gap:4px}
+    h1{margin:0;font-size:26px;letter-spacing:.2px;color:var(--navy)}
+    .tag{margin:0;color:var(--muted)}
+    nav{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid var(--border);background:#fff}
+    .btn.primary{background:var(--navy);border-color:var(--navy);color:#fff}
+    .hero{padding:26px 0}
+    .heroGrid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
+    .card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px}
+    h2{margin:0 0 10px 0;font-size:18px;color:var(--navy)}
+    .accent{height:4px;background:linear-gradient(90deg,var(--navy),var(--red),var(--gold));border-radius:999px;margin:14px 0}
+    .list{margin:0;padding-left:18px;color:var(--text)}
+    .muted{color:var(--muted)}
+    footer{border-top:1px solid var(--border)}
+    .foot{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between}
+    .small{font-size:13px;color:var(--muted)}
+    @media (max-width:800px){
+      .heroGrid{grid-template-columns:1fr}
+    }
+  </style>
 </head>
 <body>
-  <h1>Balancing the Word Ministry</h1>
-  <p>Teaching, training, and equipping believers with a biblically balanced worldview.</p>
-  <p>More content coming soon.</p>
+  <div class="topbar"></div>
+
+  <header>
+    <div class="wrap">
+      <div class="brand">
+        <div class="title">
+          <h1>Balancing the Word Ministry</h1>
+          <p class="tag">Build • Educate • Disciple</p>
+        </div>
+
+        <nav>
+          <a class="btn" href="#about">About</a>
+          <a class="btn" href="#resources">Resources</a>
+          <a class="btn" href="#contact">Contact</a>
+          <a class="btn primary" href="#newsletter">Stay Connected</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="heroGrid">
+        <div>
+          <div class="accent"></div>
+          <h2>Welcome</h2>
+          <p>
+            Balancing the Word Ministry exists to teach, train, and equip believers with a biblically balanced worldview—
+            helping them grow to maturity and become complete in Christ.
+          </p>
+          <p class="muted">
+            This website is being built step-by-step. Check back often for new studies, encouragement, and resources.
+          </p>
+        </div>
+
+        <div class="card">
+          <h2>What You’ll Find Here</h2>
+          <ul class="list">
+            <li>Bible study resources and outlines</li>
+            <li>Encouragement for spiritual growth</li>
+            <li>Book updates and ministry news</li>
+            <li>Ways to connect and request prayer</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="card">
+      <h2>About</h2>
+      <p>
+        Our heart is to proclaim God’s love and grace through Jesus Christ and to strengthen believers through Scripture,
+        mentorship, and service.
+      </p>
+    </section>
+
+    <section id="resources" class="card" style="margin-top:16px;">
+      <h2>Resources</h2>
+      <p class="muted">Links coming soon. (We can add your first downloadable PDF or blog post next.)</p>
+      <ul class="list">
+        <li><strong>Study Guides</strong> — Coming soon</li>
+        <li><strong>Devotionals</strong> — Coming soon</li>
+        <li><strong>Books</strong> — Coming soon</li>
+      </ul>
+    </section>
+
+    <section id="newsletter" class="card" style="margin-top:16px;">
+      <h2>Stay Connected</h2>
+      <p class="muted">
+        For updates, you can email us and we’ll keep you posted as new resources are added.
+      </p>
+      <p><a class="btn primary" href="mailto:info@balancingtheword.com">Email: info@balancingtheword.com</a></p>
+    </section>
+
+    <section id="contact" class="card" style="margin-top:16px;">
+      <h2>Contact</h2>
+      <p>
+        <strong>Email:</strong> <a href="mailto:info@balancingtheword.com">info@balancingtheword.com</a><br/>
+        <strong>Mailing:</strong> P.O. Box 1043, Wagoner, OK 74477
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <div class="small">© <span id="y"></span> Balancing the Word Ministry</div>
+      <div class="small">Build • Educate • Disciple</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
-  
 </html>
