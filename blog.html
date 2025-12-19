@@ -70,6 +70,29 @@ header .title .tag span.educate {
   width: 100%;
   height: auto;
 }
+    /* Match homepage typography */
+header .title h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--navy);
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+header .title .tag {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+/* Tagline color control */
+header .title .tag {
+  color: var(--navy);
+}
+
+header .title .tag .educate {
+  color: var(--red);
+}
+
 </style>
 
 </head>
@@ -89,8 +112,9 @@ header .title .tag span.educate {
   <h1>Balancing the Word Ministry</h1>
 
   <p class="tag">
-    Build • <span class="educate">Educate</span> • Disciple
-  </p>
+    <p class="tag">
+  Build • <span class="educate">Educate</span> • Disciple
+</p>
     </div>
     <nav>
       <a class="btn" href="index.html">Home</a>
