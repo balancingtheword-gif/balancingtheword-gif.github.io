@@ -36,6 +36,33 @@
     z-index: 10;
     pointer-events: auto;
   }
+    /* Intro Branding */
+header .title {
+  text-align: center;
+  width: 100%;
+}
+
+header .title h1 {
+  color: var(--navy);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 2.2rem;
+  margin-bottom: 0.4rem;
+}
+
+header .title .tag {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+/* Tagline color branding */
+header .title .tag {
+  color: var(--navy);
+}
+
+header .title .tag span.educate {
+  color: var(--red);
+}
+
 </style>
 
 </head>
@@ -48,7 +75,9 @@
   <div class="wrap brand">
     <div class="title">
       <h1>Balancing the Word Ministry</h1>
-      <p class="tag">Build • Educate • Disciple</p>
+      <p class="tag">
+  Build • <span class="educate">Educate</span> • Disciple
+</p>
     </div>
     <nav>
       <a class="btn" href="index.html">Home</a>
