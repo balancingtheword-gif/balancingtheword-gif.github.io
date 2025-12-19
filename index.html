@@ -65,14 +65,34 @@ header {
   padding-top: 20px;   /* reduce from whatever it was */
   padding-bottom: 20px;
 }
-   .heroGrid {
+.heroGrid {
   display: grid;
   grid-template-columns: 1.2fr .8fr;
   gap: 18px;
-  align-items: start;   /* ← ADD THIS */
+  align-items: start;
 }
-    .heroLeft section p {
+
+/* Remove excess vertical spacing */
+.heroLeft {
+  margin-top: 0;
+}
+
+.heroLeft section {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+/* Tighten heading spacing */
+.heroLeft h2 {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+/* Justify About text cleanly */
+.heroLeft section p {
   text-align: justify;
+  margin: 0;
+  line-height: 1.6;
 }
     .card {
   background: var(--card);
