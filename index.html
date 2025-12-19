@@ -64,21 +64,6 @@ header {
     .hero{padding:26px 0}
     .heroGrid{display:grid;grid-template-columns:1.2fr .8fr;gap:18px}
     .card {
-     .two-col {
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 40px;
-  align-items: start;
-}
-
-.left-col {
-  text-align: left;
-}
-
-.right-col {
-  display: flex;
-  justify-content: center;
-}
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 14px;
@@ -254,41 +239,25 @@ h3 {
 
   </header>
 
-<main class="wrap">
-  <section class="hero">
-    <div class="heroGrid">
-
-      <div class="two-col">
-
-        <!-- LEFT COLUMN -->
-        <div class="left-col">
-          <h1>Welcome</h1>
-
+  <main class="wrap">
+    <section class="hero">
+      <div class="heroGrid">
+        <div>
+          <div class="accent"></div>
+          <h2>Welcome</h2>
           <p>
-            Balancing the Word Ministry exists to teach, train, and equip believers
-            with a biblically balanced worldview—helping them grow to maturity
-            and become complete in Christ.
+            Balancing the Word Ministry exists to teach, train, and equip believers with a biblically balanced worldview—
+            helping them grow to maturity and become complete in Christ.
           </p>
-
-          <p>
-            This website is being built step-by-step. Check back often for new
-            studies, encouragement, and resources.
+          <p class="muted">
+            This website is being built step-by-step. Check back often for new studies, encouragement, and resources.
           </p>
         </div>
 
-        <!-- RIGHT COLUMN -->
-        <div class="right-col">
-          <div class="card" id="featured">
-            <h2>Today’s Feature</h2>
-            <p><strong>Be Like Habakkuk</strong></p>
-          </div>
-        </div>
+      <div class="card" id="featured">
+  <h2>Today’s Feature</h2>
 
-      </div>
-
-    </div>
-  </section>
-</main>
+  <p><strong>Be Like Habakkuk</strong></p>
 
   <p>
     A faith-building book offering historical and theological insight,
