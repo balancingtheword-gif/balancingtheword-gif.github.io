@@ -53,6 +53,34 @@ header p {
     @media (max-width:800px){
       .heroGrid{grid-template-columns:1fr}
     }
+    /* Amazon Author Page Button */
+.author-link-wrap{
+  text-align:center;
+  margin-top:3rem;
+}
+
+.author-link-btn{
+  display:inline-block;
+  padding:14px 28px;
+  font-size:1.05rem;
+  font-weight:600;
+  text-decoration:none;
+
+  background-color:var(--navy);
+  color:#ffffff;
+
+  border:2px solid var(--gold);
+  border-radius:6px;
+
+  transition:all .25s ease;
+}
+
+.author-link-btn:hover{
+  background-color:var(--red);
+  border-color:var(--red);
+  color:#ffffff;
+}
+
   </style>
 </head>
 <body>
@@ -235,7 +263,9 @@ header p {
      rel="noopener">
     View All My Books on Amazon →
   </a>
-.author-link-wrap {
+</p>
+
+ .author-link-wrap {
   text-align: center;
   margin-top: 3rem;
 }
