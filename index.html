@@ -69,18 +69,7 @@ header {
   display: grid;
   grid-template-columns: 1.2fr .8fr;
   gap: 18px;
-  align-items: start; /* keeps both columns aligned at the top */
-}
-  .heroIntro h1 {
-  text-align: center;
-}
-    .heroLeft p {
-  text-align: justify;
-  text-justify: inter-word;
-  hyphens: auto;
-}
-    .heroLeft h2 {
-  text-align: left;
+  align-items: start;   /* ← ADD THIS */
 }
     .card {
   background: var(--card);
@@ -257,46 +246,21 @@ h3 {
   </div>
 
   </header>
-<main class="wrap">
-  <section class="hero">
-    <div class="heroGrid">
 
-      <!-- LEFT COLUMN -->
-      <div class="heroLeft">
-
-        <!-- WELCOME (centered) -->
-        <div class="heroIntro">
+  <main class="wrap">
+    <section class="hero">
+      <div class="heroGrid">
+        <div>
           <div class="accent"></div>
-         <h1>Welcome</h1>
+          <h2>Welcome</h2>
           <p>
-            Balancing the Word Ministry exists to teach, train, and equip believers
-            with a biblically balanced worldview—helping them grow to maturity
-            and become complete in Christ.
+            Balancing the Word Ministry exists to teach, train, and equip believers with a biblically balanced worldview—
+            helping them grow to maturity and become complete in Christ.
           </p>
           <p class="muted">
-            This website is being built step-by-step. Check back often for new
-            studies, encouragement, and resources.
+            This website is being built step-by-step. Check back often for new studies, encouragement, and resources.
           </p>
         </div>
-
-        <!-- ABOUT (justified) -->
-        <section>
-          <h2>About Balancing the Word Ministry</h2>
-          <p>
-            <!-- About text here -->
-          </p>
-        </section>
-
-      </div>
-
-      <!-- RIGHT COLUMN -->
-      <div class="heroRight">
-        <!-- feature cards -->
-      </div>
-
-    </div>
-  </section>
-</main>
 
       <div class="card" id="featured">
   <h2>Today’s Feature</h2>
@@ -327,15 +291,22 @@ h3 {
 
 <a class="btn btn-outline" href="blog.html">Read More from Lesli</a>
 
-<div class="left-column">
-  <section class="about">
-    <h2>About Balancing the Word Ministry</h2>
-    <p>
-      Balancing the Word Ministry exists to teach, train, and equip believers
-      with a biblically balanced worldview...
-    </p>
-  </section>
 </div>
+  
+    </section>
+
+  <section id="about" class="about">
+  <h3>About Balancing the Word Ministry</h3>
+
+  <p>
+    Balancing the Word Ministry exists to teach, train, and equip believers with a
+    biblically balanced worldview. Through scriptural instruction and the imparting
+    of godly wisdom, we help believers grow to maturity and become “complete in
+    Christ.” We mentor new believers in faith, spiritual gifts, and discernment,
+    while encouraging mature Christians to teach, mentor, and serve others. In all
+    we do, we proclaim God’s love and His grace given through Jesus Christ.
+  </p>
+</section>
   
       <section id="books" class="books-section">
   <h3>Books & Resources</h3>
