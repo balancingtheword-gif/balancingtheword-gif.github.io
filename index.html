@@ -124,6 +124,57 @@ header {
   border-radius: 14px;
   padding: 16px;
 }
+    /* ===== FEATURED BOX (strong red accents) ===== */
+.featureStack{
+  border: 2px solid var(--red);
+  background: linear-gradient(
+    180deg,
+    rgba(176,18,42,.10),
+    rgba(255,255,255,1)
+  );
+  box-shadow: 0 14px 30px rgba(176,18,42,.18);
+}
+
+.featureStack > h2{
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+/* Inner sections inside the Featured box */
+.featureBlock{
+  padding: 6px 4px 10px;
+}
+
+/* Smaller titles inside Featured */
+.featureTitle{
+  margin: 0 0 8px 0;
+  font-size: 22px;
+  color: var(--navy);
+}
+
+/* Divider between Book + Blog */
+.mini-divider{
+  height: 3px;
+  width: 86%;
+  margin: 14px auto;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    var(--red),
+    var(--gold)
+  );
+}
+
+/* Buttons inside Featured */
+.featureStack .btn{
+  border: 2px solid var(--gold);
+}
+
+.featureStack .btn:hover{
+  background: var(--red);
+  border-color: var(--red);
+  color: #fff;
+}
 
 /* Featured box with BTWM red accents */
 #featured {
@@ -353,18 +404,25 @@ h3 {
       <!-- RIGHT COLUMN -->
       <aside class="heroRight">
 
-        <div class="card" id="featured">
-          <h2>Today’s Feature</h2>
-          <p class="muted">Highlight a book, study, or resource here.</p>
-          <a class="btn" href="books.html">View Featured</a>
-        </div>
+        <div class="card featureStack" id="featured">
+  <h2>Featured</h2>
 
-        <div class="card" id="latest">
-          <h2>Lesli’s Latest</h2>
-          <p class="muted">Latest blog post or newest release.</p>
-          <a class="btn" href="blog.html">Read the Latest</a>
-        </div>
+  <!-- BOOK FEATURE -->
+  <div class="featureBlock">
+    <h3 class="featureTitle">Today’s Feature</h3>
+    <p class="muted">Highlight a book, study, or resource here.</p>
+    <a class="btn" href="books.html">View Featured</a>
+  </div>
 
+  <div class="mini-divider"></div>
+
+  <!-- BLOG FEATURE -->
+  <div class="featureBlock" id="what-about">
+    <h3 class="featureTitle">What About…</h3>
+    <p class="muted">Biblically balanced reflections on questions, topics, and issues that matter.</p>
+    <a class="btn" href="blog.html">Read the Blog</a>
+  </div>
+</div>
       </aside>
 
     </div>
