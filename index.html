@@ -90,44 +90,37 @@ header {
     .heroIntro { 
   margin-bottom: 12px; 
 }
-    /* Center Greetings text */
-/* Force full centering for the Greetings section only */
-.heroIntro,
-.heroIntro p {
-  text-align: center;
-}
-
-  /* Scarlet red "Stay tuned" */
-.stay-tuned {
-  color: #b21f2d;
-  font-weight: bold;
-  margin-top: 6px;
-}
-
-/* Justify About text cleanly */
-.heroLeft section p {
+/* Justify ONLY the normal left-column sections */
+.heroLeft section.panel p{
   text-align: justify;
   margin: 0;
   line-height: 1.6;
 }
-    /* Center Greetings text */
-.heroIntro {
+
+/* GREETINGS: override the justify rule above */
+.heroLeft section#greetings.heroIntro,
+.heroLeft section#greetings.heroIntro p{
   text-align: center;
 }
 
+.heroLeft section#greetings.heroIntro{
+  margin-bottom: 12px;
+}
+
+.heroLeft section#greetings.heroIntro p{
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Scarlet red "Stay tuned" */
-.stay-tuned {
+.heroLeft section#greetings .stay-tuned{
   color: #b21f2d;
   font-weight: bold;
-  margin-top: 6px;
-}
-    /* Scarlet red, centered "Stay tuned" under Greetings */
-.stay-tuned{
   text-align: center;
-  color: #b21f2d;   /* scarlet red */
   margin-top: 6px;
   font-size: 16px;
 }
+
     .card {
   background: var(--card);
   border: 1px solid var(--border);
