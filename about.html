@@ -24,7 +24,7 @@
     );
   }
 
-  .about-header::after{
+  .-header::after{
     content: "";
     position: absolute;
     left: 0;
@@ -39,7 +39,7 @@
     height: auto;
     display: inline-block;
   }
-  .about-grid{
+  ..about-grid{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 22px;
@@ -50,11 +50,13 @@
   .about-grid{
     grid-template-columns: 1fr;
   }
+}
+</style>
+
 </style>
 
  </head>
 
-<body>
 <body>
   <header class="about-header">
     <img src="images/Icon_with_ring_transparent.png" alt="BTWM icon" class="btwm-icon">
@@ -62,51 +64,54 @@
 
   <main class="wrap">
  <div class="about-grid">
+
   <section class="about-section" id="my-story">
-  <h2>My Story</h2>
+    <h2>My Story</h2>
 
-  <p>
-    From an early age, my life was marked by instability, trauma, and loss. Throughout
-    childhood and adolescence, I experienced abuse, frequent displacement, and foster
-    care, learning to adapt quickly while longing for safety, love, and belonging.
-  </p>
+    <p>
+      From an early age, my life was marked by instability, trauma, and loss. Throughout
+      childhood and adolescence, I experienced abuse, frequent displacement, and foster
+      care, learning to adapt quickly while longing for safety, love, and belonging.
+    </p>
 
-  <p>
-    Even in those years, God was drawing me to Himself. The Bible and prayer became my
-    refuge—places of comfort, peace, and hope when nothing else felt secure. Though I
-    believed in God and Jesus, I did not yet understand salvation, and for many years I
-    searched for freedom and healing.
-  </p>
+    <p>
+      Even in those years, God was drawing me to Himself. The Bible and prayer became my
+      refuge—places of comfort, peace, and hope when nothing else felt secure. Though I
+      believed in God and Jesus, I did not yet understand salvation, and for many years I
+      searched for freedom and healing.
+    </p>
 
-  <p>
-    In a season of deep brokenness as a young wife and mother, I cried out to Jesus with
-    a surrendered heart. In that moment, I experienced true forgiveness, renewal, and
-    redemption. Shortly afterward, I received the baptism of the Holy Spirit, and my life
-    was forever changed. Since then, God has continually renewed my mind, healed my heart,
-    and transformed my life—giving me a deep desire to serve others, teach His Word, and
-    point all people to the hope, freedom, and power found in Jesus Christ.
-  </p>
+    <p>
+      In a season of deep brokenness as a young wife and mother, I cried out to Jesus with
+      a surrendered heart. In that moment, I experienced true forgiveness, renewal, and
+      redemption. Shortly afterward, I received the baptism of the Holy Spirit, and my life
+      was forever changed. Since then, God has continually renewed my mind, healed my heart,
+      and transformed my life—giving me a deep desire to serve others, teach His Word, and
+      point all people to the hope, freedom, and power found in Jesus Christ.
+    </p>
 
-  <p class="journey-close"><em>
-    My journey stands as a testimony that God redeems, restores, and empowers all who come
-    to Him in faith.
-  </em></p>
-</section>
+    <p class="journey-close"><em>
+      My journey stands as a testimony that God redeems, restores, and empowers all who come
+      to Him in faith.
+    </em></p>
+  </section>
 
-<section class="about-section" id="btwm-story">
-  </div>
-  <h2>The BTWM Story</h2>
+  <section class="about-section" id="btwm-story">
+    <h2>The BTWM Story</h2>
 
-  <p>
-    Balancing the Word Ministry exists to teach, train, and equip believers with a biblically
-    balanced worldview—helping them grow to maturity and become <em>“complete in Christ”</em>.
-  </p>
+    <p>
+      Balancing the Word Ministry exists to teach, train, and equip believers with a biblically
+      balanced worldview—helping them grow to maturity and become <em>“complete in Christ”</em>.
+    </p>
 
-  <p>
-    Serving and teaching are at the heart of this ministry. Through studies, blogs, and books,
-    BTWM is devoted to strengthening believers in discernment, Scripture, and Spirit-led growth.
-  </p>
-</section>
+    <p>
+      Serving and teaching are at the heart of this ministry. Through studies, blogs, and books,
+      BTWM is devoted to strengthening believers in discernment, Scripture, and Spirit-led growth.
+    </p>
+  </section>
+
+</div>
+
   </main>
 </body>
 </html>
