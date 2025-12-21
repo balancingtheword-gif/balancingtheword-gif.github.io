@@ -25,21 +25,18 @@
       #0b1f3a 100%
     );
 }
-  .about-header::after{
+ .about-header::after{
   content: "";
-  display: block;
-  height: 4px;
-  margin-top: 22px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 6px;
 
-  background: linear-gradient(
-    to right,
-    #0b1f3a,
-    var(--gold),
-    #0b1f3a
-  );
+  background: linear-gradient(to right, #0b1f3a, var(--gold), #0b1f3a);
 }
   .btwm-icon{
-  width: 200px;
+  width: 280px;
   height: auto;
   display: inline-block;
 }
