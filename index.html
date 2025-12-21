@@ -27,11 +27,8 @@
   padding: 20px;
   border-bottom: 2px solid #D4AF37; /* Gold */
 }
-    p {
-  font-size: 1.05rem;
-  max-width: 750px;
-  margin-left: auto;
-  margin-right: auto;
+  p{
+  margin: 0 0 12px 0;
 }
 
 header p {
@@ -283,79 +280,79 @@ h3 {
     color: white;
     border-color: #0b2c4d;
   }
+      /* BTWM brand gradient divider */
+.brand-divider{
+  width: 100%;
+  height: 4px;
+  margin: 18px 0 26px;
+  background: linear-gradient(
+    to right,
+    #0b1f3a,   /* navy */
+    #b21f2d,   /* scarlet */
+    #c8a44d    /* gold */
+  );
+}
 </style>
 
    <nav class="boxed-nav">
   <a href="index.html#about">About</a>
-  <a href="blog.html">Lesli’s Latest</a>
+  <a href="blog.html">What About...</a>
   <a href="index.html#books">Books</a>
   <a href="#featured">Featured</a>
   <a href="index.html#contact">Contact</a>
 </nav>
+    <div class="brand-divider"></div>
 
   </div>
 
   </header>
 
- <main class="wrap">
+<main class="wrap">
   <section class="hero">
-   <div class="heroGrid">
+    <div class="heroGrid">
 
-  <!-- LEFT COLUMN -->
-  <div class="heroLeft">
-    <!-- Greetings, Mission, etc -->
-  </div>
+      <!-- LEFT COLUMN -->
+      <div class="heroLeft">
 
-  <!-- RIGHT COLUMN -->
-  <aside class="heroRight">
-    <!-- Feature boxes -->
-  </aside>
+        <!-- GREETINGS -->
+        <section class="panel heroIntro" id="greetings">
+          <h2>Greetings</h2>
 
-</div>
+          <p>
+            <strong>Welcome to Balancing the Word Ministry.</strong>
+            We are glad you’re here and invite you to explore Scripture, grow in faith,
+            and be encouraged as we seek to become <em>complete in Christ</em> together.
+          </p>
 
-  <!-- GREETINGS (centered) -->
- <section class="panel heroIntro" id="greetings">
-  <h2>Greetings</h2>
+          <p class="stay-tuned"><strong>Stay tuned.</strong></p>
+        </section>
 
-  <p>
-    <strong>Welcome to Balancing the Word Ministry.</strong>
-    We are glad you’re here and invite you to explore Scripture, grow in faith,
-    and be encouraged as we seek to become <em>complete in Christ</em> together.
-  </p>
+        <!-- MISSION -->
+        <section class="panel" id="mission">
+          <h2>The Mission</h2>
+          <p>
+            Balancing the Word Ministry exists to teach and equip believers with a
+            biblically balanced worldview, helping them grow to maturity and become
+            <em>complete in Christ</em> (Colossians 1:28).
+          </p>
+        </section>
 
-  <p class="stay-tuned">
-    <strong>Stay tuned.</strong>
-  </p>
-</section>
-
-  <!-- NEXT LEFT-COLUMN SECTIONS -->
-  <section class="panel" id="mission">
-    <h2>The Mission</h2>
-    <p>
-      Balancing the Word Ministry exists to teach and equip believers with a
-      biblically balanced worldview, helping them grow to maturity and become
-      <em>complete in Christ</em> (Colossians 1:28).
-    </p>
-  </section>
-</div>
-
+        <!-- FOUNDER -->
         <section class="panel" id="founder">
           <h2>Meet the Founder</h2>
-
-          <div class="founderRow">
-            <img src="images/founder.jpg" alt="Founder photo" class="founderPic">
-            <p>
-              Hi, I’m Lesli. I discovered my love for writing as a teenager, and after
-              surrendering my life to Jesus Christ, writing became more than a craft—it
-              became a ministry. My desire is to encourage others with the gospel and
-              point every reader to the love and grace of God.
-            </p>
-          </div>
+          <p>
+            Hi, I’m Lesli. I discovered my love for writing as a teenager, and after
+            surrendering my life to Jesus Christ, writing became more than a craft—it
+            became a ministry. My desire is to encourage others with the gospel and
+            point every reader to the love and grace of God.
+          </p>
         </section>
+
       </div>
 
-      <!-- RIGHT COLUMN: feature boxes -->
+      <!-- RIGHT COLUMN -->
       <aside class="heroRight">
+
         <div class="card" id="featured">
           <h2>Today’s Feature</h2>
           <p class="muted">Highlight a book, study, or resource here.</p>
@@ -367,6 +364,7 @@ h3 {
           <p class="muted">Latest blog post or newest release.</p>
           <a class="btn" href="blog.html">Read the Latest</a>
         </div>
+
       </aside>
 
     </div>
