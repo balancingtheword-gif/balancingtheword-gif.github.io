@@ -8,53 +8,53 @@
   <!-- Copy/paste your SAME <style> block from index.html right here -->
 
 <style>
- .about-header{
-  position: relative;
-  text-align: center;
-  padding: 34px 0 28px;
-  margin-bottom: 22px;
+  .about-header{
+    position: relative;
+    text-align: center;
+    padding: 34px 0 28px;
+    margin-bottom: 0;
 
-  background: linear-gradient(
-    to right,
-    #0b1f3a 0%,
-    #0b1f3a 15%,
-    #f8f5ef 50%,
-    #0b1f3a 85%,
-    #0b1f3a 100%
-  );
-}
+    background: linear-gradient(
+      to right,
+      #0b1f3a 0%,
+      #0b1f3a 15%,
+      #f8f5ef 50%,
+      #0b1f3a 85%,
+      #0b1f3a 100%
+    );
+  }
 
-/* the bottom line */
-.about-header::after{
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 6px;
-  background: linear-gradient(to right, #0b1f3a, #c9a23a, #0b1f3a);
-}
+  .-header::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 6px;
+    background: linear-gradient(to right, #0b1f3a, #c9a23a, #0b1f3a);
+  }
 
-.btwm-icon{
-  width: 280px;
-  height: auto;
-  display: inline-block;
-}
-
-/* TWO COLUMNS */
-.about-grid{
+  .btwm-icon{
+    width: 280px;
+    height: auto;
+    display: inline-block;
+  }
+  ..about-grid{
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 22px;
   align-items: start;
 }
 
-/* Stack on mobile */
 @media (max-width: 900px){
   .about-grid{
     grid-template-columns: 1fr;
   }
 }
+</style>
+
+</style>
+
  </head>
 
 <body>
