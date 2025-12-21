@@ -249,7 +249,36 @@ h3 {
   font-weight: 700;
   letter-spacing: 0.3px;
 }
+/* =========================
+   Headshot + About link
+   ========================= */
 
+.about-link{
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  text-align: center;
+}
+
+.headshot{
+  width: 140px;
+  max-width: 100%;
+  border-radius: 50%;
+  border: 3px solid var(--gold);
+  margin-bottom: 10px;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.about-link:hover .headshot{
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,.15);
+}
+
+.lesli-name{
+  margin: 0;
+  font-size: 22px;
+  color: var(--navy);
+}
   </style>
 </head>
 <body>
@@ -388,16 +417,19 @@ h3 {
           </p>
         </section>
 
-        <!-- FOUNDER -->
-        <section class="panel" id="founder">
-          <h2>Meet the Founder</h2>
-          <p>
-            Hi, I’m Lesli. I discovered my love for writing as a teenager, and after
-            surrendering my life to Jesus Christ, writing became more than a craft—it
-            became a ministry. My desire is to encourage others with the gospel and
-            point every reader to the love and grace of God.
-          </p>
-        </section>
+      <section class="panel" id="lesli">
+  <a href="about.html" class="about-link">
+    <img
+   <img
+  src="images/Website-HS.jpg"
+  alt="Lesli D. Mize"
+  class="headshot"
+/>
+    />
+    <h2 class="lesli-name">Lesli D. Mize</h2>
+  </a>
+</section>
+      
 
       </div>
 
