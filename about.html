@@ -39,6 +39,17 @@
     height: auto;
     display: inline-block;
   }
+  .about-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+  align-items: start;
+}
+
+@media (max-width: 900px){
+  .about-grid{
+    grid-template-columns: 1fr;
+  }
 </style>
 
  </head>
@@ -50,6 +61,7 @@
   </header>
 
   <main class="wrap">
+ <div class="about-grid">
   <section class="about-section" id="my-story">
   <h2>My Story</h2>
 
@@ -82,6 +94,7 @@
 </section>
 
 <section class="about-section" id="btwm-story">
+  </div>
   <h2>The BTWM Story</h2>
 
   <p>
