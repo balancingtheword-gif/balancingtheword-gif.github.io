@@ -254,29 +254,24 @@ h3 {
    ========================= */
 
 .about-link{
-  text-decoration: none;
-  color: inherit;
-  display: inline-block;
-  text-align: center;
+  text-decoration:none;
+  color:inherit;
+  display:inline-block;
+  text-align:center;
 }
 
 .headshot{
-  width: 140px;
-  max-width: 100%;
-  border-radius: 50%;
-  border: 3px solid var(--gold);
-  margin-bottom: 10px;
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-
-.about-link:hover .headshot{
-  transform: scale(1.03);
-  box-shadow: 0 8px 20px rgba(0,0,0,.15);
+  width:140px;
+  height:140px;
+  object-fit:cover;
+  border-radius:50%;
+  border:3px solid var(--gold);
+  margin: 10px auto 8px;
+  display:block;
 }
 
 .lesli-name{
-  margin: 0;
-  font-size: 22px;
+  margin:0;
   color: var(--navy);
 }
   </style>
@@ -417,20 +412,13 @@ h3 {
           </p>
         </section>
 
-      <section class="panel" id="lesli">
-  <a href="about.html" class="about-link">
-    <img
-   <img
-  src="images/Website-HS.jpg"
-  alt="Lesli D. Mize"
-  class="headshot"
-/>
-    />
+    <section class="panel" id="lesli">
+  <a href="#about" class="about-link">
+    <img src="images/Website-HS.png" alt="Lesli D. Mize" class="headshot">
     <h2 class="lesli-name">Lesli D. Mize</h2>
   </a>
 </section>
-      
-
+     
       </div>
 
       <!-- RIGHT COLUMN -->
