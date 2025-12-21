@@ -8,11 +8,28 @@
   <!-- Copy/paste your SAME <style> block from index.html right here -->
 
 <style>
+  <style>
+  /* match home page font + color */
+  body{
+    font-family: Georgia, "Times New Roman", serif;
+    color: #0b1f3a;
+    line-height: 1.7;
+    margin: 0;
+  }
+
+  /* keep content from running edge-to-edge */
+  .wrap{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 18px 40px;
+  }
+
+  /* HEADER */
   .about-header{
     position: relative;
     text-align: center;
     padding: 34px 0 28px;
-    margin-bottom: 0;
+    margin-bottom: 22px;
 
     background: linear-gradient(
       to right,
@@ -24,7 +41,8 @@
     );
   }
 
-  .-header::after{
+  /* bottom gradient line */
+  .about-header::after{
     content: "";
     position: absolute;
     left: 0;
@@ -35,24 +53,52 @@
   }
 
   .btwm-icon{
-    width: 280px;
+    width: 220px; /* balanced size */
     height: auto;
     display: inline-block;
   }
-  ..about-grid{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 22px;
-  align-items: start;
-}
 
-@media (max-width: 900px){
+  /* TWO COLUMNS */
   .about-grid{
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 22px;
+    align-items: start;
+    margin-top: 18px;
   }
-}
-</style>
 
+  @media (max-width: 900px){
+    .about-grid{
+      grid-template-columns: 1fr;
+    }
+  }
+
+  /* bordered “card” look */
+  .about-section{
+    background:#fff;
+    border:1px solid #d9d9d9;
+    border-radius:16px;
+    padding:20px;
+    box-shadow: 0 10px 22px rgba(0,0,0,.06);
+  }
+
+  .about-section h2{
+    margin: 0 0 12px;
+    color: #0b1f3a;
+    border-left: 6px solid #c9a23a;
+    padding-left: 10px;
+  }
+
+  /* readable line length */
+  .about-section p{
+    max-width: 62ch;
+    margin: 0 0 12px;
+  }
+
+  .journey-close{
+    text-align:center;
+    margin-top: 14px;
+  }
 </style>
 
  </head>
