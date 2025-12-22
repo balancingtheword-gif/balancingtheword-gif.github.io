@@ -24,7 +24,48 @@ body{
   margin: 0 auto;
   padding: 0 18px 40px;
 }
+  /* ABOUT PAGE LAYOUT */
+.about-grid{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 46px;
+  align-items: start;
+}
 
+.about-section{
+  background: #fff;
+  border: 1px solid rgba(11,31,58,.14);
+  border-radius: 18px;
+  padding: 26px;
+  position: relative;
+}
+
+/* SCRIPTURE ANCHOR */
+.scripture-anchor{
+  max-width: 900px;
+  margin: 0 auto 10px;
+  padding: 18px 22px;
+  border-left: 5px solid #d4af37;
+  background: rgba(212,175,55,.10);
+  border-radius: 14px;
+  text-align: center;
+}
+
+.scripture-text{
+  font-size: 1.35rem;
+  font-style: italic;
+}
+
+.scripture-ref{
+  display: block;
+  font-weight: bold;
+}
+
+/* ABOUT PAGE TEXT REFINEMENT */
+.about-section p{
+  font-size: 1.25rem;
+  line-height: 1.9;
+}
 /* ABOUT PAGE TEXT REFINEMENT */
 .about-section p{
   font-size: 1.25rem;    /* ~20px equivalent */
@@ -155,6 +196,20 @@ body{
 
   <main class="wrap">
  <div class="about-grid">
+   
+  <!-- SCRIPTURE ANCHOR (GOES FIRST) -->
+  <div class="scripture-anchor">
+    <p class="scripture-text">
+      “Him we proclaim, warning everyone and teaching everyone with all wisdom,
+      that we may present everyone mature in Christ.”
+    </p>
+    <span class="scripture-ref">Colossians 1:28</span>
+  </div>
+
+  <!-- MY STORY SECTION -->
+  <section class="about-section" id="my-story">
+    <h2>My Story</h2>
+
   <section class="about-section" id="my-story">
   <h2>My Story</h2>
     
