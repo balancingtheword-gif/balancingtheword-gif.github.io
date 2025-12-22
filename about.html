@@ -7,6 +7,36 @@
 
   <!-- Copy/paste your SAME <style> block from index.html right here -->
       <style>
+        /* DECORATIVE BORDER ACCENTS */
+.about-grid{
+  position: relative;
+}
+
+/* top-left accent */
+.about-grid::before{
+  content:"";
+  position:absolute;
+  top: 14px;
+  left: 14px;
+  width: 42px;
+  height: 42px;
+  border-top: 4px solid #d4af37;   /* gold */
+  border-left: 4px solid #b11226;  /* scarlet */
+  border-radius: 6px 0 0 0;
+}
+
+/* bottom-right accent */
+.about-grid::after{
+  content:"";
+  position:absolute;
+  bottom: 14px;
+  right: 14px;
+  width: 42px;
+  height: 42px;
+  border-bottom: 4px solid #d4af37;
+  border-right: 4px solid #b11226;
+  border-radius: 0 0 6px 0;
+}
         /* ABOUT PAGE BACKGROUND PANEL */
 .about-grid{
   background: #f4f6fa;          /* soft light blue-gray */
