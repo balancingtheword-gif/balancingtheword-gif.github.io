@@ -116,12 +116,37 @@ body{
   border-bottom: 3px solid #d4af37;
   overflow: hidden;
 }
+        /* subtle gold texture on header sides */
+.about-header::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:
+    radial-gradient(circle at 18% 50%, rgba(212,175,55,.18), transparent 55%),
+    radial-gradient(circle at 82% 50%, rgba(212,175,55,.16), transparent 60%);
+}
 
-  .btwm-icon{
-    width: 220px; /* balanced size */
-    height: auto;
-    display: inline-block;
-  }
+/* HEADER ICON BADGE */
+.about-header .logo-badge{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,.9);
+  border: 2px solid rgba(212,175,55,.95);
+  box-shadow: 0 10px 26px rgba(11,31,58,.22);
+  position: relative;
+  z-index: 1;
+}
+
+.about-header .site-logo{
+  height: 58px;   /* adjust 54–64 if desired */
+  width: auto;
+  opacity: 1;
+}
+
 
 /* ABOUT PAGE LAYOUT */
 .about-grid{
@@ -207,9 +232,11 @@ body{
  </head>
 
 <body>
-  <header class="about-header">
-    <img src="images/Icon_with_ring_transparent.png" alt="BTWM icon" class="btwm-icon">
-  </header>
+ <header class="about-header">
+  <div class="logo-badge">
+    <img src="Icon with ring.png" class="site-logo" alt="Balancing the Word Ministry">
+  </div>
+</header>
 
   <main class="wrap">
  <div class="about-grid">
