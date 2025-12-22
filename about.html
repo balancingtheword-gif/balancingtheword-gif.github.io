@@ -169,6 +169,25 @@ body{
   border-bottom: 3px solid #d4af37;
   overflow: hidden;
 }
+        /* HEADER SIDE ACCENTS */
+.about-header::before,
+.about-header::after{
+  content:"";
+  position:absolute;
+  top: 18%;
+  bottom: 18%;
+  width: 4px;
+  background: #d4af37; /* gold */
+  opacity: .75;
+}
+
+.about-header::before{
+  left: 18px;
+}
+
+.about-header::after{
+  right: 18px;
+}
         /* subtle gold texture on header sides */
 .about-header::after{
   content:"";
