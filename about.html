@@ -32,6 +32,40 @@
   border-bottom: 3px solid #d4af37;
   border-right: 3px solid #b11226;
 }
+        /* LEFT & RIGHT DECORATIVE PANELS */
+.about-header::before,
+.about-header::after{
+  content:"";
+  position:absolute;
+  top: 0;
+  bottom: 0;
+  width: 18%;
+  z-index: 0;
+}
+
+/* LEFT PANEL */
+.about-header::before{
+  left: 0;
+  background: linear-gradient(
+    to bottom,
+    #0b1f3a 0%,
+    #1a2f52 50%,
+    #0b1f3a 100%
+  );
+  border-right: 4px solid #d4af37;
+}
+
+/* RIGHT PANEL */
+.about-header::after{
+  right: 0;
+  background: linear-gradient(
+    to bottom,
+    #0b1f3a 0%,
+    #1a2f52 50%,
+    #0b1f3a 100%
+  );
+  border-left: 4px solid #d4af37;
+}
 /* top-left accent */
 .about-grid::before{
   content:"";
@@ -166,7 +200,7 @@ body{
   );
 
   /* gold authority line */
-  border-bottom: 3px solid #d4af37;
+  border-bottom: 4px solid #d4af37;
   overflow: hidden;
 }
         /* HEADER SIDE ACCENTS */
