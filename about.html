@@ -7,15 +7,12 @@
 
   <!-- Copy/paste your SAME <style> block from index.html right here -->
       <style>
-        HEADER BACKGROUND
- ├─ Pillars (left/right)
- ├─ Corner accents (scarlet)
- └─ Logo & text (top layer)
+     
         /* DECORATIVE BORDER ACCENTS */
 .about-grid{
   position: relative;
 }
-        .about-grid::before{
+        -grid::before{
   content:"";
   position:absolute;
   top: 14px;
@@ -37,39 +34,9 @@
   border-right: 3px solid #b11226;
 }
         /* LEFT & RIGHT DECORATIVE PANELS */
-.about-header::before,
-.about-header::after{
-  content:"";
-  position:absolute;
-  top: 0;
-  bottom: 0;
-  width: 18%;
-  z-index: 0;
-}
 
-/* LEFT PANEL */
-.about-header::before{
-  left: 0;
-  background: linear-gradient(
-    to bottom,
-    #0b1f3a 0%,
-    #1a2f52 50%,
-    #0b1f3a 100%
-  );
-  border-right: 4px solid #d4af37;
-}
 
-/* RIGHT PANEL */
-.about-header::after{
-  right: 0;
-  background: linear-gradient(
-    to bottom,
-    #0b1f3a 0%,
-    #1a2f52 50%,
-    #0b1f3a 100%
-  );
-  border-left: 4px solid #d4af37;
-}
+
 /* top-left accent */
 .about-grid::before{
   content:"";
@@ -207,36 +174,69 @@ body{
   border-bottom: 4px solid #d4af37;
   overflow: hidden;
 }
-        /* HEADER SIDE ACCENTS */
-.about-header::before,
-.about-header::after{
-  content:"";
-  position:absolute;
-  top: 18%;
-  bottom: 18%;
-  width: 4px;
-  background: #d4af37; /* gold */
-  opacity: .75;
+        /* --- Header Decor: Pillars + Scarlet Corners --- */
+
+/* Pillars */
+.about-header .pillar{
+  position: absolute;
+  top: 16%;
+  height: 68%;
+  width: 18px;
+  border-radius: 10px;
+  opacity: .92;
+  background: linear-gradient(to bottom, #f5d76e, #d4af37, #b8962e);
+  z-index: 1;
 }
 
-.about-header::before{
-  left: 18px;
+/* inset from edges */
+.about-header .pillar.left{ left: 72px; }
+.about-header .pillar.right{ right: 72px; }
+
+/* Gold cap with engraved BTWM */
+.about-header .pillar::before{
+  content: "BTWM";
+  position: absolute;
+  top: -34px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 12px;
+  border-radius: 10px;
+  background: linear-gradient(to bottom, #f5d76e, #d4af37, #b8962e);
+  color: rgba(80,55,10,.85);
+  font-family: "Trajan Pro", Georgia, serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  box-shadow: inset 0 1px 1px rgba(255,255,255,.55);
+  text-shadow: 0 1px 0 rgba(255,255,255,.35);
+}
+/* Scarlet corner accents */
+.about-header .corner-accent{
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  border: 3px solid #b11226;
+  opacity: .9;
+  z-index: 2;
 }
 
-.about-header::after{
-  right: 18px;
-}
-        /* subtle gold texture on header sides */
-.about-header::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  pointer-events:none;
-  background:
-    radial-gradient(circle at 18% 50%, rgba(212,175,55,.18), transparent 55%),
-    radial-gradient(circle at 82% 50%, rgba(212,175,55,.16), transparent 60%);
+.about-header .corner-accent.top-left{
+  top: 16px; left: 16px;
+  border-right: none;
+  border-bottom: none;
 }
 
+.about-header .corner-accent.top-right{
+  top: 16px; right: 16px;
+  border-left: none;
+  border-bottom: none;
+}
+
+/* Keep logo above decoration */
+.about-header .logo-badge{
+  position: relative;
+  z-index: 3;
+}
+       
 /* HEADER ICON BADGE */
 .about-header .logo-badge{
   display: inline-flex;
@@ -345,23 +345,19 @@ body{
  </head>
 
 <body>
- <header class="about-header">
+<header class="about-header">
 
-  <!-- Decorative elements FIRST -->
+  <!-- Pillars -->
   <div class="pillar left"></div>
   <div class="pillar right"></div>
 
+  <!-- Scarlet corner accents -->
   <div class="corner-accent top-left"></div>
   <div class="corner-accent top-right"></div>
 
-  <!-- Your existing logo -->
   <div class="logo-badge">
-    <img src="images/Icon-ring.png"
-         class="site-logo header-icon"
-         alt="BTWM">
+    <img src="images/Icon-ring.png" class="site-logo header-icon" alt="BTWM">
   </div>
-
-</header>
 
 </header>
 
