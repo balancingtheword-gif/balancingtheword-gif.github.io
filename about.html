@@ -65,20 +65,47 @@ body{
     display: inline-block;
   }
 
-  /* TWO COLUMNS */
-  .about-grid {
+/* ABOUT PAGE LAYOUT */
+.about-grid{
   display: grid;
-  grid-template-columns: 1fr; /* ONE column */
-  gap: 42px;                  /* space between boxes */
+  grid-template-columns: 1fr;   /* vertical stack */
+  gap: 46px;
   align-items: start;
 }
 
-  @media (max-width: 900px){
-    .about-grid{
-      grid-template-columns: 1fr;
-    }
-  }
+/* ABOUT SECTION BOXES */
+.about-section{
+  background: #ffffff;
+  border: 1px solid rgba(11,31,58,.14);
+  border-radius: 18px;
+  padding: 26px 26px 22px;
+  box-shadow: 0 10px 28px rgba(11,31,58,.08);
+  position: relative;
+}
 
+/* Gold accent line at top of each box */
+.about-section::before{
+  content:"";
+  position:absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 4px;
+  background: #d4af37;
+}
+
+/* Headings */
+.about-section h2{
+  font-size: 1.7rem;
+  margin-bottom: 18px;
+}
+
+/* Responsive safety (kept simple) */
+@media (max-width: 900px){
+  .about-grid{
+    gap: 32px;
+  }
+}
   /* bordered “card” look */
   .about-section{
     background:#fff;
