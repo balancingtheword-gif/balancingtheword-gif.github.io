@@ -95,33 +95,27 @@ body{
   line-height: 1.9;
 }
 
-  /* HEADER */
-  .about-header{
-    position: relative;
-    text-align: center;
-    padding: 34px 0 28px;
-    margin-bottom: 22px;
+ /* HEADER */
+.about-header{
+  position: relative;
+  text-align: center;
+  padding: 34px 0 28px;
+  margin-bottom: 22px;
 
-    background: linear-gradient(
-      to right,
-      #0b1f3a 0%,
-      #0b1f3a 15%,
-      #f8f5ef 50%,
-      #0b1f3a 85%,
-      #0b1f3a 100%
-    );
-  }
+  /* refined gradient: richer sides, lighter center */
+  background: linear-gradient(
+    to right,
+    #0b1f3a 0%,
+    #1a2f52 18%,
+    #f8f5ef 50%,
+    #1a2f52 82%,
+    #0b1f3a 100%
+  );
 
-  /* bottom gradient line */
-  .about-header::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    height: 6px;
-    background: linear-gradient(to right, #0b1f3a, #c9a23a, #0b1f3a);
-  }
+  /* gold authority line */
+  border-bottom: 3px solid #d4af37;
+  overflow: hidden;
+}
 
   .btwm-icon{
     width: 220px; /* balanced size */
