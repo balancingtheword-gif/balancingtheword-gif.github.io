@@ -143,52 +143,6 @@ body{
   font-size: 1.25rem;
   line-height: 1.9;
 }
-/* ABOUT PAGE TEXT REFINEMENT */
-.about-section p{
-  font-size: 1.25rem;    /* ~20px equivalent */
-  line-height: 1.9;
-}
-
- /* HEADER */
-/* ===== ABOUT HEADER (RESET & CLEAN) ===== */
-.about-header{
-  position: relative;
-  background: #0b1f3a; /* BTWM navy */
-  padding: 60px 0;
-  text-align: center;
-}
-/* Logo wrapper with gradient transition */
-/* LOGO */
-.about-logo{
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 28px;
-  border-radius: 24px;
-   /* Navy → White transition */
-background: radial-gradient(
-    circle,
-    #ffffff 0%,
-    #ffffff 45%,
-    #0b1f3a 70%,
-    #0b1f3a 100%
-  );
-}
- /* Logo image (white stays intentional) */
-.about-logo-img{
-  display: block;
-  background: #ffffff;
-  padding: 18px;
-  border-radius: 14px;
-  width: 346px;
-  height: auto;
-}
-.about-logo-img{
-  width: 346px;
-  height: auto;
-  display: block;
-  max-width: 100%;
-}
 /* ===== ABOUT HEADER (FINAL) ===== */
 .about-header{
   position: relative;
@@ -197,6 +151,38 @@ background: radial-gradient(
   text-align: center;
   overflow: visible;
 }
+
+/* LOGO + NAVY → WHITE TRANSITION */
+.about-logo{
+  position: relative;
+  z-index: 5;                 /* keep logo above ribbons */
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 28px;
+  border-radius: 24px;
+
+  background: radial-gradient(
+    circle,
+    #ffffff 0%,
+    #ffffff 45%,
+    #0b1f3a 70%,
+    #0b1f3a 100%
+  );
+}
+
+/* LOGO IMAGE */
+.about-logo-img{
+  width: 346px;
+  height: auto;
+  display: block;
+  max-width: 100%;
+
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 14px;
+}
+
 /* RIBBONS */
 .ribbon{
   position: absolute;
@@ -218,36 +204,6 @@ background: radial-gradient(
 .ribbon-left{ left: 32px; }
 .ribbon-right{ right: 32px; }
 
-/* LOGO + NAVY → WHITE TRANSITION */
-.about-logo{
-  position: relative;
-  z-index: 5;                 /* above ribbons */
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 28px;
-  border-radius: 24px;
-
-  background: radial-gradient(
-    circle,
-    #ffffff 0%,
-    #ffffff 45%,
-    #0b1f3a 70%,
-    #0b1f3a 100%
-  );
-}
-
-/* LOGO IMAGE (KEEP THIS RULE) */
-.about-logo-img{
-  width: 346px;
-  height: auto;
-  display: block;
-  max-width: 100%;
-
-  background: #ffffff;  /* intentional white badge */
-  padding: 18px;
-  border-radius: 14px;
-}
 /* RESPONSIVE */
 @media (max-width: 768px){
   .about-logo-img{ width: 260px; }
