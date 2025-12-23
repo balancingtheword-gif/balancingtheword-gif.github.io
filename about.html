@@ -143,71 +143,50 @@ body{
   font-size: 1.25rem;
   line-height: 1.9;
 }
-/* ===== ABOUT HEADER (FINAL) ===== */
+/* ===== ABOUT HEADER (OPTION 1 ACCENTS) ===== */
 .about-header{
   position: relative;
   background: #0b1f3a; /* BTWM navy */
   padding: 60px 0;
   text-align: center;
   overflow: visible;
+
+  /* subtle scarlet anchor line */
+  border-bottom: 3px solid rgba(177,18,38,.85);
 }
-
-/* LOGO + NAVY → WHITE TRANSITION */
-.about-logo{
-  position: relative;
-  z-index: 5;                 /* keep logo above ribbons */
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  padding: 28px;
-  border-radius: 24px;
-
-  background: radial-gradient(
-    circle,
-    #ffffff 0%,
-    #ffffff 45%,
-    #0b1f3a 70%,
-    #0b1f3a 100%
-  );
-}
-
-/* LOGO IMAGE */
-.about-logo-img{
-  width: 346px;
-  height: auto;
-  display: block;
-  max-width: 100%;
-
-  background: #ffffff;
-  padding: 18px;
-  border-radius: 14px;
-}
-
-/* RIBBONS */
-.ribbon{
+/* Gold side accents */
+.about-header::before,
+.about-header::after{
+  content: "";
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  height: 6px;
-  width: 180px;
-  z-index: 1;
+  width: 160px;
+  height: 8px;
+  border-radius: 10px;
+  pointer-events: none;
 
   background: linear-gradient(
     to right,
     transparent,
-    #b11226 35%,   /* scarlet */
-    #d4af37 55%,   /* gold */
-    #b11226 75%,
+    #d4af37,
     transparent
   );
 }
-.ribbon-left{ left: 32px; }
-.ribbon-right{ right: 32px; }
+.about-header::before{ left: 26px; }
+.about-header::after{ right: 26px; }
 
 /* RESPONSIVE */
 @media (max-width: 768px){
-  .about-logo-img{ width: 260px; }
-  .ribbon{ width: 110px; }
+  .about-logo-img{
+    width: 260px;
+  }
+
+  /* Side gold accents */
+  .about-header::before,
+  .about-header::after{
+    width: 100px;
+  }
 }
 /* Ensure logo stays above ribbons */
 .about-logo{
@@ -301,10 +280,7 @@ body{
 <body>
   
 <header class="about-header">
-  <div class="ribbon ribbon-left"></div>
-  <div class="ribbon ribbon-right"></div>
-
-  <div class="about-logo">
+   <div class="about-logo">
   <img src="/images/346-shield-icon.png"
      class="about-logo-img"
      alt="Balancing The Word Ministry Logo">
