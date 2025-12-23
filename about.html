@@ -151,7 +151,7 @@ body{
   text-align: center;
   overflow: visible;
 
-  border-top: 2px solid rgba(212,175,55,.75); /* ← ADD IT HERE */
+  border-top: 2px solid rgba(212,175,55,.75); /* optional gold top rule */
 }
   /* subtle scarlet anchor line */
   border-bottom: 3px solid rgba(177,18,38,.85);
@@ -262,10 +262,34 @@ body{
     radial-gradient(circle at 50% 15%, rgba(212,175,55,.10), transparent 60%);
 }
 /* Ensure logo stays above ribbons */
-.about-logo{ position: relative; z-index: 5; }
-.about-header .corner{ z-index: 4; }
+.about-logo{
+  position: relative;
+  z-index: 5;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 34px;
+  border-radius: 50%;
 
+  background: radial-gradient(
+    circle,
+    #ffffff 0%,
+    #ffffff 42%,
+    rgba(11,31,58,.85) 65%,
+    #0b1f3a 78%
+  );
 }
+.about-logo-img{
+  width: 346px;
+  height: auto;
+  display: block;
+  max-width: 100%;
+
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 14px;
+}
+
  /* ABOUT PAGE LAYOUT */
 .about-grid{
   display: grid;
@@ -344,16 +368,6 @@ body{
 .btwm-symbols li {
   margin-bottom: 10px;
   line-height: 1.6;
-}
- .about-glow{
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-
-  background:
-    radial-gradient(circle at 20% 50%, rgba(255,255,255,.05), transparent 60%),
-    radial-gradient(circle at 80% 50%, rgba(0,0,0,.25), transparent 60%);
 }
 
 </style>
