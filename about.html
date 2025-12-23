@@ -176,38 +176,28 @@ body{
 }
         /* --- Header Decor: Pillars + Scarlet Corners --- */
 
-/* Pillars */
-.about-header .pillar{
+/* Header pillars (PNG) */
+.header-pillar{
   position: absolute;
-  top: 16%;
-  height: 68%;
-  width: 18px;
-  border-radius: 10px;
-  opacity: .92;
-  background: linear-gradient(to bottom, #f5d76e, #d4af37, #b8962e);
+  top: 50%;
+  transform: translateY(-50%);
+  height: 80%;            /* scale relative to header height */
+  max-height: 420px;      /* safety cap */
+  width: auto;
   z-index: 1;
+  pointer-events: none;
 }
 
-/* inset from edges */
-.about-header .pillar.left{ left: 72px; }
-.about-header .pillar.right{ right: 72px; }
+/* Left pillar — at gradient transition */
+.header-pillar.left{
+  left: 18%;
+  transform: translate(-50%, -50%);
+}
 
-/* Gold cap with engraved BTWM */
-.about-header .pillar::before{
-  content: "BTWM";
-  position: absolute;
-  top: -34px;
-  left: 50%;
-  transform: translateX(-50%);
-  padding: 6px 12px;
-  border-radius: 10px;
-  background: linear-gradient(to bottom, #f5d76e, #d4af37, #b8962e);
-  color: rgba(80,55,10,.85);
-  font-family: "Trajan Pro", Georgia, serif;
-  font-size: 11px;
-  letter-spacing: 2px;
-  box-shadow: inset 0 1px 1px rgba(255,255,255,.55);
-  text-shadow: 0 1px 0 rgba(255,255,255,.35);
+/* Right pillar — mirrored position */
+.header-pillar.right{
+  right: 18%;
+  transform: translate(50%, -50%);
 }
 /* Scarlet corner accents */
 .about-header .corner-accent{
@@ -218,7 +208,6 @@ body{
   opacity: .9;
   z-index: 2;
 }
-
 .about-header .corner-accent.top-left{
   top: 16px; left: 16px;
   border-right: none;
@@ -349,7 +338,9 @@ body{
 
   <!-- Pillars -->
   <div class="pillar left"></div>
+  img src="images/one-column.png" class="header-pillar left" alt="">
   <div class="pillar right"></div>
+  <img src="images/one-column.png" class="header-pillar right" alt="">
 
   <!-- Scarlet corner accents -->
   <div class="corner-accent top-left"></div>
