@@ -175,6 +175,64 @@ body{
 }
 .about-header::before{ left: 26px; }
 .about-header::after{ right: 26px; }
+/* ===== CORNER ACCENTS ===== */
+/* ===== CORNER ACCENTS ===== */
+.about-header .corner{
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  pointer-events: none;
+}
+
+/* RESPONSIVE: scale corner accents on smaller screens */
+@media (max-width: 768px){
+  .about-header .corner{
+    width: 32px;
+    height: 32px;
+  }
+}
+.about-header .corner::before,
+.about-header .corner::after{
+  content: "";
+  position: absolute;
+  background: #d4af37; /* gold */
+}
+
+/* Top-left */
+.about-header .corner.tl{
+  top: 18px;
+  left: 18px;
+}
+.about-header .corner.tl::before{
+  width: 4px;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.about-header .corner.tl::after{
+  height: 4px;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+/* Top-right */
+.about-header .corner.tr{
+  top: 18px;
+  right: 18px;
+}
+.about-header .corner.tr::before{
+  width: 4px;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+.about-header .corner.tr::after{
+  height: 4px;
+  width: 100%;
+  right: 0;
+  top: 0;
+}
 
 /* RESPONSIVE */
 @media (max-width: 768px){
@@ -280,11 +338,14 @@ body{
 <body>
   
 <header class="about-header">
-   <div class="about-logo">
+  <span class="corner tl"></span>
+  <span class="corner tr"></span>
+  <div class="about-logo">
   <img src="/images/346-shield-icon.png"
      class="about-logo-img"
      alt="Balancing The Word Ministry Logo">
     </div>
+  
 </header>
 
   <main class="wrap">
