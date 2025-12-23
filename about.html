@@ -151,6 +151,8 @@ body{
   text-align: center;
   overflow: visible;
 
+  border-top: 2px solid rgba(212,175,55,.75); /* ← ADD IT HERE */
+}
   /* subtle scarlet anchor line */
   border-bottom: 3px solid rgba(177,18,38,.85);
 }
@@ -175,7 +177,7 @@ body{
 }
 .about-header::before{ left: 26px; }
 .about-header::after{ right: 26px; }
-/* ===== CORNER ACCENTS ===== */
+        
 /* ===== CORNER ACCENTS ===== */
 .about-header .corner{
   position: absolute;
@@ -246,10 +248,23 @@ body{
     width: 100px;
   }
 }
+        /* Soft background glow (adds richness) */
+.about-header::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+
+  background:
+    radial-gradient(circle at 18% 55%, rgba(212,175,55,.18), transparent 55%),
+    radial-gradient(circle at 82% 55%, rgba(177,18,38,.14), transparent 58%),
+    radial-gradient(circle at 50% 15%, rgba(212,175,55,.10), transparent 60%);
+}
 /* Ensure logo stays above ribbons */
-.about-logo{
-  position: relative;
-  z-index: 5;
+.about-logo{ position: relative; z-index: 5; }
+.about-header .corner{ z-index: 4; }
+
 }
  /* ABOUT PAGE LAYOUT */
 .about-grid{
@@ -330,7 +345,16 @@ body{
   margin-bottom: 10px;
   line-height: 1.6;
 }
- 
+        .about-glow{
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  z-index:0;
+  background:
+    radial-gradient(circle at 18% 55%, rgba(212,175,55,.18), transparent 55%),
+    radial-gradient(circle at 82% 55%, rgba(177,18,38,.14), transparent 58%),
+    radial-gradient(circle at 50% 15%, rgba(212,175,55,.10), transparent 60%);
+}
 </style>
 
  </head>
@@ -338,6 +362,7 @@ body{
 <body>
   
 <header class="about-header">
+  <div class="about-glow"></div>
   <span class="corner tl"></span>
   <span class="corner tr"></span>
   <div class="about-logo">
