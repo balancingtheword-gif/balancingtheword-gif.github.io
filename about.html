@@ -325,31 +325,38 @@ body{
   align-items: start;
 }
 
-/* ABOUT SECTION BOXES */
-.about-section{
-  background: #ffffff;
-  border: 1px solid rgba(11,31,58,.14);
-  border-radius: 18px;
-  padding: 26px 26px 22px;
-  box-shadow: 0 10px 28px rgba(11,31,58,.08);
-  position: relative;
+/* BTWM ABOUT BOX STYLING */
+.about-box {
+  background-color: #0b1f3a; /* BTWM Navy */
+  color: #ffffff;
+
+  /* Border system */
+  border-top: 4px solid #d4af37;   /* Gold – authority */
+  border-left: 3px solid #b11226;  /* Scarlet – covenant */
+  border-right: 3px solid #b11226; /* Scarlet – covenant */
+  border-bottom: 3px solid #b11226;
+
+  border-radius: 14px;
+  padding: 28px;
+  box-sizing: border-box;
+}
+.about-box h3,
+.about-box h4 {
+  color: #d4af37; /* Gold headings */
+  margin-top: 0;
 }
 
-/* Gold accent line at top of each box */
-.about-section::before{
-  content:"";
-  position:absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 4px;
-  background: #d4af37;
+.about-box p {
+  color: #f2f2f2;
+  line-height: 1.7;
 }
-
 /* Headings */
 .about-section h2{
   font-size: 1.7rem;
   margin-bottom: 18px;
+}
+.about-box {
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,0.04);
 }
 
 /* Responsive safety (kept simple) */
