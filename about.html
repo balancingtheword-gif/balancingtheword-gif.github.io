@@ -194,81 +194,81 @@ background: radial-gradient(
   max-width: 100%;
 }
 
+/* ============================= */
+/* RIBBONS (RESTORED & CLEAN)   */
+/* ============================= */
+
+/* ===== ABOUT HEADER (FINAL) ===== */
+.about-header{
+  position: relative;
+  background: #0b1f3a; /* BTWM navy */
+  padding: 60px 0;
+  text-align: center;
+  overflow: visible;
+}
+
 /* RIBBONS */
 .ribbon{
   position: absolute;
   top: 50%;
-  width: 140px;
-  height: 6px;
   transform: translateY(-50%);
+  height: 6px;
+  width: 180px;
   z-index: 1;
+
   background: linear-gradient(
     to right,
     transparent,
-    #b11226,
-    #d4af37,
-    #b11226,
+    #b11226 35%,   /* scarlet */
+    #d4af37 55%,   /* gold */
+    #b11226 75%,
     transparent
   );
 }
+.ribbon-left{ left: 32px; }
+.ribbon-right{ right: 32px; }
 
-.ribbon-left{ left: 20px; }
-.ribbon-right{ right: 20px; }
-
-/* RESPONSIVE */
-@media (max-width: 768px){
-  .about-logo-img{
-    width: 346px;
-  }
-  .ribbon{
-    width: 90px;
-  }
-  .about-logo{
-  background: transparent
-}
-  /* Remove any checkerboard/preview backgrounds */
-.about-logo,
-.about-logo-img,
-.about-logo img{
-  background: none !important;
-  background-image: none !important;
-}
-/* Keep logo above decoration */
-.about-header .logo-badge{
+/* LOGO + NAVY → WHITE TRANSITION */
+.about-logo{
   position: relative;
-  z-index: 10;
-}
-
-.about-header .btwm-icon{
-  position: relative;
-  z-index: 11;
-}
-       
-/* HEADER ICON BADGE */
-.about-header .logo-badge{
+  z-index: 5;                 /* above ribbons */
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 10px;
-  border-radius: 999px;
- background: transparent !important;
-  border: 2px solid rgba(212,175,55,.95);
-  box-shadow: 0 10px 26px rgba(11,31,58,.22);
-  position: relative;
-  z-index: 1;
+  padding: 28px;
+  border-radius: 24px;
+
+  background: radial-gradient(
+    circle,
+    #ffffff 0%,
+    #ffffff 45%,
+    #0b1f3a 70%,
+    #0b1f3a 100%
+  );
 }
 
-/* HEADER ICON — FIXED VISUAL SIZE */
-.header-icon{
+/* LOGO IMAGE (KEEP THIS RULE) */
+.about-logo-img{
   width: 346px;
-  height: 346px;
-  max-width: 100%;
-  height: auto;        /* safety for smaller screens */
+  height: auto;
   display: block;
-  margin: 0 auto;
-}
+  max-width: 100%;
 
-/* ABOUT PAGE LAYOUT */
+  background: #ffffff;  /* intentional white badge */
+  padding: 18px;
+  border-radius: 14px;
+}
+/* RESPONSIVE */
+@media (max-width: 768px){
+  .about-logo-img{ width: 260px; }
+  .ribbon{ width: 110px; }
+}
+/* Ensure logo stays above ribbons */
+.about-logo{
+  position: relative;
+  z-index: 5;
+}
+ /* ABOUT PAGE LAYOUT */
 .about-grid{
   display: grid;
   grid-template-columns: 1fr;   /* vertical stack */
