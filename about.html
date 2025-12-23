@@ -143,19 +143,27 @@ body{
   font-size: 1.25rem;
   line-height: 1.9;
 }
-/* ===== ABOUT HEADER (OPTION 1 ACCENTS) ===== */
-/* FORCE SOLID NAVY (override any old gradients/overlays) */
+/* ===== ABOUT HEADER (FINAL CENTER + SOLID NAVY) ===== */
 .about-header{
-  background-color: #0b1f3a !important;
+  position: relative;
+  background: #0b1f3a !important;      /* solid navy */
   background-image: none !important;
+  padding: 60px 0;
+  overflow: visible;
+
+  display: flex;                        /* centers the logo 100% reliably */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  border-top: 2px solid rgba(212,175,55,.75);
 }
 
-/* Kill any leftover overlay layers */
-.about-header::before,
-.about-header::after{
-  content: none !important;
-  background: none !important;
+  .about-logo{
+  position: relative;
+  z-index: 5;
 }
+
 /* ===== CORNER ACCENTS ===== */
 .about-header .corner{
   position: absolute;
@@ -237,14 +245,9 @@ body{
   padding: 34px;
   border-radius: 50%;
 
-  background: radial-gradient(
-    circle,
-    #ffffff 0%,
-    #ffffff 42%,
-    rgba(11,31,58,.85) 65%,
-    #0b1f3a 78%
-  );
+  margin: 0 auto;   /* <-- centers the logo wrapper */
 }
+
 .about-logo-img{
   width: 346px;
   height: auto;
