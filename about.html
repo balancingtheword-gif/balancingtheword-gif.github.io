@@ -174,28 +174,50 @@ body{
   border-bottom: 4px solid #d4af37;
   overflow: hidden;
 }
-        /* --- Header Decor: Pillars + Scarlet Corners --- */
+   .header-ornaments{
+  position:absolute;
+  top:50%;
+  left:0;
+  right:0;
+  transform:translateY(-50%);
+  pointer-events:none;
+}
+.ornament{
+  position:absolute;
+  height:3px;
+  border-radius:4px;
+}
+/* GOLD FLOURISH */
+.ornament.gold{
+  width:200px;
+  background:linear-gradient(
+    to center,
+    transparent,
+    #c9a24d,
+    transparent
+  );
+  opacity:0.95;
+}
+/* SCARLET ACCENT */
+.ornament.red{
+  width:130px;
+  height:2px;
+  background:linear-gradient(
+    to center,
+    transparent,
+    #b11226, /* scarlet */
+    transparent
+  );
+  opacity:0.85;
+  margin-top:6px;
+}
+/* POSITIONING */
+.left.gold{ left:40px; }
+.left.red{ left:75px; }
 
-.header-pillar{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  height: 80%;            /* scale relative to header height */
-  max-height: 420px;      /* safety cap */
-  width: auto;
-  z-index: 1;
-  pointer-events: none;
-}
-/* Left pillar — at gradient transition */
-.header-pillar.left{
-  left: 30%;
-  transform: translateX(-50%);
-}
-/* Right pillar — mirrored position */
-.header-pillar.right{
-  right: 30%;
-  transform: translateX(50%);
-}
+.right.gold{ right:40px; }
+.right.red{ right:75px; }
+      
 /* Scarlet corner accents */
 .about-header .corner-accent{
   position: absolute;
@@ -333,13 +355,13 @@ body{
 <body>
   
 <header class="about-header">
+  <div class="header-ornaments">
+  <span class="ornament gold left"></span>
+  <span class="ornament red left"></span>
 
-  <!-- Left pillar -->
-  <img src="images/one-column.png" class="header-pillar left" alt="">
-
-  <!-- Right pillar -->
-  <img src="images/one-column.png" class="header-pillar right" alt="">
-
+  <span class="ornament gold right"></span>
+  <span class="ornament red right"></span>
+</div>
   <!-- Logo -->
   <div class="logo-badge">
     <img src="images/Icon-ring.png" class="site-logo header-icon" alt="BTWM">
