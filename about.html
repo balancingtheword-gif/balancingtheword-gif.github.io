@@ -158,20 +158,35 @@ body{
 .about-header{
   position: relative;
   background: #0b1f3a; /* BTWM navy */
-  padding: 36px 0;
+  padding: 60px 0;
   text-align: center;
-  overflow: visible;
 }
-
+/* Logo wrapper with gradient transition */
 /* LOGO */
 .about-logo{
-  position: relative;
-  z-index: 5;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
+  padding: 28px;
+  border-radius: 24px;
+   /* Navy → White transition */
+background: radial-gradient(
+    circle,
+    #ffffff 0%,
+    #ffffff 45%,
+    #0b1f3a 70%,
+    #0b1f3a 100%
+  );
 }
-
+ /* Logo image (white stays intentional) */
+.about-logo-img{
+  display: block;
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 14px;
+  width: 346px;
+  height: auto;
+}
 .about-logo-img{
   width: 346px;
   height: auto;
@@ -344,7 +359,7 @@ body{
   <div class="ribbon ribbon-right"></div>
 
   <div class="about-logo">
-  <img src="/images/BTWM-shield-clean-final.png"
+  <img src="/images/346-shield-icon.png"
      class="about-logo-img"
      alt="Balancing The Word Ministry Logo">
     </div>
