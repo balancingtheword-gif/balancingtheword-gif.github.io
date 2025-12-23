@@ -154,57 +154,60 @@ body{
 }
 
  /* HEADER */
+/* ===== ABOUT HEADER (RESET & CLEAN) ===== */
 .about-header{
   position: relative;
+  background: #0b1f3a; /* BTWM navy */
+  padding: 36px 0;
   text-align: center;
-  padding: 34px 0 28px;
-  margin-bottom: 22px;
-
-  background: #0b1f3a;         /* SOLID NAVY */
-  border-bottom: 4px solid #d4af37;
-  overflow: visible;           /* CRITICAL: keeps ribbons inside header */
+  overflow: visible;
 }
-/* Side ribbons */
-.ribbon-side{
+
+/* LOGO */
+.about-logo{
+  position: relative;
+  z-index: 5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-logo-img{
+  width: 346px;
+  height: auto;
+  display: block;
+  max-width: 100%;
+}
+
+/* RIBBONS */
+.ribbon{
   position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 260px;                 /* controls how much empty space gets filled */
-  pointer-events: none;
+  top: 50%;
+  width: 140px;
+  height: 6px;
+  transform: translateY(-50%);
   z-index: 1;
-  opacity: .98;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #b11226,
+    #d4af37,
+    #b11226,
+    transparent
+  );
 }
 
-/* LEFT ribbon */
-.ribbon-left{
-  left: 0;
-  background:
-    /* gold edge */
-    linear-gradient(to right, #d4af37 0 10px, transparent 10px),
-    /* scarlet body with depth */
-    linear-gradient(135deg, #b11226 0%, #7f0e1b 55%, #b11226 100%);
-  clip-path: polygon(0 0, 100% 0, 72% 100%, 0 100%);
-}
+.ribbon-left{ left: 20px; }
+.ribbon-right{ right: 20px; }
 
-/* RIGHT ribbon */
-.ribbon-right{
-  right: 0;
-  background:
-    linear-gradient(to left, #d4af37 0 10px, transparent 10px),
-    linear-gradient(225deg, #b11226 0%, #7f0e1b 55%, #b11226 100%);
-  clip-path: polygon(28% 0, 100% 0, 100% 100%, 0 100%);
-}
-
-/* Optional: subtle inner glow so it feels “premium” */
-.ribbon-side::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background: linear-gradient(to bottom, rgba(255,255,255,.10), transparent 40%);
-}
-  /* gold authority line */
-  border-bottom: 4px solid #d4af37;
-  overflow: hidden;
+/* RESPONSIVE */
+@media (max-width: 768px){
+  .about-logo-img{
+    width: 260px;
+  }
+  .ribbon{
+    width: 90px;
+  }
 }
 
 /* Keep logo above decoration */
