@@ -157,8 +157,27 @@ body{
   text-align: center;
 
   border-top: 2px solid rgba(212,175,55,.75);
-}
+  .about-header{
+  position: relative;
+  background: #0b1f3a !important;  /* solid BTWM navy */
+  padding: 60px 0;
+  overflow: visible;
 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  border-bottom: 3px solid #b11226; /* ← SCARLET RED BOTTOM BORDER */
+  border-left: 3px solid #d4af37;     /* gold left */
+  border-right: 3px solid #d4af37;    /* gold right */
+}
+  <span class="corner-arc tl"></span>
+<span class="corner-arc tr"></span>
+<span class="corner-arc bl"></span>
+<span class="corner-arc br"></span>
+
+}
   .about-logo{
   position: relative;
   z-index: 5;
@@ -338,7 +357,54 @@ body{
   margin-bottom: 10px;
   line-height: 1.6;
 }
+  /* ===== GOLD CORNER ARCS ===== */
+.corner-arc{
+  position: absolute;
+  width: 56px;
+  height: 56px;
+  border: 4px solid #d4af37;   /* BTWM gold */
+  border-radius: 50%;
+  pointer-events: none;
+}
 
+/* Show only a quarter of the circle */
+.corner-arc{
+  clip-path: inset(0 0 50% 50%);
+}
+
+/* Top-left */
+.corner-arc.tl{
+  top: 10px;
+  left: 10px;
+  clip-path: inset(0 50% 50% 0);
+}
+
+/* Top-right */
+.corner-arc.tr{
+  top: 10px;
+  right: 10px;
+  clip-path: inset(0 0 50% 50%);
+}
+
+/* Bottom-left */
+.corner-arc.bl{
+  bottom: 10px;
+  left: 10px;
+  clip-path: inset(50% 50% 0 0);
+}
+
+/* Bottom-right */
+.corner-arc.br{
+  bottom: 10px;
+  right: 10px;
+  clip-path: inset(50% 0 0 50%);
+}
+@media (max-width: 768px){
+  .corner-arc{
+    width: 36px;
+    height: 36px;
+    border-width: 3px;
+  }
 </style>
 
  </head>
