@@ -12,7 +12,7 @@
 .about-grid{
   position: relative;
 }
-  -grid::before{
+        -grid::before{
   content:"";
   position:absolute;
   top: 14px;
@@ -34,6 +34,9 @@
   border-right: 3px solid #b11226;
 }
         /* LEFT & RIGHT DECORATIVE PANELS */
+
+
+
 /* top-left accent */
 .about-grid::before{
   content:"";
@@ -171,54 +174,50 @@ body{
   border-bottom: 4px solid #d4af37;
   overflow: hidden;
 }
- .header-ornaments{
+   .header-ornaments{
   position:absolute;
   top:50%;
   left:0;
   right:0;
   transform:translateY(-50%);
   pointer-events:none;
-  z-index:1;
 }
-
 .ornament{
   position:absolute;
   height:3px;
   border-radius:4px;
 }
-
 /* GOLD FLOURISH */
 .ornament.gold{
   width:200px;
   background:linear-gradient(
-    to right,
+    to center,
     transparent,
     #c9a24d,
     transparent
   );
   opacity:0.95;
 }
-
 /* SCARLET ACCENT */
 .ornament.red{
   width:130px;
   height:2px;
   background:linear-gradient(
-    to right,
+    to center,
     transparent,
-    #b11226
+    #b11226, /* scarlet */
+    transparent
   );
   opacity:0.85;
   margin-top:6px;
 }
-
 /* POSITIONING */
 .left.gold{ left:40px; }
 .left.red{ left:75px; }
 
 .right.gold{ right:40px; }
 .right.red{ right:75px; }
-    
+      
 /* Scarlet corner accents */
 .about-header .corner-accent{
   position: absolute;
@@ -356,20 +355,17 @@ body{
 <body>
   
 <header class="about-header">
-
-  <!-- SIDE ORNAMENTS -->
   <div class="header-ornaments">
-    <span class="ornament gold left"></span>
-    <span class="ornament red left"></span>
+  <span class="ornament gold left"></span>
+  <span class="ornament red left"></span>
 
-    <span class="ornament gold right"></span>
-    <span class="ornament red right"></span>
+  <span class="ornament gold right"></span>
+  <span class="ornament red right"></span>
+</div>
+  <!-- Logo -->
+  <div class="logo-badge">
+    <img src="images/Icon-ring.png" class="site-logo header-icon" alt="BTWM">
   </div>
-
-  <!-- MAIN HEADER CONTENT -->
-  <img src="your-logo.png" class="btwm-icon" alt="Balancing the Word Ministry logo">
-  <h1>Balancing the Word Ministry</h1>
-  <p class="tagline">Build • Educate • Disciple</p>
 
 </header>
 
