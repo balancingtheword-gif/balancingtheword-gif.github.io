@@ -144,40 +144,18 @@ body{
   line-height: 1.9;
 }
 /* ===== ABOUT HEADER (OPTION 1 ACCENTS) ===== */
+/* FORCE SOLID NAVY (override any old gradients/overlays) */
 .about-header{
-  position: relative;
-  background: #0b1f3a; /* BTWM navy */
-  padding: 60px 0;
-  text-align: center;
-  overflow: visible;
+  background-color: #0b1f3a !important;
+  background-image: none !important;
+}
 
-  border-top: 2px solid rgba(212,175,55,.75); /* optional gold top rule */
-}
-  /* subtle scarlet anchor line */
-  border-bottom: 3px solid rgba(177,18,38,.85);
-}
-/* Gold side accents */
+/* Kill any leftover overlay layers */
 .about-header::before,
 .about-header::after{
-  content: "";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 160px;
-  height: 8px;
-  border-radius: 10px;
-  pointer-events: none;
-
-  background: linear-gradient(
-    to right,
-    transparent,
-    #d4af37,
-    transparent
-  );
+  content: none !important;
+  background: none !important;
 }
-.about-header::before{ left: 26px; }
-.about-header::after{ right: 26px; }
-        
 /* ===== CORNER ACCENTS ===== */
 .about-header .corner{
   position: absolute;
@@ -248,19 +226,7 @@ body{
     width: 100px;
   }
 }
-        /* Soft background glow (adds richness) */
-.about-header::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  pointer-events:none;
-  z-index:0;
-
-  background:
-    radial-gradient(circle at 18% 55%, rgba(212,175,55,.18), transparent 55%),
-    radial-gradient(circle at 82% 55%, rgba(177,18,38,.14), transparent 58%),
-    radial-gradient(circle at 50% 15%, rgba(212,175,55,.10), transparent 60%);
-}
+     
 /* Ensure logo stays above ribbons */
 .about-logo{
   position: relative;
@@ -377,7 +343,6 @@ body{
 <body>
   
 <header class="about-header">
-  <div class="about-glow"></div>
   <span class="corner tl"></span>
   <span class="corner tr"></span>
   <div class="about-logo">
