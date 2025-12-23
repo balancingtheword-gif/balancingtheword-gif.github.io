@@ -209,13 +209,15 @@ body{
     width: 90px;
   }
   .about-logo{
-  background: transparent !important;
+  background: transparent
 }
-
-.about-logo-img{
-  background: transparent !important;
+  /* Remove any checkerboard/preview backgrounds */
+.about-logo,
+.about-logo-img,
+.about-logo img{
+  background: none !important;
+  background-image: none !important;
 }
-
 /* Keep logo above decoration */
 .about-header .logo-badge{
   position: relative;
