@@ -362,11 +362,12 @@
   position: relative; /* anchor for positioning */
 }
 
-.contact-cta-right{
-  position: absolute;
-  left: 70%;               /* pushes into empty right area */
-  top: 50%;
-  transform: translate(-50%, -50%);
+.contact-cta{
+  flex:0 0 40%;           /* reserves right-side space */
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
 }
 
 /* Button styling (BTWM branded) */
@@ -396,6 +397,12 @@
 .follow-btn:hover{
   transform:translateY(-2px);
   box-shadow:0 10px 22px rgba(11,31,58,.35);
+}
+    #contact .contact-row{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:32px;
 }
   </style>
 </head>
