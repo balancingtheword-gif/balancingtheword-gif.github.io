@@ -296,6 +296,46 @@
 .heroRight{
   margin-top: 0px;
 }
+    /* ===== BTWM CARD UPGRADE ===== */
+.card{
+  background:#fff;
+  border-radius:16px;
+  padding:18px 18px 16px;
+  border:1px solid rgba(11,31,58,.14);            /* soft navy line */
+  border-top:4px solid #c8a44d;                   /* BTWM gold */
+  border-left:3px solid #C1121F;                  /* BTWM scarlet */
+  box-shadow:0 10px 24px rgba(11,31,58,.08);      /* soft depth */
+  transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+}
+
+/* Hover (desktop) */
+.card:hover{
+  transform:translateY(-2px);
+  box-shadow:0 14px 30px rgba(11,31,58,.12);
+  border-color:rgba(11,31,58,.22);
+}
+
+/* Headings inside cards */
+.card h2, .card h3{
+  margin:0 0 10px;
+  color:var(--navy);
+  letter-spacing:.2px;
+}
+
+/* Card text */
+.card p{
+  margin:0 0 10px;
+  color:var(--muted);
+}
+
+/* Optional: small divider line inside card (if you want) */
+.card .divider{
+  height:3px;
+  width:72px;
+  border-radius:99px;
+  background:linear-gradient(to right,#c8a44d,#C1121F);
+  margin:10px 0 14px;
+}
   </style>
 </head>
 
