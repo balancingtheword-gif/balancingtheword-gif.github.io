@@ -231,6 +231,19 @@
     footer{border-top:1px solid var(--border); margin-top:24px;}
     .foot{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between}
     .small{font-size:13px;color:var(--muted)}
+    /* Ensure feature text stays contained */
+/* CONTAIN Featured Blog content */
+.featureStack .featureBlock {
+  width: 100%;
+  max-width: 100%;
+}
+
+.featureStack .feature-desc {
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: break-word;
+}
+    
   </style>
 </head>
 
@@ -345,14 +358,13 @@
 </a>
 </div>
 
-    <div class="mini-divider"></div>
-
-      <h2>Today’s Featured Blog</h2>
-      <p class="muted">
-        Biblically balanced reflections on questions, topics, and issues that matter.
-      </p>
-      <a class="btn" href="blog.html">Read the Blog</a>
-      </div>
+   <div class="featureBlock">
+  <h2>Today’s Featured Blog</h2>
+  <p class="feature-desc">
+    <strong>What About…</strong> explores biblical questions through sound teaching and real-life application, equipping believers to build, educate, and grow as disciples of Jesus Christ.
+  </p>
+  <a class="btn" href="blog.html">Read the Blog</a>
+</div>
 
   </aside>
 
