@@ -150,8 +150,7 @@
       margin-top:6px;
       font-size:16px;
     }
-
-    /* Featured card */
+    /* Featured book cover */
     .featureStack{
       border:2px solid var(--red);
       background:linear-gradient(180deg, rgba(176,18,42,.10), rgba(255,255,255,1));
@@ -186,7 +185,16 @@
       border-color:var(--red);
       color:#fff;
     }
-
+  .featuredCover{
+    width:100%;
+    max-width:260px;
+    height:auto;
+    display:block;
+    margin:0 auto 12px;
+    border-radius:12px;
+    border:2px solid var(--gold);
+    box-shadow:0 10px 22px rgba(0,0,0,.12);
+    }
     .mini-divider{
       height:3px;
       width:86%;
@@ -296,64 +304,68 @@
       <!-- RIGHT COLUMN -->
       <aside class="heroRight">
 
-        <div class="card featureStack" id="featured">
-          <h2>Today’s Featured Book</h2>
+<div class="card featureStack" id="featured">
+  <h2>Today’s Featured Book</h2>
+  <img
+    src="images/habakkuk-cover.jpg"
+    alt="Be Like Habakkuk book cover"
+    class="featuredCover"
+    loading="lazy"
+/>
+<h3 class="featuredTitle">Be Like Habakkuk!</h3>
 
-          <h3 class="featuredTitle">Be Like Habakkuk!</h3>
+  <p class="feature-desc">
+    <em>Be Like Habakkuk</em> calls believers to trust God and live by faith in uncertain times.<br>
+    A bold invitation to stand firm in God’s truth and sovereignty.
+  </p>
 
-          <p class="feature-desc">
-            <em>Be Like Habakkuk</em> calls believers to trust God and live by faith in uncertain times.<br>
-            A bold invitation to stand firm in God’s truth and sovereignty.
-          </p>
+  <!-- THIS is the only place samples are linked (your navy button behavior) -->
+  <div class="featuredButtons">
+    <a class="btn primary"
+      href="images/sample-1-howlong.jpg"
+      target="_blank"
+      rel="noopener">
+  Read Sample Pages
+   </a>
+  <a class="btn"
+      href="YOUR-AMAZON-LINK"
+      target="_blank"
+      rel="noopener">
+   Buy the Book
+      </a>
+      </div>
 
-          <!-- THIS is the only place samples are linked (your navy button behavior) -->
-          <div class="featuredButtons">
-            <a class="btn primary"
-               href="images/sample-1-howlong.jpg"
-               target="_blank"
-               rel="noopener">
-              Read Sample Pages
-            </a>
+    <div class="mini-divider"></div>
 
-            <a class="btn"
-               href="YOUR-AMAZON-LINK"
-               target="_blank"
-               rel="noopener">
-              Buy the Book
-            </a>
-          </div>
-
-          <div class="mini-divider"></div>
-
-          <h2>Today’s Featured Blog</h2>
-          <p class="muted">
-            Biblically balanced reflections on questions, topics, and issues that matter.
-          </p>
-          <a class="btn" href="blog.html">Read the Blog</a>
-        </div>
-
-      </aside>
-
-    </section>
-
-    <!-- (Keep your Books / Resources / Contact sections below here as you rebuild) -->
-
-    <section id="contact" class="card" style="margin-top:16px;">
-      <h2>Contact</h2>
-      <p>
-        <strong>Email:</strong>
-        <a href="mailto:greetings@balancingtheword.com">greetings@balancingtheword.com</a><br/>
-        <strong>Mailing:</strong> P.O. Box 1043, Wagoner, OK 74477
+      <h2>Today’s Featured Blog</h2>
+      <p class="muted">
+        Biblically balanced reflections on questions, topics, and issues that matter.
       </p>
-    </section>
+      <a class="btn" href="blog.html">Read the Blog</a>
+      </div>
 
-  </main>
+  </aside>
+
+</section>
+
+<!-- (Keep your Books / Resources / Contact sections below here as you rebuild) -->
+
+<section id="contact" class="card" style="margin-top:16px;">
+  <h2>Contact</h2>
+  <p>
+    <strong>Email:</strong>
+      <a href="mailto:greetings@balancingtheword.com">greetings@balancingtheword.com</a><br/>
+      <strong>Mailing:</strong> P.O. Box 1043, Wagoner, OK 74477
+     </p>
+  </section>
+
+ </main>
 
   <footer>
-    <div class="wrap foot">
-      <div class="small">© <span id="y"></span> Balancing the Word Ministry</div>
-      <div class="small">Build • Educate • Disciple</div>
-    </div>
+   <div class="wrap foot">
+    <div class="small">© <span id="y"></span> Balancing the Word Ministry</div>
+     <div class="small">Build • Educate • Disciple</div>
+  </div>
   </footer>
 
   <script>
