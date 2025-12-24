@@ -362,28 +362,24 @@
   position: relative; /* anchor for positioning */
 }
 
-.contact-cta{
-  flex:0 0 40%;           /* reserves right-side space */
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
+.contact-cta-right{
+  position: absolute;
+  left: 70%;               /* pushes into empty right area */
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* Button styling (BTWM branded) */
 .follow-btn{
   display:inline-block;
-  padding:12px 22px;              /* a touch taller */
+  padding:10px 20px;
   border-radius:999px;
   font-weight:700;
-  font-size:16px;                 /* ↑ readability */
-  letter-spacing:.3px;            /* improves clarity */
+  font-size:15px;
   text-decoration:none;
-
-  color:#ffffff;                  /* pure white text */
-  background:#0b1f3a;             /* BTWM navy */
-
-  box-shadow:0 6px 14px rgba(11,31,58,.22);
+  color:#fff;                         /* white text */
+  background:#0b1f3a;                 /* BTWM navy */
+  box-shadow:0 6px 14px rgba(11,31,58,.25);
   transition:transform .18s ease, box-shadow .18s ease;
 }
 @media (max-width: 860px){
@@ -397,12 +393,6 @@
 .follow-btn:hover{
   transform:translateY(-2px);
   box-shadow:0 10px 22px rgba(11,31,58,.35);
-}
-    #contact .contact-row{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:32px;
 }
   </style>
 </head>
@@ -532,36 +522,26 @@
 
 <!-- (Keep your Books / Resources / Contact sections below here as you rebuild) -->
 
-<div class="card" id="contact">
+<div id="contact" class="card">
   <h2>Contact</h2>
 
-  <div class="contact-row">
+  <p><strong>Email:</strong>
+    <a href="mailto:greetings@balancingtheword.com">
+      greetings@balancingtheword.com
+    </a>
+  </p>
 
-    <!-- LEFT SIDE: contact info -->
-    <div class="contact-info">
-      <p><strong>Email:</strong>
-        <a href="mailto:greetings@balancingtheword.com">
-          greetings@balancingtheword.com
-        </a>
-      </p>
+  <p><strong>Mailing:</strong>
+    P.O. Box 1043, Wagoner, OK 74477
+  </p>
 
-      <p><strong>Mailing:</strong>
-        P.O. Box 1043, Wagoner, OK 74477
-      </p>
-    </div>
-
-    <!-- RIGHT SIDE: button -->
-    <div class="contact-cta">
-      <p class="contact-note">New blogs &amp; studies</p>
-
-      <a class="follow-btn"
-         href="mailto:greetings@balancingtheword.com?subject=Subscribe%20to%20BTWM%20Updates">
-        Get Updates
-      </a>
-    </div>
-
+  <!-- FOLLOW BUTTON — MUST BE INSIDE CONTACT -->
+  <div class="contact-cta-right">
+    <a class="follow-btn"
+       href="mailto:greetings@balancingtheword.com?subject=Subscribe%20to%20BTWM%20Updates">
+      Follow Me
+    </a>
   </div>
-</div>
   
  </main>
 
