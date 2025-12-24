@@ -317,7 +317,59 @@ h3 {
     color: #1f3b64;
     margin-bottom: 12px;
   }
+<head>
+  <meta charset="UTF-8">
+  <title>Balancing the Word Ministry</title>
 
+  <style>
+    /* existing CSS above */
+
+    /* 🔽 PASTE YOUR CODE HERE 🔽 */
+
+    /* Buttons inside Featured */
+    .featureStack .btn{
+      border: 2px solid var(--gold);
+    }
+
+    .featureStack .btn:hover{
+      background: var(--red);
+      border-color: var(--red);
+      color: #fff;
+    }
+
+    /* Featured box with BTWM red accents */
+    #featured {
+      border: 2px solid var(--red);
+      position: relative;
+    }
+
+    #featured::before,
+    #featured::after {
+      content: "";
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      border: 3px solid var(--red);
+    }
+
+    #featured::before {
+      top: -3px;
+      left: -3px;
+      border-right: none;
+      border-bottom: none;
+    }
+
+    #featured::after {
+      bottom: -3px;
+      right: -3px;
+      border-left: none;
+      border-top: none;
+    }
+
+    /* 🔼 END PASTE 🔼 */
+
+  </style>
+</head>
   .hero-scripture {
     font-size: 18px;
     color: #9b1c1c;
@@ -471,19 +523,21 @@ h3 {
 
   </div>
 </section>
-</div>
-  <div class="feature-actions">
-  <!-- Read Sample -->
-  <a href="images/sample-1-howlong.jpg" target="_blank" rel="noopener">
-    <button class="read-sample-btn">Read Sample Pages</button>
-  </a>
 
-  <!-- Buy Book -->
-  <a href="https://amazon-link-here">
-    <button class="buy-book-btn">Buy the Book</button>
+ <div class="featuredButtons">
+  <a class="btn btnPrimary"
+     href="images/sample-1-howlong.jpg"
+     target="_blank"
+     rel="noopener">
+    Read Sample Pages
+  
+  <a class="btn btnOutline"
+     href="YOUR-AMAZON-LINK"
+     target="_blank"
+     rel="noopener">
+    Buy the Book
   </a>
 </div>
-
     <div class="sampleGrid">
       <a href="images/featured/habakkuk/sample1.jpg" target="_blank">
         <img src="images/featured/habakkuk/sample1.jpg" alt="Sample page 1">
