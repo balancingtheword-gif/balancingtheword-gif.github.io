@@ -98,17 +98,20 @@
       text-align:center;
       padding:20px 10px;
     }
-    .hero h2{
-      font-size:40px;
-      color:#1f3b64;
-      margin:0 0 12px;
-    }
+   .hero h2{
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 32px;        /* ⬅️ reduced from 40 */
+  line-height: 1.35;
+  color: #1f3b64;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
     .hero-scripture{
-      font-size:18px;
-      color:#9b1c1c;
-      font-style:italic;
-      margin:0;
-    }
+  font-size: 16px;        /* ⬅️ slightly smaller */
+  color: #9b1c1c;
+  font-style: italic;
+  margin-top: 4px;
+}
     @media (max-width:768px){
       .hero h2{ font-size:30px; }
     }
@@ -260,11 +263,11 @@
   margin-bottom: 8px;
   color: var(--navy);
 }
-    .site-logo{
-  width: 140px;          /* balanced header size */
+  .site-logo{
+  width: 190px;      /* ⬅️ bigger, balanced */
   height: auto;
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 14px;
 }
   </style>
 </head>
