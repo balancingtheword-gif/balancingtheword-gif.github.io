@@ -357,7 +357,42 @@
 #contact p{ margin: 8px 0; }
 #contact a{ color: var(--navy); font-weight: 600; }
 #contact a:hover{ color:#C1121F; }
+  /* Right-side Follow button inside Contact */
+#contact{
+  position: relative; /* anchor for positioning */
+}
 
+.contact-cta-right{
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Button styling (BTWM branded) */
+.follow-btn{
+  display:inline-block;
+  padding:10px 16px;
+  border-radius:999px;
+  font-weight:700;
+  text-decoration:none;
+  color:#fff;
+  background:linear-gradient(to right,#0b1f3a,#C1121F);
+  box-shadow:0 8px 18px rgba(11,31,58,.22);
+  transition:transform .18s ease, box-shadow .18s ease;
+}
+@media (max-width: 860px){
+  .contact-cta-right{
+    position: static;
+    transform: none;
+    margin-top: 14px;
+    text-align: center;
+  }
+}
+.follow-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 26px rgba(11,31,58,.32);
+}
   </style>
 </head>
 
@@ -494,6 +529,12 @@
   </p>
 
   <p><strong>Mailing:</strong> P.O. Box 1043, Wagoner, OK 74477</p>
+</div>
+    <div class="contact-cta-right">
+  <a class="follow-btn"
+     href="mailto:greetings@balancingtheword.com?subject=Subscribe%20to%20BTWM%20Updates">
+    Follow Me
+  </a>
 </div>
  </main>
 
