@@ -132,18 +132,22 @@
       padding:16px;
     }
 
-    /* Left column text behavior */
-    .heroLeft section.panel p{
-      text-align:justify;
-      margin:0;
-      line-height:1.6;
-    }
+   /* Justify left-column content */
+.heroLeft section.card p{
+  text-align: justify;
+}
 
-    /* Greetings override */
-    .heroLeft section#greetings.heroIntro,
-    .heroLeft section#greetings.heroIntro p{
-      text-align:center;
-    }
+/* GREETINGS override */
+.heroLeft section#greetings.heroIntro,
+.heroLeft section#greetings.heroIntro p{
+  text-align: center;
+}
+
+.heroLeft section#greetings.heroIntro p{
+  max-width: 62ch;
+  margin-left: auto;
+  margin-right: auto;
+}
     .heroLeft section#greetings .stay-tuned{
       color:#b21f2d;
       font-weight:bold;
@@ -243,7 +247,11 @@
   white-space: normal;
   overflow-wrap: break-word;
 }
-    
+    .heroLeft{
+  display: grid;
+  gap: 16px;
+}
+  
   </style>
 </head>
 
@@ -275,7 +283,7 @@
       <!-- LEFT COLUMN -->
       <div class="heroLeft">
 
-        <section class="panel heroIntro" id="greetings">
+        <<section class="card heroIntro" id="greetings">
           <h2>Greetings</h2>
           <p>
             <strong>Welcome to Balancing the Word Ministry.</strong>
@@ -285,7 +293,7 @@
           <p class="stay-tuned"><strong>Stay tuned.</strong></p>
         </section>
 
-        <section class="panel" id="mission">
+        <<section class="card" id="mission">
           <h2>The Mission</h2>
           <p>
             Balancing the Word Ministry exists to teach and equip believers with a
@@ -294,7 +302,7 @@
           </p>
         </section>
 
-        <section class="panel" id="lesli">
+        <section class="card" id="lesli">
           <a href="about.html" class="about-link">
             <img src="images/Website-HS.png" alt="Lesli D. Mize" class="headshot">
             <h2 class="lesli-name">Lesli D. Mize</h2>
