@@ -117,7 +117,6 @@ header {
   margin-top: 6px;
   font-size: 16px;
 }
-
     .card {
   background: var(--card);
   border: 1px solid var(--border);
@@ -134,17 +133,14 @@ header {
   );
   box-shadow: 0 14px 30px rgba(176,18,42,.18);
 }
-
 .featureStack > h2{
   text-align: center;
   margin-bottom: 14px;
 }
-
 /* Inner sections inside the Featured box */
 .featureBlock{
   padding: 6px 4px 10px;
 }
-
 /* Smaller titles inside Featured */
 .featureTitle{
   margin: 10px 0 6px 0;
@@ -155,7 +151,57 @@ header {
   margin: 0;
   line-height: 1.6;
 }
+    #featured .feature-main{
+  display: block;
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,.12);
+  background: #fff;
+  text-decoration: none;
+}
+#featured .feature-main img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+#featured .feature-zoom{
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  font-size: .85rem;
+  background: rgba(11,31,58,.85); /* BTWM navy */
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 999px;
+}
 
+#featured .feature-thumbs{
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+#featured .thumb{
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  overflow: hidden;
+  background: transparent;
+  cursor: pointer;
+  flex: 1;
+}
+
+#featured .thumb img{
+  width: 100%;
+  height: 84px;
+  object-fit: cover;
+  display: block;
+}
+
+#featured .thumb.is-active{
+  border-color: #c9a24d; /* BTWM gold */
+}
 /* Divider between Book + Blog */
 .mini-divider{
   height: 3px;
@@ -283,6 +329,27 @@ h3 {
 }
   </style>
 </head>
+  <script>
+  (function(){
+    const mainImg = document.getElementById('featureMainImg');
+    const thumbs = document.querySelectorAll('#featured .thumb');
+    const mainLink = document.querySelector('#featured .feature-main');
+
+    thumbs.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const full = btn.getAttribute('data-full');
+        const alt  = btn.getAttribute('data-alt');
+
+        mainImg.src = full;
+        mainImg.alt = alt;
+        mainLink.href = full;
+
+        thumbs.forEach(b => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+      });
+    });
+  })();
+</script>
 <body>
   <div class="topbar"></div>
 
@@ -317,24 +384,66 @@ h3 {
     color: #1f3b64;
     margin-bottom: 12px;
   }
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Balancing the Word Ministry</title>
 
-  <style>
-    .hero-scripture {
-      font-size: 18px;
-      color: #9b1c1c;
-      font-style: italic;
-    }
+  .hero-scripture {
+    font-size: 18px;
+    color: #9b1c1c;
+    font-style: italic;
+  }
 
-    @media (max-width: 768px) {
-      .hero h2 {
-        font-size: 30px;
-      }
+  @media (max-width: 768px) {
+    .hero h2 {
+      font-size: 30px;
     }
-     <nav class="boxed-nav">
+  }
+</style>
+
+</head>
+    <style>
+  /* ===== BOXED CENTERED NAV ===== */
+  .boxed-nav {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+  }
+
+  .boxed-nav a {
+    border: 2px solid #d4af37; /* Gold */
+    padding: 8px 16px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #0b2c4d; /* Navy */
+    border-radius: 4px;
+  }
+
+  .boxed-nav a:hover {
+    background-color: #b11226; /* Red */
+    color: white;
+    border-color: #b11226;
+  }
+
+  .boxed-nav a[href="blog.html"] {
+    background-color: #0b2c4d;
+    color: white;
+    border-color: #0b2c4d;
+  }
+      /* BTWM brand gradient divider */
+.brand-divider{
+  width: 100%;
+  height: 4px;
+  margin: 18px 0 26px;
+  background: linear-gradient(
+    to right,
+    #0b1f3a,   /* navy */
+    #b21f2d,   /* scarlet */
+    #c8a44d    /* gold */
+  );
+}
+</style>
+
+   <nav class="boxed-nav">
   <a href="about.html">About</a>
   <a href="blog.html">What About...</a>
   <a href="index.html#books">Books</a>
@@ -417,33 +526,48 @@ h3 {
     <em>Be Like Habakkuk</em> calls believers to trust God and live by faith in uncertain times.<br>
     A bold invitation to stand firm in God’s truth and sovereignty.
   </p>
-    
-      <!-- 🔼 END BUTTONS AREA 🔼 -->
+    <!-- Sample Pages -->
+  <div class="feature-gallery">
 
-    </div>
+    <!-- Main Preview -->
+    <div class="feature-main">
+  <img
+    id="featureMainImg"
+    src="images/sample-1-howlong.jpg"
+    alt="Be Like Habakkuk sample page — How Long, O LORD?"
+    loading="lazy">
+</div>
 
-    <!-- FEATURED BLOG CARD -->
-    <div class="card featuredBlog">
-      <!-- blog content -->
+      <span class="feature-zoom">Click to enlarge</span>
+    </a>
+
+    <!-- Thumbnails -->
+    <div class="feature-thumbs">
+      <button class="thumb is-active"
+        data-full="images/sample-1-howlong.jpg"
+        data-alt="Be Like Habakkuk sample page — How Long, O LORD?">
+        <img src="images/sample-1-howlong.jpg" alt="Sample page 1 thumbnail">
+      </button>
+
+      <button class="thumb"
+        data-full="images/sample-2-righteous.jpg"
+        data-alt="Be Like Habakkuk sample page — The Righteous Will Live by Faith">
+        <img src="images/sample-2-righteous.jpg" alt="Sample page 2 thumbnail">
+      </button>
     </div>
 
   </div>
-</section>
-
- <div class="featuredButtons">
-  <a class="btn btnPrimary"
-     href="images/sample-1-howlong.jpg"
-     target="_blank"
-     rel="noopener">
-    Read Sample Pages
-  
-  <a class="btn btnOutline"
-     href="YOUR-AMAZON-LINK"
-     target="_blank"
-     rel="noopener">
-    Buy the Book
-  </a>
 </div>
+</div>
+    <div class="featuredButtons">
+      <a class="btn primary" href="samples/habakkuk-sample.pdf" target="_blank">
+        Read Sample Pages
+      </a>
+      <a class="btn" href="YOUR-AMAZON-LINK" target="_blank">
+        Buy the Book
+      </a>
+    </div>
+
     <div class="sampleGrid">
       <a href="images/featured/habakkuk/sample1.jpg" target="_blank">
         <img src="images/featured/habakkuk/sample1.jpg" alt="Sample page 1">
