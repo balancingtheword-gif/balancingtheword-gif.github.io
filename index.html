@@ -372,14 +372,17 @@
 /* Button styling (BTWM branded) */
 .follow-btn{
   display:inline-block;
-  padding:10px 20px;
+  padding:12px 22px;              /* a touch taller */
   border-radius:999px;
   font-weight:700;
-  font-size:15px;
+  font-size:16px;                 /* ↑ readability */
+  letter-spacing:.3px;            /* improves clarity */
   text-decoration:none;
-  color:#fff;                         /* white text */
-  background:#0b1f3a;                 /* BTWM navy */
-  box-shadow:0 6px 14px rgba(11,31,58,.25);
+
+  color:#ffffff;                  /* pure white text */
+  background:#0b1f3a;             /* BTWM navy */
+
+  box-shadow:0 6px 14px rgba(11,31,58,.22);
   transition:transform .18s ease, box-shadow .18s ease;
 }
 @media (max-width: 860px){
