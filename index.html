@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Balancing the Word Ministry</title>
+
   <style>
     :root{
       --navy:#0b1f3a;
@@ -17,472 +18,250 @@
       --max:980px;
     }
     *{box-sizing:border-box}
- body {
-  margin: 0;
-  font-family: Georgia, "Times New Roman", serif;
-  background: var(--bg);
-  color: var(--text);
-  line-height: 1.8;
-  font-size: 18px;
-  padding: 20px;
-  border-bottom: 2px solid #D4AF37; /* Gold */
-}
-  p{
-  margin: 0 0 12px 0;
-}
 
-header p {
-  color: #C1121F; /* Red tagline */
-  font-weight: 600;
-}
+    body{
+      margin:0;
+      font-family: Georgia, "Times New Roman", serif;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.8;
+      font-size:18px;
+      padding:20px;
+      border-bottom:2px solid #D4AF37;
+    }
+
+    p{ margin:0 0 12px 0; }
 
     .wrap{max-width:var(--max);margin:0 auto;padding:18px}
-    .brand{display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap}
-    .title{display:flex;flex-direction:column;gap:4px}
+
+    /* Header */
+    header{ padding:10px 0; }
+    .brand{display:flex;flex-direction:column;align-items:center;text-align:center;gap:14px}
     h1{margin:0;font-size:26px;letter-spacing:.2px;color:var(--navy)}
     .tag{margin:0;color:var(--muted)}
-    nav{display:flex;gap:14px;flex-wrap:wrap}
-    .btn{display:inline-block;padding:10px 14px;border-radius:10px;border:1px solid var(--border);background:#fff}
-    /* Tighten header spacing */
-header {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
+    header p{ color:#C1121F; font-weight:600; }
 
-/* Tighten title + tagline spacing */
-.site-title {
-  margin-bottom: 2px;
-}
+    .brand-divider{
+      width:100%;
+      height:4px;
+      margin:18px 0 26px;
+      background:linear-gradient(to right,#0b1f3a,#b21f2d,#c8a44d);
+    }
 
-.tagline {
-  margin-top: 0;
-}
-    .btn.primary{background:var(--navy);border-color:var(--navy);color:#fff}
-   .hero {
-  padding-top: 20px;   /* reduce from whatever it was */
-  padding-bottom: 20px;
-}
-.heroGrid {
-  display: grid;
-  grid-template-columns: 1.2fr .8fr;
-  gap: 18px;
-  align-items: start;
-}
+    /* Nav */
+    .boxed-nav{
+      display:flex;
+      justify-content:center;
+      gap:14px;
+      margin-top:15px;
+      flex-wrap:wrap;
+    }
+    .boxed-nav a{
+      border:2px solid #d4af37;
+      padding:8px 16px;
+      text-decoration:none;
+      font-weight:bold;
+      color:#0b2c4d;
+      border-radius:4px;
+      background:#fff;
+    }
+    .boxed-nav a:hover{
+      background-color:#b11226;
+      color:#fff;
+      border-color:#b11226;
+    }
+    .boxed-nav a[href="blog.html"]{
+      background-color:#0b2c4d;
+      color:#fff;
+      border-color:#0b2c4d;
+    }
 
-/* Remove excess vertical spacing */
-.heroLeft {
-  margin-top: 0;
-}
+    /* Buttons */
+    .btn{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:10px;
+      border:1px solid var(--border);
+      background:#fff;
+      text-decoration:none;
+      color:var(--navy);
+      font-weight:700;
+    }
+    .btn.primary{
+      background:var(--navy);
+      border-color:var(--navy);
+      color:#fff;
+    }
 
-.heroLeft section {
-  margin-top: 0;
-  padding-top: 0;
-}
+    /* Hero */
+    .hero{
+      text-align:center;
+      padding:20px 10px;
+    }
+    .hero h2{
+      font-size:40px;
+      color:#1f3b64;
+      margin:0 0 12px;
+    }
+    .hero-scripture{
+      font-size:18px;
+      color:#9b1c1c;
+      font-style:italic;
+      margin:0;
+    }
+    @media (max-width:768px){
+      .hero h2{ font-size:30px; }
+    }
 
-/* Tighten heading spacing */
-.heroLeft h2 {
-  margin-top: 0;
-  margin-bottom: 8px;
-}
-    .heroIntro { 
-  margin-bottom: 12px; 
-}
-/* Justify ONLY the normal left-column sections */
-.heroLeft section.panel p{
-  text-align: justify;
-  margin: 0;
-  line-height: 1.6;
-}
+    /* Grid */
+    .heroGrid{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:18px;
+      align-items:start;
+    }
+    @media (max-width:800px){
+      .heroGrid{ grid-template-columns:1fr; }
+    }
 
-/* GREETINGS: override the justify rule above */
-.heroLeft section#greetings.heroIntro,
-.heroLeft section#greetings.heroIntro p{
-  text-align: center;
-}
+    /* Cards */
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:14px;
+      padding:16px;
+    }
 
-.heroLeft section#greetings.heroIntro{
-  margin-bottom: 12px;
-}
+    /* Left column text behavior */
+    .heroLeft section.panel p{
+      text-align:justify;
+      margin:0;
+      line-height:1.6;
+    }
 
-.heroLeft section#greetings.heroIntro p{
-  margin-left: auto;
-  margin-right: auto;
-}
+    /* Greetings override */
+    .heroLeft section#greetings.heroIntro,
+    .heroLeft section#greetings.heroIntro p{
+      text-align:center;
+    }
+    .heroLeft section#greetings .stay-tuned{
+      color:#b21f2d;
+      font-weight:bold;
+      margin-top:6px;
+      font-size:16px;
+    }
 
-/* Scarlet red "Stay tuned" */
-.heroLeft section#greetings .stay-tuned{
-  color: #b21f2d;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 6px;
-  font-size: 16px;
-}
-    .card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 16px;
-}
-    /* ===== FEATURED BOX (strong red accents) ===== */
-.featureStack{
-  border: 2px solid var(--red);
-  background: linear-gradient(
-    180deg,
-    rgba(176,18,42,.10),
-    rgba(255,255,255,1)
-  );
-  box-shadow: 0 14px 30px rgba(176,18,42,.18);
-}
-.featureStack > h2{
-  text-align: center;
-  margin-bottom: 14px;
-}
-/* Inner sections inside the Featured box */
-.featureBlock{
-  padding: 6px 4px 10px;
-}
-/* Smaller titles inside Featured */
-.featureTitle{
-  margin: 10px 0 6px 0;
-  font-size: 1.15trm;;
-  color: var(--navy);
-}
-  #featured .feature-desc{
-  margin: 0;
-  line-height: 1.6;
-}
-    #featured .feature-main{
-  display: block;
-  position: relative;
-  border-radius: 14px;
-  overflow: hidden;
-  border: 1px solid rgba(0,0,0,.12);
-  background: #fff;
-  text-decoration: none;
-}
-#featured .feature-main img{
-  width: 100%;
-  height: auto;
-  display: block;
-}
-#featured .feature-zoom{
-  position: absolute;
-  right: 10px;
-  bottom: 10px;
-  font-size: .85rem;
-  background: rgba(11,31,58,.85); /* BTWM navy */
-  color: #fff;
-  padding: 6px 10px;
-  border-radius: 999px;
-}
+    /* Featured card */
+    .featureStack{
+      border:2px solid var(--red);
+      background:linear-gradient(180deg, rgba(176,18,42,.10), rgba(255,255,255,1));
+      box-shadow:0 14px 30px rgba(176,18,42,.18);
+    }
+    .featureStack > h2{
+      text-align:center;
+      margin:0 0 14px;
+      color:var(--navy);
+      font-size:18px;
+    }
+    .featuredTitle{
+      margin:10px 0 6px 0;
+      font-size:1.15rem; /* fixed typo */
+      color:var(--navy);
+    }
+    .feature-desc{ margin:0; line-height:1.6; }
 
-#featured .feature-thumbs{
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-}
+    .featuredButtons{
+      display:flex;
+      gap:12px;
+      justify-content:center;
+      align-items:center;
+      margin-top:14px;
+      flex-wrap:wrap;
+    }
+    .featureStack .btn{
+      border:2px solid var(--gold);
+    }
+    .featureStack .btn:hover{
+      background:var(--red);
+      border-color:var(--red);
+      color:#fff;
+    }
 
-#featured .thumb{
-  padding: 0;
-  border: 2px solid transparent;
-  border-radius: 12px;
-  overflow: hidden;
-  background: transparent;
-  cursor: pointer;
-  flex: 1;
-}
+    .mini-divider{
+      height:3px;
+      width:86%;
+      margin:14px auto;
+      border-radius:999px;
+      background:linear-gradient(90deg,var(--red),var(--gold));
+    }
 
-#featured .thumb img{
-  width: 100%;
-  height: 84px;
-  object-fit: cover;
-  display: block;
-}
+    /* Headshot */
+    .about-link{
+      text-decoration:none;
+      color:inherit;
+      display:inline-block;
+      text-align:center;
+    }
+    .headshot{
+      width:140px;
+      height:140px;
+      object-fit:cover;
+      border-radius:50%;
+      border:3px solid var(--gold);
+      margin:10px auto 8px;
+      display:block;
+    }
+    #lesli p{
+      max-width:680px;
+      margin:0 auto 12px;
+    }
+    .lesli-name{ margin:0; color:var(--navy); }
 
-#featured .thumb.is-active{
-  border-color: #c9a24d; /* BTWM gold */
-}
-/* Divider between Book + Blog */
-.mini-divider{
-  height: 3px;
-  width: 86%;
-  margin: 14px auto;
-  border-radius: 999px;
-  background: linear-gradient(
-    90deg,
-    var(--red),
-    var(--gold)
-  );
-}
-
-/* Buttons inside Featured */
-.featureStack .btn{
-  border: 2px solid var(--gold);
-}
-
-.featureStack .btn:hover{
-  background: var(--red);
-  border-color: var(--red);
-  color: #fff;
-}
-
-/* Featured box with BTWM red accents */
-#featured {
-  border: 2px solid var(--red);
-  position: relative;
-}
-
-#featured::before,
-#featured::after {
-  content: "";
-  position: absolute;
-  width: 22px;
-  height: 22px;
-  border: 3px solid var(--red);
-}
-
-#featured::before {
-  top: -3px;
-  left: -3px;
-  border-right: none;
-  border-bottom: none;
-}
-
-#featured::after {
-  bottom: -3px;
-  right: -3px;
-  border-left: none;
-  border-top: none;
-}
-    h2{margin:0 0 10px 0;font-size:18px;color:var(--navy)}
-    .accent{height:4px;background:linear-gradient(90deg,var(--navy),var(--red),var(--gold));border-radius:999px;margin:14px 0}
-    .list{margin:0;padding-left:18px;color:var(--text)}
-    .muted{color:var(--muted)}
-    footer{border-top:1px solid var(--border)}
+    /* Footer */
+    footer{border-top:1px solid var(--border); margin-top:24px;}
     .foot{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between}
     .small{font-size:13px;color:var(--muted)}
-    @media (max-width:800px){
-      .heroGrid{grid-template-columns:1fr}
-    }
-    /* Amazon Author Page Button */
-.author-link-wrap{
-  text-align:center;
-  margin-top:3rem;
-}
-
-.author-link-btn{
-  display:inline-block;
-  padding:14px 28px;
-  font-size:1.05rem;
-  font-weight:600;
-  text-decoration:none;
-
-  background-color:var(--navy);
-  color:#ffffff;
-
-  border:2px solid var(--gold);
-  border-radius:6px;
-
-  transition:all .25s ease;
-}
-
-.author-link-btn:hover{
-  background-color:var(--red);
-  border-color:var(--red);
-  color:#ffffff;
-}
-
-/* Section Headers */
-h3 {
-  font-family: Georgia, "Times New Roman", serif;
-  color: var(--navy);
-  font-weight: 700;
-  letter-spacing: 0.3px;
-}
-/* =========================
-   Headshot + About link
-   ========================= */
-
-.about-link{
-  text-decoration:none;
-  color:inherit;
-  display:inline-block;
-  text-align:center;
-}
-
-.headshot{
-  width:140px;
-  height:140px;
-  object-fit:cover;
-  border-radius:50%;
-  border:3px solid var(--gold);
-  margin: 10px auto 8px;
-  display:block;
-}
-#lesli p{
-  max-width: 680px;
-  margin: 0 auto 12px;
-}
-.lesli-name{
-  margin:0;
-  color: var(--navy);
-}
   </style>
 </head>
-  <script>
-  (function(){
-    const mainImg = document.getElementById('featureMainImg');
-    const thumbs = document.querySelectorAll('#featured .thumb');
-    const mainLink = document.querySelector('#featured .feature-main');
 
-    thumbs.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const full = btn.getAttribute('data-full');
-        const alt  = btn.getAttribute('data-alt');
-
-        mainImg.src = full;
-        mainImg.alt = alt;
-        mainLink.href = full;
-
-        thumbs.forEach(b => b.classList.remove('is-active'));
-        btn.classList.add('is-active');
-      });
-    });
-  })();
-</script>
 <body>
-  <div class="topbar"></div>
 
-  <header>
-  <div class="brand" style="display:flex; flex-direction:column; align-items:center; text-align:center; gap:14px;">
-    <img src="/btwm-logo.png" alt="Balancing the Word Ministry logo" class="site-logo" />
+  <header class="wrap">
+    <div class="brand">
+      <img src="/btwm-logo.png" alt="Balancing the Word Ministry logo" class="site-logo" />
     </div>
 
     <section class="hero">
-  <h2>
-    Helping believers grow to maturity and become complete in Christ.
-  </h2>
-  <p class="hero-scripture">
-    Colossians 1:28
-  </p>
-    
-</section>
+      <h2>Helping believers grow to maturity and become complete in Christ.</h2>
+      <p class="hero-scripture">Colossians 1:28</p>
+    </section>
 
-    <head>
-  <meta charset="UTF-8">
-  <title>Balancing the Word Ministry</title>
+    <nav class="boxed-nav">
+      <a href="about.html">About</a>
+      <a href="blog.html">What About...</a>
+      <a href="index.html#books">Books</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
 
-  <style>
-  .hero {
-    text-align: center;
-    padding: 40px 20px;
-  }
-
-  .hero h2 {
-    font-family: 'Georgia', 'Times New Roman', serif;
-    font-size: 40px;
-    color: #1f3b64;
-    margin-bottom: 12px;
-  }
-
-  .hero-scripture {
-    font-size: 18px;
-    color: #9b1c1c;
-    font-style: italic;
-  }
-
-  @media (max-width: 768px) {
-    .hero h2 {
-      font-size: 30px;
-    }
-  }
-    .boxed-nav {
-      display: flex;
-      justify-content: center;
-      gap: 14px;
-      margin-top: 15px;
-      flex-wrap: wrap;
-    }
-</style>
-
-</head>
-
-  /* ===== BOXED CENTERED NAV ===== */
-  .boxed-nav {
-    display: flex;
-    justify-content: center;
-    gap: 14px;
-    margin-top: 15px;
-    flex-wrap: wrap;
-  }
-
-  .boxed-nav a {
-    border: 2px solid #d4af37; /* Gold */
-    padding: 8px 16px;
-    text-decoration: none;
-    font-weight: bold;
-    color: #0b2c4d; /* Navy */
-    border-radius: 4px;
-  }
-
-  .boxed-nav a:hover {
-    background-color: #b11226; /* Red */
-    color: white;
-    border-color: #b11226;
-  }
-
-  .boxed-nav a[href="blog.html"] {
-    background-color: #0b2c4d;
-    color: white;
-    border-color: #0b2c4d;
-  }
-      /* BTWM brand gradient divider */
-.brand-divider{
-  width: 100%;
-  height: 4px;
-  margin: 18px 0 26px;
-  background: linear-gradient(
-    to right,
-    #0b1f3a,   /* navy */
-    #b21f2d,   /* scarlet */
-    #c8a44d    /* gold */
-  );
-}
-</style>
-
-   <nav class="boxed-nav">
-  <a href="about.html">About</a>
-  <a href="blog.html">What About...</a>
-  <a href="index.html#books">Books</a>
-  <a href="index.html#contact">Contact</a>
-</nav>
     <div class="brand-divider"></div>
-
-  </div>
-
   </header>
 
-<main class="wrap">
-  <section class="hero">
-    <div class="heroGrid">
+  <main class="wrap">
+    <section class="heroGrid">
 
       <!-- LEFT COLUMN -->
       <div class="heroLeft">
 
-        <!-- GREETINGS -->
         <section class="panel heroIntro" id="greetings">
           <h2>Greetings</h2>
-
           <p>
             <strong>Welcome to Balancing the Word Ministry.</strong>
             We are glad you’re here and invite you to explore Scripture, grow in faith,
             and be encouraged as we seek to become <em>"complete in Christ"</em> together.
           </p>
-
           <p class="stay-tuned"><strong>Stay tuned.</strong></p>
         </section>
 
-        <!-- MISSION -->
         <section class="panel" id="mission">
           <h2>The Mission</h2>
           <p>
@@ -492,214 +271,81 @@ h3 {
           </p>
         </section>
 
-   <section class="panel" id="lesli">
- <a href="about.html" class="about-link">
-    <img src="images/Website-HS.png" alt="Lesli D. Mize" class="headshot">
-    <h2 class="lesli-name">Lesli D. Mize</h2>
-  </a>
+        <section class="panel" id="lesli">
+          <a href="about.html" class="about-link">
+            <img src="images/Website-HS.png" alt="Lesli D. Mize" class="headshot">
+            <h2 class="lesli-name">Lesli D. Mize</h2>
+          </a>
 
-  <p>
-    I’m Lesli D. Mize, founder of Balancing the Word Ministry. My desire is to serve
-    believers by helping them grow in discernment and maturity through biblically
-    balanced teaching grounded in Scripture.
-  </p>
+          <p>
+            I’m Lesli D. Mize, founder of Balancing the Word Ministry. My desire is to serve
+            believers by helping them grow in discernment and maturity through biblically
+            balanced teaching grounded in Scripture.
+          </p>
 
-  <p>
-    Serving and teaching are at the heart of this ministry. After surrendering my life
-    to Jesus Christ, writing became a way to serve others through studies, blogs, and
-    books—encouraging believers to remain rooted in truth and to grow toward becoming
-    <em>complete in Christ </em>(Colossians 1:28).
-  </p>
-</section>
-       
+          <p>
+            Serving and teaching are at the heart of this ministry. After surrendering my life
+            to Jesus Christ, writing became a way to serve others through studies, blogs, and
+            books—encouraging believers to remain rooted in truth and to grow toward becoming
+            <em>complete in Christ </em>(Colossians 1:28).
+          </p>
+        </section>
+
       </div>
 
       <!-- RIGHT COLUMN -->
-     <!-- RIGHT COLUMN -->
-<aside class="heroRight">
+      <aside class="heroRight">
 
-  <div class="card featureStack" id="featured-box">
-  <h2>Today’s Featured Book</h2>
+        <div class="card featureStack" id="featured">
+          <h2>Today’s Featured Book</h2>
 
-  <div class="featuredBook">
-    <img
-      src="images/habakkuk-cover.jpg"
-      alt="Be Like Habakkuk book cover"
-      class="featuredCover"
-    />
-    <h3 class="featuredTitle">Be Like Habakkuk!</h3>
+          <h3 class="featuredTitle">Be Like Habakkuk!</h3>
 
-   <p class="feature-desc">
-    <em>Be Like Habakkuk</em> calls believers to trust God and live by faith in uncertain times.<br>
-    A bold invitation to stand firm in God’s truth and sovereignty.
-  </p>
-    <!-- Sample Pages -->
-  <div class="feature-gallery">
+          <p class="feature-desc">
+            <em>Be Like Habakkuk</em> calls believers to trust God and live by faith in uncertain times.<br>
+            A bold invitation to stand firm in God’s truth and sovereignty.
+          </p>
 
-    <!-- Main Preview -->
-    <div class="feature-main">
-  <img
-    id="featureMainImg"
-    src="images/sample-1-howlong.jpg"
-    alt="Be Like Habakkuk sample page — How Long, O LORD?"
-    loading="lazy">
-</div>
+          <!-- THIS is the only place samples are linked (your navy button behavior) -->
+          <div class="featuredButtons">
+            <a class="btn primary"
+               href="images/sample-1-howlong.jpg"
+               target="_blank"
+               rel="noopener">
+              Read Sample Pages
+            </a>
 
-      <span class="feature-zoom">Click to enlarge</span>
-    </a>
+            <a class="btn"
+               href="YOUR-AMAZON-LINK"
+               target="_blank"
+               rel="noopener">
+              Buy the Book
+            </a>
+          </div>
 
-    <!-- Thumbnails -->
-    <div class="feature-thumbs">
-      <button class="thumb is-active"
-        data-full="images/sample-1-howlong.jpg"
-        data-alt="Be Like Habakkuk sample page — How Long, O LORD?">
-        <img src="images/sample-1-howlong.jpg" alt="Sample page 1 thumbnail">
-      </button>
+          <div class="mini-divider"></div>
 
-      <button class="thumb"
-        data-full="images/sample-2-righteous.jpg"
-        data-alt="Be Like Habakkuk sample page — The Righteous Will Live by Faith">
-        <img src="images/sample-2-righteous.jpg" alt="Sample page 2 thumbnail">
-      </button>
-    </div>
+          <h2>Today’s Featured Blog</h2>
+          <p class="muted">
+            Biblically balanced reflections on questions, topics, and issues that matter.
+          </p>
+          <a class="btn" href="blog.html">Read the Blog</a>
+        </div>
 
-  </div>
-</div>
-</div>
-    <div class="featuredButtons">
-      <a class="btn primary" href="samples/habakkuk-sample.pdf" target="_blank">
-        Read Sample Pages
-      </a>
-      <a class="btn" href="YOUR-AMAZON-LINK" target="_blank">
-        Buy the Book
-      </a>
-    </div>
-
-    <div class="sampleGrid">
-      <a href="images/featured/habakkuk/sample1.jpg" target="_blank">
-        <img src="images/featured/habakkuk/sample1.jpg" alt="Sample page 1">
-      </a>
-      <a href="images/featured/habakkuk/sample2.jpg" target="_blank">
-        <img src="images/featured/habakkuk/sample2.jpg" alt="Sample page 2">
-      </a>
-      <a href="images/featured/habakkuk/sample3.jpg" target="_blank">
-        <img src="images/featured/habakkuk/sample3.jpg" alt="Sample page 3">
-      </a>
-    </div>
-  </div>
-</div>
-    <div class="mini-divider"></div>
-
-    <!-- BLOG FEATURE -->
-    <div class="featureBlock" id="what-about">
-      <h3 class="featureTitle">What About…</h3>
-      <p class="muted">
-        Biblically balanced reflections on questions, topics, and issues that matter.
-      </p>
-      <a class="btn" href="blog.html">Read the Blog</a>
-    </div>
-  </div>
-
-</aside>
-</div>
       </aside>
 
-    </div>
-  </section>
-</main>
-
-<div class="heroLeft">
-
- <div class="heroIntro">
-  <div class="accent"></div>
-  <h2>Greetings</h2>
-  <p>
-    We are glad you’re here and invite you to explore Scripture, grow in faith,
-    and be encouraged as we seek to become <em>complete in Christ</em> together.
-  </p>
-</div>
-
-      <section id="books" class="books-section">
-  <h3>Books & Resources</h3>
-
-  <p class="books-intro">
-    Biblical resources written to equip believers with truth, discernment,
-    and a deeper understanding of Scripture.
-  </p>
-
-  <div class="books-grid">
-
-  <!-- BOOK 1 -->
-  <article class="book-card">
-    <img src="be-like-habakkuk-thumb.jpg"
-     alt="Be Like Habakkuk book cover"
-     class="book-cover">
-
-    <h4>Be Like Habakkuk!</h4>
-
-    <p>
-      Be Like Habakkuk calls believers to trust God and live by faith in uncertain times.
-      A bold invitation to stand firm in God’s truth and sovereignty.
-    </p>
-  </article>
-
-  <!-- BOOK 2 -->
-  <article class="book-card">
-    <img src="balaam-thumb.jpg"
-         alt="Balaam: Diviner or Prophet book cover"
-         class="book-cover">
-
-    <h4>Balaam: Diviner or Prophet?</h4>
-
-    <p>
-      The Book of Balaam exposes the danger of compromised obedience and divided hearts.
-      A sobering call to discern God’s truth and walk in faithful submission to Him.
-    </p>
-  </article>
-
-</div>
-
-  <p class="author-link-wrap">
-  <a class="author-link-btn"
-     href="https://www.amazon.com/author/lesli-d-mize_balancingtheword"
-     target="_blank"
-     rel="noopener">
-    View All My Books on Amazon →
-  </a>
-</p>
-
-</section>
-
-</section>
-
-    <section id="resources" class="card" style="margin-top:16px;">
-      <h2>Resources</h2>
-      <p class="muted">Links coming soon. (We can add your first downloadable PDF or blog post next.)</p>
-      <ul class="list">
-        <li><strong>Study Guides</strong> — Coming soon</li>
-        <li><strong>Devotionals</strong> — Coming soon</li>
-        <li><strong>Books</strong> — Coming soon</li>
-      </ul>
     </section>
 
-    <section id="newsletter" class="card" style="margin-top:16px;">
-      <h2>Stay Connected</h2>
-      <p class="muted">
-        For updates, you can email us and we’ll keep you posted as new resources are added.
+    <!-- (Keep your Books / Resources / Contact sections below here as you rebuild) -->
+
+    <section id="contact" class="card" style="margin-top:16px;">
+      <h2>Contact</h2>
+      <p>
+        <strong>Email:</strong>
+        <a href="mailto:greetings@balancingtheword.com">greetings@balancingtheword.com</a><br/>
+        <strong>Mailing:</strong> P.O. Box 1043, Wagoner, OK 74477
       </p>
-      <p><a class="btn primary" href=href="mailto:greetings@balancingtheword.com">Email: greetings@balancingtheword.com</a></p>
     </section>
-
-   <section id="contact" class="card" style="margin-top:16px;">
-  <h2>Contact</h2>
-  <p>
-    <strong>Email:</strong>
-    <a href="mailto:greetings@balancingtheword.com">
-      greetings@balancingtheword.com
-    </a><br/>
-    <strong>Mailing:</strong> P.O. Box 1043, Wagoner, OK 74477
-  </p>
-</section>
 
   </main>
 
@@ -713,5 +359,6 @@ h3 {
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
