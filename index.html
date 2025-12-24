@@ -296,23 +296,22 @@
 .heroRight{
   margin-top: 0px;
 }
-    /* ===== BTWM CARD UPGRADE ===== */
-.card{
+  /* ===== BTWM CARD UPGRADE (EXCEPT FEATURED) ===== */
+.card:not(#featured){
   background:#fff;
   border-radius:16px;
   padding:18px 18px 16px;
-  border:1px solid rgba(11,31,58,.14);            /* soft navy line */
-  border-top:4px solid #c8a44d;                   /* BTWM gold */
-  border-left:3px solid #C1121F;                  /* BTWM scarlet */
-  box-shadow:0 10px 24px rgba(11,31,58,.08);      /* soft depth */
+  border:1px solid rgba(11,31,58,.14);        /* soft navy line */
+  border-top:4px solid #c8a44d;               /* gold */
+  border-left:3px solid #C1121F;              /* scarlet */
+  box-shadow:0 10px 24px rgba(11,31,58,.08);
   transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;
 }
 
-/* Hover (desktop) */
-.card:hover{
+/* Hover (desktop only) */
+.card:not(#featured):hover{
   transform:translateY(-2px);
   box-shadow:0 14px 30px rgba(11,31,58,.12);
-  border-color:rgba(11,31,58,.22);
 }
 
 /* Headings inside cards */
