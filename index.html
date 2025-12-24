@@ -270,32 +270,31 @@
   margin: 0 auto 18px;
 }
     /* Align left column with featured box */
-.heroLeft > .card:first-child{
-  margin-top: 0;
-}
-    .heroLeft .card h2,
+.heroLeft .card h2,
 .heroRight .card h2{
-  margin-top: 18px;
+  margin: 0 0 10px;
 }
+
     .heroLeft{
   padding-top: 0;
 }
-    .left-block.greetings {
+ /* Greetings spacing */
+.left-block.greetings{
   margin-top: 12px;
   margin-bottom: 28px;
 }
-    .left-block.greetings h2 {
-  margin-top: 0;
-  margin-bottom: 8px;
+.left-block.greetings h2{ margin: 0 0 8px; }
+.left-block.greetings p{ margin-top: 0; }
+
+/* Normalize card headings */
+.heroLeft .card h2,
+.heroRight .card h2{
+  margin: 0 0 10px;
 }
-.left-block.greetings p {
-  margin-top: 0;
-}
-.heroRight {
-  margin-top: 36px; /* start here */
-}
-    .heroGrid > :nth-child(2){
-  margin-top: 18px;   /* adjust: 12 / 16 / 22 etc */
+
+/* Move RIGHT column down */
+.heroRight{
+  margin-top: 24px;
 }
   </style>
 </head>
