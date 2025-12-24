@@ -217,14 +217,14 @@
       text-align:center;
     }
     .headshot{
-      width:140px;
-      height:140px;
-      object-fit:cover;
-      border-radius:50%;
-      border:3px solid var(--gold);
-      margin:10px auto 8px;
-      display:block;
-    }
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--gold);
+  display: block;
+  margin: 0 auto 10px; /* ⬅️ centers horizontally */
+}
     #lesli p{
       max-width:680px;
       margin:0 auto 12px;
@@ -251,7 +251,15 @@
   display: grid;
   gap: 16px;
 }
-  
+  /* Center Lesli card content */
+#lesli{
+  text-align: center;
+}
+    .lesli-name{
+  margin-top: 4px;
+  margin-bottom: 8px;
+  color: var(--navy);
+}
   </style>
 </head>
 
@@ -304,7 +312,7 @@
 
         <section class="card" id="lesli">
           <a href="about.html" class="about-link">
-            <img src="images/Website-HS.png" alt="Lesli D. Mize" class="headshot">
+            <img src="images/about/headshot.png" alt="Lesli D. Mize" class="headshot">
             <h2 class="lesli-name">Lesli D. Mize</h2>
           </a>
 
