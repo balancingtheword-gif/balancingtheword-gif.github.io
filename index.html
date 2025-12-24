@@ -363,22 +363,26 @@
 }
 
 .contact-cta-right{
-  position: absolute;
-  right: 18px;
-  top: 50%;
+  right: 32px;          /* was 18px — pulls it inward */
+  top: 52%;             /* tiny optical centering */
   transform: translateY(-50%);
 }
 
 /* Button styling (BTWM branded) */
 .follow-btn{
   display:inline-block;
-  padding:10px 16px;
+  padding:10px 18px;
   border-radius:999px;
   font-weight:700;
+  font-size:15px;
   text-decoration:none;
   color:#fff;
-  background:linear-gradient(to right,#0b1f3a,#C1121F);
-  box-shadow:0 8px 18px rgba(11,31,58,.22);
+  background:linear-gradient(
+    to right,
+    #1f355c,   /* lighter navy */
+    #C1121F    /* BTWM scarlet */
+  );
+  box-shadow:0 6px 14px rgba(11,31,58,.25);
   transition:transform .18s ease, box-shadow .18s ease;
 }
 @media (max-width: 860px){
