@@ -363,25 +363,22 @@
 }
 
 .contact-cta-right{
-  right: 32px;          /* was 18px — pulls it inward */
-  top: 52%;             /* tiny optical centering */
-  transform: translateY(-50%);
+  position: absolute;
+  left: 70%;               /* pushes into empty right area */
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* Button styling (BTWM branded) */
 .follow-btn{
   display:inline-block;
-  padding:10px 18px;
+  padding:10px 20px;
   border-radius:999px;
   font-weight:700;
   font-size:15px;
   text-decoration:none;
-  color:#fff;
-  background:linear-gradient(
-    to right,
-    #1f355c,   /* lighter navy */
-    #C1121F    /* BTWM scarlet */
-  );
+  color:#fff;                         /* white text */
+  background:#0b1f3a;                 /* BTWM navy */
   box-shadow:0 6px 14px rgba(11,31,58,.25);
   transition:transform .18s ease, box-shadow .18s ease;
 }
@@ -392,10 +389,10 @@
     margin-top: 14px;
     text-align: center;
   }
-}
+  }
 .follow-btn:hover{
   transform:translateY(-2px);
-  box-shadow:0 12px 26px rgba(11,31,58,.32);
+  box-shadow:0 10px 22px rgba(11,31,58,.35);
 }
   </style>
 </head>
