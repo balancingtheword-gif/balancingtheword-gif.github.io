@@ -644,13 +644,15 @@ footer::after{
   border-radius:999px;
   background: linear-gradient(to right, var(--red), var(--gold));
 }
-/* Center Subscribe + Button group */
-.contact-cta-right{
+/* Center the Subscribe + Follow button group */
+#contact .contact-cta-right{
   display: flex;
   flex-direction: column;
-  align-items: center;     /* ⬅️ centers horizontally */
-  justify-content: center; /* ⬅️ centers vertically */
+  align-items: center;     /* horizontal centering */
+  justify-content: center; /* vertical centering */
   text-align: center;
+
+  margin: 0 auto;          /* centers the group itself */
 }
   </style>
 </head>
