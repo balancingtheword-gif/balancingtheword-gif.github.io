@@ -266,6 +266,31 @@
   text-align: center;      /* centers text inside cards */
   align-items: center;     /* centers button horizontally */
 }
+  /* Decorative icon box under blog cards */
+.feature-icon-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 24px auto 8px;
+  padding: 14px 18px;
+  width: fit-content;
+
+  border: 2px solid var(--gold);
+  border-radius: 16px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(202,162,74,0.10),
+    rgba(255,255,255,1)
+  );
+
+  box-shadow: 0 6px 14px rgba(11,31,58,0.12);
+}
+
+.feature-icon-box img{
+  width: 92px;          /* ⬅️ slightly larger */
+  height: auto;
+}
 .featureRow .featureBlock{
   width:100%;
 }
@@ -665,7 +690,7 @@
 </div> <!-- end .featureRow -->
 
 </div> <!-- end #featured -->
-<div class="feature-icon">
+<div class="feature-icon-box">
   <img src="images/logos/stand-alone-icon-book.png"
        alt="Balancing the Word Ministry scale icon">
 </div>
