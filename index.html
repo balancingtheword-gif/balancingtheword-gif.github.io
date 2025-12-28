@@ -487,6 +487,36 @@
 .featureBlock .btn{
   margin-top: auto;
 }
+    /* Sample dropdown */
+.sample-dropdown{
+  position: relative;
+}
+
+.sample-dropdown summary{
+  list-style: none;
+  cursor: pointer;
+}
+
+.sample-dropdown summary::-webkit-details-marker{
+  display: none;
+}
+
+.sample-links{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sample-links a{
+  text-decoration: none;
+  font-weight: 600;
+  color: var(--navy);
+}
+
+.sample-links a:hover{
+  color: var(--red);
+}
   </style>
 </head>
 
@@ -579,8 +609,19 @@
 
   <!-- THIS is the only place samples are linked (your navy button behavior) -->
 <div class="featuredButtons">
-  <a class="btn primary" href="images/sample-1-howlong.jpg" target="_blank" rel="noopener">Read Sample – Page 1</a>
-  <a class="btn" href="images/sample-2-righteous.jpg" target="_blank" rel="noopener">Read Sample – Page 2</a>
+
+  <details class="sample-dropdown">
+    <summary class="btn primary">Read Sample</summary>
+
+    <div class="sample-links">
+      <a href="images/sample-1-howlong.jpg" target="_blank" rel="noopener">
+        Sample – Page 1
+      </a>
+      <a href="images/sample-2-righteous.jpg" target="_blank" rel="noopener">
+        Sample – Page 2
+      </a>
+    </div>
+  </details>
 
   <a class="btn"
      href="https://www.amazon.com/author/lesli-d-mize_balancingtheword"
@@ -588,6 +629,7 @@
      rel="noopener">
     Buy the Book
   </a>
+
 </div> <!-- end .featuredButtons -->
 
 <h2 class="section-title">Today’s Featured Blog</h2>
