@@ -544,7 +544,35 @@
   align-items: center;
   column-gap: 24px;
 }
-  
+    /* Anchor for arrow positioning */
+#contact .contact-cta-right{
+  position: relative;
+}
+
+/* Left angled arrow */
+#contact .contact-cta-right::before{
+  content: "↘";
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-42px);
+  font-size: 18px;
+  color: var(--gold);
+  opacity: 0.75;
+}
+
+/* Right angled arrow */
+#contact .contact-cta-right::after{
+  content: "↙";
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(24px);
+  font-size: 18px;
+  color: var(--gold);
+  opacity: 0.75;
+}
+ 
     /* Scripture placeholder box */
 .scripture-box{
   text-align:center;
