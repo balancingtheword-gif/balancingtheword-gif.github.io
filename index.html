@@ -402,14 +402,17 @@
   text-align:center;
 }
     /* Contact should look like a normal card */
+/* CONTACT – styled like Featured box but navy */
 #contact{
-  border: inherit;
-  border-top: inherit;
-  border-left: inherit;
-  border-radius: inherit;
-  box-shadow: inherit;
-  padding: inherit;
-  background: inherit;
+  border: 2px solid var(--navy);
+  background: linear-gradient(
+    180deg,
+    rgba(11,31,58,0.10),
+    rgba(255,255,255,1)
+  );
+  box-shadow: 0 14px 30px rgba(11,31,58,0.18);
+  border-radius: 16px;
+  padding: 18px;
 }
 #contact p{ margin: 8px 0; }
 #contact a{ color: var(--navy); font-weight: 600; }
