@@ -250,18 +250,22 @@
   white-space: normal;
   overflow-wrap: break-word;
 }
-    /* LAYOUT: side-by-side featured cards */
+  /* FORCE blog cards side-by-side */
 .featureRow{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display:grid;
+  grid-template-columns: 1fr 1fr;
   gap: 18px;
-  align-items: stretch;
+  width:100%;
+}
+.featureRow .featureBlock{
+  width:100%;
 }
 /* Stack on mobile */
 @media (max-width: 820px){
   .featureRow{
     grid-template-columns: 1fr;
   }
+}
     .heroLeft{
   display: grid;
   gap: 16px;
@@ -435,6 +439,38 @@
   font-size:14px;
   color:rgba(11,31,58,.7);
 }
+    /* Blog intro text */
+.blog-intro{
+  text-align: center;
+  max-width: 70ch;
+  margin: 0 auto 18px;
+  color: var(--muted);
+}
+
+/* Side-by-side blog cards */
+.featureRow{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+/* Stack on mobile */
+@media (max-width: 820px){
+  .featureRow{
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Clean card alignment */
+.featureBlock{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.featureBlock .btn{
+  margin-top: auto;
+}
   </style>
 </head>
 
@@ -539,26 +575,24 @@
 </div> <!-- end .featuredButtons -->
 
 <h2 class="section-title">Today’s Featured Blog</h2>
-<div class="section-divider"></div>
+<div class="mini-divider"></div>
+
+<p class="feature-desc blog-intro">
+  Discover Scripture-centered insights as you read the current blog and explore previous posts to continue growing in faith.
+</p>
 
 <div class="featureRow">
+
   <div class="featureBlock">
     <h3>What About…</h3>
-    <p class="feature-desc">
-      explores biblical questions through sound teaching and real-life application,
-      equipping believers to build, educate, and grow as disciples of Jesus Christ.
-    </p>
     <a class="btn" href="blog.html">Read the Blog</a>
   </div>
 
   <div class="featureBlock">
     <h3>Previous Blog</h3>
-    <p class="feature-desc">
-      Browse earlier posts and continue growing through past teachings,
-      studies, and encouragement.
-    </p>
     <a class="btn" href="blog-archive.html">View Previous</a>
   </div>
+
 </div> <!-- end .featureRow -->
 
 </div> <!-- end #featured -->
