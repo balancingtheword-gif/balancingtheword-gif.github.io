@@ -478,47 +478,16 @@
   text-align: center;
 }
   /* Contact layout: left info + right subscribe */
-/* Contact layout: content rows */
 #contact{
-  display: block; /* restores original flow */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  column-gap: 24px;
 }
-
-/* Two-column layout only for inner content */
-#contact .contact-left,
-#contact .contact-cta-right{
-  box-sizing: border-box;
-}
-
-#contact{
-  padding: 20px;
-}
-
-/* Create two-column layout */
-#contact > .contact-left,
-#contact > .contact-cta-right{
-  display: inline-block;
-  vertical-align: middle;
-}
-
-#contact .contact-left{
-  width: 60%;
-}
-
-#contact .contact-cta-right{
-  width: 40%;
-  text-align: center;
-}
-
   
     /* Scripture placeholder box */
 .scripture-box{
   text-align:center;
-}
-#contact .contact-cta-right{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
 .scripture-box h3{
@@ -832,7 +801,9 @@ footer::after{
 
 <!-- (Keep your Books / Resources / Contact sections below here as you rebuild) -->
 
-<div class="contact-left">
+<div id="contact" class="card">
+  <h2>Contact</h2>
+
   <p><strong>Email:</strong>
     <a href="mailto:greetings@balancingtheword.com">
       greetings@balancingtheword.com
@@ -842,15 +813,15 @@ footer::after{
   <p><strong>Mailing:</strong>
     P.O. Box 1043, Wagoner, OK 74477
   </p>
-</div>
 
-<div class="contact-cta-right">
-  <p class="contact-note">Please Subscribe</p>
-  <a class="follow-btn"
-     href="mailto:greetings@balancingtheword.com?subject=Subscribe%20to%20BTWM%20Updates">
-    Follow Me
-  </a>
-</div>
+  <!-- FOLLOW BUTTON — MUST BE INSIDE CONTACT -->
+  <div class="contact-cta-right">
+    <p class="contact-note">Please Subscribe</p>
+    <a class="follow-btn"
+       href="mailto:greetings@balancingtheword.com?subject=Subscribe%20to%20BTWM%20Updates">
+      Follow Me
+    </a>
+  </div>
   
  </main>
 
