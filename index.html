@@ -424,12 +424,12 @@
   position: relative; /* anchor for positioning */
 }
 
+/* REMOVE absolute positioning */
 .contact-cta-right{
-  position: absolute;
-  left: 70%;               /* pushes into empty right area */
-  top: 50%;
-  transform: translate(-50%, -50%);
+  position: static;
+  transform: none;
 }
+
 /* CONTACT – styled like Featured box but navy */
 #contact{
   border: 2px solid var(--navy);
