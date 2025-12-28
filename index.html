@@ -537,38 +537,31 @@
   color: #0b1f3a;     /* BTWM navy */
   text-align: center;
 }
-  /* Contact layout: left info + right subscribe */
-#contact{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  column-gap: 24px;
-}
-    /* Anchor for arrow positioning */
-#contact .contact-cta-right{
+ /* Anchor arrows to the Subscribe text */
+#contact .contact-note{
   position: relative;
 }
 
 /* Left angled arrow */
-#contact .contact-cta-right::before{
+#contact .contact-note::before{
   content: "↘";
   position: absolute;
-  top: -18px;
+  top: -22px;
   left: 50%;
-  transform: translateX(-42px);
-  font-size: 46px;
+  transform: translateX(-36px);
+  font-size: 18px;
   color: var(--gold);
   opacity: 0.75;
 }
 
 /* Right angled arrow */
-#contact .contact-cta-right::after{
+#contact .contact-note::after{
   content: "↙";
   position: absolute;
-  top: -18px;
+  top: -22px;
   left: 50%;
-  transform: translateX(24px);
-  font-size: 46px;
+  transform: translateX(20px);
+  font-size: 18px;
   color: var(--gold);
   opacity: 0.75;
 }
