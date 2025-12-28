@@ -477,6 +477,14 @@
   color: #0b1f3a;     /* BTWM navy */
   text-align: center;
 }
+  /* Contact layout: left info + right subscribe */
+#contact{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  column-gap: 24px;
+}
+  
     /* Scripture placeholder box */
 .scripture-box{
   text-align:center;
@@ -648,11 +656,9 @@ footer::after{
 #contact .contact-cta-right{
   display: flex;
   flex-direction: column;
-  align-items: center;     /* horizontal centering */
-  justify-content: center; /* vertical centering */
+  align-items: center;
+  justify-content: center;
   text-align: center;
-
-  margin: 0 auto;          /* centers the group itself */
 }
   </style>
 </head>
