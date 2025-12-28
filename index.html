@@ -404,12 +404,14 @@
     /* Contact should look like a normal card */
 /* CONTACT – styled like Featured box but navy */
 #contact{
-  border: 2px solid var(--navy);
-  background: linear-gradient(
-    180deg,
-    rgba(11,31,58,0.10),
-    rgba(255,255,255,1)
-  );
+  border: inherit;
+  border-top: inherit;
+  border-left: inherit;
+  border-radius: inherit;
+  box-shadow: inherit;
+  padding: inherit;
+  background: inherit;
+}
   box-shadow: 0 14px 30px rgba(11,31,58,0.18);
   border-radius: 16px;
   padding: 18px;
@@ -428,7 +430,18 @@
   top: 50%;
   transform: translate(-50%, -50%);
 }
-
+/* CONTACT – styled like Featured box but navy */
+#contact{
+  border: 2px solid var(--navy);
+  background: linear-gradient(
+    180deg,
+    rgba(11,31,58,0.10),
+    rgba(255,255,255,1)
+  );
+  box-shadow: 0 14px 30px rgba(11,31,58,0.18);
+  border-radius: 16px;
+  padding: 18px;
+}
 /* Button styling (BTWM branded) */
 .follow-btn{
   display:inline-block;
