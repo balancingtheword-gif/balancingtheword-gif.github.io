@@ -679,6 +679,39 @@
   letter-spacing: 0.4px;
   margin-bottom: 10px; /* keeps spacing tight to button */
 }
+    /* Contact corner accents */
+#contact{
+  position: relative; /* required for accents */
+  overflow: hidden;   /* keeps accents inside rounded corners */
+}
+
+/* Top-left accent (gold) */
+#contact::before{
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: 28px;
+  height: 28px;
+  border-top: 3px solid var(--gold);
+  border-left: 3px solid var(--gold);
+  border-radius: 6px 0 0 0;
+  opacity: 0.9;
+}
+
+/* Bottom-right accent (red) */
+#contact::after{
+  content: "";
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  width: 28px;
+  height: 28px;
+  border-bottom: 3px solid var(--red);
+  border-right: 3px solid var(--red);
+  border-radius: 0 0 6px 0;
+  opacity: 0.85;
+}
     /* ===== FOOTER — BTWM NAVY STYLE ===== */
 footer{
   background: linear-gradient(
