@@ -455,18 +455,12 @@
   transform: none;   /* keep */
 }
   
-
 /* RIGHT: lift subscribe block slightly */
 #contact .contact-cta-right{
   padding-left: 24px;
   margin-top: -6px;
 }
 
-/* Slightly larger Follow button */
-#contact .follow-btn{
-  padding: 12px 26px;
-  font-size: 16px;
-}
 @media (max-width: 700px){
   #contact{
     grid-template-columns: 1fr;
@@ -717,7 +711,38 @@
     grid-template-columns: 1fr;
   }
 }
+/* Contact card text alignment */
+#contact{
+  text-align: center;
+}
 
+/* Ministry name */
+.connect-ministry{
+  font-weight: 700;
+  color: var(--navy);
+  margin: 6px 0 6px;
+}
+
+/* Address */
+.connect-address{
+  margin: 0 0 8px;
+  line-height: 1.5;
+}
+
+/* Email */
+.connect-email{
+  margin: 0;
+}
+
+#contact a{
+  color: var(--gold);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+#contact a:hover{
+  color: var(--red);
+}
     /* ===== FOOTER — BTWM NAVY STYLE ===== */
 footer{
   background: linear-gradient(
@@ -911,17 +936,23 @@ footer::after{
 
     <!-- CONTACT BOX -->
     <div class="card connect-card" id="contact">
-      <h2 class="connect-title">Contact</h2>
+  <h2 class="connect-title">Contact</h2>
 
-      <p class="connect-email">
-        <a href="mailto:greetings@balancingtheword.com">greetings@balancingtheword.com</a>
-      </p>
+  <p class="connect-ministry">
+    Balancing the Word Ministry
+  </p>
 
-      <p class="connect-address">
-        P.O. Box 1043<br>
-        Wagoner, OK 74477
-      </p>
-    </div>
+  <p class="connect-address">
+    P.O. Box 1043<br>
+    Wagoner, OK 74477
+  </p>
+
+  <p class="connect-email">
+    <a href="mailto:greetings@balancingtheword.com">
+      greetings@balancingtheword.com
+    </a>
+  </p>
+</div>
 
     <!-- SUBSCRIBE BOX -->
     <div class="card connect-card" id="subscribe">
