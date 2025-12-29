@@ -537,6 +537,18 @@
   color: #0b1f3a;     /* BTWM navy */
   text-align: center;
 }
+.substack-embed iframe {
+  width: 100%;
+  height: 320px;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  background: #ffffff;
+}
+.substack-embed {
+  max-width: 420px;
+  width: 100%;
+  margin: 0 auto;
+}
 
     /* Subscribe text */
 #contact .contact-note{
@@ -739,6 +751,12 @@
   border-radius: 0 0 6px 0;
   opacity: 0.85;
 }
+    .substack-embed {
+  max-width: 420px;
+  width: 100%;
+}
+
+
     /* ===== FOOTER — BTWM NAVY STYLE ===== */
 footer{
   background: linear-gradient(
@@ -945,17 +963,20 @@ footer::after{
      </div>
 
   <!-- RIGHT SIDE: Subscribe CTA -->
-  <div class="contact-cta-right">
-    <p class="contact-note">Please Subscribe</p>
-    <a class="follow-btn"
-    href="https://balancingtheword.substack.com/subscribe"
-   target="_blank"
-   rel="noopener noreferrer">
-  Follow BTWM
-</a>
+ <!-- RIGHT SIDE: Subscribe CTA -->
+<div class="contact-cta-right">
+  <p class="contact-note">Receive email updates</p>
+
+  <div class="substack-embed">
+    <iframe
+      src="https://balancingtheword.substack.com/embed"
+      frameborder="0"
+      scrolling="no"
+      title="Subscribe to Balancing the Word Ministry">
+    </iframe>
   </div>
 </div>
-  
+
  </main>
 
   <footer>
