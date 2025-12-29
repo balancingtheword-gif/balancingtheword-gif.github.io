@@ -431,13 +431,41 @@
   width: 100%;
   margin: 0 auto;
 }
- .contact-cards{
+/* Two-column layout */
+.connect-grid{
   display:grid;
   grid-template-columns: 1fr 1fr;
   gap:18px;
-  margin-top:12px;
+  align-items:start;
 }
 
+/* Stack Contact + icon */
+.connect-stack{
+  display:flex;
+  flex-direction:column;
+}
+
+/* Icon under Contact */
+.logo-box{
+  margin-top:16px;
+  text-align:left;
+}
+
+/* Icon size (matches scale icon) */
+.logo-box-img{
+  width:80px;
+  height:auto;
+  display:inline-block;
+}
+
+/* Mobile: stack everything */
+@media (max-width: 900px){
+  .connect-grid{
+    grid-template-columns:1fr;
+  }
+  .logo-box{
+    text-align:center;
+  }
 .contact-card{
   padding:16px 18px;
   border:1px solid rgba(11,31,58,.14);
@@ -830,47 +858,31 @@ footer::after{
   <div class="connect-grid">
 
     <!-- LEFT COLUMN -->
-    <div class="connect-left">
+    <div class="connect-stack">
 
-      <!-- CONTACT BOX -->
+      <!-- CONTACT CARD -->
       <div class="card connect-card" id="contact">
         <h2 class="connect-title">Contact</h2>
         <!-- contact content -->
-      </div>
-
-      <!-- LOGO BOX (UNDER CONTACT – LEFT SIDE) -->
       <div class="logo-box">
         <img
-  src="images/logos/plain-shield-trans.png"
-  alt="Balancing the Word Ministry Shield Icon"
-  class="logo-box-img"
->
-      </div>
-
-    </div>
-
-    <!-- RIGHT COLUMN -->
-    <div class="connect-right">
-      <!-- follow / other card -->
+          src="images/logos/plain-shield-trans.png"
+          alt="Balancing the Word Ministry shield icon"
+          class="logo-box-img"
+        >
+      <div class="card subscribe-card" id="subscribe">
+      <h2 class="connect-title">Subscribe</h2>
+      <!-- Substack embed -->
     </div>
 
   </div>
 </section>
-
-    <!-- SUBSCRIBE BOX -->
-    <div class="card connect-card" id="subscribe">
-      <h2 class="connect-title">Subscribe</h2>
-      <p class="connect-note">Receive email updates when new teachings are published.</p>
-
-      <div class="substack-embed">
-        <iframe
-          src="https://balancingtheword.substack.com/embed"
-          frameborder="0"
-          scrolling="no"
-          title="Subscribe to Balancing the Word Ministry">
-        </iframe>
-      </div>
     </div>
+
+      </div>
+</section>
+
+       </div>
 
   </div>
 </section>
