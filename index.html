@@ -589,13 +589,42 @@
   border-radius: 12px;
   background: #ffffff;
 }
+/* CONNECT GRID BASE LAYOUT */
+.connect-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:18px;
+}
+
+.connect-left,
+.connect-right{
+  display:flex;
+  flex-direction:column;
+}
 
 /* Mobile: stack the two boxes */
 @media (max-width: 900px){
   .connect-grid{
     grid-template-columns: 1fr;
   }
+/* LOGO BOX under Contact */
+.logo-box{
+  background:#ffffff;
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:22px 18px;
+  margin-top:18px;
+  text-align:center;
+  box-shadow:0 6px 14px rgba(11,31,58,.12);
 }
+
+.logo-box-img{
+  max-width:240px;
+  width:100%;
+  height:auto;
+  display:inline-block;
+}
+
 /* Contact card text alignment */
 /* Ministry name */
 .connect-ministry{
@@ -818,32 +847,33 @@ footer::after{
 <section id="connect" class="connect">
   <div class="connect-grid">
 
-    <!-- CONTACT BOX -->
-    <div class="card connect-card" id="contact">
-  <h2 class="connect-title">Contact</h2>
+    <!-- LEFT COLUMN -->
+    <div class="connect-left">
 
-  <p class="connect-ministry">
-    Balancing the Word Ministry
-  </p>
+      <!-- CONTACT BOX -->
+      <div class="card connect-card" id="contact">
+        <h2 class="connect-title">Contact</h2>
+        <!-- contact content -->
+      </div>
 
-  <p class="connect-address">
-    P.O. Box 1043<br>
-    Wagoner, OK 74477
-  </p>
+      <!-- LOGO BOX (UNDER CONTACT – LEFT SIDE) -->
+      <div class="logo-box">
+        <img
+          src="images/logos/plain-shield-banner.png"
+          alt="Balancing the Word Ministry Shield Banner Logo"
+          class="logo-box-img"
+        >
+      </div>
 
-  <p class="connect-email">
-    <a href="mailto:greetings@balancingtheword.com">
-      greetings@balancingtheword.com
-    </a>
-  </p>
-</div>
-    <div class="logo-box">
-  <img 
-    src="images/logos/plain-shield-banner.png" 
-    alt="Balancing the Word Ministry Shield Banner Logo"
-    class="logo-box-img"
-  >
-</div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="connect-right">
+      <!-- follow / other card -->
+    </div>
+
+  </div>
+</section>
 
     <!-- SUBSCRIBE BOX -->
     <div class="card connect-card" id="subscribe">
