@@ -472,8 +472,6 @@
     grid-template-columns: 1fr;
   }
  
- }
-
 /* CONTACT – styled like Featured box but navy */
 #contact{
   border: 2px solid var(--navy);
@@ -670,82 +668,55 @@
   opacity: 0.9;
 }
     /* ===== CONTACT: Featured-style navy box (FINAL OVERRIDE) ===== */
-#contact.card{
-  border: 2px solid var(--navy) !important;
-  background: linear-gradient(
-    180deg,
-    rgba(11,31,58,0.10),
-    rgba(255,255,255,1)
-  ) !important;
-  box-shadow: 0 14px 30px rgba(11,31,58,0.18) !important;
-  border-radius: 16px !important;
-  padding: 18px !important;
+/* TWO SEPARATE BOXES: Contact + Subscribe */
+.connect {
+  margin-top: 24px;
 }
 
-#contact.card h2{
-  text-align: center;
-  color: var(--navy);
+.connect-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  align-items: start;
 }
 
-#contact.card a{
-  color: var(--gold);
-  font-weight: 700;
-  text-decoration: none;
+.connect-card{
+  padding: 18px 18px 20px;
 }
 
-#contact.card a:hover{
-  color: var(--red);
-}
-
-#contact .contact-note{
-  color: var(--gold);
-  font-weight: 700;
+.connect-title{
+  margin: 0 0 12px;
   text-align: center;
 }
-    #contact .contact-note{
-  font-size: 19px;     /* ⬅️ larger */
-  font-weight: 700;
-  letter-spacing: 0.4px;
-  margin-bottom: 10px; /* keeps spacing tight to button */
-}
-    /* Contact corner accents */
-#contact{
-  position: relative; /* required for accents */
-  overflow: hidden;   /* keeps accents inside rounded corners */
+
+.connect-note{
+  margin: 0 0 12px;
+  text-align: center;
+  font-weight: 600;
+  color: #0b1f3a;
 }
 
-/* Top-left accent (gold) */
-#contact::before{
-  content: "";
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  width: 28px;
-  height: 28px;
-  border-top: 3px solid var(--gold);
-  border-left: 3px solid var(--gold);
-  border-radius: 6px 0 0 0;
-  opacity: 0.9;
-}
-
-/* Bottom-right accent (red) */
-#contact::after{
-  content: "";
-  position: absolute;
-  bottom: 12px;
-  right: 12px;
-  width: 28px;
-  height: 28px;
-  border-bottom: 3px solid var(--red);
-  border-right: 3px solid var(--red);
-  border-radius: 0 0 6px 0;
-  opacity: 0.85;
-}
-    .substack-embed {
-  max-width: 420px;
+/* Substack embed sizing */
+.substack-embed{
   width: 100%;
+  max-width: 520px;   /* gives it room */
+  margin: 0 auto;
 }
 
+.substack-embed iframe{
+  width: 100%;
+  height: 320px;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  background: #ffffff;
+}
+
+/* Mobile: stack the two boxes */
+@media (max-width: 900px){
+  .connect-grid{
+    grid-template-columns: 1fr;
+  }
+}
 
     /* ===== FOOTER — BTWM NAVY STYLE ===== */
 footer{
@@ -935,23 +906,27 @@ footer::after{
 
 <!-- (Keep your Books / Resources / Contact sections below here as you rebuild) -->
 
-<section id="contact" class="contact">
-  <h2 class="section-title">Contact</h2>
+<section id="connect" class="connect">
+  <div class="connect-grid">
 
-  <div class="contact-cards">
-    <!-- LEFT CARD -->
-    <div class="contact-card">
-      <a class="contact-email" href="mailto:greetings@balancingtheword.com">
-        greetings@balancingtheword.com
-      </a>
-      <p class="contact-address">
-        P.O. Box 1043, Wagoner, OK 74477
+    <!-- CONTACT BOX -->
+    <div class="card connect-card" id="contact">
+      <h2 class="connect-title">Contact</h2>
+
+      <p class="connect-email">
+        <a href="mailto:greetings@balancingtheword.com">greetings@balancingtheword.com</a>
+      </p>
+
+      <p class="connect-address">
+        P.O. Box 1043<br>
+        Wagoner, OK 74477
       </p>
     </div>
 
-    <!-- RIGHT CARD -->
-    <div class="contact-card">
-      <p class="contact-note">Receive email updates</p>
+    <!-- SUBSCRIBE BOX -->
+    <div class="card connect-card" id="subscribe">
+      <h2 class="connect-title">Subscribe</h2>
+      <p class="connect-note">Receive email updates when new teachings are published.</p>
 
       <div class="substack-embed">
         <iframe
@@ -962,6 +937,11 @@ footer::after{
         </iframe>
       </div>
     </div>
+
+  </div>
+</section>
+
+      </div>
   </div>
 </section>
 
