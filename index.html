@@ -525,7 +525,6 @@
     margin-top: 14px;
     text-align: center;
   }
-  }
 .follow-btn:hover{
   transform:translateY(-2px);
   box-shadow:0 10px 22px rgba(11,31,58,.35);
@@ -786,6 +785,13 @@ footer::after{
   justify-content: center;
   text-align: center;
 }
+  .site-footer, footer {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  clear: both;
+}
   </style>
 </head>
 
@@ -929,7 +935,6 @@ footer::after{
 
 <div id="contact" class="card">
   <h2>Contact</h2>
-
   <!-- LEFT SIDE: Contact info -->
   <div class="contact-left">
    <p>
@@ -937,11 +942,8 @@ footer::after{
     greetings@balancingtheword.com
   </a>
 </p>
-
-<p>
   P.O. Box 1043, Wagoner, OK 74477
 </p>
-
      </div>
 
   <!-- RIGHT SIDE: Subscribe CTA -->
@@ -954,7 +956,6 @@ rel="noopener noreferrer"
       Follow Me
     </a>
   </div>
-</div>
   
  </main>
 
