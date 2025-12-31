@@ -377,17 +377,23 @@
 .subscribe-card{
   height:100%;
 }
-    .contact-card{
+   .contact-card{
   display:flex;
   flex-direction:column;
-}
-     .contact-card{
+  height:100%;
   text-align:center;
 }
-    .contact-card p{
-  margin:6px 0;
+.contact-card *{
+  text-align:center;
 }
 
+.contact-card > *{
+  margin:6px 0;
+}
+.contact-card a{
+  display:inline-block;
+  margin:6px auto;
+}
 .contact-card .scripture-box{
   margin-top:auto;         /* pushes scripture box down */
 }
