@@ -121,12 +121,21 @@
       margin-bottom: 8px;
       font-weight: 600;
     }
-    .hero-scripture{
-      font-size: 16px;
-      color: #9b1c1c;
-      font-style: italic;
-      margin-top: 4px;
-    }
+   /* Decorative gold divider under hero */
+.hero-divider{
+  width: 180px;
+  height: 4px;
+  margin: 14px auto 18px;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #d4af37,
+    transparent
+  );
+  box-shadow: 0 0 6px rgba(212,175,55,0.45);
+}
+
     @media (max-width:768px){
       .hero h2{ font-size:30px; }
     }
@@ -478,12 +487,13 @@
     >
   </header>
 
-  <section class="hero">
-    <h2>Helping believers grow to maturity and become complete in Christ.</h2>
-    <p
-  </section>
+ <section class="hero">
+  <h2>Helping believers grow to maturity and become complete in Christ.</h2>
+</section>
 
-  <nav class="boxed-nav">
+<div class="hero-divider"></div>
+
+<nav class="boxed-nav">
     <a href="about.html">About</a>
     <a href="blog.html">What About...</a>
     <a href="index.html#books">Books</a>
