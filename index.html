@@ -358,11 +358,11 @@
       margin-top:24px;
     }
     .connect-grid{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:18px;
-      align-items:start;
-    }
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:24px;
+  align-items:stretch;     /* KEY */
+}
     .connect-stack{
       display:flex;
       flex-direction:column;
@@ -372,6 +372,18 @@
    /* Compact the subscribe card */
 .subscribe-card{
   padding:18px 18px;      /* reduce internal spacing */
+}
+.contact-card,
+.subscribe-card{
+  height:100%;
+}
+    .contact-card{
+  display:flex;
+  flex-direction:column;
+}
+
+.contact-card .scripture-box{
+  margin-top:auto;         /* pushes scripture box down */
 }
 
 /* If your embed has a wrapper like .substack-embed */
