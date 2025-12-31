@@ -54,13 +54,20 @@
   overflow:hidden;
 }
 
+.site-header{
+  width:100%;
+  background:#0b1f3a;
+  overflow:hidden;
+}
+
 .site-header img{
   width:100%;
-  height:auto;
+  height:56vh;          /* makes it tall enough to feel like a hero */
   display:block;
-  max-height:520px;
-  object-fit:contain;
+  object-fit:cover;     /* fills the space (removes side gaps) */
+  object-position:center;
 }
+.site-header{ padding:0; }
 
     /* Nav */
     .boxed-nav{
