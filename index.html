@@ -475,6 +475,16 @@
       color:#d4af37;
       font-weight:700;
     }
+    footer .legal a{
+  color: var(--muted);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+footer .legal a:hover{
+  text-decoration: underline;
+}
+
   </style>
 </head>
 
@@ -677,12 +687,17 @@
       <div class="small">© <span id="y"></span> Balancing the Word Ministry</div>
       <div class="small">Colossians 1:28</div>
       <div class="small tagline">Build • Educate • Disciple</div>
+      
+      <!-- Privacy Policy -->
+    <div class="small legal">
+      <a href="/privacy-policy.html">Privacy Policy</a>
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
-
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+   
 </body>
 </html>
