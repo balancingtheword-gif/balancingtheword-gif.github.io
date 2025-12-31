@@ -807,8 +807,42 @@ footer .tagline{
   color:#d4af37;
   font-weight:700;
 }
+  .site-footer{
+  background:#0b1f3a;   /* BTWM navy */
+  color:#fff;
+  padding:22px 0;
+  margin-top:28px;
+}
+
+.site-footer .small{
+  font-size:14px;
+  text-align:center;
+  margin:6px 0;
+}
+
+.site-footer .tagline{
+  color:#d4af37;        /* BTWM gold */
+  font-weight:700;
+}
+
   </style>
 </head>
+  <!-- FOOTER SHOULD APPEAR BELOW THIS LINE -->
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="small">© <span id="y"></span> Balancing the Word Ministry</div>
+    <div class="small">Colossians 1:28</div>
+    <div class="small tagline">Build • Educate • Disciple</div>
+  </div>
+</footer>
+
+<script>
+  window.addEventListener("DOMContentLoaded", () => {
+    const y = document.getElementById("y");
+    if (y) y.textContent = new Date().getFullYear();
+  });
+</script>
 
 <body>
 
