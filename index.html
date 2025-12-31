@@ -47,6 +47,20 @@
       margin:10px 0 12px;
       background:linear-gradient(to right,#0b1f3a,#b21f2d,#c8a44d);
     }
+    /* WEBSITE HEADER IMAGE */
+.site-header{
+  width:100%;
+  background:#0b1f3a; /* BTWM Navy */
+  overflow:hidden;
+}
+
+.site-header img{
+  width:100%;
+  height:auto;
+  display:block;
+  max-height:520px;
+  object-fit:contain;
+}
 
     /* Nav */
     .boxed-nav{
@@ -757,10 +771,12 @@ footer .tagline{
 
 <body>
 
-  <header class="wrap">
-    <div class="brand">
-      <img src="logos/btwm-logo.png" alt="Balancing the Word Ministry logo" class="site-logo">
-    </div>
+ <header class="site-header">
+  <img 
+    src="images/website-header-1.png"
+    alt="Balancing the Word Ministry — Build • Educate • Disciple"
+  >
+</header>
 
     <section class="hero">
       <h2>Helping believers grow to maturity and become complete in Christ.</h2>
