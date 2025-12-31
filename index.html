@@ -397,27 +397,29 @@
       margin:16px auto 12px;
       background:linear-gradient(to right, transparent, #d4af37, transparent);
     }
-    .scripture-ref-only{
-      margin:0;
-      text-align:center;
-      font-weight:700;
-      color:#d4af37;
-    }
+    .scripture-box{
+  background:#0b1f3a;           /* BTWM navy */
+  padding:22px 26px;            /* slightly taller */
+  border-radius:12px;
+  text-align:center;
+}
 
-    .scripture-tagline{
-      margin:14px 0 0;
-      text-align:center;
-      color:#fff;
-      background:#0b1f3a;
-      padding:10px 12px;
-      border-radius:12px;
-    }
-    .scripture-tagline span{
-      display:inline-block;
-      margin-top:6px;
-      color:#d4af37;
-      font-weight:700;
-    }
+/* Scripture text */
+.scripture-text{
+  color:#f5e6a8;                /* BRIGHT warm gold (more readable) */
+  font-size:16px;
+  font-weight:600;
+  line-height:1.6;
+  margin-bottom:10px;
+}
+
+/* Scripture reference */
+.scripture-ref{
+  color:#ffd966;                /* brighter gold for emphasis */
+  font-size:15px;
+  font-weight:700;
+  letter-spacing:.4px;
+}
 
     .subscribe-card iframe{
       width:100%;
@@ -647,11 +649,14 @@ footer .legal a:hover{
             <div class="contact-divider"></div>
             
 
-            <p class="scripture-tagline">
-              Proclaiming Christ • Teaching with wisdom<br>
-              <span>Colossians 1:28</span>
-            </p>
-          </div>
+            <div class="scripture-box">
+  <div class="scripture-text">
+    “Him we preach, warning every man, and teaching every man in all wisdom…”
+  </div>
+  <div class="scripture-ref">
+    Colossians 1:28
+  </div>
+</div>
 
           <!-- Optional icon box (if you want it under Contact) -->
           <!--
