@@ -369,11 +369,21 @@
       max-width:520px;
     }
     .connect-card,
-    .subscribe-card{
-      padding:34px 18px 20px;
-      margin:0;
-      width:100%;
-    }
+   /* Compact the subscribe card */
+.subscribe-card{
+  padding:18px 18px;      /* reduce internal spacing */
+}
+
+/* If your embed has a wrapper like .substack-embed */
+.substack-embed{
+  max-width:520px;
+  margin:0 auto;
+}
+
+/* Reduce extra whitespace inside the embed (common) */
+.subscribe-card p{ margin:8px 0; }
+.subscribe-card h2, .subscribe-card h3{ margin:0 0 10px; }
+
     .connect-title{
       margin:0 0 12px;
       text-align:center;
