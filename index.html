@@ -369,11 +369,21 @@
       max-width:520px;
     }
     .connect-card,
-    .subscribe-card{
-      padding:34px 18px 20px;
-      margin:0;
-      width:100%;
-    }
+   /* Compact the subscribe card */
+.subscribe-card{
+  padding:18px 18px;      /* reduce internal spacing */
+}
+
+/* If your embed has a wrapper like .substack-embed */
+.substack-embed{
+  max-width:520px;
+  margin:0 auto;
+}
+
+/* Reduce extra whitespace inside the embed (common) */
+.subscribe-card p{ margin:8px 0; }
+.subscribe-card h2, .subscribe-card h3{ margin:0 0 10px; }
+
     .connect-title{
       margin:0 0 12px;
       text-align:center;
@@ -397,29 +407,9 @@
       margin:16px auto 12px;
       background:linear-gradient(to right, transparent, #d4af37, transparent);
     }
-    .scripture-box{
-  background:#0b1f3a;           /* BTWM navy */
-  padding:22px 26px;            /* slightly taller */
-  border-radius:12px;
-  text-align:center;
-}
-
-/* Scripture text */
-.scripture-text{
-  color:#f5e6a8;                /* BRIGHT warm gold (more readable) */
-  font-size:16px;
-  font-weight:600;
-  line-height:1.6;
-  margin-bottom:10px;
-}
-
-/* Scripture reference */
-.scripture-ref{
-  color:#ffd966;                /* brighter gold for emphasis */
-  font-size:15px;
-  font-weight:700;
-  letter-spacing:.4px;
-}
+.scripture-box{ background:#0b1f3a; padding:14px 18px; border-radius:12px; text-align:center; }
+.scripture-text{ color:#f5e6a8; font-size:14px; font-weight:650; line-height:1.35; margin:0 0 6px; }
+.scripture-ref{ color:#ffd966; font-size:13px; font-weight:800; letter-spacing:.3px; margin:0; }
 
     .subscribe-card iframe{
       width:100%;
@@ -649,13 +639,11 @@ footer .legal a:hover{
             <div class="contact-divider"></div>
             
 
-            <div class="scripture-box">
-  <div class="scripture-text">
-    “Him we preach, warning every man, and teaching every man in all wisdom…”
-  </div>
-  <div class="scripture-ref">
-    Colossians 1:28
-  </div>
+ <div class="scripture-box">
+  <div class="scripture-text">“Him we preach… teaching every man in all wisdom.”</div>
+  <div class="scripture-ref">Colossians 1:28</div>
+</div>
+
 </div>
 
           <!-- Optional icon box (if you want it under Contact) -->
