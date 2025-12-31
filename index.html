@@ -498,12 +498,40 @@ footer .legal a:hover{
   letter-spacing:.3px;
   margin:0;
 }
-    /* HARD TEST – should be very obvious if CSS is applying */
+    /* Scripture box – final override */
 .scripture-box{
-  outline: 6px solid hotpink !important;
-  padding: 30px !important;
+  background:#0b1f3a !important;
+  padding:16px 18px !important;     /* slightly taller, still compact */
+  border-radius:12px !important;
+  text-align:center !important;
 }
-  </style>
+    .scripture-text{
+  color:#f5e6a8 !important;
+  font-size:14px !important;
+  font-weight:650 !important;
+  line-height:1.35 !important;
+  margin:0 0 4px !important;        /* small gap above divider */
+}
+
+.scripture-ref{
+  color:#ffd966 !important;
+  font-size:13px !important;
+  font-weight:800 !important;
+  letter-spacing:.3px !important;
+  margin:0 !important;
+}
+
+/* Mini divider */
+.scripture-ref::before{
+  content:"" !important;
+  display:block !important;
+  width:26px !important;
+  height:2px !important;
+  background:#c8a44d !important;
+  margin:3px auto 3px !important;   /* tiny space above & below */
+  border-radius:2px !important;
+}
+    </style>
 </head>
 
 <body>
