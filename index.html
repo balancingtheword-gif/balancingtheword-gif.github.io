@@ -436,21 +436,26 @@
 /* Two-column layout */
 .connect-grid{
   display:grid;
-  grid-template-columns: minmax(520px, 1fr) minmax(520px, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap:18px;
   align-items:start;
 }
 
-@media (max-width: 1100px){
+@media (max-width: 900px){
   .connect-grid{
-    grid-template-columns: 1fr; /* stack on smaller screens */
+    grid-template-columns: 1fr;
   }
 }
 
 /* Make both grid children fill the column */
 .connect-grid > *{
-  width:100%;
   justify-self:stretch;
+  min-width:0;          /* prevents overflow/shrink issues */
+}
+/* In the connect section, cards must fill their grid column */
+#connect .card{
+  width:100%;
+  max-width:none;
 }
 
 /* Stack Contact + icon */
