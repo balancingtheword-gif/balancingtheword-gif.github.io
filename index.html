@@ -804,7 +804,41 @@ footer .tagline{
   font-weight:700;
   letter-spacing:.2px;
 }
+/* ===== CONNECT SECTION: HARD OVERRIDES (paste at VERY bottom) ===== */
 
+#connect .connect-grid{
+  display:grid !important;
+  grid-template-columns: 1fr 1fr !important;  /* equal columns */
+  gap:24px !important;
+  align-items:start !important;
+}
+
+/* Stop either column from collapsing */
+#connect .connect-stack,
+#connect .subscribe-card{
+  min-width:0 !important;
+  width:100% !important;
+}
+
+/* Make the subscribe card/iframe actually fill the column */
+#connect .subscribe-card{
+  max-width:none !important;
+}
+
+#connect .subscribe-card iframe{
+  display:block !important;
+  width:100% !important;
+  height:520px !important;
+  max-width:none !important;
+  margin:0 !important;
+}
+
+/* Stack on smaller screens */
+@media (max-width: 900px){
+  #connect .connect-grid{
+    grid-template-columns: 1fr !important;
+  }
+}
   </style>
 </head>
 
