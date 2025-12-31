@@ -441,21 +441,10 @@
   align-items:start;
 }
 
-@media (max-width: 900px){
-  .connect-grid{
-    grid-template-columns: 1fr;
-  }
-}
-
 /* Make both grid children fill the column */
 .connect-grid > *{
-  justify-self:stretch;
-  min-width:0;          /* prevents overflow/shrink issues */
-}
-/* In the connect section, cards must fill their grid column */
-#connect .card{
   width:100%;
-  max-width:none;
+  justify-self:stretch;
 }
 
 /* Stack Contact + icon */
@@ -474,19 +463,15 @@
 
 /* Substack iframe fills the card */
 .subscribe-card iframe{
-  display:block;
   width:100%;
-  height:520px;                 /* reduce internal scrolling */
+  height:320px;
   border:1px solid #e5e5e5;
   border-radius:12px;
   background:#fff;
-}
-/* Allow grid children to size correctly */
-.connect-stack,
-.subscribe-card{
-  min-width:0;
+  display:block;
 }
 
+/* Icon under Contact */
 /* Mobile */
 @media (max-width: 900px){
   .connect-grid{
@@ -625,7 +610,7 @@
 
 .connect-grid{
   display:grid;
-  grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+  grid-template-columns: 1fr 1fr;
   gap:18px;
   align-items:start;
 }
@@ -662,27 +647,6 @@
 
 .connect-email{
   margin:0;
-}
-/* CONTACT – SCRIPTURE FILL */
-.contact-scripture{
-  background:#0b1f3a;          /* BTWM navy */
-  color:#fff;
-  text-align:center;
-  padding:40px 24px;
-}
-
-.contact-scripture .scripture-text{
-  max-width:760px;
-  margin:0 auto 12px;
-  font-size:18px;
-  line-height:1.6;
-  font-style:italic;
-}
-
-.contact-scripture .scripture-ref{
-  font-size:16px;
-  font-weight:600;
-  color:#d4af37;               /* BTWM gold */
 }
 
 /* Substack iframe should fill the Subscribe card */
@@ -809,128 +773,7 @@ footer .tagline{
   font-weight:700;
   letter-spacing:.2px;
 }
-/* ===== CONNECT SECTION: HARD OVERRIDES (paste at VERY bottom) ===== */
 
-#connect .connect-grid{
-  display:grid !important;
-  grid-template-columns: 1fr 1fr !important;  /* equal columns */
-  gap:24px !important;
-  align-items:start !important;
-}
-
-/* Stop either column from collapsing */
-#connect .connect-stack,
-#connect .subscribe-card{
-  min-width:0 !important;
-  width:100% !important;
-}
-
-/* Make the subscribe card/iframe actually fill the column */
-#connect .subscribe-card{
-  max-width:none !important;
-}
-
-#connect .subscribe-card iframe{
-  display:block !important;
-  width:100% !important;
-  height:520px !important;
-  max-width:none !important;
-  margin:0 !important;
-}
-
-/* Stack on smaller screens */
-@media (max-width: 900px){
-  #connect .connect-grid{
-    grid-template-columns: 1fr !important;
-  }
-}
-  /* ===== FIX: Make Subscribe card stretch full column ===== */
-#connect .connect-grid{
-  grid-template-columns: 1fr 1fr !important;
-}
-
-/* This is the key: remove any max-width caps on cards in this section */
-#connect .card{
-  width:100% !important;
-  max-width:none !important;
-}
-
-/* Force the subscribe card to stretch inside the grid cell */
-#connect #subscribe{
-  width:100% !important;
-  justify-self:stretch !important;
-  align-self:start !important;
-}
-
-/* Now the iframe will have room to render properly */
-#connect #subscribe iframe{
-  width:100% !important;
-  max-width:none !important;
-  display:block !important;
-  height:520px !important;
-}
-/* ===== FIX: Stop Subscribe card from shrinking ===== */
-#connect .subscribe-card{
-  display:block !important;
-  width:100% !important;
-  max-width:none !important;
-  margin:0 !important;
-  justify-self:stretch !important;
-  align-self:start !important;
-}
-
-/* If a global .card rule is capping width, override it inside Connect only */
-#connect .card{
-  display:block !important;
-  max-width:none !important;
-  width:100% !important;
-  margin-left:0 !important;
-  margin-right:0 !important;
-}
-
-/* Make sure the iframe fills the card */
-#connect .subscribe-card iframe{
-  display:block !important;
-  width:100% !important;
-  max-width:none !important;
-}
-/* ===== CONNECT: KNOWN-GOOD LAYOUT (paste at very bottom) ===== */
-
-#connect .connect-grid{
-  display:grid !important;
-  grid-template-columns: 1fr 1fr !important;
-  gap:18px !important;
-  align-items:start !important;
-}
-
-#connect .connect-stack{
-  display:flex !important;
-  flex-direction:column !important;
-  min-width:0 !important;
-}
-
-#connect .connect-card,
-#connect .subscribe-card{
-  width:100% !important;
-  max-width:none !important;
-  margin:0 !important;
-}
-
-#connect .subscribe-card iframe{
-  display:block !important;
-  width:100% !important;
-  height:320px !important;
-  border:1px solid #e5e5e5 !important;
-  border-radius:12px !important;
-  background:#fff !important;
-}
-
-/* Mobile stacks */
-@media (max-width: 900px){
-  #connect .connect-grid{
-    grid-template-columns: 1fr !important;
-  }
-}
   </style>
 </head>
 
@@ -1078,53 +921,41 @@ footer .tagline{
   <div class="connect-grid">
 
     <!-- LEFT: CONTACT (and icon under it) -->
-   <section id="connect" class="connect">
-  <div class="connect-grid">
-
-    <!-- LEFT: CONTACT (and anything under it) -->
     <div class="connect-stack">
 
-      <div class="card connect-card" id="contact">
-        <h2 class="connect-title">Contact</h2>
+    <div class="card connect-card" id="contact">
+  <h2 class="connect-title">Contact</h2>
 
-        <p class="connect-ministry">Balancing the Word Ministry</p>
+  <p class="connect-ministry">Balancing the Word Ministry</p>
 
-        <p class="connect-address">
-          P.O. Box 1043<br>
-          Wagoner, OK 74477
-        </p>
+  <p class="connect-address">
+    P.O. Box 1043<br>
+    Wagoner, OK 74477
+  </p>
 
-        <p class="connect-email">
-          <a href="mailto:greetings@balancingtheword.com">
-            Greetings@BalancingTheWord.com
-          </a>
-        </p>
+  <p class="connect-email">
+    <a href="mailto:greetings@balancingtheword.com">
+      Greetings@BalancingTheWord.com
+    </a>
+  </p>
+</div>
 
-        <section class="contact-scripture">
-          <p class="scripture-text">
-            “We proclaim Him, admonishing every man and teaching every man with all wisdom,
-            so that we may present every man complete in Christ.”
-          </p>
-          <p class="scripture-ref">Colossians 1:28</p>
-        </section>
+         </div> <!-- ✅ CLOSE LEFT STACK -->
 
-      </div> <!-- CLOSE CONTACT CARD -->
+ <!-- RIGHT: SUBSCRIBE -->
+<div class="card subscribe-card" id="subscribe">
+  <h2 class="connect-title">Subscribe</h2>
 
-    </div> <!-- CLOSE LEFT STACK -->
+  <iframe
+    src="https://balancingtheword.substack.com/embed"
+    width="100%"
+    height="320"
+    style="border:1px solid #EEE; background:white;"
+    frameborder="0"
+    scrolling="no">
+  </iframe>
 
-    <!-- RIGHT: SUBSCRIBE -->
-    <div class="card subscribe-card" id="subscribe">
-      <h2 class="connect-title">Subscribe</h2>
-
-      <iframe
-  src="https://balancingtheword.substack.com/embed"
-  frameborder="0"
-  scrolling="no">
-</iframe>
-    </div> <!-- CLOSE SUBSCRIBE CARD -->
-
-  </div> <!-- CLOSE GRID -->
-</section> <!-- CLOSE SECTION -->
+</div> <!-- ✅ CLOSE SUBSCRIBE CARD -->
 
   </div> <!-- ✅ CLOSE CONNECT-GRID -->
 </section> <!-- ✅ CLOSE CONNECT SECTION -->
