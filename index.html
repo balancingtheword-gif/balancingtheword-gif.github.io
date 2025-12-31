@@ -471,7 +471,6 @@
   display:block;
 }
 
-/* Icon under Contact */
 /* Mobile */
 @media (max-width: 900px){
   .connect-grid{
@@ -647,6 +646,27 @@
 
 .connect-email{
   margin:0;
+}
+/* CONTACT – SCRIPTURE FILL */
+.contact-scripture{
+  background:#0b1f3a;          /* BTWM navy */
+  color:#fff;
+  text-align:center;
+  padding:40px 24px;
+}
+
+.contact-scripture .scripture-text{
+  max-width:760px;
+  margin:0 auto 12px;
+  font-size:18px;
+  line-height:1.6;
+  font-style:italic;
+}
+
+.contact-scripture .scripture-ref{
+  font-size:16px;
+  font-weight:600;
+  color:#d4af37;               /* BTWM gold */
 }
 
 /* Substack iframe should fill the Subscribe card */
@@ -933,14 +953,21 @@ footer .tagline{
     Wagoner, OK 74477
   </p>
 
-  <p class="connect-email">
-    <a href="mailto:greetings@balancingtheword.com">
-      Greetings@BalancingTheWord.com
-    </a>
-  </p>
-</div>
+ <p class="connect-email">
+  <a href="mailto:greetings@balancingtheword.com">
+    Greetings@BalancingTheWord.com
+  </a>
+</p>
 
-         </div> <!-- ✅ CLOSE LEFT STACK -->
+<section class="contact-scripture">
+  <p class="scripture-text">
+    “We proclaim Him, admonishing every man and teaching every man with all wisdom,
+    so that we may present every man complete in Christ.”
+  </p>
+  <p class="scripture-ref">Colossians 1:28</p>
+</section>
+
+    </div> <!-- ✅ CLOSE LEFT STACK -->
 
  <!-- RIGHT: SUBSCRIBE -->
 <div class="card subscribe-card" id="subscribe">
