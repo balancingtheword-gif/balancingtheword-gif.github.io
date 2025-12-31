@@ -438,7 +438,24 @@
 }
 .scripture-box{ background:#0b1f3a; padding:14px 18px; border-radius:12px; text-align:center; }
 .scripture-text{ color:#f5e6a8; font-size:14px; font-weight:650; line-height:1.35; margin:0 0 6px; }
-.scripture-ref{ color:#ffd966; font-size:13px; font-weight:800; letter-spacing:.3px; margin:0; }
+.scripture-ref{
+  position:relative;
+  color:#ffd966;
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:.3px;
+  margin-top:6px;          /* small, controlled gap */
+}
+
+.scripture-ref::before{
+  content:"";
+  display:block;
+  width:32px;              /* mini divider */
+  height:2px;
+  margin:4px auto 6px;     /* tight spacing */
+  background:#c8a44d;      /* BTWM gold */
+  border-radius:2px;
+}
 
     .subscribe-card iframe{
       width:100%;
@@ -677,9 +694,7 @@ footer .legal a:hover{
     Proclaiming Christ • Teaching with Wisdom
   </div>
 
-  <div class="scripture-divider"></div>
-
-  <div class="scripture-ref">
+    <div class="scripture-ref">
     Colossians 1:28
   </div>
 </div>
