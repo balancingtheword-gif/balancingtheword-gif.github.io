@@ -869,7 +869,31 @@ footer .tagline{
   display:block !important;
   height:520px !important;
 }
- body{ outline: 8px solid #ff0000 !important; }
+/* ===== FIX: Stop Subscribe card from shrinking ===== */
+#connect .subscribe-card{
+  display:block !important;
+  width:100% !important;
+  max-width:none !important;
+  margin:0 !important;
+  justify-self:stretch !important;
+  align-self:start !important;
+}
+
+/* If a global .card rule is capping width, override it inside Connect only */
+#connect .card{
+  display:block !important;
+  max-width:none !important;
+  width:100% !important;
+  margin-left:0 !important;
+  margin-right:0 !important;
+}
+
+/* Make sure the iframe fills the card */
+#connect .subscribe-card iframe{
+  display:block !important;
+  width:100% !important;
+  max-width:none !important;
+}
 
   </style>
 </head>
