@@ -260,6 +260,7 @@
     footer{border-top:1px solid var(--border); margin-top:24px;}
     .foot{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between}
     .small{font-size:13px;color:var(--muted)}
+    
     /* Ensure feature text stays contained */
 /* CONTAIN Featured Blog content */
 .featureStack .featureBlock {
@@ -830,7 +831,7 @@ footer .tagline{
   <!-- FOOTER SHOULD APPEAR BELOW THIS LINE -->
 
 <footer class="site-footer">
-  <div class="wrap">
+  <div class="wrap foot">
     <div class="small">© <span id="y"></span> Balancing the Word Ministry</div>
     <div class="small">Colossians 1:28</div>
     <div class="small tagline">Build • Educate • Disciple</div>
@@ -838,10 +839,7 @@ footer .tagline{
 </footer>
 
 <script>
-  window.addEventListener("DOMContentLoaded", () => {
-    const y = document.getElementById("y");
-    if (y) y.textContent = new Date().getFullYear();
-  });
+  document.getElementById("y").textContent = new Date().getFullYear();
 </script>
 
 <body>
