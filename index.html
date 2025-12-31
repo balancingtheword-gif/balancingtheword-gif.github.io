@@ -441,6 +441,12 @@
   align-items:start;
 }
 
+@media (max-width: 900px){
+  .connect-grid{
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Make both grid children fill the column */
 .connect-grid > *{
   width:100%;
@@ -941,48 +947,56 @@ footer .tagline{
   <div class="connect-grid">
 
     <!-- LEFT: CONTACT (and icon under it) -->
+   <section id="connect" class="connect">
+  <div class="connect-grid">
+
+    <!-- LEFT: CONTACT (and anything under it) -->
     <div class="connect-stack">
 
-    <div class="card connect-card" id="contact">
-  <h2 class="connect-title">Contact</h2>
+      <div class="card connect-card" id="contact">
+        <h2 class="connect-title">Contact</h2>
 
-  <p class="connect-ministry">Balancing the Word Ministry</p>
+        <p class="connect-ministry">Balancing the Word Ministry</p>
 
-  <p class="connect-address">
-    P.O. Box 1043<br>
-    Wagoner, OK 74477
-  </p>
+        <p class="connect-address">
+          P.O. Box 1043<br>
+          Wagoner, OK 74477
+        </p>
 
- <p class="connect-email">
-  <a href="mailto:greetings@balancingtheword.com">
-    Greetings@BalancingTheWord.com
-  </a>
-</p>
+        <p class="connect-email">
+          <a href="mailto:greetings@balancingtheword.com">
+            Greetings@BalancingTheWord.com
+          </a>
+        </p>
 
-<section class="contact-scripture">
-  <p class="scripture-text">
-    “We proclaim Him, admonishing every man and teaching every man with all wisdom,
-    so that we may present every man complete in Christ.”
-  </p>
-  <p class="scripture-ref">Colossians 1:28</p>
-</section>
+        <section class="contact-scripture">
+          <p class="scripture-text">
+            “We proclaim Him, admonishing every man and teaching every man with all wisdom,
+            so that we may present every man complete in Christ.”
+          </p>
+          <p class="scripture-ref">Colossians 1:28</p>
+        </section>
 
-    </div> <!-- ✅ CLOSE LEFT STACK -->
+      </div> <!-- CLOSE CONTACT CARD -->
 
- <!-- RIGHT: SUBSCRIBE -->
-<div class="card subscribe-card" id="subscribe">
-  <h2 class="connect-title">Subscribe</h2>
+    </div> <!-- CLOSE LEFT STACK -->
 
-  <iframe
-    src="https://balancingtheword.substack.com/embed"
-    width="100%"
-    height="320"
-    style="border:1px solid #EEE; background:white;"
-    frameborder="0"
-    scrolling="no">
-  </iframe>
+    <!-- RIGHT: SUBSCRIBE -->
+    <div class="card subscribe-card" id="subscribe">
+      <h2 class="connect-title">Subscribe</h2>
 
-</div> <!-- ✅ CLOSE SUBSCRIBE CARD -->
+      <iframe
+        src="https://balancingtheword.substack.com/embed"
+        width="100%"
+        height="320"
+        style="border:1px solid #EEE; background:white;"
+        frameborder="0"
+        scrolling="no">
+      </iframe>
+    </div> <!-- CLOSE SUBSCRIBE CARD -->
+
+  </div> <!-- CLOSE GRID -->
+</section> <!-- CLOSE SECTION -->
 
   </div> <!-- ✅ CLOSE CONNECT-GRID -->
 </section> <!-- ✅ CLOSE CONNECT SECTION -->
