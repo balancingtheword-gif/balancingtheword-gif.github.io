@@ -388,13 +388,6 @@
 .contact-card .scripture-box{
   margin-top:auto;   /* pushes scripture box to the bottom */
 }
-.scripture-box .scripture-divider{
-  width:40px;
-  height:2px;
-  margin:6px auto 4px;
-  background:#c8a44d;
-  border-radius:2px;
-}
 /* If your embed has a wrapper like .substack-embed */
 .substack-embed{
   max-width:520px;
@@ -430,33 +423,37 @@
       margin:16px auto 12px;
       background:linear-gradient(to right, transparent, #d4af37, transparent);
     }
-    .scripture-box{
-  margin-top:14px;   /* try 12–16px range */
+.scripture-box{
+  background:#0b1f3a;
+  padding:14px 18px;
+  border-radius:12px;
+  text-align:center;
+  margin-top:14px;
 }
-    .gold-divider{
-  margin-bottom:14px;
+
+.scripture-text{
+  color:#f5e6a8;
+  font-size:14px;
+  font-weight:600;
+  line-height:1.35;
+  margin-bottom:6px;
 }
-.scripture-box{ background:#0b1f3a; padding:14px 18px; border-radius:12px; text-align:center; }
-.scripture-text{ color:#f5e6a8; font-size:14px; font-weight:650; line-height:1.35; margin:0 0 6px; }
+
+.scripture-tagline{
+  color:#e0c56f;
+  font-size:12.5px;
+  font-weight:600;
+  letter-spacing:.4px;
+  margin-bottom:4px;
+}
+
 .scripture-ref{
-  position:relative;
   color:#ffd966;
   font-size:13px;
   font-weight:800;
   letter-spacing:.3px;
-  margin-top:6px;          /* small, controlled gap */
+  margin-top:0;
 }
-
-.scripture-ref::before{
-  content:"";
-  display:block;
-  width:32px;              /* mini divider */
-  height:2px;
-  margin:4px auto 6px;     /* tight spacing */
-  background:#c8a44d;      /* BTWM gold */
-  border-radius:2px;
-}
-
     .subscribe-card iframe{
       width:100%;
       height:320px;
