@@ -47,19 +47,20 @@
       margin:10px 0 12px;
       background:linear-gradient(to right,#0b1f3a,#b21f2d,#c8a44d);
     }
-    /* WEBSITE HEADER IMAGE */
-.site-header{
-  width:100%;
-  background:#0b1f3a; /* BTWM Navy */
-  overflow:hidden;
-}
-
+  /* WEBSITE HEADER IMAGE – PROPORTIONAL */
 .site-header{
   width:100%;
   background:#0b1f3a;
+  padding:0;            /* override global header padding */
   overflow:hidden;
 }
 
+.site-header img{
+  width:100%;
+  height:auto;
+  display:block;
+  object-fit:contain;   /* preserves design proportions */
+}
 .site-header img{
   width:100%;
   height:56vh;          /* makes it tall enough to feel like a hero */
