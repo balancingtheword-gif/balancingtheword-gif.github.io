@@ -265,7 +265,7 @@
 }
 
 .book-cover{
-  height: 320px;                 /* NORMALIZED visual height */
+  height: 320px;                 /* consistent frame */
   padding: 14px;
   background: rgba(11,31,58,.04);
   display: flex;
@@ -278,8 +278,12 @@
   max-width: 100%;
   height: auto;
   width: auto;
-  object-fit: contain;           /* NEVER crop */
+  object-fit: contain;           /* show full cover */
   display: block;
+}
+
+@media (max-width: 640px){
+  .book-cover{ height: 280px; }
 }
 .book-body{ padding: 14px 14px 16px; }
 .book-body h4{
@@ -292,12 +296,7 @@
   color: rgba(11,31,58,.78);
   font-size: 14px;
 }
-    @media (max-width: 640px){
-  .book-cover{
-    height: 280px;
-  }
-}
-}
+   }
 
 /* Buttons */
 .btn-row{ display:flex; gap:10px; flex-wrap:wrap; margin-top: 10px; }
@@ -466,7 +465,7 @@
         <!-- Book Card: Balaam -->
         <article class="book-card">
           <div class="book-cover">
-            <img src="images/balaam-front-cover.png" alt="The Story of Balaam front cover">
+            <img src="images/Balaam-Front-Cover 1200x1800.png" alt="The Story of Balaam front cover">
           </div>
           <div class="book-body">
             <h4>The Story of Balaam</h4>
@@ -482,7 +481,7 @@
         <!-- Book Card: Habakkuk -->
         <article class="book-card">
           <div class="book-cover">
-            <<img src="images/be-like-habakkuk-1.png" alt="Be Like Habakkuk front cover">
+            <img src="images/Be-Like-Habakkuk-cover-1200x1800.png" alt="Be Like Habakkuk front cover">
           </div>
           <div class="book-body">
             <h4>Be Like Habakkuk</h4>
