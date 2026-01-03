@@ -423,69 +423,87 @@ body{
   margin-bottom: 10px;
   line-height: 1.6;
 }
-  /* ===== GOLD CORNER ARCS ===== */
-.corner-arc{
+        /* =========================
+   Top corner L-shapes (restore)
+   ========================= */
+
+.about-header .corner{
   position: absolute;
-  width: 56px;
-  height: 56px;
-  border: 4px solid #d4af37;   /* BTWM gold */
-  border-radius: 50%;
-  pointer-events: none;
-}
-
-/* Show only a quarter of the circle */
-.corner-arc{
-  clip-path: inset(0 0 50% 50%);
-}
-
-/* Top-left */
-.corner-arc.tl{
-  top: 10px;
-  left: 10px;
-  clip-path: inset(0 50% 50% 0);
-}
-
-/* Top-right */
-.corner-arc.tr{
-  top: 10px;
-  right: 10px;
-  clip-path: inset(0 0 50% 50%);
-}
-
-/* Bottom-left */
-.corner-arc.bl{
-  bottom: 10px;
-  left: 10px;
-  clip-path: inset(50% 50% 0 0);
-}
-
-/* Bottom-right */
-.corner-arc.br{
-  bottom: 10px;
-  right: 10px;
-  clip-path: inset(50% 0 0 50%);
-}
-@media (max-width: 768px){
-  .corner-arc{
-    width: 36px;
-    height: 36px;
-    border-width: 3px;
-  }
-  /* ===== BOTTOM CORNER ARCS ===== */
-.about-header .corner.bl,
-.about-header .corner.br{
-  position: absolute;
-  bottom: 18px;
   width: 48px;
   height: 48px;
   pointer-events: none;
-  border: 4px solid #d4af37; /* gold */
+  z-index: 3;
+}
+
+.about-header .corner::before,
+.about-header .corner::after{
+  content: "";
+  position: absolute;
+  background: #d4af37; /* BTWM gold */
+}
+
+/* Top-left */
+.about-header .corner.tl{
+  top: 18px;
+  left: 18px;
+}
+.about-header .corner.tl::before{
+  width: 4px;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.about-header .corner.tl::after{
+  height: 4px;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+/* Top-right */
+.about-header .corner.tr{
+  top: 18px;
+  right: 18px;
+}
+.about-header .corner.tr::before{
+  width: 4px;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+.about-header .corner.tr::after{
+  height: 4px;
+  width: 100%;
+  right: 0;
+  top: 0;
+}
+
+        /* =========================
+   Bottom corner arcs (clean + reliable)
+   Converts ONLY the bottom corners to arcs
+   ========================= */
+
+/* Bottom corners become arc borders */
+.about-header .corner.bl,
+.about-header .corner.br{
+  width: 48px;
+  height: 48px;
+  bottom: 18px;
+  border: 4px solid #d4af37;   /* gold */
+  border-top: none;            /* arc only */
+}
+
+/* Turn off the L-corner pseudo lines on bottom corners */
+.about-header .corner.bl::before,
+.about-header .corner.bl::after,
+.about-header .corner.br::before,
+.about-header .corner.br::after{
+  background: transparent;
 }
 
 /* Bottom-left arc */
 .about-header .corner.bl{
   left: 18px;
-  border-top: none;
   border-right: none;
   border-radius: 0 0 0 28px;
 }
@@ -493,7 +511,6 @@ body{
 /* Bottom-right arc */
 .about-header .corner.br{
   right: 18px;
-  border-top: none;
   border-left: none;
   border-radius: 0 0 28px 0;
 }
@@ -507,45 +524,9 @@ body{
     border-width: 3px;
     bottom: 14px;
   }
-  }
-  /* ===== BOTTOM ARCS (add-on only) ===== */
-.about-header .corner.bl,
-.about-header .corner.br{
-  bottom: 18px;
-}
-
-.about-header .corner.bl{
-  left: 18px;
-}
-.about-header .corner.br{
-  right: 18px;
-}
-
-/* Override the pseudo-element “L” for bottom corners with arc-style borders */
-.about-header .corner.bl::before,
-.about-header .corner.bl::after,
-.about-header .corner.br::before,
-.about-header .corner.br::after{
-  background: transparent; /* turn off the L lines */
-}
-
-/* Draw the arcs using borders (most reliable) */
-.about-header .corner.bl,
-.about-header .corner.br{
-  border: 4px solid #d4af37;
-  border-top: none;
-  width: 48px;
-  height: 48px;
-}
-
-.about-header .corner.bl{
-  border-right: none;
-  border-radius: 0 0 0 28px;
-}
-
-.about-header .corner.br{
-  border-left: none;
-  border-radius: 0 0 28px 0;
+  .about-header .corner.bl{ left: 14px; }
+  .about-header .corner.br{ right: 14px; }
+}      
 }
 background:
   radial-gradient(circle at 50% 40%, rgba(202,162,74,.18), transparent 58%),
