@@ -178,11 +178,39 @@ body{
 <span class="corner-arc tr"></span>
 <span class="corner-arc bl"></span>
 <span class="corner-arc br"></span>
-  .about-logo{
+ /* Center the header content block properly */
+.about-logo{
   position: relative;
   z-index: 5;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  gap:12px;
+}
+/* Make sure the title/subtitle are visible on navy */
+.page-title{
+  margin: 6px 0 0;
+  color:#fff;
+  font-size: 30px;
+  letter-spacing:.2px;
 }
 
+.page-sub{
+  margin: 0;
+  color:#C1121F;        /* BTWM scarlet */
+  font-weight: 700;
+}
+
+/* Ensure the logo doesn't push weird spacing */
+.btwm-logo{
+  display:block;
+  width: 340px;         /* adjust if needed */
+  height:auto;
+  margin:0;
+  filter: drop-shadow(0 18px 30px rgba(0,0,0,.35));
+}
 /* ===== CORNER ACCENTS ===== */
 .about-header .corner{
   position: absolute;
