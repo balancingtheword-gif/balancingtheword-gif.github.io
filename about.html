@@ -191,6 +191,14 @@ body{
   pointer-events: none;
   z-index: 3
 }
+        .about-header .inner-frame{
+  position:absolute;
+  inset:26px;
+  border:1px solid rgba(212,175,55,.28);
+  pointer-events:none;
+  border-radius:2px;
+}
+
 
 /* RESPONSIVE: scale corner accents on smaller screens */
 @media (max-width: 768px){
@@ -325,6 +333,15 @@ body{
   background: #ffffff;
   padding: 18px;
   border-radius: 14px;
+}
+        .btwm-logo{
+  filter: drop-shadow(0 18px 30px rgba(0,0,0,.35));
+}
+.about-logo{
+  padding:14px;
+  border-radius:14px;
+  background: rgba(255,255,255,.06);
+  box-shadow: 0 0 0 1px rgba(212,175,55,.18) inset;
 }
 
  /* ABOUT PAGE LAYOUT */
@@ -536,6 +553,17 @@ background:
   radial-gradient(circle at 82% 65%, rgba(202,162,74,.10), transparent 55%),
   linear-gradient(#0b1f3a, #07162a);
 
+  .page-title{
+  margin:18px 0 6px;
+  color:#fff;
+  font-size:30px;
+  letter-spacing:.2px;
+}
+.page-sub{
+  margin:0;
+  color:#C1121F;
+  font-weight:700;
+}
 </style>
 
  </head>
@@ -551,7 +579,9 @@ background:
  <img src="../logos/346-shield-icon.png"
      alt="Balancing The Word Ministry Logo"
      class="btwm-logo">
-
+    <span class="inner-frame"></span>
+    <h1 class="page-title">About Balancing the Word Ministry</h1>
+<p class="page-sub">Build • Educate • Disciple</p>
     </div>
   
 </header>
