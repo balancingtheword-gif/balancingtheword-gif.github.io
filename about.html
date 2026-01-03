@@ -653,7 +653,14 @@ header p { color:#C1121F; font-weight:600; }
 .about-hero{
   border: 1px solid rgba(255,255,255,.08) !important;
 }
-
+/* Force exact same solid navy, no tint overlay */
+.about-header{
+  background:#0b1f3a !important;
+  background-image:none !important;
+}
+.about-header::before{
+  content:none !important;
+}
 </style>
 
  </head>
