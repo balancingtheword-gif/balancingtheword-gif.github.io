@@ -226,6 +226,7 @@
     }
     /* ===== BOOKS PAGE ===== */
 .books-main{ padding: 34px 0 54px; }
+.wrap{ max-width: 1100px; margin: 0 auto; padding: 0 18px; }
 
 .books-intro{
   text-align:center;
@@ -243,44 +244,47 @@
   font-size: 16px;
 }
 
-.featured-book{
-  display:grid;
-  grid-template-columns: 360px 1fr;
-  gap: 24px;
-  align-items: start;
-
-  border: 1px solid rgba(11,31,58,.14);
-  border-radius: 18px;
-  padding: 18px;
-  background: #fff;
-  box-shadow: 0 14px 28px rgba(11,31,58,.08);
-  margin: 18px 0 26px;
-}
-.featured-cover img{
-  width:100%;
-  height:auto;
-  display:block;
-  border-radius: 14px;
-  border: 1px solid rgba(11,31,58,.12);
-}
-.featured-details h3{
-  margin: 4px 0 10px;
-  font-size: 26px;
+.section-title{
+  margin: 22px 0 14px;
+  font-size: 20px;
   color:#0b1f3a;
 }
-.featured-hook{
-  margin: 0 0 10px;
-  font-weight: 700;
-  color: #b11226; /* scarlet accent */
+
+.books-grid .grid{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
 }
-.featured-desc{
-  margin: 0 0 14px;
-  color: rgba(11,31,58,.82);
+
+.book-card{
+  border: 1px solid rgba(11,31,58,.14);
+  border-radius: 18px;
+  background:#fff;
+  overflow:hidden;
+  box-shadow: 0 12px 24px rgba(11,31,58,.08);
 }
-.note{
-  margin: 12px 0 0;
-  font-size: 13px;
-  color: rgba(11,31,58,.62);
+
+.book-cover{
+  aspect-ratio: 4 / 5;
+  background: rgba(11,31,58,.04);
+}
+.book-cover img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  display:block;
+}
+
+.book-body{ padding: 14px 14px 16px; }
+.book-body h4{
+  margin: 0 0 8px;
+  color:#0b1f3a;
+  font-size: 18px;
+}
+.book-body p{
+  margin: 0 0 12px;
+  color: rgba(11,31,58,.78);
+  font-size: 14px;
 }
 
 /* Buttons */
@@ -293,17 +297,13 @@
   text-decoration:none;
   border: 1px solid rgba(11,31,58,.18);
 }
-.btn.primary{
-  background:#0b1f3a;
-  color:#fff;
-  box-shadow: 0 10px 20px rgba(11,31,58,.18);
-}
-.btn.ghost{
-  background:#fff;
-  color:#0b1f3a;
-}
+.btn.primary{ background:#0b1f3a; color:#fff; }
+.btn.ghost{ background:#fff; color:#0b1f3a; }
 .btn.small{ padding: 8px 12px; font-size: 14px; }
 
+@media (max-width: 720px){
+  .books-grid .grid{ grid-template-columns: 1fr; }
+}
 .section-title{
   margin: 22px 0 14px;
   font-size: 20px;
@@ -439,13 +439,55 @@
   <main class="books-main">
   <div class="wrap">
 
-    <!-- Intro -->
     <section class="books-intro">
       <h2>Books & Teaching Resources</h2>
       <p>
-        Scripture-rooted books & studies designed to help believers grow in discernment, doctrine, and discipleship.
+        Scripture-rooted studies designed to build discernment, strengthen doctrine, and encourage true discipleship.
       </p>
     </section>
+
+    <section class="books-grid">
+      <h3 class="section-title">Available Now</h3>
+
+      <div class="grid">
+
+        <!-- Book Card: Balaam -->
+        <article class="book-card">
+          <div class="book-cover">
+            <img src="images/balaam-front-cover.png" alt="The Story of Balaam front cover">
+          </div>
+          <div class="book-body">
+            <h4>The Story of Balaam</h4>
+            <p>A sobering study on compromise, deception, and the sovereignty of God.</p>
+
+            <div class="btn-row">
+              <a class="btn small primary" href="#" target="_blank" rel="noopener">Amazon</a>
+              <a class="btn small ghost" href="#" target="_blank" rel="noopener">Details</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Book Card: Habakkuk -->
+        <article class="book-card">
+          <div class="book-cover">
+            <img src="images/habakkuk-cover.jpg" alt="Be Like Habakkuk front cover">
+          </div>
+          <div class="book-body">
+            <h4>Be Like Habakkuk</h4>
+            <p>Learning to trust God when answers delay—and faith is tested.</p>
+
+            <div class="btn-row">
+              <a class="btn small primary" href="#" target="_blank" rel="noopener">Amazon</a>
+              <a class="btn small ghost" href="#" target="_blank" rel="noopener">Details</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+  </div>
+</main>
 
     <!-- Featured Book -->
     <section class="featured-book">
@@ -525,6 +567,8 @@
       </section>
     </div>
   </main>
+   </div>
+</main>
 
   <!-- FOOTER -->
   <footer class="site-footer">
