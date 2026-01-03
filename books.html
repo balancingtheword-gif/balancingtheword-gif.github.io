@@ -243,6 +243,31 @@
     .about-header{
   background: linear-gradient(#0b1f3a, #07162a) !important;
 }
+    /* LOCK About + Books header + panel colors to match exactly */
+.about-header{
+  background: linear-gradient(#0b1f3a, #07162a) !important;
+}
+
+/* The soft glow overlay must match too */
+.about-header::before{
+  background:
+    radial-gradient(circle at 50% 40%, rgba(202,162,74,.18), transparent 58%),
+    radial-gradient(circle at 18% 65%, rgba(177,18,38,.10), transparent 55%),
+    radial-gradient(circle at 82% 65%, rgba(202,162,74,.10), transparent 55%) !important;
+}
+
+/* This is the “shadow box” panel that looks off */
+.about-hero{
+  background: rgba(255,255,255,.06) !important;
+  box-shadow:
+    0 0 0 1px rgba(212,175,55,.18) inset,
+    0 22px 40px rgba(0,0,0,.22) !important;
+}
+
+/* Optional: make the panel border a touch more consistent */
+.about-hero{
+  border: 1px solid rgba(255,255,255,.08) !important;
+}
   </style>
   
 </head>
