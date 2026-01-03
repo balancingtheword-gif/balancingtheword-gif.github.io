@@ -29,58 +29,81 @@
     .wrap{max-width:var(--wrap); margin:0 auto; padding:0 18px;}
 
     /* =========================
-       BOOK PAGE HEADER
-       ========================= */
-    .book-header{
-      position:relative;
-      background:
-        radial-gradient(circle at 50% 45%, rgba(202,162,74,.18), transparent 58%),
-        radial-gradient(circle at 18% 70%, rgba(193,18,31,.10), transparent 55%),
-        radial-gradient(circle at 82% 70%, rgba(202,162,74,.10), transparent 55%),
-        linear-gradient(#0b1f3a, #07162a);
-      padding:34px 0 28px;
-      overflow:hidden;
-    }
+   ABOUT + BOOK HEADER (shared)
+   Use this exact CSS for BOTH pages
+   ========================= */
 
-    /* Soft watermark to fill space */
-    .book-header::before{
-      content:"";
-      position:absolute;
-      inset:-40px;
-      background:
-        radial-gradient(circle at 50% 45%, rgba(255,255,255,.07), transparent 55%),
-        radial-gradient(circle at 35% 55%, rgba(202,162,74,.06), transparent 55%),
-        radial-gradient(circle at 65% 55%, rgba(193,18,31,.05), transparent 55%);
-      pointer-events:none;
-      filter: blur(.2px);
-    }
+.about-header{
+  position: relative;
+  background: #0b1f3a;                 /* solid BTWM navy */
+  padding: 60px 0 70px;                /* bottom padding matches your “KEY FIX” */
+  overflow: visible;
 
-    /* Gold corner accents (like About page) */
-    .corner{
-      position:absolute;
-      width:42px;
-      height:42px;
-      border:3px solid var(--gold);
-      pointer-events:none;
-    }
-    .corner.tl{top:18px; left:18px; border-right:none; border-bottom:none;}
-    .corner.tr{top:18px; right:18px; border-left:none; border-bottom:none;}
-    .corner.bl{bottom:18px; left:18px; border-right:none; border-top:none;}
-    .corner.br{bottom:18px; right:18px; border-left:none; border-top:none;}
+  display: flex;                       /* centers logo reliably */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
-    /* Decorative side lines to fill space */
-    .side-accent{
-      position:absolute;
-      top:50%;
-      transform:translateY(-50%);
-      width:220px;
-      height:3px;
-      background:linear-gradient(to right, transparent, var(--gold), transparent);
-      opacity:.95;
-      pointer-events:none;
-    }
-    .side-accent.left{left:70px;}
-    .side-accent.right{right:70px;}
+  border-top: 2px solid rgba(212,175,55,.75);
+  border-bottom: 3px solid #b11226;    /* scarlet red bottom border */
+  border-left: 22px solid #d4af37;     /* gold left */
+  border-right: 22px solid #d4af37;    /* gold right */
+}
+
+.about-logo{
+  position: relative;
+  z-index: 5;
+}
+
+/* ===== CORNER ACCENTS ===== */
+.about-header .corner{
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.about-header .corner::before,
+.about-header .corner::after{
+  content: "";
+  position: absolute;
+  background: #d4af37;                /* gold */
+}
+
+/* Top-left */
+.about-header .corner.tl{ top: 18px; left: 18px; }
+.about-header .corner.tl::before{ width: 4px; height: 100%; left: 0; top: 0; }
+.about-header .corner.tl::after{ height: 4px; width: 100%; left: 0; top: 0; }
+
+/* Top-right */
+.about-header .corner.tr{ top: 18px; right: 18px; }
+.about-header .corner.tr::before{ width: 4px; height: 100%; right: 0; top: 0; }
+.about-header .corner.tr::after{ height: 4px; width: 100%; right: 0; top: 0; }
+
+/* Bottom-left */
+.about-header .corner.bl{ bottom: 18px; left: 18px; }
+.about-header .corner.bl::before{ width: 4px; height: 100%; left: 0; bottom: 0; }
+.about-header .corner.bl::after{ height: 4px; width: 100%; left: 0; bottom: 0; }
+
+/* Bottom-right */
+.about-header .corner.br{ bottom: 18px; right: 18px; }
+.about-header .corner.br::before{ width: 4px; height: 100%; right: 0; bottom: 0; }
+.about-header .corner.br::after{ height: 4px; width: 100%; right: 0; bottom: 0; }
+
+/* Logo sizing */
+.btwm-logo{
+  width: 340px;                        /* close to your 346px icon */
+  height: auto;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px){
+  .about-header{ padding: 44px 0 54px; border-left-width:14px; border-right-width:14px; }
+  .about-header .corner{ width: 32px; height: 32px; }
+  .btwm-logo{ width: 260px; }
+}
 
     /* Header content */
     .book-brand{
