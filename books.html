@@ -263,15 +263,17 @@
   border-radius: 18px;
   background:#fff;
   overflow:hidden;
-  box-shadow: 0 12px 24px rgba(11,31,58,.08);
 
-  border-left: 4px solid #b0122a;  /* BTWM red */
-  border-top: 4px solid #caa24a;   /* BTWM gold */
-}
-.book-card{
-  outline: 3px solid red;
-}
+  /* Make accents clearly visible */
+  border-left: 6px solid #b0122a;  /* BTWM red */
+  border-top: 6px solid #caa24a;   /* BTWM gold */
 
+  /* Keep your shadow, but slightly lighter so borders stand out */
+  box-shadow: 0 10px 20px rgba(11,31,58,.06);
+
+  /* Optional: adds a clean inner edge (makes it look like home page cards) */
+  box-sizing: border-box;
+}
 .book-cover{
   height: 300px;          /* better proportion for 2:3 covers */
   padding: 16px;
@@ -280,7 +282,11 @@
   align-items: center;
   justify-content: center;
 }
-
+.book-card{
+  box-shadow:
+    0 10px 20px rgba(11,31,58,.06),
+    inset 0 0 0 1px rgba(255,255,255,.6);
+}
 .book-cover img{
   max-height: 100%;
   max-width: 100%;
