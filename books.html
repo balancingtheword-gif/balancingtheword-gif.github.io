@@ -460,16 +460,32 @@
 .about-header::before{
   content:none !important;
 }
-    <div class="wrap">
-  <section class="coming-soon-callout">
-    <h2>Coming Soon</h2>
-    <p>
-      Additional Bible studies, teaching resources, and devotionals from
-      Balancing the Word Ministry are currently in development and will be
-      released soon.
-    </p>
-  </section>
-</div>
+  /* COMING SOON ANCHOR (matches About page scripture style) */
+.coming-soon-anchor{
+  max-width: 900px;
+  margin: 0 auto 10px;
+  padding: 18px 22px;
+  border-left: 5px solid #d4af37;           /* same gold */
+  background: rgba(212,175,55,.10);         /* same tint */
+  border-radius: 14px;
+  text-align: center;
+}
+
+/* Title */
+.coming-soon-title{
+  font-size: 1.4rem;
+  font-weight: 800;
+  margin-bottom: 8px;
+  color: #0b1f3a;                           /* BTWM navy */
+}
+
+/* Body text */
+.coming-soon-text{
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #111827;
+}
 
   </style>
   
@@ -565,9 +581,9 @@
   <!-- MAIN -->
   <main>
 <div class="wrap">
-  <section class="coming-soon-callout">
-    <h2>Coming Soon</h2>
-    <p>
+  <section class="coming-soon-anchor">
+    <div class="coming-soon-title">Coming Soon</div>
+    <p class="coming-soon-text">
       Additional Bible studies, teaching resources, and devotionals from
       Balancing the Word Ministry are currently in development and will be
       released soon.
