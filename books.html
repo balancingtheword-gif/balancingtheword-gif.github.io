@@ -259,21 +259,31 @@
 }
 
 .book-card{
-  border: 1px solid rgba(11,31,58,.14);
-  border-radius: 18px;
-  background:#fff;
-  overflow:hidden;
-
-  /* Make accents clearly visible */
-  border-left: 6px solid #b0122a;  /* BTWM red */
-  border-top: 6px solid #caa24a;   /* BTWM gold */
-
-  /* Keep your shadow, but slightly lighter so borders stand out */
-  box-shadow: 0 10px 20px rgba(11,31,58,.06);
-
-  /* Optional: adds a clean inner edge (makes it look like home page cards) */
-  box-sizing: border-box;
+  position: relative;
 }
+
+/* Red accent on the left */
+.book-card::before{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:6px;
+  height:100%;
+  background:#b0122a; /* BTWM red */
+}
+
+/* Gold accent on the top */
+.book-card::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  height:6px;
+  width:100%;
+  background:#caa24a; /* BTWM gold */
+}
+
 .book-cover{
   height: 300px;          /* better proportion for 2:3 covers */
   padding: 16px;
