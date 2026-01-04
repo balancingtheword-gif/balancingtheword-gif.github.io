@@ -123,6 +123,43 @@
     .about-header .corner.br::after{
       content:none;
     }
+/* ===== HEADER SHADOW BOX / FRAME ===== */
+.about-header{
+  position: relative;
+}
+
+/* outer shadow box */
+.about-header::before{
+  content:"";
+  position:absolute;
+  inset:18px;                       /* space from edges */
+  background: rgba(255,255,255,.04);
+  border:1px solid rgba(212,175,55,.35); /* gold outline */
+  border-radius:14px;
+  box-shadow:
+    0 30px 60px rgba(0,0,0,.35),
+    inset 0 0 0 1px rgba(255,255,255,.06);
+  z-index:1;
+  pointer-events:none;
+}
+
+/* soft inner glow */
+.about-header::after{
+  content:"";
+  position:absolute;
+  inset:18px;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(255,255,255,.08), transparent 60%);
+  border-radius:14px;
+  z-index:2;
+  pointer-events:none;
+}
+
+/* keep real content ABOVE the box */
+.about-hero{
+  position:relative;
+  z-index:5;
+}
 
     @media (max-width:768px){
       .about-header{ padding:46px 0 60px; border-left-width:14px; border-right-width:14px; }
