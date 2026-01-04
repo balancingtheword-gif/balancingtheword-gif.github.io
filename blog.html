@@ -135,6 +135,89 @@
   .about-logo-img{
     width: 260px;
   }
+/* bottom corners as arcs */
+.about-header .corner.bl,
+.about-header .corner.br{
+  bottom:18px;
+  top:auto;
+  border:4px solid #d4af37;
+  border-top:none;
+}
+
+.about-header .corner.bl{
+  left:18px;
+  border-right:none;
+  border-radius:0 0 0 28px;
+}
+
+.about-header .corner.br{
+  right:18px;
+  border-left:none;
+  border-radius:0 0 28px 0;
+}
+
+.about-header .corner.bl::before,
+.about-header .corner.bl::after,
+.about-header .corner.br::before,
+.about-header .corner.br::after{
+  content:none; /* turn off L-shapes for bottom corners */
+}
+
+/* responsive tweaks */
+@media (max-width:768px){
+  .about-header{ padding:46px 0 60px; border-left-width:14px; border-right-width:14px; }
+  .about-header .corner{ width:32px; height:32px; }
+  .btwm-logo{ width:260px; }
+}
+}
+.about-header .corner::before,
+.about-header .corner::after{
+  content: "";
+  position: absolute;
+  background: #d4af37; /* gold */
+}
+
+/* Top-left */
+.about-header .corner.tl{
+  top: 18px;
+  left: 18px;
+}
+.about-header .corner.tl::before{
+  width: 4px;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.about-header .corner.tl::after{
+  height: 4px;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+/* Top-right */
+.about-header .corner.tr{
+  top: 18px;
+  right: 18px;
+}
+.about-header .corner.tr::before{
+  width: 4px;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+.about-header .corner.tr::after{
+  height: 4px;
+  width: 100%;
+  right: 0;
+  top: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px){
+  .about-logo-img{
+    width: 260px;
+  }
   /* ===== BOTTOM ARCS (only affects .bl and .br) ===== */
 .about-header .corner.bl,
 .about-header .corner.br{
@@ -162,12 +245,277 @@
   border-radius: 0 0 28px 0;
 }
 
+/* turn OFF your existing L-corner pseudo lines for the bottom corners */
 .about-header .corner.bl::before,
 .about-header .corner.bl::after,
 .about-header .corner.br::before,
 .about-header .corner.br::after{
-  content:none; /* turn off L-shapes for bottom corners */
+  content: none;
 }
+
+/* If something is clipping them, this prevents it */
+.about-header{
+  overflow: visible;
+}
+  /* Side gold accents */
+  .about-header::before,
+  .about-header::after{
+    width: 100px;
+  }
+}
+  .about-header::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(255,255,255,.06), transparent 60%);
+  opacity:1;
+  pointer-events:none;
+}
+   
+/* Ensure logo stays above ribbons */
+.about-logo{
+  position: relative;
+  z-index: 5;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 34px;
+  border-radius: 50%;
+
+  margin: 0 auto;   /* <-- centers the logo wrapper */
+}
+
+.about-logo-img{
+  width: 346px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 20px;   /* centers + spacing */
+
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 14px;
+}
+        .btwm-logo{
+  filter: drop-shadow(0 18px 30px rgba(0,0,0,.35));
+}
+.about-logo{
+  padding:14px;
+  border-radius:14px;
+  background: rgba(255,255,255,.06);
+  box-shadow: 0 0 0 1px rgba(212,175,55,.18) inset;
+}
+
+ /* ABOUT PAGE LAYOUT */
+.about-grid{
+  display: grid;
+  grid-template-columns: 1fr;   /* vertical stack */
+  gap: 38px;
+  align-items: start;
+}
+
+/* ABOUT SECTION BOXES */
+.about-section{
+  background: #ffffff;
+  border: 1px solid rgba(11,31,58,.14);
+  border-radius: 18px;
+  padding: 26px 26px 22px;
+  box-shadow: 0 10px 28px rgba(11,31,58,.08);
+  position: relative;
+}
+
+/* Gold accent line at top of each box */
+.about-section::before{
+  content:"";
+  position:absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 4px;
+  background: #d4af37;
+}
+
+/* Headings */
+.about-section h2{
+  font-size: 1.7rem;
+  margin-bottom: 18px;
+}
+
+/* Responsive safety (kept simple) */
+@media (max-width: 900px){
+  .about-grid{
+    gap: 32px;
+  }
+}
+  /* bordered “card” look */
+  .about-section{
+    background:#fff;
+    border:1px solid #d9d9d9;
+    border-radius:16px;
+    padding:20px;
+    box-shadow: 0 10px 22px rgba(0,0,0,.06);
+  }
+
+  .about-section h2{
+    margin: 0 0 12px;
+    color: #0b1f3a;
+    border-left: 6px solid #c9a23a;
+    padding-left: 10px;
+  }
+
+  /* readable line length */
+ .about-section p{
+  max-width: none;          /* allow it to fill the box */
+  width: 100%;
+  margin: 0 0 14px;
+  text-align: justify;      /* keep your book-style justification */
+  text-indent: 1.5em;
+}
+  .journey-close{
+    text-align:center;
+    margin-top: 14px;
+  }
+  .btwm-symbols {
+  max-width: 100%;
+  margin: 12px 0 0 0;
+  padding-left: 18px;
+}
+
+.btwm-symbols li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+        /* =========================
+   Top corner L-shapes (restore)
+   ========================= */
+
+.about-header .corner{
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.about-header .corner::before,
+.about-header .corner::after{
+  background: #b11226; /* BTWM scarlet red */
+}
+}
+/* Top-left */
+.about-header .corner.tl{
+  top: 18px;
+  left: 18px;
+}
+.about-header .corner.tl::before{
+  width: 4px;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.about-header .corner.tl::after{
+  height: 4px;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+/* Top-right */
+.about-header .corner.tr{
+  top: 18px;
+  right: 18px;
+}
+.about-header .corner.tr::before{
+  width: 4px;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+.about-header .corner.tr::after{
+  height: 4px;
+  width: 100%;
+  right: 0;
+  top: 0;
+}
+        /* =========================
+   Bottom corner arcs (clean + reliable)
+   Converts ONLY the bottom corners to arcs
+   ========================= */
+
+/* Bottom corners become arc borders */
+.about-header .corner.bl,
+.about-header .corner.br{
+  width: 48px;
+  height: 48px;
+  bottom: 18px;
+  border: 4px solid #b11226;   /* BTWM scarlet red */
+  border-top: none;
+}
+
+/* Turn off the L-corner pseudo lines on bottom corners */
+.about-header .corner.bl::before,
+.about-header .corner.bl::after,
+.about-header .corner.br::before,
+.about-header .corner.br::after{
+  background: transparent;
+}
+
+/* Bottom-left arc */
+.about-header .corner.bl{
+  left: 18px;
+  border-right: none;
+  border-radius: 0 0 0 28px;
+}
+
+/* Bottom-right arc */
+.about-header .corner.br{
+  right: 18px;
+  border-left: none;
+  border-radius: 0 0 28px 0;
+}
+
+/* Responsive */
+@media (max-width: 768px){
+  .about-header .corner.bl,
+  .about-header .corner.br{
+    width: 32px;
+    height: 32px;
+    border-width: 3px;
+    bottom: 14px;
+  }
+  .about-header .corner.bl{ left: 14px; }
+  .about-header .corner.br{ right: 14px; }
+}      
+}
+background:
+  radial-gradient(circle at 50% 40%, rgba(202,162,74,.18), transparent 58%),
+  radial-gradient(circle at 18% 65%, rgba(193,18,31,.10), transparent 55%),
+  radial-gradient(circle at 82% 65%, rgba(202,162,74,.10), transparent 55%),
+  linear-gradient(#0b1f3a, #07162a);
+
+  .page-title{
+  margin:18px 0 6px;
+  color:#fff;
+  font-size:30px;
+  letter-spacing:.2px;
+}
+
+        /* Balanced header content layout */
+.about-hero{
+  position: relative;
+  z-index: 5;
+
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 340px 1fr; /* logo column + text column */
+  gap: 28px;
+  align-items: center;
+
+  padding: 26px 28px;
+  border-radius: 14px;
 
 /* responsive tweaks */
 @media (max-width:768px){
