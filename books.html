@@ -1,491 +1,102 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Books | Balancing the Word Ministry</title>
-
-  <style>
-    :root{
-      --navy:#0b1f3a;
-      --gold:#caa24a;
-      --scarlet:#C1121F;
-      --ink:#0b1220;
-      --muted:#5b677a;
-      --border:rgba(11,31,58,.14);
-      --wrap:1100px;
-    }
-
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
-      color:var(--ink);
-      background:#fff;
-      line-height:1.55;
-    }
-    a{color:inherit}
-
-    .wrap{max-width:var(--wrap); margin:0 auto; padding:0 18px;}
-
-    /* =========================
-   ABOUT + BOOK HEADER (shared)
-   Use this exact CSS for BOTH pages
-   ========================= */
-
-/* ===== ABOUT HEADER (FINAL CENTER + SOLID NAVY) ===== */
-.about-header{
-  position: relative;
-  background: #0b1f3a !important;      /* solid navy */
-  background-image: none !important;
-  padding: 60px 0;
-  overflow: visible;
-
-  border-top: 2px solid rgba(212,175,55,.75);
-  border-bottom: 3px solid #b11226;
-  border-left: 22px solid #d4af37;
-  border-right: 22px solid #d4af37;
-}
-
-/* subtle depth */
-.about-header::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    radial-gradient(circle at 50% 40%, rgba(202,162,74,.18), transparent 58%),
-    radial-gradient(circle at 18% 65%, rgba(177,18,38,.10), transparent 55%),
-    radial-gradient(circle at 82% 65%, rgba(202,162,74,.10), transparent 55%);
-  pointer-events:none;
-}
-
-.inner-frame{
-  position:absolute;
-  inset:26px;
-  border:1px solid rgba(212,175,55,.28);
-  pointer-events:none;
-  z-index:2;
-}
-
-/* Top corners (L-shapes) – scarlet */
-.about-header .corner{
-  position:absolute;
-  width:48px;
-  height:48px;
-  pointer-events:none;
-  z-index:3;
-}
-.about-header .corner::before,
-.about-header .corner::after{
-  content:"";
-  position:absolute;
-  background:#b11226; /* scarlet */
-}
-.about-header .corner.tl{ top:18px; left:18px; }
-.about-header .corner.tl::before{ width:4px; height:100%; left:0; top:0; }
-.about-header .corner.tl::after{ height:4px; width:100%; left:0; top:0; }
-
-.about-header .corner.tr{ top:18px; right:18px; }
-.about-header .corner.tr::before{ width:4px; height:100%; right:0; top:0; }
-.about-header .corner.tr::after{ height:4px; width:100%; right:0; top:0; }
-
-/* Bottom arcs – scarlet */
-.about-header .corner.bl,
-.about-header .corner.br{
-  width:48px;
-  height:48px;
-  bottom:18px;
-  border:4px solid #b11226;
-  border-top:none;
-}
-
-/* turn off L-lines for bottom corners */
-.about-header .corner.bl::before,
-.about-header .corner.bl::after,
-.about-header .corner.br::before,
-.about-header .corner.br::after{
-  background:transparent;
-}
-
-.about-header .corner.bl{
-  left:18px;
-  border-right:none;
-  border-radius:0 0 0 28px;
-}
-.about-header .corner.br{
-  right:18px;
-  border-left:none;
-  border-radius:0 0 28px 0;
-}
-
-/* balanced layout */
-.about-hero{
-  position:relative;
-  z-index:5;
-  width:min(1100px,92vw);
-  margin:0 auto;
-
-  display:grid;
-  grid-template-columns: 340px 1fr;
-  gap:28px;
-  align-items:center;
-
-  padding:26px 28px;
-  border-radius:14px;
-  background: rgba(255,255,255,.06);
-  box-shadow: 0 0 0 1px rgba(212,175,55,.18) inset;
-}
-
-.btwm-logo{
-  width:320px;
-  max-width:100%;
-  height:auto;
-  display:block;
-  background:#fff;
-  padding:14px;
-  border-radius:10px;
-  box-shadow:0 18px 30px rgba(0,0,0,.30);
-}
-
-.about-hero-text{ text-align:left; }
-
-.page-title{
-  margin:0 0 10px;
-  color:#fff;
-  font-size:34px;
-  letter-spacing:.2px;
-  line-height:1.15;
-}
-
-.page-sub{
-  margin:0;
-  color:#c8a44d; /* gold text */
-  font-weight:800;
-  letter-spacing:.3px;
-}
-
-@media (max-width: 820px){
-  .about-hero{ grid-template-columns:1fr; text-align:center; padding:22px 18px; }
-  .about-hero-text{ text-align:center; }
-  .page-title{ font-size:28px; }
-}
-
-    /* Header content */
-    .book-brand{
-      position:relative;
-      text-align:center;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      gap:14px;
-    }
-
-    .book-logo{
-      width:min(280px, 70vw);
-      height:auto;
-      display:block;
-      filter: drop-shadow(0 14px 26px rgba(0,0,0,.28));
-      background:#fff;
-      padding:18px;
-      border-radius:10px;
-    }
-
-    .book-rule{
-      width:140px;
-      height:3px;
-      border-radius:2px;
-      background:var(--gold);
-      opacity:.95;
-    }
-
-    .book-title{
-      margin:0;
-      color:#fff;
-      font-size:32px;
-      letter-spacing:.2px;
-    }
-
-    .book-subtitle{
-      margin:0;
-      color:var(--scarlet);
-      font-weight:700;
-      font-size:16px;
-    }
-
-    /* =========================
-       MAIN CONTENT PLACEHOLDER
-       ========================= */
-    main{padding:28px 0 42px;}
-
-    .card{
-      border:1px solid var(--border);
-      border-radius:16px;
-      padding:18px;
-      box-shadow:0 10px 24px rgba(11,31,58,.08);
-      background:#fff;
-    }
-    /* ===== BOOKS PAGE ===== */
-.books-main{ padding: 34px 0 54px; }
-.wrap{ max-width: 1100px; margin: 0 auto; padding: 0 18px; }
-
-.books-intro{
-  text-align:center;
-  margin: 0 auto 22px;
-  max-width: 860px;
-}
-.books-intro h2{
-  margin: 0 0 10px;
-  font-size: 30px;
-  color: #0b1f3a;
-}
-.books-intro p{
-  margin: 0;
-  color: rgba(11,31,58,.78);
-  font-size: 16px;
-}
-
-.section-title{
-  margin: 22px 0 14px;
-  font-size: 20px;
-  color:#0b1f3a;
-}
-
-.books-grid .grid{
-  display:grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-}
-
-.book-card{
-  border: 1px solid rgba(11,31,58,.14);
-  border-radius: 18px;
-  background:#fff;
-  overflow:hidden;
-  box-shadow: 0 12px 24px rgba(11,31,58,.08);
-}
-
-.book-cover{
-  height: 340px;          /* better proportion for 2:3 covers */
-  padding: 12px;
-  background: rgba(11,31,58,.04);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.book-cover img{
-  max-height: 100%;
-  max-width: 100%;
-  height: auto;
-  width: auto;
-  object-fit: contain;           /* show full cover */
-  display: block;
-}
-
-@media (max-width: 640px){
-  .book-cover{ height: 280px; }
-}
-.book-body{ padding: 14px 14px 16px; }
-.book-body h4{
-  margin: 0 0 8px;
-  color:#0b1f3a;
-  font-size: 18px;
-}
-.book-body p{
-  margin: 0 0 12px;
-  color: rgba(11,31,58,.78);
-  font-size: 14px;
-}
-     
-    /* Buttons */
-.btn-row{ display:flex; gap:10px; flex-wrap:wrap; margin-top: 10px; }
-.btn{
-  display:inline-block;
-  padding: 10px 16px;
-  border-radius: 999px;
-  font-weight: 800;
-  text-decoration:none;
-  border: 1px solid rgba(11,31,58,.18);
-}
-.btn.primary{ background:#0b1f3a; color:#fff; }
-.btn.ghost{ background:#fff; color:#0b1f3a; }
-.btn.small{ padding: 8px 12px; font-size: 14px; }
-
-@media (max-width: 720px){
-  .books-grid .grid{ grid-template-columns: 1fr; }
-}
-    /* Footer (your existing style can override this) */
-    footer{border-top:1px solid var(--border); margin-top:24px;}
-    .site-footer{
-      background:var(--navy);
-      color:#fff;
-      padding:22px 0;
-      margin-top:28px;
-    }
-    .site-footer .small{
-      font-size:14px;
-      text-align:center;
-      margin:6px 0;
-    }
-    .site-footer .tagline{
-      color:var(--gold);
-      font-weight:700;
-    }
-    .about-header{
-  background: linear-gradient(#0b1f3a, #07162a) !important;
-}
-    /* LOCK About + Books header + panel colors to match exactly */
-.about-header{
-  background: linear-gradient(#0b1f3a, #07162a) !important;
-}
-
-/* The soft glow overlay must match too */
-.about-header::before{
-  background:
-    radial-gradient(circle at 50% 40%, rgba(202,162,74,.18), transparent 58%),
-    radial-gradient(circle at 18% 65%, rgba(177,18,38,.10), transparent 55%),
-    radial-gradient(circle at 82% 65%, rgba(202,162,74,.10), transparent 55%) !important;
-}
-
-/* This is the “shadow box” panel that looks off */
-.about-hero{
-  background: rgba(255,255,255,.06) !important;
-  box-shadow:
-    0 0 0 1px rgba(212,175,55,.18) inset,
-    0 22px 40px rgba(0,0,0,.22) !important;
-}
-
-/* Optional: make the panel border a touch more consistent */
-.about-hero{
-  border: 1px solid rgba(255,255,255,.08) !important;
-}
-    /* Force exact same solid navy, no tint overlay */
-.about-header{
-  background:#0b1f3a !important;
-  background-image:none !important;
-}
-.about-header::before{
-  content:none !important;
-}
-  </style>
-  
 </head>
-  <header class="about-header">
-  <span class="corner tl"></span>
-  <span class="corner tr"></span>
-  <span class="corner bl"></span>
-  <span class="corner br"></span>
-
-  <span class="inner-frame"></span>
-
-  <div class="about-hero">
-    <img src="../logos/346-shield-icon.png"
-         alt="Balancing The Word Ministry Logo"
-         class="btwm-logo">
-
-    <div class="about-hero-text">
-      <h1 class="page-title">Books & Teaching Resources</h1>
-      <p class="page-sub">Build • Educate • Disciple</p>
-    </div>
-  </div>
-</header>
-  <main class="books-main">
-  <div class="wrap">
-
-    <section class="books-intro">
-      <h2>Books & Teaching Resources</h2>
-      <p>
-        Scripture-rooted studies designed to build discernment, strengthen doctrine, and encourage true discipleship.
-      </p>
-    </section>
-
-    <section class="books-grid">
-      <h3 class="section-title">Available Now</h3>
-
-      <div class="grid">
-
-        <!-- Book Card: Balaam -->
-        <article class="book-card">
-          <div class="book-cover">
-            <img src="images/Balaam-Front-Cover 1200x1800.png" alt="The Story of Balaam front cover">
-          </div>
-          <div class="book-body">
-            <h4>The Story of Balaam</h4>
-            <p>A sobering study on compromise, deception, and the sovereignty of God.</p>
-
-            <div class="btn-row">
-              <a class="btn small primary" href="#" target="_blank" rel="noopener">Amazon</a>
-              <a class="btn small ghost" href="#" target="_blank" rel="noopener">Details</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Book Card: Habakkuk -->
-        <article class="book-card">
-          <div class="book-cover">
-           
-          </div>
-          <div class="book-body">
-            <h4>Be Like Habakkuk</h4>
-            <p>Learning to trust God when answers delay—and faith is tested.</p>
-
-            <div class="btn-row">
-              <a class="btn small primary" href="#" target="_blank" rel="noopener">Amazon</a>
-              <a class="btn small ghost" href="#" target="_blank" rel="noopener">Details</a>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-  </div>
-</main>
- 
-        <!-- All Books -->
-    <section class="books-grid">
-      <h3 class="section-title">Library</h3>
-
-      <div class="grid">
-        <!-- Book Card 1 -->
-        <article class="book-card">
-         <div class="book-cover">
-  <img
-    src="images/books/be-like-habakkuk/habakkuk-1.png"
-    alt="Be Like Habakkuk book cover"
-  >
-</div>
-          <div class="book-body">
-            <h4>Be Like Habakkuk</h4>
-            <p>Learning to trust God when answers delay—and faith is tested.</p>
-            <div class="btn-row">
-              <a class="btn small primary" href="#" target="_blank" rel="noopener">Amazon</a>
-              <a class="btn small ghost" href="#" target="_blank" rel="noopener">Details</a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Book Card 2 (placeholder) -->
-        <article class="book-card">
-          <div class="book-cover placeholder">
-            <span>Cover</span>
-          </div>
-          <div class="book-body">
-            <h4>Coming Soon</h4>
-            <p>Additional BTWM resources will be added here as they’re released.</p>
-            <div class="btn-row">
-              <a class="btn small ghost" href="index.html#contact">Request Updates</a>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </section>
-
-  </div>
-</main>
-
 <body>
+
+  <header class="about-header">
+    <span class="corner tl"></span>
+    <span class="corner tr"></span>
+    <span class="corner bl"></span>
+    <span class="corner br"></span>
+
+    <span class="inner-frame"></span>
+
+    <div class="about-hero">
+      <img src="logos/346-shield-icon.png"
+           alt="Balancing The Word Ministry Logo"
+           class="btwm-logo">
+
+      <div class="about-hero-text">
+        <h1 class="page-title">Books & Teaching Resources</h1>
+        <p class="page-sub">Build • Educate • Disciple</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="books-main">
+    <div class="wrap">
+
+      <section class="books-intro">
+        <h2>Books & Teaching Resources</h2>
+        <p>
+          Scripture-rooted studies designed to build discernment, strengthen doctrine, and encourage true discipleship.
+        </p>
+      </section>
+
+      <section class="books-grid">
+        <h3 class="section-title">Available Now</h3>
+
+        <div class="grid">
+
+          <!-- Book Card: Balaam -->
+          <article class="book-card">
+            <div class="book-cover">
+              <!-- If this image has spaces in the filename, it may not load.
+                   Best fix is to rename it without spaces.
+                   If you haven't renamed yet, use %20 for spaces like shown below. -->
+              <img src="images/Balaam-Front-Cover%201200x1800.png"
+                   alt="The Story of Balaam front cover">
+            </div>
+
+            <div class="book-body">
+              <h4>The Story of Balaam</h4>
+              <p>A sobering study on compromise, deception, and the sovereignty of God.</p>
+
+              <div class="btn-row">
+                <a class="btn small primary" href="#" target="_blank" rel="noopener">Amazon</a>
+                <a class="btn small ghost" href="#" target="_blank" rel="noopener">Details</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Book Card: Habakkuk -->
+          <article class="book-card">
+            <div class="book-cover">
+              <img src="images/books/be-like-habakkuk/habakkuk-1.png"
+                   alt="Be Like Habakkuk book cover">
+            </div>
+
+            <div class="book-body">
+              <h4>Be Like Habakkuk</h4>
+              <p>Learning to trust God when answers delay—and faith is tested.</p>
+
+              <div class="btn-row">
+                <a class="btn small primary" href="#" target="_blank" rel="noopener">Amazon</a>
+                <a class="btn small ghost" href="#" target="_blank" rel="noopener">Details</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="small">© <span id="y"></span> Balancing the Word Ministry</div>
+      <div class="small">Colossians 1:28</div>
+      <div class="small tagline">Build • Educate • Disciple</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
 
   <!-- MAIN -->
   <main>
