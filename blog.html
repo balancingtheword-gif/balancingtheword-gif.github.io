@@ -86,42 +86,80 @@
   z-index:3;
 }
 
+}
 .about-header .corner::before,
 .about-header .corner::after{
-  content:"";
-  position:absolute;
-  background:#d4af37;
+  content: "";
+  position: absolute;
+  background: #d4af37; /* gold */
 }
 
-/* top-left */
-.about-header .corner.tl{ top:18px; left:18px; }
-.about-header .corner.tl::before{ width:4px; height:100%; left:0; top:0; }
-.about-header .corner.tl::after{ height:4px; width:100%; left:0; top:0; }
+/* Top-left */
+.about-header .corner.tl{
+  top: 18px;
+  left: 18px;
+}
+.about-header .corner.tl::before{
+  width: 4px;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.about-header .corner.tl::after{
+  height: 4px;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
 
-/* top-right */
-.about-header .corner.tr{ top:18px; right:18px; }
-.about-header .corner.tr::before{ width:4px; height:100%; right:0; top:0; }
-.about-header .corner.tr::after{ height:4px; width:100%; right:0; top:0; }
+/* Top-right */
+.about-header .corner.tr{
+  top: 18px;
+  right: 18px;
+}
+.about-header .corner.tr::before{
+  width: 4px;
+  height: 100%;
+  right: 0;
+  top: 0;
+}
+.about-header .corner.tr::after{
+  height: 4px;
+  width: 100%;
+  right: 0;
+  top: 0;
+}
 
-/* bottom corners as arcs */
+/* RESPONSIVE */
+@media (max-width: 768px){
+  .about-logo-img{
+    width: 260px;
+  }
+  /* ===== BOTTOM ARCS (only affects .bl and .br) ===== */
 .about-header .corner.bl,
 .about-header .corner.br{
-  bottom:18px;
-  top:auto;
-  border:4px solid #d4af37;
-  border-top:none;
+  bottom: 18px;
+  top: auto;                 /* ensure not inheriting any top position */
+  width: 48px;
+  height: 48px;
+
+  /* draw arc with borders */
+  border: 4px solid #d4af37;
+  border-top: none;
 }
 
 .about-header .corner.bl{
-  left:18px;
-  border-right:none;
-  border-radius:0 0 0 28px;
+  left: 18px;
+  right: auto;
+  border-right: none;
+  border-radius: 0 0 0 28px;
 }
 
 .about-header .corner.br{
-  right:18px;
-  border-left:none;
-  border-radius:0 0 28px 0;
+  right: 18px;
+  left: auto;
+  border-left: none;
+  border-radius: 0 0 28px 0;
 }
 
 .about-header .corner.bl::before,
