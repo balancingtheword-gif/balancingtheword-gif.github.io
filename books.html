@@ -252,12 +252,10 @@
 
 .books-grid .grid{
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-columns: repeat(2, 420px); /* fixed card width */
   gap: 28px;
 
-  max-width: 900px;        /* keeps the two cards centered */
-  margin: 0 auto;          /* ← THIS centers the boxes */
-  justify-content: center; /* extra safety */
+  justify-content: center;  /* ← THIS is the key */
 }
 
 .book-card{
@@ -286,8 +284,10 @@
   display: block;
 }
 
-@media (max-width: 640px){
-  .book-cover{ height: 280px; }
+@media (max-width: 900px){
+  .books-grid .grid{
+    grid-template-columns: 1fr;
+  }
 }
 .book-body{ padding: 14px 14px 16px; }
 .book-body h4{
