@@ -251,9 +251,13 @@
 }
 
 .books-grid .grid{
-  display:grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 28px;
+
+  max-width: 900px;        /* keeps the two cards centered */
+  margin: 0 auto;          /* ← THIS centers the boxes */
+  justify-content: center; /* extra safety */
 }
 
 .book-card{
