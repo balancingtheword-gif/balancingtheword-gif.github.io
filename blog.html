@@ -660,6 +660,29 @@ background:
    .back-home{
   margin: 0 0 20px;
 }
+    /* ===== BLOG CARD: NAVY BORDER + SHADOW ===== */
+.card{
+  text-align: left;
+  background: #ffffff;
+
+  border: 2px solid #0b1f3a;           /* BTWM navy border */
+  border-radius: 14px;
+
+  padding: 18px 18px 16px;
+
+  box-shadow:
+    0 10px 22px rgba(0,0,0,.18),       /* main shadow */
+    0 0 0 1px rgba(11,31,58,.25);      /* subtle navy halo */
+
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.card:hover{
+  transform: translateY(-2px);
+  box-shadow:
+    0 18px 36px rgba(0,0,0,.28),
+    0 0 0 1px rgba(11,31,58,.35);
+}
+
   </style>
 </head>
 >
