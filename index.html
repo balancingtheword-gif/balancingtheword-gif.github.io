@@ -484,31 +484,78 @@
     }
 
     /* ===== FOOTER (your navy footer class) ===== */
-    .site-footer{
-      background:#0b1f3a;
-      color:#fff;
-      padding:22px 0;
-      margin-top:28px;
-      border-top:4px solid #c8a44d;
-    }
-    .site-footer .small{
-      font-size:14px;
-      text-align:center;
-      margin:6px 0;
-      color:#fff;
-    }
-    .site-footer .tagline{
-      color:#d4af37;
-      font-weight:700;
-    }
-    footer .legal a{
-  color: var(--muted);
-  font-size: 13px;
-  text-decoration: none;
+   /* =========================
+   SITE FOOTER
+   ========================= */
+
+.site-footer{
+  position: relative;
+  background-image: url("images/website-footer-1100x300.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 40px 0 28px;
+  margin-top: 32px;
 }
 
-footer .legal a:hover{
-  text-decoration: underline;
+/* Overlay for readability */
+.site-footer::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(11,31,58,0.7); /* BTWM navy */
+  z-index:0;
+}
+
+/* Footer content */
+.footer-inner{
+  position: relative;
+  z-index:1;
+  text-align:center;
+}
+
+/* Text styles */
+.site-footer .small{
+  font-size:14px;
+  color:#ffffff;
+  margin:6px 0;
+}
+
+.site-footer .scripture{
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.site-footer .tagline{
+  font-weight:700;
+  color:#d4af37; /* gold */
+}
+
+.site-footer .tagline .red{
+  color:#b11226;
+}
+
+/* Legal link */
+.site-footer .legal a{
+  color:#ffffff;
+  text-decoration:underline;
+  font-size:13px;
+}
+
+.site-footer .legal a:hover{
+  opacity:0.85;
+}
+
+/* Mobile */
+@media (max-width: 768px){
+  .site-footer{
+    padding: 28px 0 22px;
+  }
+
+  .site-footer .small{
+    font-size:13px;
+  }
 }
 /* Scripture box styling */
 .scripture-box{
@@ -804,16 +851,25 @@ footer .legal a:hover{
   </main>
 
   <!-- ✅ ONE footer, inside body, at the bottom -->
-  <footer class="site-footer">
-    <div class="wrap">
-      <div class="small">© <span id="y"></span> Balancing the Word Ministry</div>
-      <div class="small">Colossians 1:28</div>
-      <div class="small tagline">Build • Educate • Disciple</div>
-      
-      <!-- Privacy Policy -->
+ <footer class="site-footer">
+  <div class="footer-inner wrap">
+
+    <div class="small">
+      © <span id="y"></span> Balancing the Word Ministry
+    </div>
+
+    <div class="small scripture">
+      Colossians 1:28
+    </div>
+
+    <div class="small tagline">
+      Build • <span class="red">Educate</span> • Disciple
+    </div>
+
     <div class="small legal">
       <a href="/privacy-policy.html">Privacy Policy</a>
     </div>
+
   </div>
 </footer>
 
