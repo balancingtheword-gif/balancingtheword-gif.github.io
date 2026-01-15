@@ -200,113 +200,7 @@
   line-height: 1.6;
 }
         /* =========================
-   Top corner L-shapes (restore)
-   ========================= */
-
-.about-header .corner{
-  position: absolute;
-  width: 48px;
-  height: 48px;
-  pointer-events: none;
-  z-index: 3;
-}
-
-.about-header .corner::before,
-.about-header .corner::after{
-  background: #b11226; /* BTWM scarlet red */
-}
-}
-/* Top-left */
-.about-header .corner.tl{
-  top: 18px;
-  left: 18px;
-}
-.about-header .corner.tl::before{
-  width: 4px;
-  height: 100%;
-  left: 0;
-  top: 0;
-}
-.about-header .corner.tl::after{
-  height: 4px;
-  width: 100%;
-  left: 0;
-  top: 0;
-}
-
-/* Top-right */
-.about-header .corner.tr{
-  top: 18px;
-  right: 18px;
-}
-.about-header .corner.tr::before{
-  width: 4px;
-  height: 100%;
-  right: 0;
-  top: 0;
-}
-.about-header .corner.tr::after{
-  height: 4px;
-  width: 100%;
-  right: 0;
-  top: 0;
-}
-        /* =========================
-   Bottom corner arcs (clean + reliable)
-   Converts ONLY the bottom corners to arcs
-   ========================= */
-
-/* Bottom corners become arc borders */
-.about-header .corner.bl,
-.about-header .corner.br{
-  width: 48px;
-  height: 48px;
-  bottom: 18px;
-  border: 4px solid #b11226;   /* BTWM scarlet red */
-  border-top: none;
-}
-
-/* Turn off the L-corner pseudo lines on bottom corners */
-.about-header .corner.bl::before,
-.about-header .corner.bl::after,
-.about-header .corner.br::before,
-.about-header .corner.br::after{
-  background: transparent;
-}
-
-/* Bottom-left arc */
-.about-header .corner.bl{
-  left: 18px;
-  border-right: none;
-  border-radius: 0 0 0 28px;
-}
-
-/* Bottom-right arc */
-.about-header .corner.br{
-  right: 18px;
-  border-left: none;
-  border-radius: 0 0 28px 0;
-}
-
-/* Responsive */
-@media (max-width: 768px){
-  .about-header .corner.bl,
-  .about-header .corner.br{
-    width: 32px;
-    height: 32px;
-    border-width: 3px;
-    bottom: 14px;
-  }
-  .about-header .corner.bl{ left: 14px; }
-  .about-header .corner.br{ right: 14px; }
-}      
-}
-background:
-  radial-gradient(circle at 50% 40%, rgba(202,162,74,.18), transparent 58%),
-  radial-gradient(circle at 18% 65%, rgba(193,18,31,.10), transparent 55%),
-  radial-gradient(circle at 82% 65%, rgba(202,162,74,.10), transparent 55%),
-  linear-gradient(#0b1f3a, #07162a);
-
+ 
   .page-title{
   margin:18px 0 6px;
   color:#fff;
@@ -470,10 +364,7 @@ background:
 .about-header::before{
   content:none !important;
 }
-   .back-home{
-  margin: 0 0 20px;
-}
-    /* ===== BLOG CARD: NAVY BORDER + SHADOW ===== */
+       /* ===== BLOG CARD: NAVY BORDER + SHADOW ===== */
 .card{
   text-align: left;
   background: #ffffff;
@@ -537,24 +428,12 @@ background:
 
 <body>
 
-  <header class="about-header">
-  <span class="corner tl"></span>
-  <span class="corner tr"></span>
-  <span class="corner bl"></span>
-  <span class="corner br"></span>
-
-  <span class="inner-frame"></span>
-
-  <div class="about-hero">
-    <img src="../logos/346-shield-icon.png"
-         alt="Balancing The Word Ministry Logo"
-         class="btwm-logo">
-
-    <div class="about-hero-text">
-      <h1 class="page-title">What About...</h1>
-      <p class="page-sub">Build • Educate • Disciple</p>
-    </div>
-  </div>
+ <header class="about-header">
+  <img
+    src="images/website-about-header-1920x300.png"
+    alt="About Balancing the Word Ministry"
+    class="about-header-image"
+  >
 </header>
 
  <main class="wrap hero">
