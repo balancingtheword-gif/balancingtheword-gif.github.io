@@ -497,47 +497,37 @@ background:
     0 0 0 1px rgba(11,31,58,.35);
 }
  /* ===== FOOTER (LOCKED + SIMPLE) ===== */
-.site-footer.footer-bg{
+/* ===== ABOUT PAGE FOOTER ===== */
+.site-footer{
   position: relative;
-  min-height: 220px;
-  width: 100%;
   margin-top: 32px;
+  padding: 40px 0 28px;
+  min-height: 220px;
 
-  background: #0b1f3a url("/images/website-footer-1100x300.png") center/cover no-repeat;
+  background: #0b1f3a url("/images/website-footer-1100x300.png")
+              center center / cover
+              no-repeat;
 }
 
-/* Kill any old overlay that might be hiding text */
-.site-footer.footer-bg::before{
-  display: none !important;
-}
-
-/* Text layer sits on top no matter what */
-.site-footer.footer-bg .footer-text{
-  position: absolute;
-  inset: 0;
-  z-index: 9999;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
+/* Footer text */
+.site-footer .footer-inner{
+  position: relative;
+  z-index: 1;
   text-align: center;
-  padding: 16px;
 }
 
-.site-footer.footer-bg .small{
-  color: #fff;
-  margin: 6px 0;
+.site-footer .small{
   font-size: 14px;
+  color: #ffffff;
+  margin: 6px 0;
 }
 
-.site-footer.footer-bg .tagline{
+.site-footer .tagline{
   font-weight: 700;
   color: #d4af37;
 }
 
-.site-footer.footer-bg .tagline .red{
+.site-footer .tagline .red{
   color: #b11226;
   font-weight: 800;
 }
@@ -596,46 +586,12 @@ background:
   </main>
 
   <footer>
-    <footer class="site-footer"
-  style="position:relative; min-height:220px; background:#0b1f3a url('/images/website-footer-1100x300.png') center/cover no-repeat;">
-
-  <!-- GUARANTEED VISIBLE TEXT LAYER -->
-  <div style="
-    position:absolute; inset:0; z-index:999999;
-    display:flex; flex-direction:column;
-    align-items:center; justify-content:center;
-    text-align:center;
-    color:#fff; font: 14px/1.6 Georgia, serif;
-    background: rgba(0,0,0,.25);
-    ">
-    <div>© <span id="y"></span> Balancing the Word Ministry</div>
-    <div>Colossians 1:28</div>
-    <div style="font-weight:700; color:#d4af37;">
-      Build • <span style="color:#b11226; font-weight:800;">Educate</span> • Disciple
-    </div>
-  </div>
-</footer>
-
-<script>
-  document.getElementById("y").textContent = new Date().getFullYear();
-</script>
-<footer class="site-footer"
-  style="position:relative; min-height:220px; background:#0b1f3a url('/images/website-footer-1100x300.png') center/cover no-repeat;">
-
-  <!-- GUARANTEED VISIBLE TEXT LAYER -->
-  <div style="
-    position:absolute; inset:0; z-index:999999;
-    display:flex; flex-direction:column;
-    align-items:center; justify-content:center;
-    text-align:center;
-    color:#fff; font: 14px/1.6 Georgia, serif;
-    background: rgba(0,0,0,.25);
-    ">
-    <div>© <span id="y"></span> Balancing the Word Ministry</div>
-    <div>Colossians 1:28</div>
-    <div style="font-weight:700; color:#d4af37;">
-      Build • <span style="color:#b11226; font-weight:800;">Educate</span> • Disciple
-    </div>
+  <footer class="site-footer" style="min-height:220px; background:#0b1f3a url('/images/website-footer-1100x300.png') center/cover no-repeat;">
+  <div class="footer-inner wrap">
+    <div class="small">© <span id="y"></span> Balancing the Word Ministry</div>
+    <div class="small">Colossians 1:28</div>
+    <div class="small tagline">Build • <span class="red">Educate</span> • Disciple</div>
+    <div class="small legal"><a href="/privacy-policy.html">Privacy Policy</a></div>
   </div>
 </footer>
 
