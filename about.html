@@ -511,6 +511,35 @@ header p { color:#C1121F; font-weight:600; }
 .site-footer .red{ color:#b11226; font-weight:800; }
 
 .site-footer a{ color:inherit; text-decoration:underline; }
+  /* FOOTER IMAGE + TEXT OVERLAY (ABOUT PAGE FIX) */
+
+.site-footer .footer-hero{
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.site-footer .footer-banner{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.site-footer .footer-overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  pointer-events: none; /* prevents link blocking */
+}
 
 </style>
 
