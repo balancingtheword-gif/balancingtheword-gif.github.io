@@ -488,67 +488,62 @@
    SITE FOOTER
    ========================= */
 
-.site-footer{
+/* ===== FOOTER (LOCKED + SIMPLE) ===== */
+.site-footer.footer-bg{
   position: relative;
-  background-image: url("images/website-footer-1100x300.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  padding: 40px 0 28px;
+  min-height: 220px;
+  width: 100%;
   margin-top: 32px;
+
+  background: #0b1f3a url("/images/website-footer-1100x300.png") center/cover no-repeat;
 }
 
-/* Overlay for readability */
-.site-footer::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background: rgba(11,31,58,0.55); /* BTWM navy */
-  z-index:0;
+/* Kill any old overlay */
+.site-footer.footer-bg::before{
+  display: none !important;
 }
 
-/* Footer content */
-.footer-inner{
-  position: relative;
-  z-index:1;
-  text-align:center;
+/* Text overlay */
+.site-footer.footer-bg .footer-text{
+  position: absolute;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  padding: 16px;
 }
 
-/* Text styles */
-.site-footer .small{
-  font-size:14px;
-  color:#ffffff;
-  margin:6px 0;
+.site-footer.footer-bg .small{
+  color: #fff;
+  margin: 6px 0;
+  font-size: 14px;
 }
 
-.site-footer .scripture{
-  font-style: italic;
-  opacity: 0.9;
+.site-footer.footer-bg .tagline{
+  font-weight: 700;
+  color: #d4af37;
 }
 
-.site-footer .tagline{
-  font-weight:700;
-  color:#d4af37; /* gold */
+.site-footer.footer-bg .tagline .red{
+  color: #b11226;
+  font-weight: 800;
 }
 
-.site-footer .tagline .red{
-  color:#b11226;
+/* Legal link styling */
+.site-footer.footer-bg .legal a{
+  color: #fff;
+  text-decoration: underline;
+  font-size: 13px;
+}
+.site-footer.footer-bg .legal a:hover{
+  opacity: 0.85;
 }
 
-/* Legal link */
-.site-footer .legal a{
-  color:#ffffff;
-  text-decoration:underline;
-  font-size:13px;
-}
-
-.site-footer .legal a:hover{
-  opacity:0.85;
-}
- .site-footer .small{
-    font-size:13px;
-  }
     /* Footer side icons */
 .site-footer .footer-icon{
   filter: brightness(1.4) contrast(1.2) saturate(1.15);
@@ -864,31 +859,32 @@
   </main>
 
   <!-- ✅ ONE footer, inside body, at the bottom -->
- <footer class="site-footer">
-  <div class="footer-inner wrap">
+<footer class="site-footer"
+  style="position:relative; min-height:220px; background:#0b1f3a url('/images/website-footer-1100x300.png') center/cover no-repeat;">
 
-    <div class="small">
-      © <span id="y"></span> Balancing the Word Ministry
+  <!-- GUARANTEED VISIBLE TEXT LAYER -->
+  <div style="
+    position:absolute; inset:0; z-index:999999;
+    display:flex; flex-direction:column;
+    align-items:center; justify-content:center;
+    text-align:center;
+    color:#fff; font: 14px/1.6 Georgia, serif;
+    background: rgba(0,0,0,.25);
+    ">
+    <div>© <span id="y"></span> Balancing the Word Ministry</div>
+    <div>Colossians 1:28</div>
+    <div style="font-weight:700; color:#d4af37;">
+      Build • <span style="color:#b11226; font-weight:800;">Educate</span> • Disciple
     </div>
-
-    <div class="small scripture">
-      Colossians 1:28
-    </div>
-
-    <div class="small tagline">
-      Build • <span class="red">Educate</span> • Disciple
-    </div>
-
-    <div class="small legal">
+  <div class="small legal">
       <a href="/privacy-policy.html">Privacy Policy</a>
     </div>
-
-  </div>
 </footer>
 
 <script>
   document.getElementById("y").textContent = new Date().getFullYear();
 </script>
+
    
 </body>
 </html>
