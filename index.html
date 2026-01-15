@@ -565,6 +565,46 @@ footer .legal a:hover{
   margin:3px auto 3px !important;   /* tiny space above & below */
   border-radius:2px !important;
 }
+    /* =========================
+   MOBILE CARD FIX
+   ========================= */
+@media (max-width: 900px){
+
+  /* Make cards fit mobile screen */
+  .card{
+    max-width: 100%;
+    padding: 16px 14px;     /* was too large on mobile */
+    border-radius: 14px;
+  }
+
+  /* Reduce vertical spacing between cards */
+  .connect-grid{
+    gap: 14px;
+  }
+}
+    @media (max-width: 900px){
+
+  .connect-title{
+    font-size: 18px;
+    margin-bottom: 8px;
+  }
+
+  .connect-note{
+    font-size: 14px;
+  }
+}
+@media (max-width: 900px){
+  .subscribe-card iframe{
+    height: 420px;   /* balanced for mobile */
+  }
+}
+@media (max-width: 900px){
+  .follow-btn{
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+}
+
        </style>
 </head>
 
