@@ -421,11 +421,80 @@ header p { color:#C1121F; font-weight:600; }
    .back-home{
   margin: 0 0 20px;
 }
-  
+  /* ===== SITE FOOTER (IMAGE BACKGROUND) ===== */
+.site-footer{
+  position: relative;
+  background-image: url("images/website-footer-1100x300.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 40px 0 28px;
+  margin-top: 32px;
+}
+
+/* readability overlay */
+.site-footer::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background: rgba(11,31,58,0.65);
+  pointer-events:none;
+  z-index:0;
+}
+
+.footer-inner{
+  position: relative;
+  z-index:1;
+  text-align:center;
+}
+
+.site-footer .small{
+  font-size:14px;
+  color:#fff;
+  margin:6px 0;
+}
+
+.site-footer .tagline{
+  font-weight:700;
+  color:#d4af37;
+}
+
+.site-footer .tagline .red{ color:#b11226; }
+
+.site-footer .legal a{
+  color:#fff;
+  text-decoration:underline;
+  font-size:13px;
+}
+
+@media (max-width:768px){
+  .site-footer{
+    padding: 28px 0 22px;
+  }
+  .site-footer .small{
+    font-size:13px;
+  }
+}
 
 </style>
 
  </head>
+<footer class="site-footer">
+  <div class="footer-inner wrap">
+    <div class="small">© <span id="y"></span> Balancing the Word Ministry</div>
+    <div class="small">Colossians 1:28</div>
+    <div class="small tagline">Build • <span class="red">Educate</span> • Disciple</div>
+
+    <div class="small legal">
+      <a href="/privacy-policy.html">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
 
 <body>
   
