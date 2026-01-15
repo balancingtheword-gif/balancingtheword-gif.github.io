@@ -49,20 +49,24 @@
     }
 
     /* WEBSITE HEADER IMAGE – PROPORTIONAL */
-    .site-header{
-      width:100%;
-      background:#0b1f3a;
-      padding:0;
-      overflow:hidden;
-    }
-    .site-header img{
-      width:100%;
-      height:56vh;
-      display:block;
-      object-fit:cover;
-      object-position:center;
-    }
+   .site-header{
+  width:100%;
+  height:360px;
+  overflow:hidden;
+}
 
+.header-image{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+}
+@media (max-width:768px){
+  .site-header{
+    height:260px;
+  }
+}
     /* Nav */
     .boxed-nav{
       display:flex;
@@ -560,12 +564,13 @@ footer .legal a:hover{
 
 <body>
 
-  <header class="site-header">
-    <img
-      src="images/website-header-1.png"
-      alt="Balancing the Word Ministry — Build • Educate • Disciple"
-    >
-  </header>
+ <header class="site-header">
+  <img
+    src="images/website-header-1920x600.png"
+    alt="Balancing the Word Ministry — Build • Educate • Disciple"
+    class="header-image"
+  >
+</header>
 
  <section class="hero">
   <h2>Helping believers grow to maturity and become complete in Christ.</h2>
