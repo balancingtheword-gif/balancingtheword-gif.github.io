@@ -465,6 +465,29 @@ header p { color:#C1121F; font-weight:600; }
   .site-footer{ padding: 28px 0 22px; }
   .site-footer .small{ font-size:13px; }
 }
+<style>
+  /* ABOUT footer: force text visible above any overlay */
+  .site-footer::before{ display:none !important; }
+
+  .site-footer .footer-inner{
+    position: relative !important;
+    z-index: 9999 !important;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+
+  .site-footer .small,
+  .site-footer .tagline,
+  .site-footer .red{
+    color: #ffffff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+  }
+
+  .site-footer .tagline{ color:#d4af37 !important; }
+  .site-footer .tagline .red{ color:#b11226 !important; font-weight:800; }
 </style>
 
  </head>
