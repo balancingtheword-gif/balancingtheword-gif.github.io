@@ -427,45 +427,27 @@ header p { color:#C1121F; font-weight:600; }
   position: relative;
   margin-top: 32px;
   padding: 40px 0 28px;
+  min-height: 180px; /* THIS is what forces the image to show */
 
-  /* IMPORTANT: use the SAME path that worked in your HTML */
-  background: url("../images/website-footer-1100x300.png") center/cover no-repeat;
-}
-
-/* Optional overlay for readability */
-.site-footer::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background: rgba(11,31,58,0.55);
-  z-index:0;
+  background: url("/images/website-footer-1100x300.png")
+              center center / contain
+              no-repeat
+              #0b1f3a;
 }
 
 .site-footer .footer-inner{
   position: relative;
-  z-index:1;
-  text-align:center;
-}
-
-.site-footer .small{
-  font-size:14px;
-  color:#fff;
-  margin:6px 0;
-}
-
-.site-footer .scripture{
-  font-style: italic;
-  opacity: 0.9;
+  text-align: center;
+  color: #ffffff;
 }
 
 .site-footer .tagline{
-  font-weight:700;
-  color:#d4af37;
+  font-weight: 700;
+  color: #d4af37;
 }
 
 .site-footer .tagline .red{
-  color:#b11226;
-  font-weight:800;
+  color: #b11226;
 }
 
 .site-footer .legal a{
@@ -606,8 +588,7 @@ header p { color:#C1121F; font-weight:600; }
 
   </main>
 <footer class="site-footer">
-  <img src="/images/website-footer-1100x300.png" style="max-width:300px;">
-  <div class="footer-inner wrap">
+   <div class="footer-inner wrap">
     <div class="small">© <span id="y"></span> Balancing the Word Ministry</div>
     <div class="small scripture">Colossians 1:28</div>
     <div class="small tagline">Build • <span class="red">Educate</span> • Disciple</div>
