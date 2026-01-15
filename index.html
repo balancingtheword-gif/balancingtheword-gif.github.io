@@ -49,18 +49,18 @@
     }
 
     /* WEBSITE HEADER IMAGE – PROPORTIONAL */
-   .site-header{
-  width:100%;
-  height:360px;
-  overflow:hidden;
+ html, body { margin: 0; padding: 0; }
+
+.site-header{
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.header-image{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center;
-  display:block;
+.site-header img{
+  width: 100%;
+  height: auto;     /* <-- THIS prevents cropping */
+  display: block;   /* removes the little gap */
 }
 @media (max-width:768px){
   .site-header{
