@@ -277,7 +277,7 @@
 
 .grid{
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* forces 2 columns */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
 }
 
@@ -288,10 +288,10 @@
   overflow:hidden;
   box-shadow: 0 12px 24px rgba(11,31,58,.08);
 }
-    .book-card{
-  max-width: 420px;
-  padding: 22px;
-  border-radius: 16px;
+   .book-card{
+  max-width: 320px;   /* key fix */
+  margin: 0 auto;
+  position: relative;
 }
 .book-cover{
   aspect-ratio: 4 / 5;              /* good book proportion */
