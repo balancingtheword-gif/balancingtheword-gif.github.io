@@ -226,12 +226,19 @@
     0 10px 20px rgba(11,31,58,.06),
     inset 0 0 0 1px rgba(255,255,255,.6);
 }
-.book-cover img{
+.books-cover-row{
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.books-cover-row img{
   width: 100%;
-  max-width: 220px;   /* adjust if needed */
+  max-width: 150px;   /* try 140–180 depending on preference */
   height: auto;
   display: block;
-  margin: 0 auto;
 }
 
 @media (max-width: 900px){
