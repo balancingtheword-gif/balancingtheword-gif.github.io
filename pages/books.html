@@ -228,19 +228,32 @@
     inset 0 0 0 1px rgba(255,255,255,.6);
 }
 
-.books-cover-row{
-  display: flex;
-  justify-content: center;
-  gap: 24px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
+.books-list{
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-.books-cover-row img{
-  width: 100%;
-  max-width: 150px;
+.book-row{
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.book-row img{
+  width: 100px;     /* controls image size */
   height: auto;
-  display: block;
+  border-radius: 6px;
+}
+
+.book-info h3{
+  margin: 0 0 8px;
+}
+
+.book-info p{
+  margin: 0;
+  line-height: 1.5;
 }
 
 @media (max-width: 900px){
