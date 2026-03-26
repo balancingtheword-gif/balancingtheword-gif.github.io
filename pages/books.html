@@ -233,11 +233,11 @@
 }
 
 .books-list {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
   max-width: 1000px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
 }
 
 .book-item {
@@ -245,25 +245,32 @@
   align-items: flex-start;
   gap: 24px;
   padding: 20px;
-  border: 1px solid #d8d8d8;
+  border: 1px solid #ddd;
   border-radius: 12px;
-  background: #ffffff;
+  background: #fff;
+}
+
+.book-cover-wrap {
+  width: 120px !important;
+  min-width: 120px !important;
+  max-width: 120px !important;
+  flex: 0 0 120px !important;
 }
 
 .book-cover {
-  width: 120px;
-  height: auto;
-  flex-shrink: 0;
-  display: block;
+  display: block !important;
+  width: 120px !important;
+  min-width: 120px !important;
+  max-width: 120px !important;
+  height: auto !important;
 }
 
 .book-info {
-  flex: 1;
+  flex: 1 1 auto;
 }
 
 .book-info h3 {
-  margin-top: 0;
-  margin-bottom: 10px;
+  margin: 0 0 10px 0;
 }
 
 .book-info p {
@@ -278,8 +285,17 @@
     text-align: center;
   }
 
+  .book-cover-wrap {
+    width: 140px !important;
+    min-width: 140px !important;
+    max-width: 140px !important;
+    flex: 0 0 140px !important;
+  }
+
   .book-cover {
-    width: 140px;
+    width: 140px !important;
+    min-width: 140px !important;
+    max-width: 140px !important;
   }
 }
 .book-body{ padding: 14px 14px 16px; }
@@ -520,32 +536,32 @@
   <div class="books-list">
 
     <div class="book-item">
-      <img src="/Assets/images/book-covers/balaam/balaam.png" alt="Balaam cover" class="book-cover" />
+      <div class="book-cover-wrap">
+        <img src="/Assets/images/book-covers/balaam/balaam.png" alt="Balaam cover" class="book-cover">
+      </div>
       <div class="book-info">
         <h3>The Story of Balaam</h3>
-        <p>
-          A sobering biblical study on compromise, deception, and the sovereignty of God.
-        </p>
+        <p>A sobering biblical study on compromise, deception, and the sovereignty of God.</p>
       </div>
     </div>
 
     <div class="book-item">
-      <img src="/Assets/images/book-covers/unexpected-answers/unexpected-answers.png" alt="Unexpected Answers cover" class="book-cover" />
+      <div class="book-cover-wrap">
+        <img src="/Assets/images/book-covers/unexpected-answers/unexpected-answers.png" alt="Unexpected Answers cover" class="book-cover">
+      </div>
       <div class="book-info">
         <h3>Unexpected Answers</h3>
-        <p>
-          When God’s answers challenge your expectations and test your faith, this book calls you to trust His sovereignty and remain steadfast.
-        </p>
+        <p>When God’s answers challenge your expectations and test your faith, this book calls you to trust His sovereignty and remain steadfast.</p>
       </div>
     </div>
 
     <div class="book-item">
-      <img src="/Assets/images/book-covers/eternal-question/eternal-question.png" alt="The Eternal Question cover" class="book-cover" />
+      <div class="book-cover-wrap">
+        <img src="/Assets/images/book-covers/eternal-question/eternal-question.png" alt="The Eternal Question cover" class="book-cover">
+      </div>
       <div class="book-info">
         <h3>The Eternal Question</h3>
-        <p>
-          A biblical call to consider life, death, and the eternal destiny of the soul through the truth of Scripture.
-        </p>
+        <p>A biblical call to consider life, death, and the eternal destiny of the soul through the truth of Scripture.</p>
       </div>
     </div>
 
