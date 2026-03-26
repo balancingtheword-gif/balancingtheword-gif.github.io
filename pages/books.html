@@ -228,37 +228,58 @@
     inset 0 0 0 1px rgba(255,255,255,.6);
 }
 
-.books-list{
-  max-width: 900px;
+.books-section {
+  padding: 40px 20px;
+}
+
+.books-list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
-.book-row{
+.book-item {
   display: flex;
   align-items: flex-start;
-  gap: 20px;
-  padding: 20px 0;
-  border-bottom: 1px solid #ddd;
+  gap: 24px;
+  padding: 20px;
+  border: 1px solid #d8d8d8;
+  border-radius: 12px;
+  background: #ffffff;
 }
 
-.book-row img{
-  width: 100px;     /* controls image size */
+.book-cover {
+  width: 120px;
   height: auto;
-  border-radius: 6px;
+  flex-shrink: 0;
+  display: block;
 }
 
-.book-info h3{
-  margin: 0 0 8px;
+.book-info {
+  flex: 1;
 }
 
-.book-info p{
+.book-info h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.book-info p {
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
-@media (max-width: 900px){
-  .books-grid .grid{
-    grid-template-columns: 1fr;
+@media (max-width: 768px) {
+  .book-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .book-cover {
+    width: 140px;
   }
 }
 .book-body{ padding: 14px 14px 16px; }
@@ -356,14 +377,6 @@
   font-size: 14px;
 }
 
-/* Responsive */
-@media (max-width: 980px){
-  .featured-book{ grid-template-columns: 1fr; }
-  .books-grid .grid{ grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 640px){
-  .books-grid .grid{ grid-template-columns: 1fr; }
-}
 
     /* Footer (your existing style can override this) */
   /* ===== FOOTER (LOCKED + SIMPLE) ===== */
@@ -503,7 +516,41 @@
  <section class="books-showcase">
   <h3 class="section-title">Available Now</h3>
 
+<section class="books-section">
+  <div class="books-list">
 
+    <div class="book-item">
+      <img src="/Assets/images/book-covers/balaam/balaam.png" alt="Balaam cover" class="book-cover" />
+      <div class="book-info">
+        <h3>The Story of Balaam</h3>
+        <p>
+          A sobering biblical study on compromise, deception, and the sovereignty of God.
+        </p>
+      </div>
+    </div>
+
+    <div class="book-item">
+      <img src="/Assets/images/book-covers/unexpected-answers/unexpected-answers.png" alt="Unexpected Answers cover" class="book-cover" />
+      <div class="book-info">
+        <h3>Unexpected Answers</h3>
+        <p>
+          When God’s answers challenge your expectations and test your faith, this book calls you to trust His sovereignty and remain steadfast.
+        </p>
+      </div>
+    </div>
+
+    <div class="book-item">
+      <img src="/Assets/images/book-covers/eternal-question/eternal-question.png" alt="The Eternal Question cover" class="book-cover" />
+      <div class="book-info">
+        <h3>The Eternal Question</h3>
+        <p>
+          A biblical call to consider life, death, and the eternal destiny of the soul through the truth of Scripture.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 </div>
     <!-- AMAZON BUTTON -->
