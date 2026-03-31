@@ -70,7 +70,29 @@ body{
   padding: 26px;
   position: relative;
 }
+/* 🔴 LEFT RED ACCENT */
+.about-section::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 18px;
+  bottom: 18px;
+  width: 5px;
+  background: #B0122A;
+  border-radius: 3px;
+}
 
+/* 🟡 TOP GOLD ACCENT */
+.about-section::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20px;
+  right: 20px;
+  height: 3px;
+  background: #CAA24A;
+  border-radius: 3px;
+}
 .scripture-anchor{
   max-width: 900px;
  margin: 20px auto 20px;
