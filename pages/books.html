@@ -692,24 +692,46 @@
    
 </section>
 
-    <section class="coming-soon-anchor">
-      <div class="coming-soon-title">Coming Soon</div>
-      <p class="coming-soon-text">
-        Additional Bible studies, teaching resources, and devotionals from
-        Balancing the Word Ministry are currently in development and will be
-        released soon.
-      </p>
-    </section>
+   <!-- MAIN -->
+  <main>
+<div class="wrap">
+  <section class="coming-soon-anchor">
+    <div class="coming-soon-title">Coming Soon</div>
+    <p class="coming-soon-text">
+      Additional Bible studies, teaching resources, and devotionals from
+      Balancing the Word Ministry are currently in development and will be
+      released soon.
+    </p>
+  </section>
+</div>
   </main>
+   </div>
+</main>
 
-  <footer class="site-footer">
+  <!-- FOOTER -->
+ <footer class="site-footer"
+  style="position:relative; min-height:220px; background:#0b1f3a url('/images/website-footer-1100x300.png') center/cover no-repeat;">
+
+  <!-- GUARANTEED VISIBLE TEXT LAYER -->
+  <div style="
+    position:absolute; inset:0; z-index:999999;
+    display:flex; flex-direction:column;
+    align-items:center; justify-content:center;
+    text-align:center;
+    color:#fff; font: 14px/1.6 Georgia, serif;
+    background: rgba(0,0,0,.25);
+    ">
     <div>© <span id="y"></span> Balancing the Word Ministry</div>
     <div>Colossians 1:28</div>
-    <div>Build • <span>Educate</span> • Disciple</div>
-  </footer>
+    <div style="font-weight:700; color:#d4af37;">
+      Build • <span style="color:#b11226; font-weight:800;">Educate</span> • Disciple
+    </div>
+  </div>
+</footer>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+
 </body>
 </html>
