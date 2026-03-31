@@ -137,7 +137,38 @@
       font-weight:700;
       font-size:16px;
     }
+/* BOOK CONTAINER STYLING */
+.book-item{
+  position: relative;
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 6px 14px rgba(11,31,58,.08);
+}
 
+/* 🔴 LEFT RED ACCENT */
+.book-item::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 12px;
+  bottom: 12px;
+  width: 4px;
+  background: #B0122A; /* BTWM red */
+  border-radius: 2px;
+}
+
+/* 🟡 TOP GOLD ACCENT */
+.book-item::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 12px;
+  right: 12px;
+  height: 3px;
+  background: #CAA24A; /* BTWM gold */
+  border-radius: 2px;
+}
     /* =========================
        MAIN CONTENT PLACEHOLDER
        ========================= */
