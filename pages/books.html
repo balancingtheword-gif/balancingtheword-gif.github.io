@@ -280,7 +280,36 @@
   border-radius: 12px;
   background: #fff;
 }
+.book-item {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  background: #fff;
+}
+  /* Red accent on the left */
+.book-item::before{
+  content: "";
+  position: absolute;
+  top: 12px;
+  bottom: 12px;
+  left: 0;
+  width: 5px;
+  background: #b0122a;
+  border-radius: 3px;
+}
 
+/* Gold accent on the top */
+.book-item::after{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 14px;
+  right: 14px;
+  height: 4px;
+  background: #caa24a;
+  border-radius: 3px;
+}
 .book-cover-wrap {
   width: 120px !important;
   min-width: 120px !important;
