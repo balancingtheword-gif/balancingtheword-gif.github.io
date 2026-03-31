@@ -695,7 +695,7 @@
   <!-- MAIN -->
 <main>
   <div class="wrap">
-    <section class="coming-soon-anchor">
+       <section class="coming-soon-anchor">
       <div class="coming-soon-title">Coming Soon</div>
       <p class="coming-soon-text">
         Additional Bible studies, teaching resources, and devotionals from
@@ -703,34 +703,38 @@
         released soon.
       </p>
     </section>
-  </div>
-</main>
+  </main>
 
-<!-- FOOTER -->
-<footer class="site-footer"
-  style="position:relative; min-height:180px; background: 
-  linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.25)),
-  url('../Assets/images/layout-footer/layout-footer.png') center/cover no-repeat;
-
-  <div style="
-    position:absolute; inset:0; z-index:999999;
-    display:flex; flex-direction:column;
-    align-items:center; justify-content:center;
-    text-align:center;
-    color:#fff; font:14px/1.6 Georgia, serif;
-    background:rgba(0,0,0,.25);
-  ">
-    <div>© <span id="y"></span> Balancing the Word Ministry</div>
-    <div>Colossians 1:28</div>
-    <div style="font-weight:700; color:#d4af37;">
-      Build • <span style="color:#b11226; font-weight:800;">Educate</span> • Disciple
+  <footer class="site-footer"
+    style="
+      position: relative;
+      width: 100vw;
+      margin-left: calc(50% - 50vw);
+      height: 180px;
+      background: #0b1f3a url('../Assets/images/layout-footer/layout-footer.png') center/cover no-repeat;
+    ">
+    <div style="
+      position:absolute;
+      inset:0;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:#fff;
+      font:14px/1.6 Georgia, serif;
+      background:rgba(0,0,0,.25);
+    ">
+      <div>© <span id="y"></span> Balancing the Word Ministry</div>
+      <div>Colossians 1:28</div>
+      <div style="font-weight:700; color:#d4af37;">
+        Build • <span style="color:#b11226; font-weight:800;">Educate</span> • Disciple
+      </div>
     </div>
-  </div>
-</footer>
+  </footer>
 
-<script>
-  document.getElementById("y").textContent = new Date().getFullYear();
-</script>
-
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
