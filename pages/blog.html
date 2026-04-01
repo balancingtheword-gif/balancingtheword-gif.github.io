@@ -330,7 +330,31 @@
       color: #0b1f3a;
     }
 
-    .back-home{ margin: 0 0 20px; }
+  .back-home{
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+/* NAV PILLS */
+.back-home a{
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 14px;
+
+  background: rgba(11,31,58,.06);
+  color: #0b1f3a;
+
+  border: 1px solid rgba(11,31,58,.12);
+}
+
+/* HOVER */
+.back-home a:hover{
+  background: rgba(11,31,58,.12);
+}
 
     .about-header{
   background: linear-gradient(#0b1f3a, #07162a) !important;
@@ -436,9 +460,9 @@
 
  <main class="wrap hero">
 
- <div class="back-home">
-  <a href="index.html" class="btn ghost">← Home</a>
-  <a href="blog.html" class="btn ghost">Blog</a>
+<div class="back-home">
+  <a href="index.html">← Back to Home</a>
+  <a href="blog.html">What About…</a>
 </div>
 
   <!-- ✅ “Blog” heading removed -->
