@@ -8,76 +8,50 @@
 
 <body>
 
-<!-- HEADER -->
-<header class="about-header">
-  <img src="../Assets/images/layout/header/layout-pages-header.png"
-       class="about-header-image"
-       alt="Header">
-</header>
-
 <main>
-  <div class="wrap">
+  <div class="wrap" style="text-align:center;">
 
-    <!-- NAV BUTTONS -->
-    <div class="back-home">
-      <a href="/">← Back to Home</a>
+    <!-- LOGO -->
+    <img src="../Assets/images/logo.png" alt="BTWM Logo"
+         style="width:80px; margin-top:40px;">
+
+    <!-- TITLE -->
+    <h1 style="margin:20px 0 10px;">
+      Balancing the Word Ministry
+    </h1>
+
+    <!-- TAGLINE -->
+    <p style="font-weight:700;">
+      Build • <span style="color:#b11226;">Educate</span> • Disciple
+    </p>
+
+    <!-- NAV -->
+    <div class="back-home" style="justify-content:center;">
+      <a href="/">← Home</a>
       <a href="/pages/blog.html">What About…</a>
     </div>
 
-    <!-- ARTICLE CONTAINER -->
-    <section class="about-section">
-
-      <h2>The New Commandment: Love as the Mark of True Discipleship</h2>
-
-      <p class="post-meta">Posted on January 20, 2026</p>
-
-      <p>
-        Jesus’ final command reveals the defining mark of true discipleship—love
-        modeled by Christ, expressed through humble service, unity, and obedience.
-      </p>
-
-      <!-- ADD YOUR FULL ARTICLE CONTENT BELOW -->
-      <p>
-        <!-- Paste the rest of your article here -->
-      </p>
-
-    </section>
+    <!-- DIVIDER -->
+    <div style="width:120px; height:3px; background:#CAA24A; margin:20px auto;"></div>
 
   </div>
+
+  <!-- ARTICLE CONTENT -->
+  <div class="wrap">
+
+    <h2>The New Commandment</h2>
+
+    <p class="post-meta">Posted on January 20, 2026</p>
+
+    <p>
+      Jesus’ final command reveals the defining mark of true discipleship...
+    </p>
+
+    <!-- FULL ARTICLE HERE -->
+
+  </div>
+
 </main>
-
-<!-- FOOTER -->
-<footer class="site-footer"
-  style="
-    position: relative;
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    height: 180px;
-    background: #0b1f3a url('../Assets/images/layout-footer/layout-pages-footer.png') center/cover no-repeat;
-  ">
-
-  <div style="
-    position:absolute;
-    inset:0;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    text-align:center;
-    color:#fff;
-    background:rgba(0,0,0,.25);
-  ">
-    <div>© <span id="y"></span> Balancing the Word Ministry</div>
-    <div>Colossians 1:28</div>
-    <div style="font-weight:700; color:#d4af37;">
-      Build • <span style="color:#b11226;">Educate</span> • Disciple
-    </div>
-  </div>
-</footer>
-
-<script>
-  document.getElementById("y").textContent = new Date().getFullYear();
-</script>
 
 </body>
 </html>
