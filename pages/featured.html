@@ -183,7 +183,6 @@
   font-weight:500;
 }
 
-/* GROUPING CONTAINER */
 /* GROUP CONTAINER */
 .cta-group{
   margin-bottom:20px;
@@ -203,6 +202,19 @@
 
 .cta-group .cta-text:last-child{
   margin-top:2px;
+}
+  /* 🔥 FORCE TRUE CENTERING */
+.cta-group{
+  margin-bottom:20px;
+  text-align:center;        /* center the whole group */
+}
+
+/* 🔥 CONTROL WIDTH + CENTER BLOCK */
+.cta-group .cta-text{
+  max-width:600px;          /* keeps lines from stretching unevenly */
+  margin:2px auto;          /* centers the block itself */
+  text-align:center;
+  line-height:1.5;
 }
 /* BUTTON ROW */
 .cta-buttons{
