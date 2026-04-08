@@ -175,7 +175,30 @@
   max-width: 660px;
   line-height: 1.7;
 }
+/* TOP LINE (CENTERED + SLIGHT EMPHASIS) */
+.cta-intro{
+  text-align:center;
+  font-size:17px;
+  margin-bottom:22px;
+  font-weight:500;
+}
 
+/* GROUPING CONTAINER */
+.cta-group{
+  margin-bottom:18px;
+}
+
+/* TEXT INSIDE GROUPS */
+.cta-text{
+  text-align:center;
+  margin:6px 0;
+  line-height:1.6;
+}
+
+/* OPTIONAL: TIGHTER PAIRING EFFECT */
+.cta-group .cta-text:last-child{
+  margin-bottom:0;
+}
 /* BUTTON ROW */
 .cta-buttons{
   display: flex;
@@ -383,25 +406,30 @@
   <div class="cta-box">
    <h2 class="cta-main-header">You’ve Heard the Message</h2>
     <p class="cta-subheader">—Now Take the Next Step</p>
-    <p class="cta-text">
+   <!-- TOP LINE -->
+<p class="cta-intro">
   If this message has inspired you, I would love to hear from you.
 </p>
 
-<p class="cta-text">
-  Click the <strong>Contact</strong> button to reach me.
-</p>
+<!-- CONTACT GROUP -->
+<div class="cta-group">
+  <p class="cta-text">
+    Click the <strong>Contact</strong> button to reach me.
+  </p>
+  <p class="cta-text">
+    Let me know how this message has impacted you.
+  </p>
+</div>
 
-<p class="cta-text">
-  Share how this message has impacted you.
-</p>
-
-<p class="cta-text">
-  Click the <strong>Share</strong> button to encourage others.
-</p>
-
-<p class="cta-text">
-  Help spread the Word and support this ministry.
-</p>
+<!-- SHARE GROUP -->
+<div class="cta-group">
+  <p class="cta-text">
+    Click the <strong>Share</strong> button to encourage others.
+  </p>
+  <p class="cta-text">
+    Help spread the Word and support this ministry.
+  </p>
+</div>
        <div class="cta-buttons">
     <a href="../index.html#contact" class="cta-button">Contact</a>
     <button class="share-button" onclick="sharePage()">Share</button>
