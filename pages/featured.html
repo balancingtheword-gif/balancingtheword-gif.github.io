@@ -181,20 +181,24 @@
   display:flex;
   justify-content:center;
   align-items:center;
-  gap:14px;
-  margin-top:20px;
+  gap:16px;
+  margin-top:25px;
   flex-wrap:wrap;
 }
 
-/* 🔥 MAKE BUTTONS SAME SIZE */
+/* 🔥 FORCE IDENTICAL BUTTONS */
 .cta-button,
 .share-button{
-  width:140px;
-  text-align:center;
-  padding:12px 0;
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  width:150px;              /* SAME WIDTH */
+  height:48px;              /* SAME HEIGHT */
   font-weight:700;
   border-radius:8px;
-  transition:all 0.3s ease;
+  font-size:15px;
+  padding:0;                /* remove uneven padding */
+  box-sizing:border-box;
 }
 
 /* CONTACT BUTTON */
