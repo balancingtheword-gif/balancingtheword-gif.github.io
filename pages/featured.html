@@ -137,96 +137,97 @@
   font-size:16px;
 }
 /* CTA CONTAINER */
+/* CTA BOX */
 .cta-box{
-  margin:60px auto;
-  padding:35px 25px;
-  text-align:center;
-  background:#ffffff;
-  border:2px solid #CAA24A;
-  border-radius:12px;
-  box-shadow:0 8px 22px rgba(0,0,0,0.08);
-  max-width:750px;
+  max-width: 760px;
+  margin: 60px auto;
+  padding: 38px 28px;
+  background: #ffffff;
+  border: 2px solid #caa24a;
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
 }
-/* 🔥 FORCE ALL TEXT INSIDE TO CENTER */
-.cta-box p,
+
+/* FORCE ALL CTA TEXT TO CENTER */
+.cta-box,
 .cta-box h2,
-.cta-box h3{
-  text-align:center;
+.cta-box p,
+.cta-box div{
+  text-align: center !important;
 }
-/* TITLE (BIGGER + BOLDER) */
-.cta-title{
-  font-size:26px;
-  font-weight:800;
-  color:#0B1F3A;
-  margin-bottom:5px;
+
+.cta-main-header{
+  margin: 0 0 6px 0;
+  font-size: 26px;
+  font-weight: 800;
+  color: #0b1f3a;
 }
-/* 🔥 SUBHEADER */
+
 .cta-subheader{
-  font-size:18px;
-  font-weight:600;
-  color:#B0122A; /* red accent */
-  margin-bottom:20px;
+  margin: 0 0 22px 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #b0122a;
 }
-/* TEXT */
+
 .cta-text{
-  max-width:650px;
-  margin:0 auto 15px;
-  text-align:center;   /* ensures centering */
-  line-height:1.7;
-  font-size:16px;
+  margin: 0 auto 18px auto;
+  max-width: 660px;
+  line-height: 1.7;
 }
 
 /* BUTTON ROW */
 .cta-buttons{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  gap:16px;
-  margin-top:25px;
-  flex-wrap:wrap;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 16px;
+  margin-top: 26px;
+  flex-wrap: wrap;
 }
 
-/* 🔥 FORCE IDENTICAL BUTTONS */
+/* MAKE <a> AND <button> RENDER THE SAME */
 .cta-button,
 .share-button{
-  display:inline-flex;
-  justify-content:center;
-  align-items:center;
-  width:150px;              /* SAME WIDTH */
-  height:48px;              /* SAME HEIGHT */
-  font-weight:700;
-  border-radius:8px;
-  font-size:15px;
-  padding:0;                /* remove uneven padding */
-  box-sizing:border-box;
+  appearance: none;
+  -webkit-appearance: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 50px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1;
+  border-radius: 8px;
+  vertical-align: middle;
+  text-align: center;
 }
 
-/* CONTACT BUTTON */
+/* CONTACT */
 .cta-button{
-  background:#B0122A;
-  color:#fff;
-  text-decoration:none;
-  border:1px solid #CAA24A;
-  box-shadow:0 4px 10px rgba(0,0,0,0.15);
+  background: #b0122a;
+  color: #ffffff;
+  text-decoration: none;
+  border: 1px solid #caa24a;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-.cta-button:hover{
-  background:#8e0f24;
-  transform:translateY(-2px);
-}
-
-/* SHARE BUTTON */
+/* SHARE */
 .share-button{
-  background:#0B1F3A;
-  color:#fff;
-  border:none;
-  cursor:pointer;
-  box-shadow:0 4px 10px rgba(0,0,0,0.15);
+  background: #0b1f3a;
+  color: #ffffff;
+  border: 1px solid #0b1f3a;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
+.cta-button:hover,
 .share-button:hover{
-  background:#08162b;
-  transform:translateY(-2px);
+  transform: translateY(-2px);
 }
 
 /* SPACE BETWEEN CTA AND NEXT SECTION */
