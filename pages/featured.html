@@ -136,55 +136,62 @@
   .cta-button{
   font-size:16px;
 }
-  .cta-box{
-  margin:40px 0;
-  padding:30px 25px;
+/* CTA CONTAINER */
+.cta-box{
+  margin:60px auto;
+  padding:35px 25px;
   text-align:center;
   background:#ffffff;
   border:2px solid #CAA24A;
-  border-radius:10px;
-  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+  border-radius:12px;
+  box-shadow:0 8px 22px rgba(0,0,0,0.08);
+  max-width:750px;
 }
 
+/* TITLE (BIGGER + BOLDER) */
 .cta-title{
-  font-weight:700;
-  font-size:20px;
-  margin-bottom:15px;
+  font-size:24px;
+  font-weight:800;
   color:#0B1F3A;
+  margin-bottom:18px;
 }
 
+/* TEXT */
 .cta-text{
   max-width:650px;
-  margin:0 auto 20px;
-  line-height:1.6;
+  margin:0 auto 15px;
+  line-height:1.7;
+  font-size:16px;
 }
 
-/* 🔑 THIS IS THE IMPORTANT PART */
+/* BUTTON ROW */
 .cta-buttons{
   display:flex;
-  justify-content:center;   /* centers horizontally */
+  justify-content:center;
   align-items:center;
-  gap:12px;                 /* space between buttons */
-  margin:20px 0;
-  flex-wrap:wrap;           /* keeps it responsive */
+  gap:14px;
+  margin-top:20px;
+  flex-wrap:wrap;
 }
 
-.cta-support{
-  margin-top:15px;
-  font-size:15px;
+/* 🔥 MAKE BUTTONS SAME SIZE */
+.cta-button,
+.share-button{
+  width:140px;
+  text-align:center;
+  padding:12px 0;
+  font-weight:700;
+  border-radius:8px;
+  transition:all 0.3s ease;
 }
 
 /* CONTACT BUTTON */
 .cta-button{
-  padding:12px 22px;
   background:#B0122A;
   color:#fff;
   text-decoration:none;
-  font-weight:700;
-  border-radius:8px;
   border:1px solid #CAA24A;
   box-shadow:0 4px 10px rgba(0,0,0,0.15);
-  transition:all 0.3s ease;
 }
 
 .cta-button:hover{
@@ -194,20 +201,21 @@
 
 /* SHARE BUTTON */
 .share-button{
-  padding:12px 22px;
   background:#0B1F3A;
   color:#fff;
   border:none;
-  font-weight:700;
-  border-radius:8px;
   cursor:pointer;
   box-shadow:0 4px 10px rgba(0,0,0,0.15);
-  transition:all 0.3s ease;
 }
 
 .share-button:hover{
   background:#08162b;
   transform:translateY(-2px);
+}
+
+/* SPACE BETWEEN CTA AND NEXT SECTION */
+.section-divider{
+  height:30px;
 }
 </style>
 </head>
