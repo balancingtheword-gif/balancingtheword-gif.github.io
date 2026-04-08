@@ -184,20 +184,25 @@
 }
 
 /* GROUPING CONTAINER */
+/* GROUP CONTAINER */
 .cta-group{
-  margin-bottom:18px;
+  margin-bottom:20px;
 }
 
-/* TEXT INSIDE GROUPS */
-.cta-text{
+/* 🔥 TIGHT GROUPING FOR BOTH SETS */
+.cta-group .cta-text{
   text-align:center;
-  margin:6px 0;
-  line-height:1.6;
+  line-height:1.5;
+  margin:2px 0;
 }
 
-/* OPTIONAL: TIGHTER PAIRING EFFECT */
+/* REMOVE EXTRA SPACE BETWEEN THE TWO LINES */
+.cta-group .cta-text:first-child{
+  margin-bottom:2px;
+}
+
 .cta-group .cta-text:last-child{
-  margin-bottom:0;
+  margin-top:2px;
 }
 /* BUTTON ROW */
 .cta-buttons{
