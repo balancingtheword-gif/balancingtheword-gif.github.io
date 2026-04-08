@@ -326,6 +326,31 @@
   margin-right:10px;
   margin-top:4px;
 }
+  /* 🔥 KEEP REFLECTION QUESTIONS CENTERED */
+.reflection-questions{
+  text-align:center;
+}
+
+.reflection-questions p{
+  text-align:center !important;
+  margin:6px auto;
+  max-width:700px;
+}
+
+/* 🔥 KEEP SCRIPTURE CENTERED */
+.scripture-center{
+  text-align:center !important;
+  margin:25px auto;
+  max-width:700px;
+}
+
+/* 🔥 PREVENT DROP CAP FROM AFFECTING THESE */
+.reflection-questions p::first-letter,
+.scripture-center::first-letter{
+  float:none !important;
+  font-size:inherit !important;
+  margin:0 !important;
+}
 </style>
 </head>
 
