@@ -136,6 +136,79 @@
   .cta-button{
   font-size:16px;
 }
+  .cta-box{
+  margin:40px 0;
+  padding:30px 25px;
+  text-align:center;
+  background:#ffffff;
+  border:2px solid #CAA24A;
+  border-radius:10px;
+  box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+
+.cta-title{
+  font-weight:700;
+  font-size:20px;
+  margin-bottom:15px;
+  color:#0B1F3A;
+}
+
+.cta-text{
+  max-width:650px;
+  margin:0 auto 20px;
+  line-height:1.6;
+}
+
+/* 🔑 THIS IS THE IMPORTANT PART */
+.cta-buttons{
+  display:flex;
+  justify-content:center;   /* centers horizontally */
+  align-items:center;
+  gap:12px;                 /* space between buttons */
+  margin:20px 0;
+  flex-wrap:wrap;           /* keeps it responsive */
+}
+
+.cta-support{
+  margin-top:15px;
+  font-size:15px;
+}
+
+/* CONTACT BUTTON */
+.cta-button{
+  padding:12px 22px;
+  background:#B0122A;
+  color:#fff;
+  text-decoration:none;
+  font-weight:700;
+  border-radius:8px;
+  border:1px solid #CAA24A;
+  box-shadow:0 4px 10px rgba(0,0,0,0.15);
+  transition:all 0.3s ease;
+}
+
+.cta-button:hover{
+  background:#8e0f24;
+  transform:translateY(-2px);
+}
+
+/* SHARE BUTTON */
+.share-button{
+  padding:12px 22px;
+  background:#0B1F3A;
+  color:#fff;
+  border:none;
+  font-weight:700;
+  border-radius:8px;
+  cursor:pointer;
+  box-shadow:0 4px 10px rgba(0,0,0,0.15);
+  transition:all 0.3s ease;
+}
+
+.share-button:hover{
+  background:#08162b;
+  transform:translateY(-2px);
+}
 </style>
 </head>
 
@@ -285,14 +358,19 @@
   <div class="cta-box">
     <p><strong>You’ve heard the message—now take the next step.</strong></p>
 
-    <p>If this message has spoken to you, I would love to hear from you. You can reach out by clicking the Contact button and share how this message has impacted you.</p>
-
-    <a href="../index.html#contact" class="cta-button">Contact Me</a>
-
-    <p style="margin-top:20px;">To support this ministry, consider sharing the website with others to help spread the Word and encourage others.</p>
+    <p class="cta-text">
+    If this message has inspired you, I would love to hear from you.
+    You can reach me by clicking the <strong>Contact</strong> button and sharing how this message has impacted you.
+  </p>
+    <p class="cta-support">
+    You can also click the <strong>Share</strong> button to encourage others, support this ministry, and spread the Word.
+  </p>
+     <div class="cta-buttons">
+    <a href="../index.html#contact" class="cta-button">Contact</a>
+    <button class="share-button" onclick="sharePage()">Share</button>
   </div>
 
-  <h3>A Final Encouragement</h3>
+    <h3>A Final Encouragement</h3>
   <p>Don’t just read the Word—live it.</p>
 
   <p>Grow in it, stand firm in it, and allow it to transform your life.</p>
