@@ -788,33 +788,63 @@
 
     </section>
 
-    <!-- CONTACT + SUBSCRIBE -->
-    <section id="connect" class="connect">
-      <div class="connect-grid">
+<!-- CONTACT + SUBSCRIBE -->
+<section id="connect" class="connect">
+  <div class="connect-grid">
 
-        <!-- LEFT: CONTACT + icon -->
-        <div class="connect-stack">
+    <!-- LEFT: CONTACT + icon -->
+    <div class="connect-stack">
 
-          <div class="card connect-card" id="contact">
-            <h2 class="connect-title">Contact</h2>
+      <div class="card connect-card" id="contact">
+        <h2 class="connect-title">Contact</h2>
 
-            <p class="connect-ministry">Balancing the Word Ministry</p>
+        <p class="connect-ministry">Balancing the Word Ministry</p>
 
-            <p class="connect-address">
-              P.O. Box 1043<br>
-              Wagoner, OK 74477
-            </p>
+        <p class="connect-address">
+          P.O. Box 1043<br>
+          Wagoner, OK 74477
+        </p>
 
-            <!-- ✅ FIXED: close the <p> before inserting divs -->
-            <p class="connect-email">
-              <a href="mailto:greetings@balancingtheword.org">
-                Greetings@BalancingTheWord.org
-              </a>
-            </p>
+        <form
+          action="https://formspree.io/f/YOURFORMID"
+          method="POST"
+          class="contact-form"
+        >
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required
+          >
 
-            <div class="contact-divider"></div>
-            
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required
+          >
 
+          <textarea
+            name="message"
+            placeholder="Your Message"
+            rows="5"
+            required
+          ></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+
+        <p class="connect-email">
+          <a href="mailto:greetings@balancingtheword.org">
+            Greetings@BalancingTheWord.org
+          </a>
+        </p>
+
+        <div class="contact-divider"></div>
+      </div>
+    </div>
+  </div>
+</section>
  <div class="scripture-box">
   <div class="scripture-text">“Him we preach… teaching every man in all wisdom.”</div>
   <div class="scripture-ref">Colossians 1:28</div>
