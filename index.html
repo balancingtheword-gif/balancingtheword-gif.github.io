@@ -792,9 +792,7 @@
 <section id="connect" class="connect">
   <div class="connect-grid">
 
-    <!-- LEFT: CONTACT + icon -->
     <div class="connect-stack">
-
       <div class="card connect-card" id="contact">
         <h2 class="connect-title">Contact</h2>
 
@@ -805,33 +803,15 @@
           Wagoner, OK 74477
         </p>
 
-        <form
-          action="https://formspree.io/f/YOURFORMID"
-          method="POST"
-          class="contact-form"
-        >
-          <input
-            type="text"
-            name="name"
-            placeholder="Your Name"
-            required
-          >
+        <form action="https://formspree.io/f/YOURFORMID" method="POST" class="contact-form">
+          <div class="contact-form-row">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+          </div>
 
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email"
-            required
-          >
+          <textarea name="message" placeholder="Your Message" rows="6" required></textarea>
 
-          <textarea
-            name="message"
-            placeholder="Your Message"
-            rows="5"
-            required
-          ></textarea>
-
-          <button type="submit">Send Message</button>
+          <button type="submit" class="contact-btn">Send Message</button>
         </form>
 
         <p class="connect-email">
@@ -843,6 +823,7 @@
         <div class="contact-divider"></div>
       </div>
     </div>
+
   </div>
 </section>
  <div class="scripture-box">
