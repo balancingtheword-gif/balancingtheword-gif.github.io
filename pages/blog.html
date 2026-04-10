@@ -177,7 +177,24 @@
     border-left: 6px solid #c9a23a;
     padding-left: 10px;
   }
+.featured-article-card{
+  box-shadow: 0 10px 30px rgba(11,31,58,0.08);
+  position: relative;
+}
 
+.featured-article-card::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  pointer-events: none;
+  box-shadow: inset 0 0 20px rgba(202,162,74,0.15); /* gold glow */
+}
+    .featured-label{
+  color: #b0122a;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
   /* readable line length */
  .about-section p{
   max-width: none;          /* allow it to fill the box */
@@ -318,6 +335,20 @@
       border-color: #0b1f3a;
     }
     .btn.primary:hover{ opacity: .92; }
+   
+    .article-btn-secondary{
+  background: #f9fafb;
+  color: #0b1f3a;
+  border: 1px solid #d1d5db;
+}
+    .featured-article-buttons{
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  border-top: 1px solid rgba(11,31,58,0.1);
+  padding-top: 18px;
+  margin-top: 18px;
+}
 
     footer{
       margin-top: 26px;
@@ -465,7 +496,12 @@
   font-weight: 700;
   color: #d4af37;
 }
-
+.audio-note{
+  margin: 10px 0 18px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #b0122a; /* scarlet */
+}
 .site-footer.footer-bg .tagline .red{
   color: #b11226;
   font-weight: 800;
@@ -494,6 +530,7 @@
   <p class="muted">
     Teachings, encouragement, and biblical discernment from Balancing the Word Ministry.
   </p>
+   <p class="audio-note">🎧 Includes full audio teaching</p>
 
     <div class="accent"></div>
 
@@ -504,9 +541,7 @@
   <p class="featured-date">Posted on April 9, 2026</p>
 
   <p>
-    Since the Easter celebration has passed, this teaching turns to a vital question:
-    What does it mean to live sanctified before God? This article explores holiness,
-    obedience, discernment, and the call for believers to be truly set apart.
+    Since the Easter celebration has passed, an important question remains: What does it mean to live sanctified before God? This teaching explores holiness, obedience, discernment, and the call for believers to truly be set apart.
   </p>
 
   <a class="btn primary" href="featured.html">ARTICLE + AUDIO ON SUBSTACK </a>
