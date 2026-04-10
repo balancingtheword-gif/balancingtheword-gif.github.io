@@ -177,49 +177,87 @@
     border-left: 6px solid #c9a23a;
     padding-left: 10px;
   }
-.featured-article-card{
-  box-shadow: 0 10px 30px rgba(11,31,58,0.08);
-  position: relative;
+.featured-post-card{
+  background:#fff;
+  border:2px solid #0b1f3a;
+  border-radius:18px;
+  padding:26px 20px 28px;
+  box-shadow:0 10px 24px rgba(0,0,0,0.12);
+  max-width:900px;
+  margin:0 auto 30px;
+  text-align:center;
 }
 
-.featured-article-card::after{
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 16px;
-  pointer-events: none;
-  box-shadow: inset 0 0 20px rgba(202,162,74,0.15); /* gold glow */
-}
-    .featured-label{
-  color: #b0122a;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-}
-  /* readable line length */
- .about-section p{
-  max-width: none;          /* allow it to fill the box */
-  width: 100%;
-  margin: 0 0 14px;
-  text-align: justify;      /* keep your book-style justification */
-  text-indent: 1.5em;
-}
-    .second-line{
-  display: block;
-  margin-top: 6px;
-}
-    .question-line{
-  display: block;
-  margin: 8px 0;
-  font-size: 1.15rem;
-  color: #0b1f3a; /* navy */
-}
-    .question-line{
-  color: #b0122a; /* scarlet emphasis */
+.featured-label{
+  text-align:center;
+  margin:0 0 12px;
+  font-size:.95rem;
+  font-weight:800;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:#b0122a;
 }
 
-.follow-line{
-  display: block;
-  margin-top: 6px;
+.featured-post-card h2{
+  margin:0 0 8px;
+  color:#0b1f3a;
+}
+
+.featured-date{
+  text-align:center;
+  margin:0 0 20px;
+  font-size:.98rem;
+  color:#555;
+}
+
+.featured-hook-block{
+  margin:20px 0;
+}
+
+.hook-question{
+  margin:0 0 12px;
+  font-size:1.25rem;
+  color:#0b1f3a;
+  text-align:center;
+}
+
+.hook-response{
+  margin:0 0 14px;
+  text-align:center;
+}
+
+.hook-emphasis{
+  margin:18px auto;
+  text-align:center;
+  font-size:1.3rem;
+  line-height:1.6;
+  font-weight:700;
+  color:#0b1f3a;
+  max-width:700px;
+}
+
+.featured-preview-text{
+  max-width:760px;
+  margin:0 auto 16px;
+  text-align:center;
+}
+
+.audio-note{
+  margin:10px 0 18px;
+  font-size:.95rem;
+  font-weight:600;
+  color:#b0122a;
+  text-align:center;
+}
+
+.featured-article-buttons{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  flex-wrap:wrap;
+  border-top:1px solid rgba(11,31,58,.1);
+  padding-top:18px;
+  margin-top:18px;
 }
   .journey-close{
     text-align:center;
@@ -555,26 +593,48 @@
     <!-- POST 1 -->
   
  <div class="featured-post-card">
- <h2>Sanctification: A Call to Be Set Apart</h2>
+
+  <p class="featured-label">Featured Article</p>
+
+  <h2>Sanctification: A Call to Be Set Apart</h2>
   <p class="featured-date">Posted on April 9, 2026</p>
 
- <p>
-  Since the Easter celebration has passed, an important question remains:<br>
+  <div class="featured-hook-block">
+    <p class="hook-question">
+      <strong><em>What does it truly mean to be set apart for God?</em></strong>
+    </p>
 
-  <span class="question-line">
-    <strong><em>What does it mean to live sanctified before God?</em></strong>
-  </span>
+    <p class="hook-response">
+      After the Easter celebration, the question remains—how are we living in response?
+    </p>
 
-  <span class="follow-line">
-    This teaching explores holiness, obedience, discernment, and the call for believers to truly be set apart.
-  </span>
-</p>
+    <p class="hook-emphasis">
+      Are we truly set apart…<br>
+      or have we blurred the line between what is holy and common?
+    </p>
+  </div>
 
-  <a class="btn primary" href="featured.html">ARTICLE + AUDIO ON SUBSTACK </a>
-  <a class="btn" href="blog-archive.html">View Archives</a>
-</article>
-    </div>
+  <p class="featured-preview-text">
+    This message explores the foundation of sanctification—from Israel to the believer today—and challenges where compromise may have taken root.
+  </p>
 
+  <p class="audio-note">🎧 Includes full audio teaching</p>
+
+  <div class="featured-article-buttons">
+    <a class="btn primary"
+       href="https://tinyurl.com/sancification"
+       target="_blank"
+       rel="noopener noreferrer">
+       ARTICLE + AUDIO ON SUBSTACK
+    </a>
+
+    <a class="btn"
+       href="blog-archive.html">
+       View Archives
+    </a>
+  </div>
+
+</div>
 </div>
 
   </main>
