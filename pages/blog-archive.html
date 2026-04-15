@@ -180,23 +180,44 @@
       .archive-item h3{
         font-size:1.35rem;
       }
-    }
    .archive-links{
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-top: 10px;
+  gap: 12px;
+  margin-top: 14px;
 }
 
+/* BASE BUTTON */
 .archive-btn{
-  display: inline-block;
-  padding: 10px 18px;
-  border: 1px solid #cfcfcf;
+  display: block;
+  padding: 12px 16px;
   border-radius: 10px;
-  background: #fff;
-  color: #0b1f3a;
   text-decoration: none;
   font-weight: 700;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+
+/* PRIMARY (Article + Audio) */
+.archive-btn.primary{
+  background: #0b1f3a;      /* navy */
+  color: #ffffff;
+  border: 1px solid #0b1f3a;
+}
+
+.archive-btn.primary:hover{
+  background: #162f52;
+}
+
+/* SECONDARY (Podcast) */
+.archive-btn.secondary{
+  background: #ffffff;
+  color: #0b1f3a;
+  border: 1px solid #cfcfcf;
+}
+
+.archive-btn.secondary:hover{
+  background: #f4f4f4;
 }
   </style>
 </head>
@@ -237,14 +258,22 @@
   </p>
 
     <div class="archive-links">
-      <a href="https://tinyurl.com/sancification" target="_blank" rel="noopener" class="archive-btn">
-        Article + Audio
-      </a>
 
-      <a href="https://tinyurl.com/santification-podcast" target="_blank" rel="noopener" class="archive-btn">
-        Podcast
-      </a>
-    </div>
+  <a href="https://tinyurl.com/sancification"
+     target="_blank"
+     rel="noopener"
+     class="archive-btn primary">
+    📖 Article + Audio
+  </a>
+
+  <a href="https://tinyurl.com/santification-podcast"
+     target="_blank"
+     rel="noopener"
+     class="archive-btn secondary">
+    🎙 Podcast
+  </a>
+
+</div>
   </article>
 
 </section>
