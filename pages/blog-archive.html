@@ -193,38 +193,41 @@
         font-size:1.35rem;
       }
  .archive-links{
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-top: 12px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  margin-top:14px;
 }
 
 .archive-btn{
-  display: block;
-  padding: 12px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: 700;
-  text-align: center;
-  transition: all 0.2s ease;
+  display:block;
+  width:100%;
+  padding:12px 16px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:700;
+  text-align:center;
+  box-sizing:border-box;
 }
 
-/* Article + Audio */
 .archive-btn.primary{
-  background: #0b1f3a;
-  color: #fff;
-  border: 1px solid #0b1f3a;
+  background:#0b1f3a;
+  color:#fff;
+  border:1px solid #0b1f3a;
 }
 
-/* Podcast */
 .archive-btn.secondary{
-  background: #fff;
-  color: #0b1f3a;
-  border: 1px solid #ccc;
+  background:#fff;
+  color:#0b1f3a;
+  border:1px solid #cfcfcf;
 }
 
-.archive-btn:hover{
-  opacity: 0.9;
+.archive-btn.primary:hover{
+  background:#16345c;
+}
+
+.archive-btn.secondary:hover{
+  background:#f5f5f5;
 }
   </style>
 </head>
@@ -267,21 +270,15 @@
       A biblical call to live set apart—pursuing holiness in heart, mind, and daily life.
     </p>
 
-    <div class="archive-links">
-      <a href="https://tinyurl.com/sancification"
-         target="_blank"
-         rel="noopener"
-         class="archive-btn primary">
-        📖 Article + Audio
-      </a>
+   <div class="archive-links">
+  <a href="https://tinyurl.com/sancification" target="_blank" rel="noopener" class="archive-btn primary">
+    Article + Audio
+  </a>
 
-      <a href="https://tinyurl.com/santification-podcast"
-         target="_blank"
-         rel="noopener"
-         class="archive-btn secondary">
-        🎙 Podcast
-      </a>
-    </div>
+  <a href="https://tinyurl.com/santification-podcast" target="_blank" rel="noopener" class="archive-btn secondary">
+    Podcast — Go Deeper
+  </a>
+</div>
 
   </article>
 
