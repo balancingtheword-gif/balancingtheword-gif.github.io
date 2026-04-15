@@ -229,6 +229,32 @@
 .archive-btn.secondary:hover{
   background:#f5f5f5;
 }
+      .archive-link{
+  display:inline-block;
+  margin:6px 0 14px;
+  font-weight:700;
+  text-decoration:none;
+  border-bottom:1px solid transparent;
+}
+
+.archive-link.primary{
+  color:#0b1f3a;
+}
+
+.archive-link.secondary{
+  color:#b0122a;
+}
+
+.archive-link:hover{
+  border-bottom:1px solid currentColor;
+}
+
+.archive-note{
+  margin:10px 0 4px;
+  font-size:0.9rem;
+  color:#555;
+  font-style:italic;
+}
   </style>
 </head>
 
@@ -257,29 +283,42 @@
     <h2 class="archives-title">Archived Blog Posts</h2>
 
  <section class="archive-list">
-  <article class="archive-card">
-    <p class="archive-date">April 2026</p>
+<article class="archive-card">
 
-    <h2 class="archive-title">Sanctification: A Call to Be Set Apart</h2>
+  <p class="archive-date">April 2026</p>
 
-    <p class="archive-summary">
-      A biblical call to live set apart—pursuing holiness in heart, mind, and daily life.
-    </p>
+  <!-- TITLE -->
+  <h2 class="archive-title">
+    Sanctification: A Call to Be Set Apart
+  </h2>
 
-    <p class="archive-note">
-      The podcast goes deeper into the message and explores further questions beyond the article.
-    </p>
+  <!-- ARTICLE SUMMARY -->
+  <p class="archive-summary">
+    A biblical call to live set apart—pursuing holiness in heart, mind, and daily life.
+  </p>
 
-    <div class="archive-links">
-      <a href="https://tinyurl.com/sancification" target="_blank" rel="noopener" class="archive-btn primary">
-        Article + Audio
-      </a>
+  <!-- ARTICLE LINK -->
+  <a href="https://tinyurl.com/sancification"
+     target="_blank"
+     rel="noopener"
+     class="archive-link primary">
+    📖 Article + Audio
+  </a>
 
-      <a href="https://tinyurl.com/santification-podcast" target="_blank" rel="noopener" class="archive-btn secondary">
-        Podcast — Go Deeper
-      </a>
-    </div>
-  </article>
+  <!-- PODCAST NOTE -->
+  <p class="archive-note">
+    The podcast goes deeper into the message and explores further questions beyond the article.
+  </p>
+
+  <!-- PODCAST LINK -->
+  <a href="https://tinyurl.com/santification-podcast"
+     target="_blank"
+     rel="noopener"
+     class="archive-link secondary">
+    🎙 Podcast — Go Deeper
+  </a>
+
+</article>
 </section>
       <!-- FUTURE ARCHIVE ITEM TEMPLATE
       <article class="archive-item">
