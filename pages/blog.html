@@ -574,32 +574,31 @@
   font-size: 12px;
 }
 .podcast-btn{
-  display:block;              /* ⬅️ key change */
-  width:fit-content;          /* keeps button size tight */
-  margin:12px auto 20px;      /* ⬅️ centers it */
-  padding:10px 18px;
+  display:block;
+  width:fit-content;
+  margin:12px auto 20px;
+  padding:10px 22px;              /* ✅ moved inside */
   background:#0b1f3a;
   color:#fff;
   border:1px solid #caa24a;
-  border-radius:6px;
+  border-radius:999px;            /* ✅ moved inside */
   text-decoration:none;
   font-weight:600;
 }
 
 /* THIS is the missing piece most likely */
+.podcast-btn,
 .podcast-btn:link,
 .podcast-btn:visited{
-  color:#fff;
-  text-decoration:none;
+  color:#fff !important;
+  text-decoration:none !important;
 }
 
 .podcast-btn:hover{
   background:#caa24a;
   color:#0b1f3a;
 }
-  border-radius:999px;   /* pill shape */
-padding:10px 22px;     /* slightly fuller */
-  </style>
+   </style>
 </head>
 >
 
