@@ -574,8 +574,9 @@
   font-size: 12px;
 }
 .podcast-btn{
-  display:inline-block;
-  margin-top:12px;
+  display:block;              /* ⬅️ key change */
+  width:fit-content;          /* keeps button size tight */
+  margin:12px auto 20px;      /* ⬅️ centers it */
   padding:10px 18px;
   background:#0b1f3a;
   color:#fff;
@@ -596,6 +597,8 @@
   background:#caa24a;
   color:#0b1f3a;
 }
+  border-radius:999px;   /* pill shape */
+padding:10px 22px;     /* slightly fuller */
   </style>
 </head>
 >
@@ -626,9 +629,15 @@
 
 <div class="mini-divider">✦</div>
 
-<p class="featured-coming-soon">
-  🎙 <strong>Stay Tuned:</strong> the podcast goes deeper into this message.
+<p class="podcast-note">
+  🎙 The <strong>podcast</strong> goes deeper into this message.
 </p>
+   <a class="podcast-btn" 
+   href="https://tinyurl.com/BTWM-spotify" 
+   target="_blank" 
+   rel="noopener noreferrer">
+  Listen to the Podcast
+</a>
 
        <!-- POST 1 -->
   
