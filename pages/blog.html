@@ -6,707 +6,309 @@
   <title>Blog | Balancing the Word Ministry</title>
 
   <style>
-
-/* ===== BTWM INNER PAGE HEADER (About-style) ===== */
-.about-header{
-  width: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-.about-header-image{
-  width: 100%;
-  height: auto;      /* ensures no top/bottom cropping */
-  display: block;    /* removes gaps */
-}
-
-/* Mobile */
-@media (max-width: 768px){
-  .about-header-image{
-    max-height: 220px;   /* keeps it from feeling oversized */
-    object-fit: contain;
-  }
-}
-
-/* header content */
-.about-hero{
-  position:relative;
-  z-index:5;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  gap:12px;
-}
-
-.btwm-logo{
-  display:block;
-  width:340px;
-  max-width:90vw;
-  height:auto;
-  margin:0;
-  filter: drop-shadow(0 18px 30px rgba(0,0,0,.35));
-}
-
-.page-title{
-  margin:6px 0 0;
-  color:#fff;
-  font-size:30px;
-  letter-spacing:.2px;
-}
-
-.page-sub{
-  margin:0;
-  color:#d4af37;
-  font-weight:700;
-  letter-spacing:.3px;
-}
-/* RESPONSIVE */
-@media (max-width: 768px){
-  .about-logo-img{
-    width: 260px;
-  }
-/* If something is clipping them, this prevents it */
-.about-header{
-  overflow: visible;
-}
-  /* Side gold accents */
-  .about-header::before,
-  .about-header::after{
-    width: 100px;
-  }
-}
-  .about-header::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    radial-gradient(circle at 50% 45%, rgba(255,255,255,.06), transparent 60%);
-  opacity:1;
-  pointer-events:none;
-}
-   
-/* Ensure logo stays above ribbons */
-.about-logo{
-  position: relative;
-  z-index: 5;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 34px;
-  border-radius: 50%;
-
-  margin: 0 auto;   /* <-- centers the logo wrapper */
-}
-
-.about-logo-img{
-  width: 346px;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto 20px;   /* centers + spacing */
-
-  background: #ffffff;
-  padding: 18px;
-  border-radius: 14px;
-}
-        .btwm-logo{
-  filter: drop-shadow(0 18px 30px rgba(0,0,0,.35));
-}
-.about-logo{
-  padding:14px;
-  border-radius:14px;
-  background: rgba(255,255,255,.06);
-  box-shadow: 0 0 0 1px rgba(212,175,55,.18) inset;
-}
-
- /* ABOUT PAGE LAYOUT */
-.about-grid{
-  display: grid;
-  grid-template-columns: 1fr;   /* vertical stack */
-  gap: 38px;
-  align-items: start;
-}
-
-/* ABOUT SECTION BOXES */
-.about-section{
-  background: #ffffff;
-  border: 1px solid rgba(11,31,58,.14);
-  border-radius: 18px;
-  padding: 26px 26px 22px;
-  box-shadow: 0 10px 28px rgba(11,31,58,.08);
-  position: relative;
-}
-
-/* Gold accent line at top of each box */
-.about-section::before{
-  content:"";
-  position:absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 4px;
-  background: #d4af37;
-}
-
-/* Headings */
-.about-section h2{
-  font-size: 1.7rem;
-  margin-bottom: 18px;
-}
-
-/* Responsive safety (kept simple) */
-@media (max-width: 900px){
-  .about-grid{
-    gap: 32px;
-  }
-}
-  /* bordered “card” look */
-  .featured-post-card{
-  background:#fff;
-  border:2px solid #0b1f3a;
-  border-radius:18px;
-  padding:26px 20px 28px;
-  box-shadow:0 10px 24px rgba(0,0,0,0.12);
-  max-width:900px;
-  margin:0 auto 30px;
-}
-  .about-section h2{
-    margin: 0 0 12px;
-    color: #0b1f3a;
-    border-left: 6px solid #c9a23a;
-    padding-left: 10px;
-  }
-.featured-post-card{
-  background:#fff;
-  border:2px solid #0b1f3a;
-  border-radius:18px;
-  padding:26px 20px 28px;
-  box-shadow:0 10px 24px rgba(0,0,0,0.12);
-  max-width:900px;
-  margin:0 auto 30px;
-  text-align:center;
-}
-
-.featured-label{
-  text-align:center;
-  margin:0 0 12px;
-  font-size:.95rem;
-  font-weight:800;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-  color:#b0122a;
-}
-
-.featured-post-card h2{
-  margin:0 0 8px;
-  color:#0b1f3a;
-}
-
-.featured-date{
-  text-align:center;
-  margin:0 0 20px;
-  font-size:.98rem;
-  color:#555;
-}
-
-.featured-hook-block{
-  margin:20px 0;
-}
-
-.hook-question{
-  margin:0 0 12px;
-  font-size:1.25rem;
-  color:#0b1f3a;
-  text-align:center;
-}
-
-.hook-response{
-  margin:0 0 14px;
-  text-align:center;
-}
-
-.hook-emphasis{
-  margin:18px auto;
-  text-align:center;
-  font-size:1.3rem;
-  line-height:1.6;
-  font-weight:700;
-  color:#0b1f3a;
-  max-width:700px;
-}
-
-.featured-preview-text{
-  max-width:760px;
-  margin:0 auto 16px;
-  text-align:center;
-}
-
-.audio-note{
-  margin:10px 0 18px;
-  font-size:.95rem;
-  font-weight:600;
-  color:#b0122a;
-  text-align:center;
-}
-
-.featured-article-buttons{
-  display:flex;
-  gap:12px;
-  justify-content:center;
-  flex-wrap:wrap;
-  border-top:1px solid rgba(11,31,58,.1);
-  padding-top:18px;
-  margin-top:18px;
-}
-  .journey-close{
-    text-align:center;
-    margin-top: 14px;
-  }
-  .btwm-symbols {
-  max-width: 100%;
-  margin: 12px 0 0 0;
-  padding-left: 18px;
-}
-
-.btwm-symbols li {
-  margin-bottom: 10px;
-  line-height: 1.6;
-}
-        /* =========================
- 
-  .page-title{
-  margin:18px 0 6px;
-  color:#fff;
-  font-size:30px;
-  letter-spacing:.2px;
-}
-
-        /* Balanced header content layout */
-.about-hero{
-  position: relative;
-  z-index: 5;
-
-  width: min(1100px, 92vw);
-  margin: 0 auto;
-
-  display: grid;
-  grid-template-columns: 340px 1fr; /* logo column + text column */
-  gap: 28px;
-  align-items: center;
-
-  padding: 26px 28px;
-  border-radius: 14px;
-
-/* responsive tweaks */
-@media (max-width:768px){
-  .about-header{ padding:46px 0 60px; border-left-width:14px; border-right-width:14px; }
-  .about-header .corner{ width:32px; height:32px; }
-  .btwm-logo{ width:260px; }
-}
-}
-  .about-hero-text{ text-align: center; }
-}
-
-    /* GLOBAL FONT + COLOR CONSISTENCY */
     body{
-      margin: 0;
+      margin:0;
       font-family: Georgia, "Times New Roman", serif;
-      color: #0b1f3a;
-      background: #ffffff;
-      line-height: 1.7;
+      color:#0b1f3a;
+      background:#ffffff;
+      line-height:1.7;
     }
 
-    /* NAV */
-    .site-nav a{
-      margin: 0 10px;
-      text-decoration: none;
-      font-weight: 700;
-      color: #0b1f3a;
+    .about-header{
+      width:100%;
+      margin:0;
+      padding:0;
+      background:#0b1f3a;
     }
-    .site-nav a:hover{ text-decoration: underline; }
 
-    /* MAIN CONTENT */
+    .about-header-image{
+      width:100%;
+      height:auto;
+      display:block;
+    }
+
     .wrap{
-      max-width: 820px;
-      margin: 0 auto;
-      padding: 12px 18px 26px;
+      max-width:820px;
+      margin:0 auto;
+      padding:12px 18px 26px;
     }
 
     .hero{
-      text-align: center;
-      padding-top: 8px;
-      padding-bottom: 18px;
+      text-align:center;
+      padding-top:8px;
+      padding-bottom:18px;
     }
 
     p{
-      font-size: 1.1rem;
-      margin: 0 0 14px;
+      font-size:1.1rem;
+      margin:0 0 14px;
     }
 
-    .muted{ color: #555; }
-
-    .accent{
-      height: 3px;
-      width: 120px;
-      margin: 10px auto 18px;
-      background: #c9a13a;
-      border-radius: 999px;
+    .muted{
+      color:#555;
     }
 
-    .card{
-      text-align: left;
-      background: #fff;
-      border: 1px solid rgba(0,0,0,.08);
-      border-radius: 14px;
-      padding: 18px 18px 16px;
-      box-shadow: 0 10px 22px rgba(0,0,0,.06);
+    .audio-note{
+      margin:10px 0 18px;
+      font-size:.95rem;
+      font-weight:600;
+      color:#b0122a;
+      text-align:center;
     }
 
-    .card h4{
-      font-size: 1.45rem;
-      margin: 0 0 6px;
-      color: #0b1f3a;
+    .mini-divider{
+      text-align:center;
+      color:#caa24a;
+      margin:6px 0;
+      font-size:14px;
     }
 
-    .post-meta{
-      font-size: 0.95rem;
-      color: #555;
-      margin: 0 0 10px;
+    .back-home{
+      display:flex;
+      justify-content:center;
+      gap:10px;
+      margin:20px 0;
+    }
+
+    .back-home a{
+      display:inline-block;
+      padding:8px 14px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:700;
+      font-size:14px;
+      background:rgba(11,31,58,.06);
+      color:#0b1f3a;
+      border:1px solid rgba(11,31,58,.12);
+    }
+
+    .back-home a:hover{
+      background:rgba(11,31,58,.12);
+    }
+
+    .podcast-btn-wrap{
+      text-align:center;
+      margin-bottom:20px;
+    }
+
+    .podcast-btn{
+      display:inline-block;
+      margin:12px auto 20px;
+      padding:10px 22px;
+      background:#0b1f3a;
+      color:#ffffff !important;
+      border:1px solid #caa24a;
+      border-radius:999px;
+      text-decoration:none !important;
+      font-weight:600;
+    }
+
+    .podcast-btn:link,
+    .podcast-btn:visited,
+    .podcast-btn:active{
+      color:#ffffff !important;
+      text-decoration:none !important;
+    }
+
+    .podcast-btn:hover{
+      background:#caa24a;
+      color:#0b1f3a !important;
+    }
+
+    .featured-post-card{
+      background:#fff;
+      border:2px solid #0b1f3a;
+      border-radius:18px;
+      padding:26px 20px 28px;
+      box-shadow:0 10px 24px rgba(0,0,0,0.12);
+      max-width:900px;
+      margin:0 auto 30px;
+      text-align:center;
+    }
+
+    .featured-label{
+      text-align:center;
+      margin:0 0 12px;
+      font-size:.95rem;
+      font-weight:800;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+      color:#b0122a;
+    }
+
+    .featured-post-card h2{
+      margin:0 0 8px;
+      color:#0b1f3a;
+    }
+
+    .featured-date{
+      text-align:center;
+      margin:0 0 20px;
+      font-size:.98rem;
+      color:#555;
+    }
+
+    .featured-hook-block{
+      margin:20px 0;
+    }
+
+    .hook-question{
+      margin:0 0 12px;
+      font-size:1.25rem;
+      color:#0b1f3a;
+      text-align:center;
+    }
+
+    .hook-response{
+      margin:0 0 14px;
+      text-align:center;
+    }
+
+    .hook-emphasis{
+      margin:18px auto;
+      text-align:center;
+      font-size:1.3rem;
+      line-height:1.6;
+      font-weight:700;
+      color:#0b1f3a;
+      max-width:700px;
+    }
+
+    .featured-preview-text{
+      max-width:760px;
+      margin:0 auto 16px;
+      text-align:center;
+    }
+
+    .featured-article-buttons{
+      display:flex;
+      gap:12px;
+      justify-content:center;
+      flex-wrap:wrap;
+      border-top:1px solid rgba(11,31,58,.1);
+      padding-top:18px;
+      margin-top:18px;
     }
 
     .btn{
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 14px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: 700;
-      border: 1px solid rgba(0,0,0,.12);
+      display:inline-block;
+      margin-top:10px;
+      padding:10px 14px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:700;
+      border:1px solid rgba(0,0,0,.12);
+      color:#0b1f3a;
+      background:#fff;
     }
 
     .btn.primary{
-      background: #0b1f3a;
-      color: #fff;
-      border-color: #0b1f3a;
-    }
-    .btn.primary:hover{ opacity: .92; }
-   
-    .article-btn-secondary{
-  background: #f9fafb;
-  color: #0b1f3a;
-  border: 1px solid #d1d5db;
-}
-    .featured-article-buttons{
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-  border-top: 1px solid rgba(11,31,58,0.1);
-  padding-top: 18px;
-  margin-top: 18px;
-}
-
-    footer{
-      margin-top: 26px;
-      padding: 18px 0 26px;
-      text-align: center;
+      background:#0b1f3a;
+      color:#fff;
+      border-color:#0b1f3a;
     }
 
-    .small{
-      font-size: .98rem;
-      margin: 6px 0;
-      color: #0b1f3a;
+    .btn.primary:hover{
+      opacity:.92;
     }
 
-  .back-home{
-  display: flex;
-  justify-content: center;  /* centers horizontally */
-  gap: 10px;
-  margin: 20px 0;
-}
-
-/* NAV PILLS */
-.back-home a{
-  display: inline-block;
-  padding: 8px 14px;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 700;
-  font-size: 14px;
-
-  background: rgba(11,31,58,.06);
-  color: #0b1f3a;
-
-  border: 1px solid rgba(11,31,58,.12);
-}
-
-/* HOVER */
-.back-home a:hover{
-  background: rgba(11,31,58,.12);
-}
-
-    .about-header{
-  background: linear-gradient(#0b1f3a, #07162a) !important;
-}
-
-/* The soft glow overlay must match too */
-.about-header::before{
-  background:
-    radial-gradient(circle at 50% 40%, rgba(202,162,74,.18), transparent 58%),
-    radial-gradient(circle at 18% 65%, rgba(177,18,38,.10), transparent 55%),
-    radial-gradient(circle at 82% 65%, rgba(202,162,74,.10), transparent 55%) !important;
-}
-
-/* This is the “shadow box” panel that looks off */
-.about-hero{
-  background: rgba(255,255,255,.06) !important;
-  box-shadow:
-    0 0 0 1px rgba(212,175,55,.18) inset,
-    0 22px 40px rgba(0,0,0,.22) !important;
-}
-
-/* Optional: make the panel border a touch more consistent */
-.about-hero{
-  border: 1px solid rgba(255,255,255,.08) !important;
-}
-/* Force exact same solid navy, no tint overlay */
-.about-header{
-  background:#0b1f3a !important;
-  background-image:none !important;
-}
-.about-header::before{
-  content:none !important;
-}
-       /* ===== BLOG CARD: NAVY BORDER + SHADOW ===== */
-.card{
-  text-align: left;
-  background: #ffffff;
-
-  border: 2px solid #0b1f3a;           /* BTWM navy border */
-  border-radius: 14px;
-
-  padding: 18px 18px 16px;
-
-  box-shadow:
-    0 10px 22px rgba(0,0,0,.18),       /* main shadow */
-    0 0 0 1px rgba(11,31,58,.25);      /* subtle navy halo */
-
-  transition: transform .2s ease, box-shadow .2s ease;
-}
-.card:hover{
-  transform: translateY(-2px);
-  box-shadow:
-    0 18px 36px rgba(0,0,0,.28),
-    0 0 0 1px rgba(11,31,58,.35);
-}
- /* ===== FOOTER (LOCKED + SIMPLE) ===== */
-/* ===== ABOUT PAGE FOOTER ===== */
-.site-footer{
-  position: relative;
-  margin-top: 32px;
-  padding: 40px 0 28px;
-  min-height: 220px;
-
-  background: #0b1f3a url("/images/website-footer-1100x300.png")
-              center center / cover
-              no-repeat;
-}
-
-    /* Footer (your existing style can override this) */
-  /* ===== FOOTER (LOCKED + SIMPLE) ===== */
-.site-footer.footer-bg{
-  position: relative;
-  min-height: 220px;
-  width: 100%;
-  margin-top: 32px;
-
-  background: #0b1f3a url(Assets/images/layout-footer/layout-pages-footer.png) center/cover no-repeat;
-}
-
-/* Kill any old overlay that might be hiding text */
-.site-footer.footer-bg::before{
-  display: none !important;
-}
-
-/* Text layer sits on top no matter what */
-.site-footer.footer-bg .footer-text{
-  position: absolute;
-  inset: 0;
-  z-index: 9999;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  text-align: center;
-  padding: 16px;
-}
-
-.site-footer.footer-bg .small{
-  color: #fff;
-  margin: 6px 0;
-  font-size: 14px;
-}
-
-.site-footer.footer-bg .tagline{
-  font-weight: 700;
-  color: #d4af37;
-}
-.audio-note{
-  margin: 10px 0 18px;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #b0122a; /* scarlet */
-}
-.site-footer.footer-bg .tagline .red{
-  color: #b11226;
-  font-weight: 800;
-}
-  .mini-divider, .divider {
-  text-align: center;
-  color: #caa24a; /* your gold */
-  margin: 6px 0;
-  font-size: 14px;
-}
-
-.dot-divider {
-  color: #caa24a;
-  font-size: 12px;
-}
-.podcast-btn{
-  display:inline-block;
-  margin:12px auto 20px;
-  padding:10px 22px;
-  background:#0b1f3a !important;
-  color:#ffffff !important;
-  border:1px solid #caa24a;
-  border-radius:999px;
-  text-decoration:none !important;
-  font-weight:600;
-}
-
-.podcast-btn:link,
-.podcast-btn:visited,
-.podcast-btn:active{
-  color:#ffffff !important;
-  text-decoration:none !important;
-}
-
-.podcast-btn:hover{
-  background:#caa24a !important;
-  color:#0b1f3a !important;
-}
-
-.podcast-btn-wrap{
-  text-align:center;
-}
-  <style>
+    .site-footer{
+      position:relative;
+      width:100vw;
+      margin-left:calc(50% - 50vw);
+      height:180px;
+      margin-top:32px;
+      background:#0b1f3a url('../Assets/images/layout-footer/layout-footer.png') center/cover no-repeat;
+    }
+  </style>
 </head>
 <body>
 
- <header class="about-header">
-  <img src="../Assets/images/layout/header/layout-pages-header.png"
-       class="about-header-image"
-       alt="Header">
-</header>
+  <header class="about-header">
+    <img src="../Assets/images/layout/header/layout-pages-header.png"
+         class="about-header-image"
+         alt="Header">
+  </header>
 
- <main class="wrap hero">
+  <main class="wrap hero">
 
-<div class="back-home">
-  <a href="../index.html">← Back to Home</a>
-</div>
+    <div class="back-home">
+      <a href="../index.html">← Back to Home</a>
+    </div>
 
-<!-- TOP INTRO (RESTORED) -->
-
-<p class="muted">
-  Teachings, encouragement, and biblical discernment from Balancing the Word Ministry.
-</p>
-
-<p class="audio-note">
-  📖 Includes a full audio reading of this article
-</p>
-
-<div class="mini-divider">✦</div>
-
-<p class="podcast-note">
-  🎙 The <strong>podcast</strong> goes deeper into this message.
-</p>
-
-<div class="podcast-btn-wrap">
- <a class="podcast-btn"
-   href="https://tinyurl.com/BTWM-spotify"
-   target="_blank"
-   rel="noopener noreferrer"
-   style="display:inline-block; background:red; color:white; padding:10px;">
-  Listen to the Podcast
-</a>
-</div>
-       <!-- POST 1 -->
-  
-<div class="featured-post-card">
-
-  <p class="featured-label">FEATURED ARTICLE</p>
-
-  <h2>Not My Will, but Yours — True Biblical Submission</h2>
-  <p class="featured-date">Posted on April 16, 2026</p>
-
-  <div class="featured-hook-block">
-    <p class="hook-question">
-      <strong><em>What does true submission really look like?</em></strong>
+    <p class="muted">
+      Teachings, encouragement, and biblical discernment from Balancing the Word Ministry.
     </p>
 
-    <p class="hook-response">
-      In a world that often misunderstands obedience, are we truly surrendering to God—or redefining submission on our own terms?
+    <p class="audio-note">
+      📖 Includes a full audio reading of this article
     </p>
 
-    <p class="hook-emphasis">
-      True submission is not weakness…<br>
-      it is surrender to the will of God.
+    <div class="mini-divider">✦</div>
+
+    <p class="podcast-note">
+      🎙 The <strong>podcast</strong> goes deeper into this message.
     </p>
-  </div>
 
-  <p class="featured-preview-text">
-    This message explores biblical submission—what we are called to endure, where discernment is required, and how to remain faithful without compromise.
-  </p>
+    <div class="podcast-btn-wrap">
+      <a class="podcast-btn"
+         href="https://tinyurl.com/BTWM-spotify"
+         target="_blank"
+         rel="noopener noreferrer">
+        Listen to the Podcast
+      </a>
+    </div>
 
-  <p class="audio-note">📖 Includes a full audio reading of this article</p>
+    <div class="featured-post-card">
+      <p class="featured-label">FEATURED ARTICLE</p>
 
-  <div class="mini-divider">✦</div>
+      <h2>Not My Will, but Yours — True Biblical Submission</h2>
+      <p class="featured-date">Posted on April 16, 2026</p>
 
-  <p class="featured-coming-soon">
-    🎙 <strong>Stay Tuned</strong>—the podcast goes deeper into this message.
-  </p>
+      <div class="featured-hook-block">
+        <p class="hook-question">
+          <strong><em>What does true submission really look like?</em></strong>
+        </p>
 
-  <div class="featured-article-buttons">
-    <a class="btn primary"
-       href="https://tinyurl.com/submission-article"
-       target="_blank"
-       rel="noopener noreferrer">
-       ARTICLE + AUDIO ON SUBSTACK
-    </a>
+        <p class="hook-response">
+          In a world that often misunderstands obedience, are we truly surrendering to God—or redefining submission on our own terms?
+        </p>
 
-    <a class="btn"
-       href="blog-archive.html">
-       View Archives
-    </a>
-  </div>
+        <p class="hook-emphasis">
+          True submission is not weakness…<br>
+          it is surrender to the will of God.
+        </p>
+      </div>
 
-</div>
+      <p class="featured-preview-text">
+        This message explores biblical submission—what we are called to endure, where discernment is required, and how to remain faithful without compromise.
+      </p>
 
-</div>
-</div>
+      <p class="audio-note">📖 Includes a full audio reading of this article</p>
+
+      <div class="mini-divider">✦</div>
+
+      <p class="featured-coming-soon">
+        🎙 <strong>Stay Tuned</strong>—the podcast goes deeper into this message.
+      </p>
+
+      <div class="featured-article-buttons">
+        <a class="btn primary"
+           href="https://tinyurl.com/submission-article"
+           target="_blank"
+           rel="noopener noreferrer">
+          ARTICLE + AUDIO ON SUBSTACK
+        </a>
+
+        <a class="btn" href="blog-archive.html">
+          View Archives
+        </a>
+      </div>
+    </div>
 
   </main>
 
- <footer class="site-footer"
-    style="
-      position: relative;
-      width: 100vw;
-      margin-left: calc(50% - 50vw);
-      height: 180px;
-      background: #0b1f3a url('../Assets/images/layout-footer/layout-footer.png') center/cover no-repeat;
-    ">
+  <footer class="site-footer">
     <div style="
       position:absolute;
       inset:0;
@@ -724,6 +326,7 @@
       <div style="font-weight:700; color:#d4af37;">
         Build • <span style="color:#b11226; font-weight:800;">Educate</span> • Disciple
       </div>
+    </div>
   </footer>
 
   <script>
