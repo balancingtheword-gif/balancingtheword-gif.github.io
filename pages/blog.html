@@ -574,29 +574,31 @@
   font-size: 12px;
 }
 .podcast-btn{
-  display:block;
-  width:fit-content;
-  margin:12px auto 20px;
-  padding:10px 22px;              /* ✅ moved inside */
-  background:#0b1f3a;
-  color:#fff;
-  border:1px solid #caa24a;
-  border-radius:999px;            /* ✅ moved inside */
-  text-decoration:none;
-  font-weight:600;
+  display:inline-block !important;
+  margin:12px auto 20px !important;
+  padding:10px 22px !important;
+  background:#0b1f3a !important;
+  color:#ffffff !important;
+  border:1px solid #caa24a !important;
+  border-radius:999px !important;
+  text-decoration:none !important;
+  font-weight:600 !important;
 }
 
-/* THIS is the missing piece most likely */
-.podcast-btn,
 .podcast-btn:link,
-.podcast-btn:visited{
-  color:#fff !important;
+.podcast-btn:visited,
+.podcast-btn:active{
+  color:#ffffff !important;
   text-decoration:none !important;
 }
 
 .podcast-btn:hover{
-  background:#caa24a;
-  color:#0b1f3a;
+  background:#caa24a !important;
+  color:#0b1f3a !important;
+  text-decoration:none !important;
+}
+  .podcast-btn-wrap{
+  text-align:center;
 }
    </style>
 </head>
@@ -631,13 +633,15 @@
 <p class="podcast-note">
   🎙 The <strong>podcast</strong> goes deeper into this message.
 </p>
-   <a class="podcast-btn" 
-   href="https://tinyurl.com/BTWM-spotify" 
-   target="_blank" 
-   rel="noopener noreferrer">
-  Listen to the Podcast
-</a>
 
+<div class="podcast-btn-wrap">
+  <a class="podcast-btn"
+     href="https://tinyurl.com/BTWM-spotify"
+     target="_blank"
+     rel="noopener noreferrer">
+    Listen to the Podcast
+  </a>
+</div>
        <!-- POST 1 -->
   
 <div class="featured-post-card">
