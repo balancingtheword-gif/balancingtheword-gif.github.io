@@ -182,10 +182,16 @@
 }
 
 .prep-title{
-  display: block;          /* forces it onto second line */
-  margin-top: 4px;
-  font-weight: 600;
-  color: #0b1f3a;          /* navy for emphasis */
+  display:block;
+  margin-top:4px;
+  font-weight:600;
+  color:#b0122a;              /* 🔴 BTWM red */
+  text-decoration:none;
+}
+
+.prep-title:hover{
+  text-decoration:underline;
+  color:#0b1f3a;              /* 🔵 navy on hover */
 }
 .column-subhead span{
   flex:1;
@@ -487,9 +493,14 @@
       <div class="featured-podcast-block">
         <h3 class="featured-episode-title">The God of Hope: True Hope in Christ</h3>
         <p class="featured-date">Released April 24, 2026</p>
-       <p class="podcast-prep">
+      <p class="podcast-prep">
   To fully understand this message, begin with the article:
-  <span class="prep-title">“The God of Hope: True Hope in Christ.”</span>
+  <a href="https://tinyurl.com/biblical-hope"
+     class="prep-title"
+     target="_blank"
+     rel="noopener noreferrer">
+    “The God of Hope: True Hope in Christ.”
+  </a>
 </p>
         <p class="featured-summary">
           This episode goes deeper into the message of true hope in Christ and examines
