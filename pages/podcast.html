@@ -399,6 +399,26 @@
   color:#555;
   margin:0 0 10px;
 }
+    .section-divider-line{
+  width:100%;
+  max-width:500px;
+  margin:18px auto 26px;
+  height:1px;
+  background:#caa24a;
+  position:relative;
+}
+
+.section-divider-line::after{
+  content:"✦";
+  position:absolute;
+  top:-10px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#ffffff;
+  padding:0 8px;
+  color:#caa24a;
+  font-size:14px;
+}
   </style>
 </head>
 <body>
@@ -416,9 +436,10 @@
     </div>
 
     <p class="muted">
-      Biblically centered messages & encouragement to inspire maturity in Christ.
-    </p>
-<div
+  Biblically centered messages & encouragement to inspire maturity in Christ.
+</p>
+
+<div class="section-divider-line"></div>
  <section class="podcast-page">
   <div class="podcast-page-container">
 
