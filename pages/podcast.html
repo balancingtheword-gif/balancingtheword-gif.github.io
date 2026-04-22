@@ -86,259 +86,326 @@
       background:rgba(11,31,58,.12);
     }
 
-   .podcast-page{
-  padding: 60px 20px;
-  background: #f8f8f8;
+.podcast-page{
+  background:#f6f3ee;
+  padding:60px 20px 80px;
 }
 
 .podcast-page-container{
-  max-width: 900px;
-  margin: 0 auto;
-  background: #ffffff;
-  border: 1px solid #d9c27a;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
-  padding: 40px 28px;
+  max-width:1200px;
+  margin:0 auto;
+  background:#fbfaf7;
+  border:2px solid #caa24a;
+  padding:50px 28px 40px;
 }
 
-.podcast-page-container h1{
-  text-align: center;
-  color: #0b1f3a;
-  margin-bottom: 20px;
+.section-divider{
+  text-align:center;
+  color:#caa24a;
+  font-size:1rem;
+  margin-bottom:18px;
+}
+
+.podcast-page-label{
+  text-align:center;
+  color:#b0122a;
+  font-size:0.95rem;
+  font-weight:700;
+  letter-spacing:2px;
+  margin-bottom:10px;
+}
+
+.podcast-page-title{
+  text-align:center;
+  color:#0b1f3a;
+  font-size:3.2rem;
+  margin:0 0 12px;
+}
+
+.mini-divider{
+  text-align:center;
+  color:#caa24a;
+  font-size:0.95rem;
+  margin-bottom:24px;
 }
 
 .podcast-intro{
-  text-align: center;
-  line-height: 1.7;
-  color: #333;
-  margin-bottom: 40px;
+  max-width:780px;
+  margin:0 auto 40px;
+  text-align:center;
+  color:#222;
+  font-size:1.15rem;
+  line-height:1.7;
 }
 
-.podcast-category{
-  margin-top: 50px;
-  padding-top: 30px;
-  border-top: 2px solid #caa24a;
+.podcast-columns{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:26px;
+  align-items:start;
 }
 
-.podcast-category h2{
-  color: #0b1f3a;
-  margin-bottom: 10px;
+.podcast-column{
+  background:#fffdf9;
+  border:3px solid #caa24a;
 }
 
-.category-description{
-  line-height: 1.7;
-  color: #444;
-  margin-bottom: 24px;
+.podcast-column-header{
+  background:#0b1f3a;
+  padding:20px 18px;
+  border-bottom:3px solid #caa24a;
 }
 
-.featured-podcast-card{
-  background: #fcfcfc;
-  border: 1px solid #e2d3a1;
-  padding: 26px;
-  margin-bottom: 30px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+.podcast-column-header h2{
+  color:#ffffff;
+  text-align:center;
+  font-size:2rem;
+  margin:0;
 }
 
-.featured-label{
-  text-align: center;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-  color: #b0122a;
-  margin-bottom: 12px;
+.podcast-column-body{
+  padding:26px 24px 24px;
 }
 
-.featured-podcast-card h3{
-  text-align: center;
-  color: #0b1f3a;
-  margin-bottom: 10px;
+.column-subhead{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin:8px 0 24px;
 }
 
-.featured-date,
-.archive-date{
-  text-align: center;
-  color: #777;
-  font-size: 0.95rem;
-  margin-bottom: 16px;
+.column-subhead span{
+  flex:1;
+  height:1px;
+  background:#caa24a;
 }
 
-.podcast-summary{
-  line-height: 1.75;
-  color: #333;
-  margin-bottom: 20px;
+.column-subhead h3{
+  margin:0;
+  color:#b0122a;
+  font-size:1.15rem;
+  letter-spacing:2px;
 }
 
-.podcast-links{
-  text-align: center;
+.featured-podcast-block{
+  display:grid;
+  grid-template-columns:170px 1fr;
+  gap:22px;
+  margin-bottom:28px;
+}
+
+.podcast-cover-placeholder{
+  background:#0b1f3a;
+  border:3px solid #caa24a;
+  min-height:210px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:16px;
+  color:#caa24a;
+}
+
+.podcast-cover-placeholder span{
+  font-size:2rem;
+  font-weight:700;
+  line-height:1.05;
+}
+
+.podcast-cover-placeholder small{
+  display:block;
+  margin-top:10px;
+  font-size:1rem;
+  letter-spacing:2px;
+}
+
+.featured-episode-title{
+  color:#0b1f3a;
+  font-size:2rem;
+  line-height:1.15;
+  margin:0 0 10px;
+}
+
+.featured-date{
+  color:#b8892d;
+  font-size:1.05rem;
+  margin:0 0 14px;
+}
+
+.featured-summary{
+  color:#222;
+  line-height:1.7;
+  margin-bottom:20px;
 }
 
 .podcast-btn{
-  display: inline-block;
-  padding: 10px 22px;
-  background: #0b1f3a;
-  color: #fff;
-  border: 1px solid #caa24a;
-  border-radius: 999px;
-  text-decoration: none;
-  font-weight: 600;
+  display:inline-block;
+  background:#b0122a;
+  color:#fff !important;
+  text-decoration:none !important;
+  padding:12px 24px;
+  border:2px solid #8f0f23;
+  font-weight:700;
+  letter-spacing:0.5px;
 }
 
 .podcast-btn:hover{
-  background: #caa24a;
-  color: #0b1f3a;
+  background:#0b1f3a;
+  border-color:#caa24a;
+  color:#fff !important;
 }
 
-.podcast-archive{
-  margin-top: 24px;
+.archive-subhead{
+  margin-top:10px;
 }
 
-.podcast-archive h3{
-  color: #0b1f3a;
-  margin-bottom: 16px;
-}
-.podcast-columns{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
-  margin-top: 40px;
+.podcast-archive-list{
+  border-top:1px solid #d8c69b;
 }
 
-/* Each column */
-.podcast-column{
-  background: #ffffff;
-  border: 1px solid #e2d3a1;
-  padding: 24px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.05);
+.archive-item{
+  display:grid;
+  grid-template-columns:40px 1fr auto;
+  gap:14px;
+  align-items:center;
+  padding:16px 0;
+  border-bottom:1px solid #d8c69b;
 }
 
-/* Responsive (VERY important) */
-@media (max-width: 768px){
+.archive-icon{
+  width:40px;
+  height:40px;
+  background:#0b1f3a;
+  color:#caa24a;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:50%;
+  font-size:1rem;
+}
+
+.archive-text h4{
+  margin:0 0 6px;
+  color:#0b1f3a;
+  font-size:1.35rem;
+  line-height:1.2;
+}
+
+.archive-text p{
+  margin:0;
+  color:#b8892d;
+  font-size:1rem;
+}
+
+.archive-link a{
+  color:#b0122a;
+  text-decoration:none;
+  font-weight:700;
+}
+
+.archive-link a:hover{
+  text-decoration:underline;
+}
+
+.commentary-featured-block{
+  text-align:center;
+  padding:18px 10px 24px;
+  margin-bottom:26px;
+}
+
+.commentary-icon{
+  font-size:4rem;
+  color:#caa24a;
+  margin-bottom:18px;
+}
+
+.commentary-text{
+  color:#222;
+  font-size:1.25rem;
+  line-height:1.7;
+  max-width:440px;
+  margin:0 auto;
+}
+
+.empty-archive-box{
+  background:#f4efe4;
+  border:2px solid #eadcb7;
+  padding:34px 20px;
+  text-align:center;
+  margin-bottom:26px;
+}
+
+.empty-icon{
+  font-size:2.5rem;
+  color:#caa24a;
+  margin-bottom:12px;
+}
+
+.empty-archive-box p{
+  margin:0 0 8px;
+  color:#222;
+  font-size:1.2rem;
+}
+
+.check-back{
+  color:#b8892d !important;
+  font-style:italic;
+}
+
+.archive-btn{
+  display:block;
+  width:100%;
+  text-align:center;
+  background:#b0122a;
+  color:#fff !important;
+  text-decoration:none !important;
+  padding:14px 18px;
+  border:2px solid #8f0f23;
+  font-weight:700;
+  letter-spacing:0.4px;
+  box-sizing:border-box;
+}
+
+.archive-btn:hover{
+  background:#0b1f3a;
+  border-color:#caa24a;
+  color:#fff !important;
+}
+
+@media (max-width: 950px){
   .podcast-columns{
-    grid-template-columns: 1fr;
+    grid-template-columns:1fr;
   }
 }
-.archive-item{
-  padding: 18px 0;
-  border-top: 1px solid #ddd;
+
+@media (max-width: 700px){
+  .podcast-page-title{
+    font-size:2.4rem;
+  }
+
+  .podcast-column-header h2{
+    font-size:1.6rem;
+  }
+
+  .featured-podcast-block{
+    grid-template-columns:1fr;
+  }
+
+  .featured-podcast-image{
+    max-width:220px;
+    margin:0 auto;
+  }
+
+  .archive-item{
+    grid-template-columns:1fr;
+    text-align:left;
+  }
+
+  .archive-link{
+    margin-top:6px;
+  }
 }
-
-.archive-item h4{
-  margin-bottom: 6px;
-  color: #222;
-}
-
-.archive-item a{
-  color: #b0122a;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.archive-item a:hover{
-  text-decoration: underline;
-}
-
-.commentary-placeholder,
-.empty-archive{
-  background: #faf7ef;
-  border: 1px solid #e2d3a1;
-  padding: 18px;
-  color: #444;
-}
-    .featured-post-card{
-      background:#fff;
-      border:2px solid #0b1f3a;
-      border-radius:18px;
-      padding:26px 20px 28px;
-      box-shadow:0 10px 24px rgba(0,0,0,0.12);
-      max-width:900px;
-      margin:0 auto 30px;
-      text-align:center;
-    }
-
-    .featured-label{
-      text-align:center;
-      margin:0 0 12px;
-      font-size:.95rem;
-      font-weight:800;
-      letter-spacing:.12em;
-      text-transform:uppercase;
-      color:#b0122a;
-    }
-
-    .featured-post-card h2{
-      margin:0 0 8px;
-      color:#0b1f3a;
-    }
-
-    .featured-date{
-      text-align:center;
-      margin:0 0 20px;
-      font-size:.98rem;
-      color:#555;
-    }
-
-    .featured-hook-block{
-      margin:20px 0;
-    }
-
-    .hook-question{
-      margin:0 0 12px;
-      font-size:1.25rem;
-      color:#0b1f3a;
-      text-align:center;
-    }
-
-    .hook-response{
-      margin:0 0 14px;
-      text-align:center;
-    }
-
-    .hook-emphasis{
-      margin:18px auto;
-      text-align:center;
-      font-size:1.3rem;
-      line-height:1.6;
-      font-weight:700;
-      color:#0b1f3a;
-      max-width:700px;
-    }
-
-    .featured-preview-text{
-      max-width:760px;
-      margin:0 auto 16px;
-      text-align:center;
-    }
-
-    .featured-article-buttons{
-      display:flex;
-      gap:12px;
-      justify-content:center;
-      flex-wrap:wrap;
-      border-top:1px solid rgba(11,31,58,.1);
-      padding-top:18px;
-      margin-top:18px;
-    }
-
-    .btn{
-      display:inline-block;
-      margin-top:10px;
-      padding:10px 14px;
-      border-radius:10px;
-      text-decoration:none;
-      font-weight:700;
-      border:1px solid rgba(0,0,0,.12);
-      color:#0b1f3a;
-      background:#fff;
-    }
-
-    .btn.primary{
-      background:#0b1f3a;
-      color:#fff;
-      border-color:#0b1f3a;
-    }
-
-    .btn.primary:hover{
-      opacity:.92;
-    }
 
     .site-footer{
       position:relative;
@@ -389,84 +456,150 @@
 
         <div class="mini-divider">✦</div>
 
-  <section class="podcast-page">
-
+ <section class="podcast-page">
   <div class="podcast-page-container">
-    <p class="featured-label">PODCAST MINISTRY</p>
-    <h1>Podcasts</h1>
+
+    <div class="section-divider">✦</div>
+
+    <p class="podcast-page-label">PODCAST MINISTRY</p>
+    <h1 class="podcast-page-title">Podcasts</h1>
+
+    <div class="mini-divider">────────── ✦ ──────────</div>
 
     <p class="podcast-intro">
       Each week, the Go Deeper Podcast follows the featured article,
       while Biblical Commentary addresses current issues through a biblical lens.
     </p>
 
-    <!-- TWO COLUMN LAYOUT -->
     <div class="podcast-columns">
 
-      <!-- LEFT COLUMN -->
+      <!-- GO DEEPER COLUMN -->
       <div class="podcast-column">
-        <h2>Go Deeper Podcasts</h2>
-
-        <!-- Featured -->
-        <div class="featured-podcast-card">
-          <p class="featured-label">FEATURED</p>
-          <h3>The God of Hope: True Hope in Christ</h3>
-          <p class="featured-date">Released April 24, 2026</p>
-
-          <div class="podcast-summary">
-            <p>
-              This episode goes deeper into the message of true hope in Christ.
-            </p>
-          </div>
-
-          <a class="podcast-btn" href="#">Listen Now</a>
+        <div class="podcast-column-header">
+          <h2>Go Deeper Podcasts</h2>
         </div>
 
-        <!-- Archive -->
-        <div class="podcast-archive">
-          <h3>Archive</h3>
+        <div class="podcast-column-body">
 
-          <div class="archive-item">
-            <h4>Not My Will, but Yours</h4>
-            <p class="archive-date">April 18, 2026</p>
-            <a href="#">Listen</a>
+          <div class="column-subhead">
+            <span></span>
+            <h3>FEATURED</h3>
+            <span></span>
           </div>
 
+          <div class="featured-podcast-block">
+            <div class="featured-podcast-image">
+              <div class="podcast-cover-placeholder">
+                <span>GO<br>DEEPER</span>
+                <small>PODCAST</small>
+              </div>
+            </div>
+
+            <div class="featured-podcast-content">
+              <h3 class="featured-episode-title">The God of Hope: True Hope in Christ</h3>
+              <p class="featured-date">Released April 24, 2026</p>
+
+              <p class="featured-summary">
+                This episode goes deeper into the message of true hope in Christ and examines
+                what Scripture teaches about placing our hope in God rather than in the world.
+              </p>
+
+              <a class="podcast-btn"
+                 href="YOUR-SPOTIFY-LINK"
+                 target="_blank"
+                 rel="noopener noreferrer">
+                Listen Now
+              </a>
+            </div>
+          </div>
+
+          <div class="column-subhead archive-subhead">
+            <span></span>
+            <h3>ARCHIVE</h3>
+            <span></span>
+          </div>
+
+          <div class="podcast-archive-list">
+
+            <div class="archive-item">
+              <div class="archive-icon">🎙</div>
+              <div class="archive-text">
+                <h4>Not My Will, but Yours — True Biblical Submission</h4>
+                <p>April 18, 2026</p>
+              </div>
+              <div class="archive-link">
+                <a href="#">Listen →</a>
+              </div>
+            </div>
+
+            <div class="archive-item">
+              <div class="archive-icon">🎙</div>
+              <div class="archive-text">
+                <h4>Sanctification</h4>
+                <p>April 11, 2026</p>
+              </div>
+              <div class="archive-link">
+                <a href="#">Listen →</a>
+              </div>
+            </div>
+
+            <div class="archive-item">
+              <div class="archive-icon">🎙</div>
+              <div class="archive-text">
+                <h4>Walking in True Humility</h4>
+                <p>April 4, 2026</p>
+              </div>
+              <div class="archive-link">
+                <a href="#">Listen →</a>
+              </div>
+            </div>
+
+          </div>
+
+          <a class="archive-btn" href="#">View All Go Deeper Podcasts →</a>
         </div>
       </div>
 
-      <!-- RIGHT COLUMN -->
+      <!-- BIBLICAL COMMENTARY COLUMN -->
       <div class="podcast-column">
-        <h2>Biblical Commentary</h2>
-
-        <!-- Featured -->
-        <div class="featured-podcast-card">
-          <p class="featured-label">COMING SOON</p>
-          <h3>Commentary Episodes</h3>
-
-          <div class="podcast-summary">
-            <p>
-              Future episodes will address current issues and cultural concerns
-              through a biblical lens.
-            </p>
-          </div>
+        <div class="podcast-column-header">
+          <h2>Biblical Commentary</h2>
         </div>
 
-        <!-- Archive -->
-        <div class="podcast-archive">
-          <h3>Archive</h3>
+        <div class="podcast-column-body">
 
-          <div class="archive-item empty-archive">
-            <p>No episodes yet.</p>
+          <div class="column-subhead">
+            <span></span>
+            <h3>COMING SOON</h3>
+            <span></span>
           </div>
 
+          <div class="commentary-featured-block">
+            <div class="commentary-icon">🎙</div>
+
+            <p class="commentary-text">
+              Future episodes will address current issues, cultural concerns,
+              and personal reflections through a biblical lens.
+            </p>
+          </div>
+
+          <div class="column-subhead archive-subhead">
+            <span></span>
+            <h3>ARCHIVE</h3>
+            <span></span>
+          </div>
+
+          <div class="empty-archive-box">
+            <div class="empty-icon">📖</div>
+            <p>No episodes have been posted yet.</p>
+            <p class="check-back">Check back soon!</p>
+          </div>
+
+          <a class="archive-btn" href="#">View All Biblical Commentary Episodes →</a>
         </div>
       </div>
 
     </div>
-  </div>
-</section>
-
   </div>
 </section>
      
