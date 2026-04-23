@@ -142,12 +142,15 @@
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:26px;
-  align-items:start;
+  align-items:stretch;
 }
 
 .podcast-column{
   background:#fffdf9;
   border:3px solid #caa24a;
+  display:flex;
+  flex-direction:column;
+  height:100%;
 }
 
 .podcast-column-header{
@@ -165,6 +168,9 @@
 
 .podcast-column-body{
   padding:26px 24px 24px;
+  display:flex;
+  flex-direction:column;
+  flex:1;
 }
 
 .column-subhead{
@@ -360,6 +366,7 @@
   font-weight:700;
   letter-spacing:0.4px;
   box-sizing:border-box;
+  margin-top:auto;
 }
 
 .archive-btn:hover{
