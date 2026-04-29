@@ -39,30 +39,34 @@
       font-style:italic;
     }
 
-    .donation-buttons{
-      display:flex;
-      justify-content:center;
-      gap:18px;
-      flex-wrap:wrap;
-      margin-top:28px;
-    }
+  .donation-buttons{
+  display:flex;
+  justify-content:center;
+  gap:18px;
+  flex-wrap:wrap;
+  margin-top:28px;
+  position:relative;
+  z-index:20;
+}
 
-    .donate-btn{
-      display:inline-block;
-      padding:12px 26px;
-      background:#0b1f3a;
-      color:#ffffff !important;
-      border:2px solid #caa24a;
-      border-radius:999px;
-      text-decoration:none !important;
-      font-weight:700;
-    }
+.donate-btn{
+  display:inline-block;
+  padding:12px 26px;
+  background:#0b1f3a;
+  color:#ffffff !important;
+  border:2px solid #caa24a;
+  border-radius:999px;
+  text-decoration:none !important;
+  font-weight:700;
+  position:relative;
+  z-index:30;
+  cursor:pointer;
+}
 
-    .donate-btn:hover{
-      background:#caa24a;
-      color:#0b1f3a !important;
-    }
-
+.donate-btn:hover{
+  background:#caa24a;
+  color:#0b1f3a !important;
+}
     .donate-btn.stripe{
       background:#b0122a;
     }
