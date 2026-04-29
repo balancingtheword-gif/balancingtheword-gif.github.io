@@ -873,7 +873,28 @@
   background:#b0122a;
   color:#ffffff !important;
 }
-    
+    /* --- Ensure nav is clickable --- */
+.boxed-nav{
+  position:relative;
+  z-index:50;
+}
+
+.boxed-nav a{
+  position:relative;
+  z-index:60;
+}
+
+/* --- Support button styling --- */
+.boxed-nav a.support-btn{
+  border:2px solid #b0122a;
+  border-radius:999px;
+  padding:6px 14px;
+}
+
+.boxed-nav a.support-btn:hover{
+  background:#b0122a;
+  color:#ffffff !important;
+}
        </style>
 </head>
 
