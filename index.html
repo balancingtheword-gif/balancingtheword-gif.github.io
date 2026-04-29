@@ -927,6 +927,26 @@
   margin:0 auto 12px;      /* Centers the block properly */
   color:#0b1f3a;
 }
+    .gold-divider{
+  width:70%;
+  margin:12px auto 16px;
+  height:2px;
+  background:#caa24a;
+  position:relative;
+}
+
+/* Center accent (optional but matches your design) */
+.gold-divider::after{
+  content:"✦";
+  position:absolute;
+  top:-10px;
+  left:50%;
+  transform:translateX(-50%);
+  background:#fffdf9; /* match your container background */
+  padding:0 8px;
+  color:#caa24a;
+  font-size:14px;
+}
        </style>
 </head>
 
@@ -1039,6 +1059,8 @@
 <div class="mini-divider"></div>
 
 <h2 class="section-title">Today’s Featured Article</h2>
+
+<div class="gold-divider"></div>
 
 <h3 class="featured-article-title">
   Jesus Loves Me — The Greatest Truth Ever Given
