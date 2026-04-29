@@ -947,6 +947,13 @@
   color:#caa24a;
   font-size:14px;
 }
+    .feature-buttons{
+  display:flex;
+  justify-content:center;
+  gap:14px; /* space between buttons */
+  margin-top:14px;
+  flex-wrap:wrap; /* keeps it responsive on mobile */
+}
        </style>
 </head>
 
@@ -1071,12 +1078,8 @@
 </p>
 
 <div class="featureRow">
-  <div class="featureBlock">
-    <a class="btn" href="pages/blog.html">Featured</a>
-  </div>
-</div>
-
- <div class="featureBlock">
+ <div class="feature-buttons">
+  <a class="btn" href="pages/blog.html">Featured</a>
   <a class="btn" href="pages/blog-archive.html">Archives</a>
 </div>
 
