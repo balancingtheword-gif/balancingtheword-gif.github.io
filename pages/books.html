@@ -732,6 +732,45 @@
 .books-grid .grid{
   margin-top:0 !important;
 }
+    /* Enhance book card titles and descriptions */
+.book-item h3,
+.book-card h3,
+.book-info h3{
+  font-family:Georgia, "Times New Roman", serif !important;
+  color:#0B1F3A !important;
+  font-size:1.45rem !important;
+  line-height:1.25 !important;
+  font-weight:800 !important;
+  margin:0 0 12px !important;
+}
+
+.book-item h3::after,
+.book-card h3::after,
+.book-info h3::after{
+  content:"" !important;
+  display:block !important;
+  width:64px !important;
+  height:3px !important;
+  margin:10px 0 0 !important;
+  border-radius:999px !important;
+  background:#CAA24A !important;
+}
+
+.book-item p,
+.book-card p,
+.book-info p{
+  font-family:Georgia, "Times New Roman", serif !important;
+  color:#0B1F3A !important;
+  font-size:1.08rem !important;
+  line-height:1.65 !important;
+  max-width:58ch !important;
+}
+
+/* Give the text side more polish */
+.book-item > div,
+.book-info{
+  padding-top:6px !important;
+}
   </style>
   
 </head>
