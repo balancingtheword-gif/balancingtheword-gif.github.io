@@ -954,6 +954,72 @@
   margin-top:14px;
   flex-wrap:wrap; /* keeps it responsive on mobile */
 }
+    .home-intro-grid {
+  max-width: 1120px;
+  margin: 34px auto 46px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr 1fr;
+  gap: 22px;
+  align-items: stretch;
+}
+
+.intro-panel {
+  background: #ffffff;
+  border: 2px solid #CAA24A;
+  border-left: 6px solid #B0122A;
+  border-radius: 14px;
+  padding: 28px 26px;
+  box-shadow: 0 10px 24px rgba(11, 31, 58, 0.08);
+  text-align: center;
+}
+
+.intro-panel h2,
+.intro-profile .lesli-name {
+  margin: 0 0 12px;
+  color: #0B1F3A;
+  font-weight: 700;
+}
+
+.intro-panel p {
+  margin: 0 0 14px;
+  color: #0B1F3A;
+  font-size: 1.03rem;
+  line-height: 1.65;
+}
+
+.intro-panel p:last-child {
+  margin-bottom: 0;
+}
+
+.intro-profile {
+  border-left-color: #0B1F3A;
+}
+
+.intro-profile .about-link {
+  text-decoration: none;
+  color: #0B1F3A;
+}
+
+.headshot {
+  width: 136px;
+  height: 136px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #CAA24A;
+  margin-bottom: 14px;
+  box-shadow: 0 8px 18px rgba(11, 31, 58, 0.16);
+}
+
+.gold-dot {
+  color: #CAA24A;
+}
+
+@media (max-width: 850px) {
+  .home-intro-grid {
+    grid-template-columns: 1fr;
+  }
+}
        </style>
 </head>
 
@@ -987,55 +1053,48 @@
 
     <section class="heroGrid">
 
-      <!-- LEFT COLUMN -->
-      <div class="heroLeft">
-        <section class="card heroIntro" id="greetings">
-  <h2>Greetings</h2>
+  <section class="home-intro-grid">
+  <article class="intro-panel" id="greetings">
+    <h2>Greetings</h2>
 
-  <p class="welcome-line">
-    <strong>Welcome to Balancing the Word Ministry.</strong>
-  </p>
+    <p class="welcome-line">
+      <strong>Welcome to Balancing the Word Ministry.</strong>
+    </p>
 
-  <p>
-    We’re glad you’re here and invite you to explore Scripture, grow in faith,
-    and be encouraged as we walk together toward becoming “complete in Christ.”
-  </p>
+    <p>
+      We’re glad you’re here and invite you to explore Scripture, grow in faith,
+      and be encouraged as we walk together toward becoming “complete in Christ.”
+    </p>
 
-  <p class="stay-tuned"><strong>Please stay tuned.</strong></p>
+    <p class="stay-tuned"><strong>Please stay tuned.</strong></p>
+  </article>
+
+  <article class="intro-panel intro-profile" id="lesli">
+    <a href="about.html" class="about-link">
+      <img src="Assets/images/general/head-shot/HS-1.png" alt="Lesli D. Mize" class="headshot">
+      <h2 class="lesli-name">Lesli D. Mize</h2>
+    </a>
+
+    <p>
+      Founder, Balancing the Word Ministry
+    </p>
+  </article>
+
+  <article class="intro-panel" id="mission">
+    <h2>The Mission</h2>
+
+    <p class="mission-tagline">
+      Build <span class="gold-dot">•</span>
+      <span class="educate">Educate</span>
+      <span class="gold-dot">•</span>
+      Disciple
+    </p>
+
+    <p>
+      Our mission is to build others through Scripture by educating with sound biblical truth and discipling them toward spiritual maturity.
+    </p>
+  </article>
 </section>
-       
-        <section class="card" id="mission">
-         <h2>The Mission</h2>
-
-<p class="mission-tagline">
-  Build • <span class="educate">Educate</span> • Disciple
-</p>
-
-<p>
-  Our mission is to build others through Scripture by educating with sound biblical truth and discipling them toward spiritual maturity (Colossians 1:28).
-</p>
-
-<p>
-  Through faithful teaching, we seek to strengthen understanding, deepen discernment, and encourage a life that reflects obedience to Christ.
-</p>
-        </section>
-
-        <section class="card" id="lesli">
-          <a href="about.html" class="about-link">
-           <img src="Assets/images/general/head-shot/HS-1.png" alt="Lesli D. Mize" class="headshot">
-            <h2 class="lesli-name">Lesli D. Mize</h2>
-          </a>
-
-          <p>
-            I founded this ministry after recognizing the need for others to learn how to read and study the Scriptures for themselves. From that desire, my focus is to help them grow in discernment and spiritual maturity through biblically balanced teaching grounded in Scripture.
-          </p>
-
-          <p>
-            Serving and teaching are at the heart of this ministry. After surrendering my life to Jesus Christ, service became a calling expressed in many ways—wherever there is a need—with the aim of helping others remain rooted in truth and grow toward becoming "complete in Christ."
-          </p>
-        </section>
-
-      </div>
 
      <!-- RIGHT COLUMN -->
 <aside class="heroRight">
