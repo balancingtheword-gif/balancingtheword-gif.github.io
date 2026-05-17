@@ -176,88 +176,11 @@
       color:#0b1f3a;
     }
 
-   @media (max-width: 768px) {
-  .archive-item {
-    padding: 20px 20px;
-  }
-
-  .archive-card {
-    padding: 24px 22px;
-    margin-bottom: 22px;
-    border-radius: 14px;
-  }
-}
-     .archives-title{
-        font-size:1.7rem;
-      }
-
-      .archive-item h3{
-        font-size:1.35rem;
-      }
- .archive-links{
-  display:flex;
-  flex-direction:column;
-  gap:12px;
-  margin-top:14px;
+ body {
+  background: #f8f6f1;
 }
 
-.archive-btn{
-  display:block;
-  width:100%;
-  padding:12px 16px;
-  border-radius:10px;
-  text-decoration:none;
-  font-weight:700;
-  text-align:center;
-  box-sizing:border-box;
-}
-
-.archive-btn.primary{
-  background:#0b1f3a;
-  color:#fff;
-  border:1px solid #0b1f3a;
-}
-
-.archive-btn.secondary{
-  background:#fff;
-  color:#0b1f3a;
-  border:1px solid #cfcfcf;
-}
-
-.archive-btn.primary:hover{
-  background:#16345c;
-}
-
-.archive-btn.secondary:hover{
-  background:#f5f5f5;
-}
-.archive-link{
-  display:inline-block;
-  margin:6px 0 14px;
-  font-weight:700;
-  text-decoration:none;
-  color:#b0122a;   /* 🔴 BTWM red */
-  border-bottom:1px solid transparent;
-}
-
-.archive-link:hover{
-  border-bottom:1px solid #b0122a;
-}
-
-.archive-link.primary{
-  color:#0b1f3a;
-}
-
-.archive-link.secondary{
-  color:#b0122a;
-}
-
-  margin:10px 0 4px;
-  font-size:0.9rem;
-  color:#555;
-  font-style:italic;
-}
-  .archive-card {
+.archive-card {
   background: #ffffff;
   border: 2px solid #CAA24A;
   border-left: 6px solid #B0122A;
@@ -266,7 +189,8 @@
   margin-bottom: 34px;
   box-shadow: 0 10px 24px rgba(11, 31, 58, 0.08);
 }
-   .archive-links {
+
+.archive-links {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
@@ -284,10 +208,8 @@
   color: #7f0d1d;
   border-bottom-color: #B0122A;
 }
-    body {
-  background: #f8f6f1;
-}
-    .archives-title::after {
+
+.archives-title::after {
   content: "";
   display: block;
   width: 90px;
@@ -296,7 +218,31 @@
   background: #CAA24A;
   border-radius: 999px;
 }
-  </style>
+
+.archive-date {
+  margin: 10px 0 4px;
+  font-size: 0.95rem;
+  color: #555;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  .archives-title {
+    font-size: 1.7rem;
+  }
+
+  .archive-card {
+    padding: 24px 22px;
+    margin-bottom: 22px;
+    border-radius: 14px;
+  }
+
+  .archive-links {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 14px;
+  }
+}
 </head>
 
 <body>
