@@ -1513,6 +1513,28 @@ a[href="pages/btwm-in-action.html"].btn.primary{
   background:#B0122A !important;
   opacity:.9 !important;
 }
+    /* Align Foundations + BTWM in Action buttons */
+.card:has(a[href="pages/foundations.html"]),
+.card:has(a[href="pages/btwm-in-action.html"]){
+  min-height:280px !important;
+  display:flex !important;
+  flex-direction:column !important;
+  align-items:center !important;
+  text-align:center !important;
+  padding:30px 30px 26px !important;
+}
+
+.card:has(a[href="pages/foundations.html"]) p,
+.card:has(a[href="pages/btwm-in-action.html"]) p{
+  max-width:38ch !important;
+  margin:0 auto 20px !important;
+  line-height:1.6 !important;
+}
+
+.card:has(a[href="pages/foundations.html"]) .btn,
+.card:has(a[href="pages/btwm-in-action.html"]) .btn{
+  margin-top:auto !important;
+}
        </style>
 </head>
 
@@ -1671,9 +1693,10 @@ a[href="pages/btwm-in-action.html"].btn.primary{
   <article class="feature-panel" id="foundations">
     <h2>Foundations with Lesli</h2>
 
-    <p class="feature-desc">
-      Biblical teaching to help you grow in understanding, discernment, and spiritual maturity.
-    </p>
+    <p>
+  Biblical messages and practical applications to help you grow in understanding,
+  discernment, and spiritual maturity as you walk faithfully in God’s Word.
+</p>
 
     <a href="pages/foundations.html" class="btn primary">
       Explore Foundations
