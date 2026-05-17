@@ -488,6 +488,38 @@ header p { color:#C1121F; font-weight:600; }
 
   .site-footer .tagline{ color:#d4af37 !important; }
   .site-footer .tagline .red{ color:#b11226 !important; font-weight:800; }
+
+  /* Consistent Back to Home button */
+.back-home{
+  margin:0 0 24px !important;
+}
+
+.back-home-btn,
+a.back-home-btn,
+a[href="/"].btn.ghost,
+a[href="index.html"].btn.ghost,
+a[href="../index.html"].btn.ghost{
+  display:inline-block !important;
+  padding:10px 16px !important;
+  border-radius:10px !important;
+  background:#0B1F3A !important;
+  color:#ffffff !important;
+  border:2px solid #0B1F3A !important;
+  font-family:Georgia, "Times New Roman", serif !important;
+  font-weight:700 !important;
+  text-decoration:none !important;
+  box-shadow:0 8px 16px rgba(11,31,58,.12) !important;
+}
+
+.back-home-btn:hover,
+a.back-home-btn:hover,
+a[href="/"].btn.ghost:hover,
+a[href="index.html"].btn.ghost:hover,
+a[href="../index.html"].btn.ghost:hover{
+  background:#B0122A !important;
+  border-color:#B0122A !important;
+  color:#ffffff !important;
+}
 </style>
 
  </head>
@@ -505,7 +537,7 @@ header p { color:#C1121F; font-weight:600; }
   <main class="wrap">
  <div class="about-grid">
    <div class="back-home">
-  <a href="/" class="btn ghost">← Back to Home</a>
+ <a href="/" class="btn ghost back-home-btn">← Back to Home</a>
 </div>
    
   <!-- SCRIPTURE ANCHOR (GOES FIRST) -->
