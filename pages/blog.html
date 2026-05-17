@@ -449,6 +449,42 @@
     .gold-dot {
   color: #CAA24A;
 }
+    /* Top action buttons */
+.page-top-actions{
+  max-width:1100px;
+  margin:22px auto 24px;
+  padding:0 18px;
+  display:flex;
+  justify-content:center;
+  gap:14px;
+  flex-wrap:wrap;
+}
+
+.page-top-actions a{
+  display:inline-block;
+  padding:10px 16px;
+  border-radius:999px;
+  background:#0B1F3A;
+  color:#ffffff;
+  border:2px solid #0B1F3A;
+  text-decoration:none;
+  font-family:Georgia, "Times New Roman", serif;
+  font-weight:700;
+  line-height:1.2;
+  box-shadow:0 8px 16px rgba(11,31,58,.14);
+}
+
+.page-top-actions a:nth-child(2){
+  background:#CAA24A;
+  color:#0B1F3A;
+  border-color:#CAA24A;
+}
+
+.page-top-actions a:hover{
+  background:#B0122A;
+  border-color:#B0122A;
+  color:#ffffff;
+}
   </style>
 </head>
 <body>
@@ -461,9 +497,10 @@
 
   <main class="wrap hero">
 
-    <div class="back-home">
-      <a href="../index.html">← Back to Home</a>
-    </div>
+    <div class="page-top-actions">
+  <a href="../index.html">← Back to Home</a>
+  <a href="blog-archive.html">Archives</a>
+</div>
 
  <div class="article-intro">
   <p class="muted">
