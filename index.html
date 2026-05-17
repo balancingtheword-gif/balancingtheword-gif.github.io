@@ -1020,6 +1020,72 @@
     grid-template-columns: 1fr;
   }
 }
+    .home-feature-grid {
+  max-width: 1180px;
+  margin: 0 auto 54px;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 22px;
+  align-items: stretch;
+}
+
+.feature-panel {
+  background: #ffffff;
+  border: 2px solid #CAA24A;
+  border-left: 6px solid #B0122A;
+  border-radius: 14px;
+  padding: 24px 22px;
+  text-align: center;
+  box-shadow: 0 10px 24px rgba(11, 31, 58, 0.08);
+}
+
+.feature-panel h2 {
+  margin: 0 0 14px;
+  color: #0B1F3A;
+  font-size: 1.35rem;
+}
+
+.feature-panel p {
+  color: #0B1F3A;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.feature-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 9px 14px;
+  border-radius: 999px;
+  background: #B0122A;
+  color: #ffffff;
+  border: 2px solid #B0122A;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.feature-button.secondary {
+  background: #ffffff;
+  color: #B0122A;
+}
+
+.feature-button:hover {
+  background: #0B1F3A;
+  border-color: #0B1F3A;
+  color: #ffffff;
+}
+
+@media (max-width: 1000px) {
+  .home-feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .home-feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
        </style>
 </head>
 
@@ -1096,77 +1162,80 @@
   </article>
 </section>
 
-     <!-- RIGHT COLUMN -->
-<aside class="heroRight">
+<section class="home-feature-grid">
 
-  <div class="card featureStack" id="featured">
-    <h2>Today’s Featured Book</h2>
-    <img src="Assets/images/book-covers/unexpected-answers/unexpected-answers.png" 
-     alt="Unexpected Answers Book" 
-     class="featured-book" 
-     width="220" 
-     style="display: block; margin: 0 auto;">
+  <article class="feature-panel" id="featured-book">
+    <h2>Featured Book</h2>
+
+    <img src="Assets/images/book-covers/unexpected-answers/unexpected-answers.png"
+         alt="Unexpected Answers Book"
+         class="featured-book">
+
     <h3 class="featuredTitle">Unexpected Answers</h3>
 
     <p class="feature-desc">
-      <em>When God answers differently than expected—discover the purpose behind it.
+      <em>When God answers differently than expected—discover the purpose behind it.</em>
     </p>
 
-<div class="featuredButtons">
-  <a href="Assets/samples/how-long-o-lord.pdf" target="_blank" rel="noopener" class="btn primary">
-    Read Sample
-  </a>
+    <div class="featuredButtons">
+      <a href="Assets/samples/how-long-o-lord.pdf"
+         target="_blank"
+         rel="noopener"
+         class="btn primary">
+        Read Sample
+      </a>
 
-  <a href="https://www.amazon.com/author/lesli-d-mize_balancingtheword" target="_blank" rel="noopener" class="btn secondary">
-    Buy the Book
-  </a>
-</div>
+      <a href="https://www.amazon.com/author/lesli-d-mize_balancingtheword"
+         target="_blank"
+         rel="noopener"
+         class="btn secondary">
+        Buy the Book
+      </a>
+    </div>
+  </article>
 
-<div class="mini-divider"></div>
+  <article class="feature-panel" id="articles-audio">
+    <h2>Article + Audio</h2>
 
-<h2 class="section-title">Today’s Featured Article</h2>
+    <h3 class="featured-main-title">
+      Answering the Call
+    </h3>
 
-<div class="gold-divider"></div>
+    <p class="feature-desc">
+      A biblical call to return to truth, surrender, and the unshakable foundation of Christ.
+    </p>
 
-<div class="featured-title-wrap">
+    <div class="feature-buttons">
+      <a class="btn primary" href="pages/blog.html">Featured</a>
+      <a class="btn secondary" href="pages/blog-archive.html">Archives</a>
+    </div>
+  </article>
 
-  <h2 class="featured-main-title">
-    Answering the Call:
-  </h2>
+  <article class="feature-panel" id="foundations">
+    <h2>Foundations with Lesli</h2>
 
-  <h3 class="featured-subtitle">
-    Truth Beyond What We Build
-  </h3>
+    <p class="feature-desc">
+      Biblical teaching to help you grow in understanding, discernment, and spiritual maturity.
+    </p>
 
-</div>
+    <a href="pages/foundations.html" class="btn primary">
+      Explore Foundations
+    </a>
+  </article>
 
-<div class="featured-hook-block">
+  <article class="feature-panel" id="btwm-action">
+    <h2>BTWM in Action</h2>
 
-  <p class="hook-question">
-    <strong><em>Are we building God’s Kingdom—or our own?</em></strong>
-  </p>
+    <p class="feature-desc">
+      Ministry updates, service highlights, and ways Balancing the Word Ministry is building, educating, and discipling.
+    </p>
 
-  <p>
-    A biblical call to return to truth, surrender, and the unshakable foundation of Christ.
-  </p>
+    <a href="pages/btwm-in-action.html" class="btn primary">
+      View Updates
+    </a>
+  </article>
 
-</div>
-
-<div class="featureRow">
- <div class="feature-buttons">
-  <a class="btn" href="pages/blog.html">Featured</a>
-  <a class="btn" href="pages/blog-archive.html">Archives</a>
-</div>
-
-        <div class="feature-icon-box">
-          <img src=Assets/images/logos/scale/scale-blue-banner.png
-               alt="Balancing the Word Ministry scale icon">
-        </div>
-
-      </aside>
-
-    </section>
-
+</section>
 <!-- CONTACT + SUBSCRIBE -->
 <section id="connect" class="connect">
   <div class="connect-grid">
