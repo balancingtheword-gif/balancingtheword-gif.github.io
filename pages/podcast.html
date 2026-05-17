@@ -527,6 +527,33 @@
   border-radius:999px;
   background:#CAA24A;
 }
+    /* Podcast main container - match BTWM card style */
+.podcast-card,
+.podcast-hero,
+.podcast-section,
+main .card{
+  background:#ffffff !important;
+  border:1px solid rgba(11,31,58,.14) !important;
+  border-top:4px solid #CAA24A !important;
+  border-left:4px solid #B0122A !important;
+  border-radius:18px !important;
+  box-shadow:0 12px 28px rgba(11,31,58,.10) !important;
+  padding:34px 30px !important;
+}
+
+/* Remove plain navy/gray inner borders */
+.podcast-card *,
+.podcast-hero *,
+.podcast-section *,
+main .card *{
+  border-color:inherit;
+}
+
+/* If the border is on the direct container itself */
+[style*="border"],
+[class*="podcast"]{
+  border-color:#CAA24A !important;
+}
   </style>
 </head>
 <body>
