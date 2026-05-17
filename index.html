@@ -1099,6 +1099,36 @@
   border: 2px solid var(--gold);
   box-shadow: 0 6px 14px rgba(0,0,0,.15);
 }
+    .article-podcast-panel {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 24px;
+}
+
+.article-half {
+  padding-bottom: 24px;
+  border-bottom: 2px solid rgba(202, 162, 74, 0.55);
+}
+
+.article-feature-img {
+  width: 100%;
+  max-width: 260px;
+  height: 150px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 16px;
+  border-radius: 10px;
+  border: 2px solid #CAA24A;
+  box-shadow: 0 6px 14px rgba(11, 31, 58, 0.12);
+}
+
+.podcast-half {
+  padding-top: 2px;
+}
+
+.podcast-half h2 {
+  color: #B0122A;
+}
        </style>
 </head>
 
@@ -1205,8 +1235,13 @@
     </div>
   </article>
 
-  <article class="feature-panel" id="articles-audio">
+ <article class="feature-panel article-podcast-panel" id="articles-audio">
+  <div class="article-half">
     <h2>Article + Audio</h2>
+
+    <img src="Assets/images/articles/answering-the-call.jpg"
+         alt="Answering the Call article"
+         class="article-feature-img">
 
     <h3 class="featured-main-title">
       Answering the Call
@@ -1220,7 +1255,20 @@
       <a class="btn primary" href="pages/blog.html">Featured</a>
       <a class="btn secondary" href="pages/blog-archive.html">Archives</a>
     </div>
-  </article>
+  </div>
+
+  <div class="podcast-half">
+    <h2>Go Deeper Podcast</h2>
+
+    <p class="feature-desc">
+      Continue the conversation with the follow-up podcast.
+    </p>
+
+    <a class="btn primary" href="pages/podcast.html">
+      Listen Now
+    </a>
+  </div>
+</article>
 
   <article class="feature-panel" id="foundations">
     <h2>Foundations with Lesli</h2>
