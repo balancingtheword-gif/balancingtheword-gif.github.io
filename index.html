@@ -1453,6 +1453,66 @@ a[href="pages/podcast.html"].btn.primary{
   font-size:.9rem;
   font-weight:800;
 }
+    /* Balance Foundations + BTWM in Action containers */
+a[href="pages/foundations.html"].btn.primary,
+a[href="pages/btwm-in-action.html"].btn.primary{
+  margin-top:18px !important;
+}
+
+/* Target the cards that contain these two buttons */
+.card:has(a[href="pages/foundations.html"]),
+.card:has(a[href="pages/btwm-in-action.html"]){
+  min-height:270px !important;
+  padding:30px 30px 26px !important;
+  display:flex !important;
+  flex-direction:column !important;
+  justify-content:flex-start !important;
+  align-items:center !important;
+  text-align:center !important;
+}
+
+/* Enhance titles */
+.card:has(a[href="pages/foundations.html"]) h2,
+.card:has(a[href="pages/btwm-in-action.html"]) h2{
+  font-family:Georgia, "Times New Roman", serif !important;
+  color:#0B1F3A !important;
+  font-size:1.55rem !important;
+  line-height:1.25 !important;
+  margin:0 0 14px !important;
+}
+
+/* Gold title divider */
+.card:has(a[href="pages/foundations.html"]) h2::after,
+.card:has(a[href="pages/btwm-in-action.html"]) h2::after{
+  content:"" !important;
+  display:block !important;
+  width:72px !important;
+  height:3px !important;
+  margin:14px auto 0 !important;
+  border-radius:999px !important;
+  background:#CAA24A !important;
+}
+
+/* Body text */
+.card:has(a[href="pages/foundations.html"]) p,
+.card:has(a[href="pages/btwm-in-action.html"]) p{
+  max-width:36ch !important;
+  margin:0 auto 20px !important;
+  line-height:1.6 !important;
+}
+
+/* Small branded accent at bottom */
+.card:has(a[href="pages/foundations.html"])::after,
+.card:has(a[href="pages/btwm-in-action.html"])::after{
+  content:"" !important;
+  display:block !important;
+  width:44px !important;
+  height:4px !important;
+  margin:22px auto 0 !important;
+  border-radius:999px !important;
+  background:#B0122A !important;
+  opacity:.9 !important;
+}
        </style>
 </head>
 
