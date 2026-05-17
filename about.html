@@ -520,6 +520,39 @@ a[href="../index.html"].btn.ghost:hover{
   border-color:#B0122A !important;
   color:#ffffff !important;
 }
+  /* Remove corner accent beside Back to Home */
+.back-home::before,
+.back-home::after,
+.about-grid::before,
+.about-grid::after,
+.wrap::before,
+.wrap::after{
+  display:none !important;
+  content:none !important;
+}
+  /* Consistent Back to Home button */
+.back-home a,
+.back-home-btn,
+a[href="/"].btn.ghost{
+  display:inline-block !important;
+  padding:10px 16px !important;
+  border-radius:10px !important;
+  background:#0B1F3A !important;
+  color:#ffffff !important;
+  border:2px solid #0B1F3A !important;
+  font-family:Georgia, "Times New Roman", serif !important;
+  font-weight:700 !important;
+  text-decoration:none !important;
+  box-shadow:0 8px 16px rgba(11,31,58,.12) !important;
+}
+
+.back-home a:hover,
+.back-home-btn:hover,
+a[href="/"].btn.ghost:hover{
+  background:#B0122A !important;
+  border-color:#B0122A !important;
+  color:#ffffff !important;
+}
 </style>
 
  </head>
