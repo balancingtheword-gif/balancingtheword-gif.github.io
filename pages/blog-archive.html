@@ -266,25 +266,23 @@
   margin-bottom: 28px;
   box-shadow: 0 10px 24px rgba(11, 31, 58, 0.08);
 }
-    .archive-card a.archive-link{
-  color:#b0122a !important;   /* 🔴 force red */
-  text-decoration:none;
-  font-weight:700;
+   .archive-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 18px;
 }
 
-.archive-card a.archive-link:hover{
-  color:#7f0d1d !important;   /* darker red on hover */
-  text-decoration:underline;
-}
-    .archive-card .archive-links a {
+.archive-card .archive-links a {
   color: #B0122A;
-  font-weight: 600;
+  font-weight: 700;
   text-decoration: none;
+  border-bottom: 2px solid rgba(176, 18, 42, 0.25);
 }
 
 .archive-card .archive-links a:hover {
   color: #7f0d1d;
-  text-decoration: underline;
+  border-bottom-color: #B0122A;
 }
     body {
   background: #f8f6f1;
