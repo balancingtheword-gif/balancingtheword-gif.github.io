@@ -1155,11 +1155,35 @@
 }
 
 .podcast-half {
-  padding-top: 2px;
+  margin-top: 4px;
+  padding: 24px 20px 26px;
+  border: 2px solid rgba(202, 162, 74, 0.72);
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(11,31,58,0.05), rgba(202,162,74,0.10));
+  box-shadow: inset 0 0 0 1px rgba(11,31,58,0.05);
 }
 
-.podcast-half h2 {
-  color: #B0122A;
+.podcast-title{
+  margin: 0 0 10px;
+  color: #0B1F3A;
+  font-size: 1.45rem;
+}
+
+.podcast-title::after{
+  content:"";
+  display:block;
+  width:90px;
+  height:3px;
+  margin:12px auto 0;
+  border-radius:999px;
+  background:#CAA24A;
+}
+
+.podcast-desc{
+  max-width: 30ch;
+  margin: 0 auto 18px;
+  color: #0B1F3A;
+  font-style: italic;
 }
     #foundations .feature-desc,
 #btwm-action .feature-desc {
@@ -1227,6 +1251,16 @@
   white-space: nowrap;
   font-weight: 700;
   font-style: italic;
+}
+
+.complete-line::before{
+  content:"";
+  display:block;
+  width:86px;
+  height:2px;
+  margin:12px auto 10px;
+  background:#CAA24A;
+  border-radius:999px;
 }
     .mission-scripture {
   display: inline-block;
@@ -1826,7 +1860,7 @@ a[href="pages/btwm-in-action.html"].btn.primary{
 </p>
 
 <p class="podcast-desc">
-  Continue the conversation with the follow-up podcast.
+  Continue the conversation.
 </p>
 
 <a class="btn primary" href="pages/podcast.html">Go Deeper Podcast</a>
