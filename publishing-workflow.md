@@ -24,6 +24,14 @@ Each article-plus-audio page should include:
 - Related podcast follow-up link, when available
 - Canonical website URL
 
+## Featured Article Page
+
+The current featured article page lives at:
+
+`articles/featured-article.html`
+
+Use this page for the active featured article and audio reading. When the next featured article is ready, either update this page directly or copy it into a dated article page before replacing the featured content.
+
 ## Preview Channels
 
 Use other platforms for excerpts and announcements only:

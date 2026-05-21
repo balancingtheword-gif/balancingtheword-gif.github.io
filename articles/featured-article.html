@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Featured Article + Audio | Balancing the Word Ministry</title>
+  <meta name="description" content="The featured article and audio reading from Balancing the Word Ministry." />
+  <link rel="canonical" href="https://balancingtheword.org/articles/featured-article.html" />
+
+  <style>
+    :root{
+      --navy:#0b1f3a;
+      --red:#b0122a;
+      --gold:#caa24a;
+      --paper:#f8f6f1;
+      --text:#172033;
+      --muted:#556070;
+      --border:rgba(11,31,58,.16);
+    }
+
+    *{ box-sizing:border-box; }
+
+    body{
+      margin:0;
+      font-family:Georgia, "Times New Roman", serif;
+      color:var(--text);
+      background:var(--paper);
+      line-height:1.75;
+    }
+
+    .site-header{
+      width:100%;
+      background:var(--navy);
+    }
+
+    .site-header img{
+      display:block;
+      width:100%;
+      height:auto;
+    }
+
+    .wrap{
+      max-width:900px;
+      margin:0 auto;
+      padding:24px 18px 48px;
+    }
+
+    .top-actions{
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      flex-wrap:wrap;
+      margin:0 0 24px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:10px 16px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:700;
+      border:2px solid var(--navy);
+      color:var(--navy);
+      background:#fff;
+    }
+
+    .btn.primary{
+      background:var(--navy);
+      color:#fff;
+    }
+
+    .btn:hover{
+      background:var(--red);
+      border-color:var(--red);
+      color:#fff;
+    }
+
+    .article-shell{
+      background:#fff;
+      border:1px solid var(--border);
+      border-top:4px solid var(--gold);
+      border-left:4px solid var(--red);
+      border-radius:18px;
+      padding:34px 30px;
+      box-shadow:0 12px 28px rgba(11,31,58,.10);
+    }
+
+    .article-label{
+      margin:0 0 10px;
+      text-align:center;
+      color:var(--red);
+      font-size:.9rem;
+      font-weight:800;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+    }
+
+    h1{
+      margin:0;
+      color:var(--navy);
+      font-size:2.35rem;
+      line-height:1.18;
+      text-align:center;
+    }
+
+    .subtitle{
+      margin:10px auto 0;
+      max-width:680px;
+      color:var(--red);
+      font-size:1.2rem;
+      font-weight:700;
+      text-align:center;
+    }
+
+    .meta{
+      margin:16px 0 24px;
+      color:var(--muted);
+      text-align:center;
+      font-size:1rem;
+    }
+
+    .featured-image{
+      display:block;
+      width:100%;
+      height:auto;
+      margin:0 0 26px;
+      border:3px solid var(--gold);
+      border-radius:8px;
+    }
+
+    .summary-box,
+    .audio-card,
+    .platform-preview{
+      margin:0 0 30px;
+      padding:20px;
+      border-radius:14px;
+    }
+
+    .summary-box{
+      background:#fdfaf2;
+      border:1px solid rgba(202,162,74,.55);
+      text-align:center;
+    }
+
+    .summary-box p{
+      max-width:720px;
+      margin:0 auto;
+      font-size:1.12rem;
+    }
+
+    .audio-card{
+      background:#f7fbff;
+      border:1px solid rgba(11,31,58,.18);
+      text-align:center;
+    }
+
+    .audio-card h2,
+    .platform-preview h2,
+    .article-body h2{
+      margin:0 0 10px;
+      color:var(--navy);
+      font-size:1.45rem;
+    }
+
+    .audio-card audio{
+      width:100%;
+      margin-top:14px;
+    }
+
+    .audio-note{
+      margin:12px auto 0;
+      max-width:620px;
+      color:var(--muted);
+      font-size:.98rem;
+    }
+
+    .article-body{
+      margin-top:8px;
+    }
+
+    .article-body p{
+      margin:0 0 16px;
+      font-size:1.12rem;
+    }
+
+    .article-body h2{
+      margin-top:30px;
+    }
+
+    .article-placeholder{
+      padding:22px;
+      border:2px dashed rgba(176,18,42,.36);
+      border-radius:14px;
+      background:rgba(176,18,42,.04);
+      text-align:center;
+    }
+
+    blockquote{
+      margin:24px 0;
+      padding:16px 18px;
+      border-left:4px solid var(--gold);
+      background:rgba(202,162,74,.12);
+      border-radius:12px;
+      color:var(--navy);
+    }
+
+    .references{
+      margin-top:32px;
+      padding-top:22px;
+      border-top:1px solid var(--border);
+    }
+
+    .platform-preview{
+      margin-top:28px;
+      background:var(--navy);
+      color:#fff;
+      text-align:center;
+    }
+
+    .platform-preview h2{
+      color:#fff;
+    }
+
+    .platform-preview p{
+      margin:0 auto 14px;
+      max-width:680px;
+    }
+
+    .platform-preview textarea{
+      width:100%;
+      min-height:132px;
+      resize:vertical;
+      padding:14px;
+      border:2px solid var(--gold);
+      border-radius:10px;
+      font:1rem/1.55 Georgia, "Times New Roman", serif;
+      color:var(--navy);
+      background:#fff;
+    }
+
+    .site-footer{
+      position:relative;
+      min-height:190px;
+      margin-top:36px;
+      background:#0b1f3a url("../Assets/images/layout-footer/layout-footer.png") center/cover no-repeat;
+    }
+
+    .footer-text{
+      position:absolute;
+      inset:0;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:#fff;
+      font:14px/1.6 Georgia, serif;
+      background:rgba(0,0,0,.25);
+      padding:16px;
+    }
+
+    .footer-tagline{
+      font-weight:700;
+      color:#d4af37;
+    }
+
+    .footer-tagline span{
+      color:#b11226;
+      font-weight:800;
+    }
+
+    @media (max-width:640px){
+      .article-shell{ padding:26px 18px; }
+      h1{ font-size:1.9rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <img src="../Assets/images/layout/header/layout-pages-header.png" alt="Balancing the Word Ministry">
+  </header>
+
+  <main class="wrap">
+    <div class="top-actions">
+      <a class="btn" href="../index.html">Back to Home</a>
+      <a class="btn" href="../pages/blog.html">Articles + Audio</a>
+      <a class="btn" href="../pages/blog-archive.html">Archives</a>
+      <a class="btn" href="../pages/podcast.html">Go Deeper Podcast</a>
+    </div>
+
+    <article class="article-shell">
+      <p class="article-label">Featured Article + Audio</p>
+      <h1>Answer the Call: Build Disciples, Not Empires</h1>
+      <p class="subtitle">A biblical call to faithful obedience, true discipleship, and Kingdom-centered living.</p>
+      <p class="meta">Publish date to be added</p>
+
+      <img
+        class="featured-image"
+        src="../Assets/images/blog/build-disciples-2.png"
+        alt="Graphic for the article Answer the Call: Build Disciples, Not Empires."
+      >
+
+      <section class="summary-box" aria-label="Article summary">
+        <p>
+          A powerful call to true discipleship, challenging believers to surrender fully to Christ,
+          live as His ambassadors, and build God's Kingdom through faithful obedience rather than earthly ambition.
+        </p>
+      </section>
+
+      <section class="audio-card" aria-labelledby="audio-title">
+        <h2 id="audio-title">Audio Reading</h2>
+        <p>The full audio reading will live here with the article.</p>
+        <audio controls preload="metadata" src="../Assets/audio/featured-article-audio.mp3">
+          Your browser does not support the audio element.
+        </audio>
+        <p class="audio-note">
+          Add the finished audio file to <strong>Assets/audio/featured-article-audio.mp3</strong>,
+          or update this audio source to match the final file name.
+        </p>
+      </section>
+
+      <section class="article-body">
+        <div class="article-placeholder">
+          <h2>Full Article Text</h2>
+          <p>
+            Paste the full article here when it is ready. This page is already structured to become the
+            website-hosted source that previews on Substack, email, and social platforms can link back to.
+          </p>
+        </div>
+
+        <h2>Opening Section</h2>
+        <p>
+          Replace this paragraph with the opening section of the article.
+        </p>
+
+        <blockquote>
+          <p>Use this area for a key Scripture passage or emphasized quote.</p>
+          <cite>Reference to be added</cite>
+        </blockquote>
+
+        <h2>Article Section</h2>
+        <p>
+          Continue the article here, adding additional headings as needed.
+        </p>
+      </section>
+
+      <section class="references">
+        <h2>Scripture References</h2>
+        <ul>
+          <li>References to be added</li>
+        </ul>
+      </section>
+
+      <section class="platform-preview" aria-labelledby="preview-title">
+        <h2 id="preview-title">Preview Copy for Other Platforms</h2>
+        <p>
+          Use this short preview on Substack, email, or social platforms, then link readers back to this page.
+        </p>
+        <textarea readonly>New article + audio from Balancing the Word Ministry:
+
+Answer the Call: Build Disciples, Not Empires
+
+A call to true discipleship, faithful obedience, and Kingdom-centered living.
+
+Read and listen here:
+https://balancingtheword.org/articles/featured-article.html</textarea>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-text">
+      <div>&copy; <span id="y"></span> Balancing the Word Ministry</div>
+      <div>Colossians 1:28</div>
+      <div class="footer-tagline">Build <span>Educate</span> Disciple</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
