@@ -103,6 +103,11 @@
       text-align:center;
     }
 
+    h1 span{
+      display:block;
+      text-align:center;
+    }
+
     .subtitle{
       margin:10px auto 0;
       max-width:680px;
@@ -130,6 +135,7 @@
 
     .summary-box,
     .audio-card,
+    .podcast-callout,
     .platform-preview{
       margin:0 0 30px;
       padding:20px;
@@ -152,6 +158,32 @@
       background:#f7fbff;
       border:1px solid rgba(11,31,58,.18);
       text-align:center;
+    }
+
+    .podcast-callout{
+      background:var(--navy);
+      border:2px solid var(--gold);
+      color:#fff;
+      text-align:center;
+    }
+
+    .podcast-callout h2{
+      margin:0 0 8px;
+      color:#fff;
+      font-size:1.45rem;
+    }
+
+    .podcast-callout p{
+      margin:0 auto 14px;
+      max-width:620px;
+      color:#f7e6a2;
+      font-weight:700;
+    }
+
+    .podcast-callout .btn{
+      border-color:var(--gold);
+      background:var(--gold);
+      color:var(--navy);
     }
 
     .audio-card h2,
@@ -290,7 +322,10 @@
 
     <article class="article-shell">
       <p class="article-label">Featured Article + Audio</p>
-      <h1>Answering the Call: Build Disciples, Not Empires</h1>
+      <h1>
+        <span>Answering the Call:</span>
+        <span>Build Disciples, Not Empires</span>
+      </h1>
       <p class="subtitle">The Call to True Discipleship</p>
       <p class="meta">Published May 20, 2026</p>
 
@@ -304,6 +339,12 @@
         <p>
           A call to true discipleship, faithful obedience, and Kingdom-centered living through surrender to Christ rather than the pursuit of earthly platforms or personal empires.
         </p>
+      </section>
+
+      <section class="podcast-callout" aria-labelledby="podcast-title">
+        <h2 id="podcast-title">Go Deeper Podcast</h2>
+        <p>Associated with this article. Coming May 22.</p>
+        <a class="btn" href="../pages/podcast.html">Go Deeper Podcast</a>
       </section>
 
       <section class="audio-card" aria-labelledby="audio-title">
