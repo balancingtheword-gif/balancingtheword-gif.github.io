@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
@@ -43,6 +43,7 @@
 
     .site-tagline span{ color:#0b1f3a; }
     .site-tagline .tag-accent{ color:#b11226; }
+    .site-tagline .gold-dot{ color:#CAA24A; }
 
     .wrap{
       max-width:900px;
@@ -240,7 +241,7 @@ footer .small {
   margin:6px 0 14px;
   font-weight:700;
   text-decoration:none;
-  color:#b0122a;   /* 🔴 BTWM red */
+  color:#b0122a;
   border-bottom:1px solid transparent;
 }
 
@@ -263,12 +264,12 @@ footer .small {
 }
   .archive-card {
   background: #ffffff;
-  border: 2px solid #CAA24A;
-  border-left: 6px solid #B0122A;
-  border-radius: 14px;
-  padding: 34px 36px;
-  margin-bottom: 34px;
-  box-shadow: 0 10px 24px rgba(11, 31, 58, 0.08);
+  border: 1px solid rgba(11,31,58,.16);
+  border-left: 5px solid #B0122A;
+  border-radius: 10px;
+  padding: 20px 22px;
+  margin-bottom: 0;
+  box-shadow: 0 6px 14px rgba(11, 31, 58, 0.06);
 }
    .archive-links {
   display: flex;
@@ -303,14 +304,42 @@ footer .small {
     .archive-list {
   display: flex;
   flex-direction: column;
-  gap: 36px;
+  gap: 18px;
   max-width: 820px;
-  margin: 40px auto 56px;
+  margin: 30px auto 48px;
   padding: 0 20px;
 }
 
 .archive-card {
   margin-bottom: 0;
+}
+
+.archive-date{
+  margin:0 0 6px;
+  color:#B0122A;
+  font-size:.9rem;
+  font-weight:800;
+  letter-spacing:.02em;
+}
+
+.archive-title,
+.featured-main-title{
+  margin:0 0 8px;
+  color:#0B1F3A;
+  font-size:1.35rem;
+  line-height:1.25;
+}
+
+.archive-description,
+.feature-desc{
+  margin:0 0 12px;
+  color:#0B1F3A;
+  font-size:1rem;
+  line-height:1.55;
+}
+
+.article-feature-img{
+  display:none;
 }
   </style>
 </head>
@@ -318,18 +347,18 @@ footer .small {
 <body>
 
   <header class="site-header">
-    <img src="/Assets/images/logos/scale/scale-blue-banner.png"
+    <img src="../Assets/images/logos/scale/scale-blue-banner.png"
      alt="Balancing the Word Ministry logo"
      class="site-logo">
 
     <h1 class="site-title">Balancing the Word Ministry</h1>
 
     <p class="site-tagline">
-      <span>Build</span> • <span class="tag-accent">Educate</span> • <span>Disciple</span>
+      <span>Build</span> <span class="gold-dot">&bull;</span> <span class="tag-accent">Educate</span> <span class="gold-dot">&bull;</span> <span>Disciple</span>
     </p>
 
    <div class="back-home">
-  <a href="../index.html" class="btn ghost">← Back to Home</a>
+  <a href="../index.html" class="btn ghost">&larr; Back to Home</a>
   <a href="blog.html" class="btn ghost">Articles + Audio</a>
 </div>
   </header>
@@ -343,35 +372,35 @@ footer .small {
 
     <!-- NEWEST ARCHIVE ITEM -->
    <article class="archive-card">
-  <p class="archive-date">May 6, 2026</p>
+  <p class="archive-date">May 20, 2026</p>
 
   <img 
-    src="Assets/images/blog/answering-call.png" 
-    alt="Answering the Call" 
+    src="../Assets/images/blog/build-disciples-2.png"
+    alt="Answering the Call: Build Disciples, Not Empires"
     class="article-feature-img"
   >
 
   <h3 class="featured-main-title">
-    Answering the Call: Truth Beyond What We Build
+    Answering the Call: Build Disciples, Not Empires
   </h3>
 
   <p class="feature-desc">
-    A biblical call to return to truth, surrender, and the unshakable foundation of Christ.
+    A biblical call to true discipleship, faithful obedience, and Kingdom-centered living through surrender to Christ.
   </p>
 
-  <a class="archive-link" href="https://go.balancingtheword.org/answering-call-article" target="_blank" rel="noopener noreferrer">
-    📖 Article + Audio
+  <a class="archive-link" href="../articles/featured-article.html">
+    Article + Audio
   </a>
 </article>
 <article class="archive-card">
   <p class="archive-date">April 29, 2026</p>
 
   <h2 class="archive-title">
-    Jesus Loves Me — The Greatest Truth Ever Given
+    Jesus Loves Me &mdash; The Greatest Truth Ever Given
   </h2>
 
   <p class="archive-description">
-    A powerful reminder of God’s unconditional love—bringing peace, joy,
+    A powerful reminder of God&rsquo;s unconditional love&mdash;bringing peace, joy,
     and assurance through Christ.
   </p>
 
@@ -379,13 +408,13 @@ footer .small {
     <a href="https://rebrand.ly/3latt56"
        target="_blank"
        rel="noopener noreferrer">
-     📖 Article + Audio
+     Article + Audio
     </a>
 
     <a href="https://rebrand.ly/o3fkt7j"
        target="_blank"
        rel="noopener noreferrer">
-      🎙 Podcast — Go Deeper
+      Podcast &mdash; Go Deeper
     </a>
   </div>
 </article>
@@ -399,16 +428,16 @@ footer .small {
 
   <p class="archive-description">
     This message explores the difference between the hope of the world and the
-    true hope found in Christ—and how that hope sustains us.
+    true hope found in Christ&mdash;and how that hope sustains us.
   </p>
 
   <div class="archive-links">
     <a href="https://tinyurl.com/biblical-hope" target="_blank" rel="noopener noreferrer">
-      📖 Article + Audio
+      Article + Audio
     </a>
 
     <a href="https://rebrand.ly/biblical-hope-podcast" target="_blank" rel="noopener noreferrer">
-      🎙 Podcast — Go Deeper
+      Podcast &mdash; Go Deeper
     </a>
   </div>
 </article>
@@ -417,20 +446,20 @@ footer .small {
   <p class="archive-date">April 16, 2026</p>
 
   <h2 class="archive-title">
-    Not My Will, but Yours — True Biblical Submission
+    Not My Will, but Yours &mdash; True Biblical Submission
   </h2>
 
   <p class="archive-description">
-    A look at biblical submission—what to endure and how to remain faithful.
+    A look at biblical submission&mdash;what to endure and how to remain faithful.
   </p>
 
   <div class="archive-links">
     <a href="https://tinyurl.com/submission-article" target="_blank" rel="noopener noreferrer">
-      📖 Article + Audio
+      Article + Audio
     </a>
 
     <a href="https://tinyurl.com/biblical-submission" target="_blank" rel="noopener noreferrer">
-      🎙 Podcast — Go Deeper
+      Podcast &mdash; Go Deeper
     </a>
   </div>
 </article>
@@ -444,16 +473,16 @@ footer .small {
   </h2>
 
   <p class="archive-description">
-    A biblical call to live set apart—pursuing holiness in heart, mind, and daily life.
+    A biblical call to live set apart&mdash;pursuing holiness in heart, mind, and daily life.
   </p>
 
   <div class="archive-links">
     <a href="https://tinyurl.com/sancification" target="_blank" rel="noopener noreferrer">
-      📖 Article + Audio
+      Article + Audio
     </a>
 
     <a href="https://tinyurl.com/santification-podcast" target="_blank" rel="noopener noreferrer">
-      🎙 Podcast — Go Deeper
+      Podcast &mdash; Go Deeper
     </a>
   </div>
 </article>
@@ -468,8 +497,9 @@ footer .small {
       that we may present everyone mature in Christ.
       <span class="ref">Colossians 1:28</span>
     </p>
-    <p class="small">© Balancing the Word Ministry</p>
+    <p class="small">&copy; Balancing the Word Ministry</p>
   </footer>
 
 </body>
 </html>
+
