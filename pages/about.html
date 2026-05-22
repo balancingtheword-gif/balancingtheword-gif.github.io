@@ -111,6 +111,116 @@ body{
   line-height:1.6;
 }
 
+.doctrine-callout{
+  margin:22px 0 0;
+  padding:20px;
+  border:1px solid rgba(202,162,74,.55);
+  border-radius:14px;
+  background:#fffaf0;
+  text-align:center;
+}
+
+.doctrine-callout h3{
+  margin:0 0 8px;
+  color:#0B1F3A;
+  font-size:1.35rem;
+}
+
+.doctrine-callout p{
+  max-width:720px;
+  margin:0 auto 16px;
+  text-align:center;
+  text-indent:0;
+  font-size:1.08rem;
+  line-height:1.65;
+}
+
+.doctrine-callout a{
+  display:inline-block;
+  padding:10px 16px;
+  border-radius:999px;
+  background:#B0122A;
+  color:#ffffff;
+  border:2px solid #CAA24A;
+  text-decoration:none;
+  font-weight:700;
+  line-height:1.2;
+}
+
+.doctrine-callout a:hover{
+  background:#0B1F3A;
+  color:#ffffff;
+}
+
+.core-principles{
+  counter-reset:principle;
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  gap:16px;
+  margin:10px 0 0;
+  padding:0;
+  list-style:none;
+}
+
+.core-principles li{
+  counter-increment:principle;
+  position:relative;
+  margin:0;
+  padding:18px 18px 18px 68px;
+  border:1px solid rgba(11,31,58,.14);
+  border-top:4px solid #CAA24A;
+  border-radius:14px;
+  background:#fffaf0;
+  line-height:1.65;
+  font-size:1.05rem;
+}
+
+.core-principles li::before{
+  content:"CP-" counter(principle);
+  position:absolute;
+  left:16px;
+  top:18px;
+  color:#B0122A;
+  font-weight:800;
+}
+
+.scripture-link{
+  color:#0B1F3A;
+  font-weight:700;
+  text-decoration-thickness:1px;
+  text-underline-offset:3px;
+}
+
+.scripture-link:hover{
+  color:#B0122A;
+}
+
+.btwm-meaning-layout{
+  display:grid;
+  grid-template-columns:minmax(0, 1fr) 260px;
+  gap:28px;
+  align-items:center;
+  margin-top:8px;
+}
+
+.btwm-meaning-image{
+  width:100%;
+  max-width:260px;
+  height:auto;
+  display:block;
+  margin:0 auto;
+}
+
+@media (max-width:760px){
+  .btwm-meaning-layout{
+    grid-template-columns:1fr;
+  }
+
+  .core-principles{
+    grid-template-columns:1fr;
+  }
+}
+
 .site-footer{
   position:relative;
   min-height:220px;
@@ -137,53 +247,6 @@ body{
   <main class="wrap">
     
  
-  <!-- MY STORY SECTION -->
-    <section class="about-section" id="my-story">
-  <h2>My Story</h2>
-    
-  <p>
-    From an early age, my life was marked by instability, trauma, and loss. Throughout
-    childhood and adolescence, I experienced abuse, frequent displacement, and foster
-    care, learning to adapt quickly while longing for safety, love, and belonging.
-  </p>
-    
-  <p>
-    Even in those years, God was drawing me to Himself. The Bible and prayer became my
-    refuge—places of comfort, peace, and hope when nothing else felt secure. Though I
-    believed in God and Jesus, I did not yet understand salvation, and for many years I
-    searched for freedom and healing.
-  </p>
-    
-  <p>
-    In a season of deep brokenness as a young wife and mother, I cried out to Jesus with
-    a surrendered heart. In that moment, I experienced true forgiveness, renewal, and
-    redemption. Shortly afterward, I received the baptism of the Holy Spirit, and my life
-    was forever changed. Since then, God has continually renewed my mind, healed my heart,
-    and transformed my life—giving me a deep desire to serve others, teach His Word, and
-    point all people to the hope, freedom, and power found in Jesus Christ.
-  </p>
-  <!-- NEW PARAGRAPH (now properly constrained & justified) -->
-  <p>
-    Beyond the work the Lord has entrusted to me, He has richly blessed my life in deeply
-    personal ways. I am the mother of four incredible children and a grandmother to ten
-    amazing grandchildren, each one a precious gift from His hand. In His kindness, the
-    LORD has also given me a bonus family—an unexpected blessing that continues to testify
-    to His goodness and faithfulness. Truly, my cup overflows with His marvelous blessings,
-    and I am continually reminded that every good and perfect gift comes from Him.
-  </p>
-    
-     <p class="journey-close"><em>
-      My journey stands as a testimony that God redeems, restores, and empowers all who come
-      to Him in faith.
-    </em></p>
-    
-  </section>
- 
-<!-- SCALE ICON DIVIDER -->
-<div class="about-divider">
-  <img src="images/icon-nobook.png" alt="" />
-</div>
-
 <section class="about-section" id="btwm-story">
   <h2>The BTWM Story</h2>
      <p>
@@ -216,14 +279,170 @@ body{
     believers to live out truth with clarity and conviction.
   </p>
     <h3>Visual & Theological Meaning Behind BTWM</h3>
-    <ul class="btwm-symbols">
+    <div class="btwm-meaning-layout">
+      <ul class="btwm-symbols">
         <li><strong>Navy Blue</strong> — Represents the sovereignty of God…</li>
         <li><strong>Scarlet Red</strong> — Represents the blood of Jesus Christ…</li>
         <li><strong>Gold</strong> — Represents the purity, holiness, and glory of God…</li>
         <li><strong>The Shield</strong> — Represents the shield of faith…</li>
+        <li><strong>The Scales &amp; Bible</strong> &mdash; Represents balancing the Scriptures with truth, clarity, and faithfulness.</li>
       </ul>
+      <img
+        src="../Assets/images/logos/scale/podcast-pub-art.png"
+        alt="BTWM scales and Bible symbol"
+        class="btwm-meaning-image"
+      >
+    </div>
 
-    </section>    
+    <div class="doctrine-callout">
+      <h3>What We Teach</h3>
+      <p>
+        Read the foundational teachings of Balancing the Word Ministry, including our
+        statement on Scripture, salvation, the Church, baptism, Communion, and the hope
+        of Christ's return.
+      </p>
+      <a href="what-we-teach.html">Read What We Teach</a>
+    </div>
+
+    </section>
+
+  <section class="about-section" id="ten-core-principles">
+    <h2>Ten Core Principles</h2>
+    <ol class="core-principles">
+      <li>
+        We believe that God so loved the world and demonstrated His love toward humankind
+        by giving His only begotten Son
+        (<a class="scripture-link" href="https://www.biblegateway.com/passage/?search=John%203%3A16" target="_blank" rel="noopener noreferrer">John 3:16a</a>;
+        <a class="scripture-link" href="https://www.biblegateway.com/passage/?search=Romans%205%3A8" target="_blank" rel="noopener noreferrer">Romans 5:8</a>).
+      </li>
+      <li>
+        We believe that Jesus Christ is the only begotten Son of God, who became the final
+        sacrifice for our sins
+        (<a class="scripture-link" href="https://www.biblegateway.com/passage/?search=John%203%3A16" target="_blank" rel="noopener noreferrer">John 3:16b</a>;
+        <a class="scripture-link" href="https://www.biblegateway.com/passage/?search=Hebrews%2010%3A10" target="_blank" rel="noopener noreferrer">Hebrews 10:10</a>).
+      </li>
+      <li>
+        We believe that Jesus Christ was crucified, resurrected, and now sits at the right
+        hand of the Father
+        (<a class="scripture-link" href="https://www.biblegateway.com/passage/?search=1%20Corinthians%2015%3A4" target="_blank" rel="noopener noreferrer">1 Corinthians 15:4</a>;
+        <a class="scripture-link" href="https://www.biblegateway.com/passage/?search=Mark%2016%3A19" target="_blank" rel="noopener noreferrer">Mark 16:19</a>).
+      </li>
+      <li>
+        We believe that Jesus Christ is the only way unto salvation
+        (<a class="scripture-link" href="https://www.biblegateway.com/passage/?search=John%2014%3A6" target="_blank" rel="noopener noreferrer">John 14:6</a>;
+        <a class="scripture-link" href="https://www.biblegateway.com/passage/?search=Acts%204%3A12" target="_blank" rel="noopener noreferrer">Acts 4:12</a>).
+      </li>
+      <li>
+        We believe that whoever believes in the Gospel of Jesus Christ and confesses Him
+        as Lord will inherit eternal life
+        (<a class="scripture-link" href="https://www.biblegateway.com/passage/?search=Romans%2010%3A9" target="_blank" rel="noopener noreferrer">Romans 10:9</a>;
+        <a class="scripture-link" href="https://www.biblegateway.com/passage/?search=Acts%2016%3A31" target="_blank" rel="noopener noreferrer">Acts 16:31</a>).
+      </li>
+      <li>
+        We believe in the baptism of the Holy Spirit and that all spiritual gifts,
+        ministries, and the fivefold ministry exist and are active in our modern era
+        (<a class="scripture-link" href="https://www.biblegateway.com/passage/?search=Acts%201%3A8" target="_blank" rel="noopener noreferrer">Acts 1:8</a>;
+        <a class="scripture-link" href="https://www.biblegateway.com/passage/?search=1%20Corinthians%2012%3A8-10%2C%2028" target="_blank" rel="noopener noreferrer">1 Corinthians 12:8-10, 28</a>;
+        <a class="scripture-link" href="https://www.biblegateway.com/passage/?search=Ephesians%204%3A11" target="_blank" rel="noopener noreferrer">Ephesians 4:11</a>).
+      </li>
+      <li>
+        We believe that the Holy Scriptures are true, living, and active in our modern era
+        (<a class="scripture-link" href="https://www.biblegateway.com/passage/?search=Hebrews%204%3A12" target="_blank" rel="noopener noreferrer">Hebrews 4:12</a>;
+        <a class="scripture-link" href="https://www.biblegateway.com/passage/?search=Isaiah%2040%3A8" target="_blank" rel="noopener noreferrer">Isaiah 40:8</a>).
+      </li>
+      <li>
+        We believe we must diligently abide within the boundaries of His written
+        Scriptures, as they are our measuring rod for how we live our lives and guide our
+        beliefs
+        (<a class="scripture-link" href="https://www.biblegateway.com/passage/?search=Deuteronomy%204%3A2" target="_blank" rel="noopener noreferrer">Deuteronomy 4:2</a>;
+        <a class="scripture-link" href="https://www.biblegateway.com/passage/?search=Revelation%2022%3A18-19" target="_blank" rel="noopener noreferrer">Revelation 22:18-19</a>).
+      </li>
+      <li>
+        We believe God is abundant in lovingkindness, goodness, and grace
+        (<a class="scripture-link" href="https://www.biblegateway.com/passage/?search=1%20Chronicles%2016%3A34" target="_blank" rel="noopener noreferrer">1 Chronicles 16:34</a>;
+        <a class="scripture-link" href="https://www.biblegateway.com/passage/?search=Romans%205%3A20" target="_blank" rel="noopener noreferrer">Romans 5:20</a>).
+      </li>
+      <li>
+        We believe in practicing the New Commandment
+        (<a class="scripture-link" href="https://www.biblegateway.com/passage/?search=John%2013%3A34-35" target="_blank" rel="noopener noreferrer">John 13:34-35</a>;
+        <a class="scripture-link" href="https://www.biblegateway.com/passage/?search=1%20John%202%3A10" target="_blank" rel="noopener noreferrer">1 John 2:10</a>).
+      </li>
+    </ol>
+  </section>
+
+<!-- SCALE ICON DIVIDER -->
+<div class="about-divider">
+  <img src="images/icon-nobook.png" alt="" />
+</div>
+
+  <!-- MY STORY SECTION -->
+  <section class="about-section" id="my-story">
+    <h2>My Story</h2>
+
+    <p>
+      From an early age, my life was marked by instability, trauma, and loss. Throughout
+      my childhood and teenage years, I experienced abuse, displacement, and time in foster
+      care. Yet even in those difficult seasons, God was drawing me to Himself with His
+      grace and mercy.
+    </p>
+
+    <p>
+      In the middle of confusion and pain, the Bible and prayer became my refuge. Although
+      I believed in God and knew about Jesus, I did not fully understand salvation or the
+      transforming power of surrendering my life to Him. For many years, I searched for
+      healing, freedom, and purpose.
+    </p>
+
+    <p>
+      As a young wife and mother walking through deep brokenness, I cried out to Jesus with
+      a surrendered heart. In that moment, everything changed. I experienced true forgiveness,
+      redemption, and the overwhelming love of Christ. Shortly afterward, I received the
+      baptism of the Holy Spirit, and the Lord began renewing my mind, healing my heart, and
+      transforming my life from the inside out.
+    </p>
+
+    <p>
+      My first experience in ministry was serving as a Children's Church volunteer. What
+      began as a simple desire to help grew into a deeper calling to minister to children
+      and families within the community. Over time, this ministry expanded into a community
+      outreach where I organized events, conducted Bible lessons, and ministered to children
+      searching for love, encouragement, and hope.
+    </p>
+
+    <p>
+      After several years, I became the assistant pastor of a newly established church,
+      helping oversee the children's department and community outreach ministries. Throughout
+      the years, I have also served as a church secretary, led prayer meetings, participated
+      in community outreaches, and used creative gifts in ministry through writing children's
+      Bible curriculum, designing flyers, and creating outreach materials.
+    </p>
+
+    <p>
+      Through every season of ministry, God has shown me that true ministry is not about
+      recognition or position, but about loving people, serving faithfully, and pointing
+      others to Jesus Christ.
+    </p>
+
+    <p>
+      Beyond ministry, God has richly blessed my life. I am the mother of four incredible
+      children and grandmother to amazing grandchildren, each one a precious gift from His
+      hand. Through every trial and blessing, the Lord has continually shown me that His
+      grace is sufficient, and His love never fails.
+    </p>
+
+    <p>
+      My life is a testimony that Jesus Christ still redeems, restores, heals, and transforms
+      lives. No matter how broken the past may seem, God is able to bring beauty from ashes
+      and purpose from pain. My prayer is that through my story, others will come to know
+      the hope, freedom, peace, and new life found only in Him.
+    </p>
+
+    <p class="journey-close"><em>
+      My journey stands as a testimony that God redeems, restores, and empowers all who come
+      to Him in faith.
+    </em></p>
+  </section>
+
 
   </main>
 <footer class="site-footer"
