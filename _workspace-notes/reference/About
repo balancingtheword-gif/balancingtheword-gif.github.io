@@ -1,0 +1,7 @@
+<header class="about-header">
+  <img
+    src=Assets/images/layout-about/layout-about.png
+    alt="About Balancing the Word Ministry"
+    class="about-header-image"
+  >
+</header>

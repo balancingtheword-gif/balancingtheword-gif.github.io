@@ -543,7 +543,7 @@
   width: 100%;
   margin-top: 32px;
 
-  background: #0b1f3a url("/images/website-footer-1100x300.png") center/cover no-repeat;
+  background: #0b1f3a url("Assets/images/layout-footer/layout-footer.png") center/cover no-repeat;
 }
 
 /* Kill any old overlay */
@@ -1073,17 +1073,16 @@
   margin-top:24px;
 }
 
-#featured-book .featuredButtons::before{
-  content:"";
+.featured-book-divider{
   display:block;
   width:100%;
   height:2px;
-  margin:0 auto 24px;
+  margin:34px auto 0;
   background:rgba(202, 162, 74, 0.55);
 }
 
 #featured-book .featured-scripture{
-  margin-top:42px;
+  margin-top:24px;
 }
 
 .feature-button {
@@ -1123,7 +1122,7 @@
 }
     .featured-book {
   width: 100%;
-  max-width: 180px;
+  max-width: 360px;
   height: auto;
   display: block;
   margin: 0 auto 14px;
@@ -1144,9 +1143,8 @@
 
 .article-feature-img {
   width: 100%;
-  max-width: 260px;
-  height: 150px;
-  object-fit: cover;
+  max-width: 360px;
+  height: auto;
   display: block;
   margin: 0 auto 16px;
   border-radius: 10px;
@@ -1186,6 +1184,10 @@
   font-style: italic;
 }
 
+.podcast-episode-title.release-date{
+  color:#B0122A !important;
+  font-weight:800;
+}
 .podcast-episode-title{
   max-width: 30ch;
   margin: 18px auto 12px;
@@ -1523,6 +1525,13 @@ a[href="pages/podcast.html"].btn.primary{
   font-size:.9rem;
   font-weight:800;
 }
+.featured-publisher-mark{
+  display:block;
+  width:92px;
+  height:auto;
+  margin:34px auto 0;
+  opacity:.92;
+}
     /* Balance Foundations + BTWM in Action containers */
 a[href="pages/foundations.html"].btn.primary,
 a[href="pages/btwm-in-action.html"].btn.primary{
@@ -1767,7 +1776,7 @@ a[href="pages/btwm-in-action.html"].btn.primary{
    </article>
 
   <article class="intro-panel intro-profile" id="lesli">
-    <a href="about.html" class="about-link">
+    <a href="pages/about.html" class="about-link">
       <img src="Assets/images/general/head-shot/HS-1.png" alt="Lesli D. Mize" class="headshot">
       <h2 class="lesli-name">Lesli D. Mize</h2>
     </a>
@@ -1804,18 +1813,16 @@ a[href="pages/btwm-in-action.html"].btn.primary{
   <article class="feature-panel" id="featured-book">
     <h2>Featured Book</h2>
 
-    <img src="Assets/images/book-covers/unexpected-answers/unexpected-answers.png"
-         alt="Unexpected Answers Book"
+    <img src="Assets/images/book-covers/balaam/balaam-ebook-image.png"
+         alt="Balaam: Diviner or Prophet? book cover"
          class="featured-book">
 
-    <h3 class="featuredTitle">Unexpected Answers</h3>
+    <h3 class="featuredTitle">Balaam: Diviner or Prophet?</h3>
 
-    <p class="feature-desc">
-  When God answers differently than expected, faith is tested and trust is refined. This book invites readers to discover purpose, endurance, and hope in the middle of unanswered questions. Through the prophet Habakkuk’s honest struggle and steady return to faith, readers are encouraged to trust God’s character even when His timing and answers are hard to understand.
-</p>
+    <p class="feature-desc">A biblical message exploring Balaam&rsquo;s divided heart, the danger of compromise, and the importance of obeying God with reverence, humility, and faithfulness.</p>
 
     <div class="featuredButtons">
-      <a href="Assets/samples/how-long-o-lord.pdf"
+      <a href="Assets/samples/balaam-sample.pdf"
          target="_blank"
          rel="noopener"
          class="btn primary">
@@ -1829,35 +1836,30 @@ a[href="pages/btwm-in-action.html"].btn.primary{
         Buy the Book
       </a>
     </div>
+    <div class="featured-book-divider" aria-hidden="true"></div>
     <div class="featured-scripture">
-  <p>“The just shall live by faith.”</p>
-  <span>Habakkuk 2:4</span>
+  <p>“What has the Lord spoken?”</p>
+  <span>Numbers 23:17</span>
 </div>
+    <img src="Assets/images/logos/publisher-mark/btwm-publisher-mark.png"
+         alt="BTWM publisher mark"
+         class="featured-publisher-mark">
   </article>
 
 <article class="feature-panel article-podcast-panel" id="articles-audio">
   <div class="article-half">
-    <h2>Article + Audio</h2>
+    <h2>Featured Article + Audio</h2>
 
-    <p class="feature-release">
-      Next release: June 3
-    </p>
+    <p class="feature-release">Next release: June 17</p>
 
-    <img src="Assets/images/blog/build-disciples-2.png"
-         alt="Graphic for the article Answering the Call: Build Disciples, Not Empires."
-         class="article-feature-img">
+    <img src="Assets/images/blog/secret-contentment-website.png" alt="The Secret of Contentment graphic with Philippians 4:13 over a sunrise mountain scene." class="article-feature-img">
 
-<h3 class="featured-main-title">
-  <span>Answering the Call:</span>
-  <span>Build Disciples, Not Empires</span>
-</h3>
+<h3 class="featured-main-title"><span>The Secret of Contentment</span></h3>
 
-<p class="feature-desc">
-  A powerful call to true discipleship, challenging believers to surrender fully to Christ, live as His ambassadors, and build God’s Kingdom through faithful obedience rather than earthly ambition.
-</p>
+<p class="feature-desc">A biblical message of Paul&rsquo;s contentment in Philippians 4, showing that true peace is found in the sufficiency and strength of Jesus Christ.</p>
 
 <div class="feature-buttons">
-  <a class="btn primary" href="articles/featured-article.html">Featured</a>
+  <a class="btn primary" href="articles/featured-article.html">Read Article + Audio</a>
   <a class="btn secondary" href="pages/blog-archive.html">Archives</a>
 </div>
 
@@ -1866,11 +1868,7 @@ a[href="pages/btwm-in-action.html"].btn.primary{
 <div class="podcast-half">
   <h3 class="podcast-title">Go Deeper Podcast</h3>
 
-<p class="podcast-episode-title">Answer the Call: Ambassadors of Christ</p>
-
-<p class="podcast-desc">
-  A powerful call to wholehearted surrender and true discipleship in Jesus Christ.
-</p>
+<p class="podcast-episode-title release-date">Coming June 19</p><p class="podcast-desc">Go Deeper Podcast follow-up for The Secret of Contentment.</p>
 
 <a class="btn primary" href="pages/podcast.html">Go Deeper Podcast</a>
 
@@ -1969,7 +1967,7 @@ a[href="pages/btwm-in-action.html"].btn.primary{
           <!-- Optional icon box (if you want it under Contact) -->
           <!--
           <div class="logo-box">
-            <img class="logo-box-img" src="images/logos/stand-alone-icon-book.png" alt="BTWM icon">
+            <img class="logo-box-img" src="Assets/images/logos/shield-no-scripture/shield-no-scripture.png" alt="BTWM icon">
           </div>
           -->
 
@@ -2010,3 +2008,4 @@ a[href="pages/btwm-in-action.html"].btn.primary{
    
 </body>
 </html>
+

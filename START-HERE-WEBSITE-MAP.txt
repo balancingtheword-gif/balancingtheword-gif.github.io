@@ -1,0 +1,26 @@
+﻿START HERE - WEBSITE FOLDER MAP
+
+This folder is the live Balancing the Word Ministry website.
+
+Most updates happen in these places:
+
+1. Homepage
+   - index.html
+
+2. Current featured article
+   - articles/featured-article.html
+
+3. Older full articles
+   - archive/
+
+4. Article archive listing page
+   - pages/blog-archive.html
+
+5. Audio and images
+   - Assets/audio/
+   - Assets/images/
+
+6. Notes, templates, and reference material
+   - _workspace-notes/
+
+Important: Do not delete CNAME, index.html, Assets, pages, articles, or archive. Those are part of the website.

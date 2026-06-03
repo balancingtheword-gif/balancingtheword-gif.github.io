@@ -1,0 +1,17 @@
+<div class="article-container">
+
+  <h2>Article Title Here</h2>
+
+  <p class="post-meta">Posted on DATE</p>
+
+  <p class="article-subtitle">Subtitle (optional)</p>
+
+  <h3>Section Title</h3>
+  <p>Paragraph...</p>
+
+  <p>Paragraph...</p>
+
+  <h3>Next Section</h3>
+  <p>Paragraph...</p>
+
+</div>

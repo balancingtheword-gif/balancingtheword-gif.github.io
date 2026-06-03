@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ARTICLE TITLE | Balancing the Word Ministry</title>
+  <meta name="description" content="SHORT PAGE DESCRIPTION" />
+  <link rel="canonical" href="https://balancingtheword.org/articles/ARTICLE-SLUG.html" />
+
+  <style>
+    :root{
+      --navy:#0b1f3a;
+      --red:#b0122a;
+      --gold:#caa24a;
+      --paper:#f8f6f1;
+      --text:#172033;
+      --muted:#556070;
+      --border:rgba(11,31,58,.16);
+    }
+
+    *{ box-sizing:border-box; }
+
+    body{
+      margin:0;
+      font-family:Georgia, "Times New Roman", serif;
+      color:var(--text);
+      background:var(--paper);
+      line-height:1.75;
+    }
+
+    .site-header{
+      width:100%;
+      background:var(--navy);
+    }
+
+    .site-header img{
+      display:block;
+      width:100%;
+      height:auto;
+    }
+
+    .wrap{
+      max-width:880px;
+      margin:0 auto;
+      padding:24px 18px 48px;
+    }
+
+    .top-actions{
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      flex-wrap:wrap;
+      margin:0 0 24px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:10px 16px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:700;
+      border:2px solid var(--navy);
+      color:var(--navy);
+      background:#fff;
+    }
+
+    .btn.primary{
+      background:var(--navy);
+      color:#fff;
+    }
+
+    .btn:hover{
+      background:var(--red);
+      border-color:var(--red);
+      color:#fff;
+    }
+
+    .article-shell{
+      background:#fff;
+      border:1px solid var(--border);
+      border-top:4px solid var(--gold);
+      border-left:4px solid var(--red);
+      border-radius:18px;
+      padding:34px 30px;
+      box-shadow:0 12px 28px rgba(11,31,58,.10);
+    }
+
+    .article-label{
+      margin:0 0 10px;
+      text-align:center;
+      color:var(--red);
+      font-size:.9rem;
+      font-weight:800;
+      letter-spacing:.14em;
+      text-transform:uppercase;
+    }
+
+    h1{
+      margin:0;
+      color:var(--navy);
+      font-size:2.35rem;
+      line-height:1.18;
+      text-align:center;
+    }
+
+    .subtitle{
+      margin:10px auto 0;
+      max-width:680px;
+      color:var(--red);
+      font-size:1.2rem;
+      font-weight:700;
+      text-align:center;
+    }
+
+    .meta{
+      margin:16px 0 24px;
+      color:var(--muted);
+      text-align:center;
+      font-size:1rem;
+    }
+
+    .featured-image{
+      display:block;
+      width:100%;
+      height:auto;
+      margin:0 0 26px;
+      border:3px solid var(--gold);
+      border-radius:8px;
+    }
+
+    .audio-card{
+      margin:0 0 30px;
+      padding:20px;
+      background:#fdfaf2;
+      border:1px solid rgba(202,162,74,.55);
+      border-radius:14px;
+      text-align:center;
+    }
+
+    .audio-card h2{
+      margin:0 0 8px;
+      color:var(--navy);
+      font-size:1.35rem;
+    }
+
+    .audio-card audio{
+      width:100%;
+      margin-top:12px;
+    }
+
+    .article-body p{
+      margin:0 0 16px;
+      font-size:1.12rem;
+    }
+
+    .article-body h2{
+      margin:30px 0 12px;
+      color:var(--navy);
+      font-size:1.5rem;
+    }
+
+    blockquote{
+      margin:24px 0;
+      padding:16px 18px;
+      border-left:4px solid var(--gold);
+      background:rgba(202,162,74,.12);
+      border-radius:12px;
+      color:var(--navy);
+    }
+
+    .references{
+      margin-top:32px;
+      padding-top:22px;
+      border-top:1px solid var(--border);
+    }
+
+    .related{
+      margin-top:28px;
+      padding:20px;
+      background:var(--navy);
+      color:#fff;
+      border-radius:14px;
+      text-align:center;
+    }
+
+    .related h2{
+      margin:0 0 8px;
+      color:#fff;
+      font-size:1.35rem;
+    }
+
+    .related .btn{
+      margin-top:8px;
+      border-color:var(--gold);
+      background:var(--gold);
+      color:var(--navy);
+    }
+
+    .site-footer{
+      position:relative;
+      min-height:190px;
+      margin-top:36px;
+      background:#0b1f3a url("../Assets/images/layout-footer/layout-footer.png") center/cover no-repeat;
+    }
+
+    .footer-text{
+      position:absolute;
+      inset:0;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:#fff;
+      font:14px/1.6 Georgia, serif;
+      background:rgba(0,0,0,.25);
+      padding:16px;
+    }
+
+    .footer-tagline{
+      font-weight:700;
+      color:#d4af37;
+    }
+
+    .footer-tagline span{
+      color:#b11226;
+      font-weight:800;
+    }
+
+    @media (max-width:640px){
+      .article-shell{ padding:26px 18px; }
+      h1{ font-size:1.9rem; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <img src="../Assets/images/layout/header/layout-pages-header.png" alt="Balancing the Word Ministry">
+  </header>
+
+  <main class="wrap">
+    <div class="top-actions">
+      <a class="btn" href="../index.html">Back to Home</a>
+      <a class="btn" href="../pages/blog.html">Articles + Audio</a>
+      <a class="btn" href="../pages/blog-archive.html">Archives</a>
+    </div>
+
+    <article class="article-shell">
+      <p class="article-label">Article + Audio</p>
+      <h1>ARTICLE TITLE</h1>
+      <p class="subtitle">OPTIONAL SUBTITLE</p>
+      <p class="meta">Published MONTH DAY, YEAR</p>
+
+      <img class="featured-image" src="../Assets/images/blog/IMAGE-FILE.png" alt="IMAGE ALT TEXT">
+
+      <section class="audio-card" aria-labelledby="audio-title">
+        <h2 id="audio-title">Listen to the Audio Reading</h2>
+        <p>Use the audio version while reading or sharing this message.</p>
+        <audio controls src="../Assets/audio/AUDIO-FILE.mp3">
+          Your browser does not support the audio element.
+        </audio>
+      </section>
+
+      <section class="article-body">
+        <p>PASTE FULL ARTICLE TEXT HERE.</p>
+
+        <h2>SECTION HEADING</h2>
+        <p>Continue the article here.</p>
+
+        <blockquote>
+          <p>Scripture quote or emphasized passage.</p>
+          <cite>Reference</cite>
+        </blockquote>
+      </section>
+
+      <section class="references">
+        <h2>Scripture References</h2>
+        <ul>
+          <li>Reference 1</li>
+          <li>Reference 2</li>
+        </ul>
+      </section>
+
+      <section class="related">
+        <h2>Go Deeper Podcast</h2>
+        <p>Continue the conversation with the follow-up episode.</p>
+        <a class="btn" href="../pages/podcast.html">Listen to Go Deeper</a>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-text">
+      <div>&copy; <span id="y"></span> Balancing the Word Ministry</div>
+      <div>Colossians 1:28</div>
+      <div class="footer-tagline">Build <span>Educate</span> Disciple</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
