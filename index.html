@@ -1131,71 +1131,71 @@
   box-shadow: 0 6px 14px rgba(0,0,0,.15);
 }
     .article-podcast-panel {
-  display: grid;
-  grid-template-rows: auto auto;
-  gap: 24px;
+  align-items: center;
+  gap: 0;
 }
 
 .article-half {
-  padding-bottom: 24px;
-  border-bottom: 2px solid rgba(202, 162, 74, 0.55);
+  width: 100%;
 }
 
 .article-feature-img {
   width: 100%;
-  max-width: 360px;
+  max-width: 400px;
   height: auto;
   display: block;
-  margin: 0 auto 16px;
+  margin: 0 auto 18px;
   border-radius: 10px;
   border: 2px solid #CAA24A;
   box-shadow: 0 6px 14px rgba(11, 31, 58, 0.12);
 }
 
-.podcast-half {
-  margin-top: 4px;
-  padding: 24px 20px 26px;
-  border: 2px solid rgba(202, 162, 74, 0.72);
-  border-radius: 12px;
-  background: linear-gradient(180deg, rgba(11,31,58,0.05), rgba(202,162,74,0.10));
-  box-shadow: inset 0 0 0 1px rgba(11,31,58,0.05);
+#articles-audio .featured-main-title{
+  max-width: 34ch;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-bottom: 10px !important;
+  text-align: center !important;
 }
 
-.podcast-title{
-  margin: 0 0 10px;
-  color: #0B1F3A;
-  font-size: 1.45rem;
+.message-gold-divider{
+  width: 78%;
+  max-width: 300px;
+  height: 2px;
+  margin: 4px auto 16px;
+  background: rgba(202, 162, 74, 0.75);
+  border-radius: 999px;
 }
 
-.podcast-title::after{
-  content:"";
-  display:block;
-  width:90px;
-  height:3px;
-  margin:12px auto 0;
-  border-radius:999px;
-  background:#CAA24A;
-}
-
-.podcast-desc{
-  max-width: 30ch;
-  margin: 0 auto 18px;
-  color: #0B1F3A;
-  font-style: italic;
-}
-
-.podcast-episode-title.release-date{
-  color:#B0122A !important;
-  font-weight:800;
-}
-.podcast-episode-title{
-  max-width: 30ch;
-  margin: 18px auto 12px;
-  color: #0B1F3A;
-  font-size: 1.08rem;
-  line-height: 1.35;
+#articles-audio .message-included-title{
+  margin: 4px auto 14px;
+  color: #B0122A !important;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.18rem !important;
   font-weight: 700;
-  font-style: italic;
+  text-align: center;
+}
+
+.message-included-list{
+  max-width: 42ch;
+  margin: 0 auto 22px;
+  padding: 0;
+  list-style: none;
+  text-align: left;
+}
+
+.message-included-list li{
+  display: grid;
+  grid-template-columns: 1.7rem 1fr;
+  gap: 8px;
+  margin: 0 0 12px;
+  color: #0B1F3A;
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+.message-included-list .included-icon{
+  line-height: 1.5;
   text-align: center;
 }
     #foundations .feature-desc,
@@ -1831,7 +1831,7 @@ a[href="pages/btwm-in-action.html"].btn.primary{
 
     <h3 class="featuredTitle">Balaam: Diviner or Prophet?</h3>
 
-    <p class="feature-desc">A biblical message exploring Balaam&rsquo;s divided heart, the danger of compromise, and the importance of obeying God with reverence, humility, and faithfulness.</p>
+    <p class="feature-desc">A biblical message exploring Balaam&rsquo;s divided heart, the danger of compromise, and the importance of obeying God with reverence, humility, and faithfulness. This study invites readers to examine the subtle pull of self-interest, the seriousness of spiritual discernment, and the need to remain fully surrendered to the Lord even when the way forward is difficult.</p>
 
     <div class="featuredButtons">
       <a href="Assets/samples/balaam-sample.pdf"
@@ -1860,32 +1860,32 @@ a[href="pages/btwm-in-action.html"].btn.primary{
 
 <article class="feature-panel article-podcast-panel" id="articles-audio">
   <div class="article-half">
-    <h2>Featured: Read-Along Audio</h2>
+    <h2>Featured Message</h2>
 
     <p class="feature-release">Now Available</p>
 
-    <img src="Assets/images/blog/family-divide-article-image.png" alt="The Family Divide article graphic showing a divided family scene with the title The Family Divide: A Growing Trend in Modern Times." class="article-feature-img">
+    <img src="Assets/images/blog/recognizing-the-enemy-website.png" alt="Recognizing the Enemy, Trusting the Savior message graphic with a Bible, a shadowed enemy figure, and Christ in light." class="article-feature-img">
 
-<h3 class="featured-main-title"><span>The Family Divide</span></h3>
-<p class="featured-subtitle">A Growing Trend in Modern Times</p>
+<h3 class="featured-main-title"><span>Recognizing the Enemy,<br>Trusting the Savior</span></h3>
+<p class="featured-subtitle">Be Not Ignorant of the Devil&rsquo;s Schemes</p>
 
-<p class="feature-desc">A biblical and research-informed look at the growing trend of family estrangement, why it is affecting so many families, and where believers can find hope.</p>
+<p class="feature-desc">A biblical message helping believers recognize the enemy&rsquo;s schemes, stand firm in God&rsquo;s Word, and trust in the victory of Jesus Christ.</p>
+
+<div class="message-gold-divider" aria-hidden="true"></div>
+
+<p class="message-included-title">Included with this Featured Message:</p>
+
+<ul class="message-included-list" aria-label="Included with this Featured Message">
+  <li><span class="included-icon" aria-hidden="true">📖</span><span><strong>Read the full article</strong></span></li>
+  <li><span class="included-icon" aria-hidden="true">🎧</span><span><strong>Read-Along Podcast</strong> — Listen as Lesli D. Mize narrates this biblical message.</span></li>
+  <li><span class="included-icon" aria-hidden="true">🎙️</span><span><strong>Go Deeper Podcast</strong> — Continue the study with Friday&rsquo;s follow-up podcast, where we explore the message in greater depth through additional biblical insight and practical application.</span></li>
+</ul>
 
 <div class="feature-buttons">
-  <a class="btn primary" href="articles/featured-article.html">Read Article + Audio</a>
-  <a class="btn secondary" href="pages/blog-archive.html">Archives</a>
+  <a class="btn primary" href="articles/featured-article.html">Read Message + Listen</a>
 </div>
 
 </div>
-
-<div class="podcast-half">
-  <h3 class="podcast-title">Go Deeper Podcast</h3>
-
-<p class="podcast-episode-title release-date">Now Available</p><p class="podcast-desc">Listen to the Go Deeper Podcast follow-up for The Family Divide.</p>
-
-<a class="btn primary" href="Assets/audio/go-deeper/the-family-divide-podcast.mp3" target="_blank" rel="noopener noreferrer">Listen to Go Deeper</a>
-
-  </div>
 </article>
 
   <article class="feature-panel" id="foundations">
