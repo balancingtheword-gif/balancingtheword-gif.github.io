@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Books | Balancing the Word Ministry</title>
-  <meta name="description" content="Books and teaching resources from Balancing the Word Ministry." />
+  <title>The Book &amp; Gift Parlor | Balancing the Word Ministry</title>
+  <meta name="description" content="Books, teaching resources, and upcoming gifts from Balancing the Word Ministry." />
   <style>
     :root{
       --navy:#0b1f3a;
@@ -78,6 +78,12 @@
       color:#fff;
     }
 
+    .btn.support{
+      background:#fff;
+      border-color:var(--red);
+      color:var(--red);
+    }
+
     .btn:hover{
       background:var(--red);
       border-color:var(--red);
@@ -104,133 +110,156 @@
 
     .books-intro p{
       max-width:760px;
-      margin:0 auto 22px;
-      color:var(--navy);
-      font-size:1.18rem;
+      margin:0 auto 24px;
+      color:var(--red);
+      font-size:1.28rem;
+      font-style:italic;
+      font-weight:800;
+      line-height:1.55;
     }
 
-    .section-title{
-      margin:0 0 24px;
+    .construction-notice{
+      max-width:760px;
+      margin:0 auto 20px;
+      padding:12px 18px;
+      border:2px solid #b11226;
+      border-radius:8px;
+      background:#fff8f2;
+      color:#0c2340;
+      font-family:Georgia, "Times New Roman", serif;
+      font-size:1.05rem;
+      font-weight:800;
+      text-align:center;
+    }
+    .books-shop-row{
+      max-width:880px;
+      margin:0 auto 14px;
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:24px;
+      align-items:center;
+    }
+
+    .books-shop-row .btn{
+      width:100%;
+      max-width:320px;
+      justify-self:center;
+      text-align:center;
+    }
+    .parlor-columns{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:24px;
+      align-items:start;
+      max-width:880px;
+      margin:0 auto;
+    }
+
+    .parlor-column{
+      min-height:100%;
+      padding:20px;
+      border:1px solid var(--border);
+      border-top:4px solid var(--gold);
+      border-left:5px solid var(--red);
+      border-radius:14px;
+      background:#fff;
+      box-shadow:0 10px 24px rgba(11,31,58,.08);
+    }
+
+    .parlor-column h2{
+      margin:0 0 10px;
       color:var(--navy);
-      font-size:1.7rem;
+      font-size:1.35rem;
       line-height:1.25;
       text-align:center;
     }
 
-    .section-title::after{
+    .parlor-column h2::after{
       content:"";
       display:block;
-      width:90px;
+      width:70px;
       height:3px;
       margin:12px auto 0;
       border-radius:999px;
       background:var(--gold);
     }
 
-    .books-list{
-      display:grid;
-      grid-template-columns:1fr;
-      gap:24px;
-      margin:0 auto;
-      max-width:980px;
+    .column-intro{
+      margin:0 auto 16px;
+      color:var(--navy);
+      font-size:.98rem;
+      line-height:1.55;
+      text-align:center;
     }
 
-    .book-card{
-      position:relative;
-      display:grid;
-      grid-template-columns:150px minmax(0, 1fr);
-      gap:24px;
-      align-items:start;
-      overflow:hidden;
-      padding:22px;
-      border:1px solid var(--border);
-      border-left:5px solid var(--red);
-      border-top:4px solid var(--gold);
-      border-radius:14px;
-      background:#fff;
-      box-shadow:0 10px 24px rgba(11,31,58,.08);
+    .parlor-item{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      padding:14px 0;
+      border-top:1px solid rgba(11,31,58,.12);
     }
 
-    .book-cover{
-      width:150px;
-      min-height:210px;
+    .parlor-item:first-of-type{ border-top:0; }
+
+    .parlor-cover{
+      width:96px;
+      min-height:132px;
       display:flex;
       align-items:center;
       justify-content:center;
-      padding:10px;
+      margin:0 auto 2px;
+      padding:7px;
       border:1px solid rgba(11,31,58,.10);
-      border-radius:10px;
+      border-radius:8px;
       background:rgba(11,31,58,.04);
     }
 
-    .book-cover img{
+    .parlor-cover img{
       display:block;
       width:100%;
       height:auto;
-      max-height:220px;
+      max-height:128px;
       object-fit:contain;
     }
 
-    .book-info h3{
-      margin:0 0 10px;
-      color:var(--navy);
-      font-size:1.45rem;
-      line-height:1.25;
-    }
-
-    .book-info h3::after{
-      content:"";
-      display:block;
-      width:64px;
-      height:3px;
-      margin:10px 0 0;
-      border-radius:999px;
-      background:var(--gold);
-    }
-
-    .book-hook{
-      margin:0 0 14px;
+    .parlor-item h3{
+      margin:0;
       color:var(--navy);
       font-size:1.08rem;
-      line-height:1.65;
-    }
-
-    .book-details{
-      margin:0 0 16px 20px;
-      padding:0;
-      color:var(--text);
-    }
-
-    .book-details li{
-      margin:0 0 6px;
-    }
-
-    .coming-soon-anchor{
-      max-width:900px;
-      margin:34px auto 0;
-      padding:20px 24px;
-      border-left:5px solid var(--gold);
-      border-radius:14px;
-      background:rgba(202,162,74,.14);
+      line-height:1.25;
       text-align:center;
-      box-shadow:0 6px 14px rgba(11,31,58,.08);
     }
 
-    .coming-soon-title{
-      margin:0 0 8px;
-      color:var(--navy);
-      font-size:1.4rem;
-      font-weight:800;
-    }
-
-    .coming-soon-text{
+    .parlor-item p{
       margin:0;
       color:var(--text);
-      font-size:1.05rem;
-      line-height:1.6;
+      font-size:.95rem;
+      line-height:1.5;
+      text-align:center;
     }
 
-    .site-footer{
+    .item-tag{
+      width:fit-content;
+      margin:0 auto;
+      padding:4px 10px;
+      border-radius:999px;
+      background:rgba(202,162,74,.16);
+      color:var(--red);
+      font-size:.76rem;
+      font-weight:800;
+      letter-spacing:.04em;
+      text-transform:uppercase;
+    }
+
+    .parlor-item .btn{
+      width:100%;
+      margin-top:auto;
+      padding:9px 12px;
+      text-align:center;
+      font-size:.92rem;
+    }
+.site-footer{
       position:relative;
       min-height:220px;
       margin-top:36px;
@@ -263,8 +292,9 @@
 
     @media (max-width:700px){
       .books-intro h1{ font-size:2rem; }
-
-      .book-card{
+      .books-shop-row,
+      .parlor-columns{ grid-template-columns:1fr; }
+.book-card{
         grid-template-columns:1fr;
         text-align:center;
       }
@@ -297,105 +327,87 @@
     <div class="top-actions">
       <a class="btn" href="../index.html">Back to Home</a>
       <a class="btn" href="/pages/about.html">About</a>
-      <a class="btn secondary" href="support.html">Support the Ministry</a>
+      <a class="btn support" href="support.html">Support the Ministry</a>
     </div>
 
     <section class="books-intro">
-      <h1>Books &amp; Teaching Resources</h1>
+      <h1>The Book &amp; Gift Parlor</h1>
       <p>
-        Scripture-rooted studies designed to build discernment, strengthen doctrine,
-        and encourage true discipleship.
+        A curated collection of my books, writings, and thoughtful treasures to brighten your day.
       </p>
+    </section>
+
+    <p class="construction-notice">Work in progress. This page is under construction.</p>
+    <div class="books-shop-row">
       <a
         class="btn secondary"
         href="https://www.amazon.com/author/lesli-d-mize_balancingtheword"
         target="_blank"
         rel="noopener noreferrer"
       >
-        View All on Amazon
+        Shop All Books on Amazon
       </a>
-    </section>
+    </div>
+    <section class="parlor-columns" aria-label="The Book and Gift Parlor categories">
+      <article class="parlor-column" id="print-books">
+        <h2>Books &amp; eBooks</h2>
+        <p class="column-intro">Printed books and eBook editions currently available online.</p>
 
-    <section class="books-grid" aria-labelledby="available-now">
-      <h2 class="section-title" id="available-now">Available Now</h2>
+        <div class="parlor-item">
+          <div class="parlor-cover">
+            <img src="../Assets/images/book-covers/balaam/balaam.png" alt="The Story of Balaam cover" loading="lazy">
+          </div>
+          <h3>The Story of Balaam</h3>
+          <span class="item-tag">Print + eBook</span>
+          <p>A biblical message on compromise, deception, obedience, and the sovereignty of God.</p>
+        </div>
 
-      <div class="books-list">
-        <article class="book-card">
-          <div class="book-cover">
-            <img
-              src="../Assets/images/book-covers/balaam/balaam.png"
-              alt="The Story of Balaam cover"
-              loading="lazy"
-            >
+        <div class="parlor-item">
+          <div class="parlor-cover">
+            <img src="../Assets/images/book-covers/unexpected-answers/unexpected-answers.png" alt="Unexpected Answers cover" loading="lazy">
           </div>
-          <div class="book-info">
-            <h3>The Story of Balaam</h3>
-            <p class="book-hook">
-              A sobering biblical message on compromise, deception, and the sovereignty of God.
-            </p>
-            <ul class="book-details">
-              <li>Biblical message on discernment and obedience</li>
-              <li>Exposes the danger of spiritual compromise</li>
-              <li>Rooted in Numbers 22-31</li>
-            </ul>
-          </div>
-        </article>
+          <h3>Unexpected Answers</h3>
+          <span class="item-tag">Print + eBook</span>
+          <p>A faith-building book for trusting God when His answers challenge expectations.</p>
+        </div>
 
-        <article class="book-card">
-          <div class="book-cover">
-            <img
-              src="../Assets/images/book-covers/unexpected-answers/unexpected-answers.png"
-              alt="Unexpected Answers cover"
-              loading="lazy"
-            >
+        <div class="parlor-item">
+          <div class="parlor-cover">
+            <img src="../Assets/images/book-covers/eternal-question/eternal-question.png" alt="The Eternal Question cover" loading="lazy">
           </div>
-          <div class="book-info">
-            <h3>Unexpected Answers</h3>
-            <p class="book-hook">
-              A faith-building book that calls believers to trust God when His answers
-              challenge expectations and test their faith.
-            </p>
-            <ul class="book-details">
-              <li>Encourages steadfast faith when answers are difficult</li>
-              <li>Calls readers to trust God's sovereignty and timing</li>
-              <li>Rooted in the book of Habakkuk</li>
-            </ul>
-          </div>
-        </article>
+          <h3>The Eternal Question</h3>
+          <span class="item-tag">Print + eBook</span>
+          <p>A gospel-centered message that points readers to the truth found in Christ.</p>
+        </div>
+      </article>
 
-        <article class="book-card">
-          <div class="book-cover">
-            <img
-              src="../Assets/images/book-covers/eternal-question/eternal-question.png"
-              alt="The Eternal Question cover"
-              loading="lazy"
-            >
-          </div>
-          <div class="book-info">
-            <h3>The Eternal Question</h3>
-            <p class="book-hook">
-              A gospel-centered message that confronts life's most important question
-              and points to the truth found in Christ.
-            </p>
-            <ul class="book-details">
-              <li>Considers life, death, and eternal destiny</li>
-              <li>Points readers to the Gospel of Jesus Christ</li>
-              <li>Written for reflection, repentance, and hope</li>
-            </ul>
-          </div>
-        </article>
-      </div>
-    </section>
+      <article class="parlor-column" id="gifts-for-you">
+        <h2>Gifts for You</h2>
+        <p class="column-intro">Free downloads and thoughtful resources for personal encouragement and study.</p>
 
-    <section class="coming-soon-anchor" aria-label="Coming soon">
-      <div class="coming-soon-title">Coming Soon</div>
-      <p class="coming-soon-text">
-        Additional Bible studies, teaching resources, and devotionals from
-        Balancing the Word Ministry are currently in development and will be
-        released soon.
-      </p>
-    </section>
-  </main>
+        <div class="parlor-item">
+          <span class="item-tag">Free PDF</span>
+          <h3>Jesus Loves Me</h3>
+          <p>A free sheet music eBook available as a direct download.</p>
+          <a class="btn primary" href="../Assets/downloads/jesus-loves-me-sheet-music-ebook.pdf" download>Download eBook</a>
+        </div>
+
+        <div class="parlor-item">
+          <span class="item-tag">Free Sample</span>
+          <h3>Balaam Sample</h3>
+          <p>Preview a sample from the Balaam teaching resource.</p>
+          <a class="btn" href="../Assets/samples/balaam-sample.pdf" target="_blank" rel="noopener noreferrer">Read Sample</a>
+        </div>
+
+        <div class="parlor-item">
+          <span class="item-tag">Free Sample</span>
+          <h3>How Long, O Lord?</h3>
+          <p>A sample reading for reflection, encouragement, and study.</p>
+          <a class="btn" href="../Assets/samples/how-long-o-lord.pdf" target="_blank" rel="noopener noreferrer">Read Sample</a>
+        </div>
+      </article>
+</section>
+</main>
 
   <footer class="site-footer">
     <div class="footer-text">
@@ -410,3 +422,4 @@
   </script>
 </body>
 </html>
+

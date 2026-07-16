@@ -48,7 +48,7 @@
       background:linear-gradient(to right,#0b1f3a,#b21f2d,#c8a44d);
     }
 
-    /* WEBSITE HEADER IMAGE – PROPORTIONAL */
+    /* WEBSITE HEADER IMAGE - PROPORTIONAL */
  html, body { margin: 0; padding: 0; }
 
 .site-header{
@@ -265,7 +265,7 @@
       object-fit: cover;
       border-radius: 50%;
       border: 3px solid var(--gold);
-      display:block;              /* ✅ FIXED */
+      display:block;
       margin: 0 auto 10px;
     }
     #lesli p{
@@ -452,7 +452,7 @@
   font-weight:700;
   color:var(--navy);
   margin:6px 0 6px;
-  text-align:center; /* ← ADD THIS */
+  text-align:center;
 }
     .connect-address{
       margin:0 0 8px;
@@ -505,15 +505,15 @@
     max-width:520px;
     margin-left:auto;
     margin-right:auto;
-    overflow: visible;          /* ✅ prevents tap/scroll issues */
+    overflow: visible;
   }
 
   .subscribe-card iframe{
-    height:460px;               /* ✅ more room for mobile form */
+    height:460px;
   }
 }
 
-    /* Shield icon box — match the scale icon box */
+    /* Shield icon box - match the scale icon box */
     .logo-box{
       background:#ffffff !important;
       border:1px solid rgba(11,31,58,.14) !important;
@@ -652,7 +652,7 @@
   letter-spacing:.4px;
   margin:0;
 }
-    /* Scripture box – final override */
+    /* Scripture box - final override */
 .scripture-box{
   background:#0b1f3a !important;
   padding:16px 18px !important;     /* slightly taller, still compact */
@@ -953,7 +953,7 @@
 
 /* Center accent (optional but matches your design) */
 .gold-divider::after{
-  content:"✦";
+  content:"\2726";
   position:absolute;
   top:-10px;
   left:50%;
@@ -1341,7 +1341,7 @@
 
 .greeting-close {
   display: block;
-  margin-top: 24px;
+  margin-top: 38px;
   color: #B0122A;
   font-size: 1.04rem;
   font-weight: 700;
@@ -1825,7 +1825,8 @@ a[href="pages/btwm-in-action.html"].btn.primary{
   color: #B0122A;
   font-weight: 800;
 }
-       </style>
+       .boxed-nav .nav-note{display:block;margin-top:2px;color:#B0122A;font-size:.72rem;font-style:italic;line-height:1.1;}
+</style>
 </head>
 
 <body>
@@ -1833,7 +1834,7 @@ a[href="pages/btwm-in-action.html"].btn.primary{
  <header class="site-header">
   <img
     src=Assets/images/layout/header/layout-website-home.png
-    alt="Balancing the Word Ministry — Build • Educate • Disciple"
+    alt="Balancing the Word Ministry - Build - Educate - Disciple"
     class="header-image"
   >
 </header>
@@ -1846,7 +1847,8 @@ a[href="pages/btwm-in-action.html"].btn.primary{
 
 <nav class="boxed-nav">
   <a href="pages/about.html">About</a>
-  <a href="pages/books.html">Books</a>
+  <a href="pages/books.html">The Book &amp; Gift Parlor <span class="nav-note">Coming Soon</span></a>
+  <a href="pages/blog-archive.html">Library</a>
   <a href="pages/support.html" class="nav-link support-btn">Support</a>
   <a href="index.html#contact">Contact</a>
 </nav>
@@ -1868,9 +1870,8 @@ a[href="pages/btwm-in-action.html"].btn.primary{
     </p>
 
   <p class="greeting-message">
-  We’re glad you’re here. Come explore Scripture, grow in faith, and support this
-  ministry through prayer, encouragement, and sharing as we become
-  <span class="complete-line">“Complete in Christ.”</span>
+  We're glad you're here. This ministry is a place to explore Scripture, grow in faith, and be encouraged to apply God's Word with humility and hope. We invite you to pray with us, share these teachings, and walk with us as we become
+  <span class="complete-line">"Complete in Christ."</span>
   <span class="greeting-close">Growing by grace, rooted in truth.</span>
 </p>
 
@@ -1884,7 +1885,7 @@ a[href="pages/btwm-in-action.html"].btn.primary{
 
    <p class="profile-role">Author-Teacher-Host</p>
    <div class="profile-gold-divider" aria-hidden="true"></div>
-   <p class="profile-description">Helping believers know God more deeply through Scripture-centered teaching and discipleship, rooted in Christ for every season.</p>
+   <p class="profile-description">Lesli D. Mize helps believers know God more deeply through Scripture-centered teaching, writing, and podcast ministry. Her work points readers and listeners to biblical truth, practical discipleship, and a steady walk with Christ in every season.</p>
    <a href="pages/about.html" class="btn primary profile-learn-more">Learn More</a>
   </article>
 
@@ -1893,16 +1894,16 @@ a[href="pages/btwm-in-action.html"].btn.primary{
 <div class="panel-gold-divider"></div>
 
    <p class="mission-tagline">
-  Build <span class="gold-dot">•</span>
+  Build <span class="gold-dot">&bull;</span>
   <span class="educate">Educate</span>
-  <span class="gold-dot">•</span>
+  <span class="gold-dot">&bull;</span>
   Disciple
 </p>
 
 <p class="mission-scripture">Colossians 1:28</p>
 
 <p>
-  Our mission is to build disciples through Scripture, sound teaching, and practical biblical truth so believers grow in maturity and walk faithfully with Christ.
+  Our mission is to build, educate, and disciple others through sound biblical teaching and the practical application of God's Word to everyday life. By equipping believers with biblical truth, we seek to encourage spiritual growth, maturity, and a faithful walk with Jesus Christ.
 </p>
 
 <div class="mission-close-divider" aria-hidden="true"></div>
@@ -1943,7 +1944,7 @@ a[href="pages/btwm-in-action.html"].btn.primary{
     </div>
     <div class="featured-book-divider" aria-hidden="true"></div>
     <div class="featured-scripture">
-  <p>“What has the Lord spoken?”</p>
+  <p>&ldquo;What has the Lord spoken?&rdquo;</p>
   <span>Numbers 23:17</span>
 </div>
     <img src="Assets/images/logos/publisher-mark/btwm-publisher-mark.png"
@@ -1969,9 +1970,9 @@ a[href="pages/btwm-in-action.html"].btn.primary{
 <p class="message-included-title">Included with this Featured Message:</p>
 
 <ul class="message-included-list" aria-label="Included with this Featured Message">
-  <li><span class="included-icon" aria-hidden="true">📖</span><span><strong>Read the full article</strong></span></li>
-  <li><span class="included-icon" aria-hidden="true">🎧</span><span><strong>Read-Along Podcast</strong> — Listen as Lesli D. Mize narrates this biblical message.</span></li>
-  <li><span class="included-icon" aria-hidden="true">🎙️</span><span><strong>Go Deeper Podcast</strong> — Continue the study with Friday&rsquo;s follow-up podcast, where we explore the message in greater depth through additional biblical insight and practical application.</span></li>
+  <li><span class="included-icon" aria-hidden="true">&#128214;</span><span><strong>Read the full article</strong></span></li>
+  <li><span class="included-icon" aria-hidden="true">&#127911;</span><span><strong>Read-Along Podcast</strong> &mdash; Listen as Lesli D. Mize narrates this biblical message.</span></li>
+  <li><span class="included-icon" aria-hidden="true">&#127897;&#65039;</span><span><strong>Go Deeper Podcast</strong> &mdash; Continue the study with Friday&rsquo;s follow-up podcast, where we explore the message in greater depth through additional biblical insight and practical application.</span></li>
 </ul>
 
 <div class="feature-buttons">
@@ -1986,7 +1987,7 @@ a[href="pages/btwm-in-action.html"].btn.primary{
 
     <p>
   Biblical messages and practical applications to help you grow in understanding,
-  discernment, and spiritual maturity as you walk faithfully in God’s Word daily.
+  discernment, and spiritual maturity as you walk faithfully in God&rsquo;s Word daily.
 </p>
 
     <a href="pages/foundations.html" class="btn primary">
@@ -2000,7 +2001,7 @@ a[href="pages/btwm-in-action.html"].btn.primary{
    <p>
   Ministry updates, service highlights, and real-life moments showing how
   Balancing the Word Ministry lives out its calling to
-  <strong>Build</strong> • <strong>Educate</strong> • <strong>Disciple</strong>
+  <strong>Build</strong> &bull; <strong>Educate</strong> &bull; <strong>Disciple</strong>
   through Scripture-centered work.
 </p>
 
@@ -2048,8 +2049,8 @@ a[href="pages/btwm-in-action.html"].btn.primary{
 
 <div class="scripture-box">
   <div class="scripture-text">
-    “Him we preach, warning every man and teaching every man in all wisdom,
-    that we may present every man perfect in Christ Jesus.”
+    &ldquo;Him we preach, warning every man and teaching every man in all wisdom,
+    that we may present every man perfect in Christ Jesus.&rdquo;
   </div>
   <div class="scripture-ref">Colossians 1:28</div>
 </div>
@@ -2060,7 +2061,7 @@ a[href="pages/btwm-in-action.html"].btn.primary{
   <h2 class="connect-title">Stay Connected</h2>
 
   <p class="connect-note">
-    Receive biblical messages, ministry updates, and encouragement to help you grow in God’s Word.
+    Receive biblical messages, ministry updates, and encouragement to help you grow in God&rsquo;s Word.
   </p>
 
   <script async data-uid="d93bc58dff" src="https://btwm.kit.com/d93bc58dff/index.js"></script>
@@ -2084,7 +2085,7 @@ a[href="pages/btwm-in-action.html"].btn.primary{
 
   </main>
 
-  <!-- ✅ ONE footer, inside body, at the bottom -->
+  <!-- ONE footer, inside body, at the bottom -->
 <footer class="site-footer"
   style="position:relative; min-height:220px; background:#0b1f3a url(Assets/images/layout-footer/layout-footer.png) center/cover no-repeat;">
 
@@ -2097,10 +2098,10 @@ a[href="pages/btwm-in-action.html"].btn.primary{
     color:#fff; font: 14px/1.6 Georgia, serif;
     background: rgba(0,0,0,.25);
     ">
-    <div>© <span id="y"></span> Balancing the Word Ministry</div>
+    <div>&copy; <span id="y"></span> Balancing the Word Ministry</div>
     <div>Colossians 1:28</div>
     <div style="font-weight:700; color:#d4af37;">
-      Build • <span style="color:#b11226; font-weight:800;">Educate</span> • Disciple
+      Build &bull; <span style="color:#b11226; font-weight:800;">Educate</span> &bull; Disciple
     </div>
   <div class="small legal">
       <a href="pages/privacy.html" class="footer-policy">Privacy Policy</a>
