@@ -263,6 +263,9 @@
   border:2px solid #8f0f23;
   font-weight:700;
   letter-spacing:0.5px;
+  font-family:inherit;
+  font-size:1rem;
+  cursor:pointer;
 }
 
 .podcast-btn:hover{
@@ -731,9 +734,13 @@ main .card *{
         for every believer to live faithfully as part of God&#39;s royal priesthood today.
       </p>
 
-      <audio controls preload="metadata" src="../Assets/audio/go-deeper/the-royal-priesthood-godeeper.mp3">
+      <audio id="royal-priesthood-audio" controls preload="metadata" src="../Assets/audio/go-deeper/the-royal-priesthood-godeeper.mp3">
         Your browser does not support the audio element.
       </audio>
+
+      <button class="podcast-btn" id="royal-priesthood-listen" type="button">
+        Listen Now &rarr;
+      </button>
     </div>
 
     <div class="column-subhead archive-subhead">
@@ -939,6 +946,11 @@ main .card *{
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
+    document.getElementById("royal-priesthood-listen").addEventListener("click", function () {
+      const audio = document.getElementById("royal-priesthood-audio");
+      audio.play();
+      audio.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
   </script>
 </body>
 </html>
