@@ -62,11 +62,6 @@
   height: auto;     /* <-- THIS prevents cropping */
   display: block;   /* removes the little gap */
 }
-@media (max-width:768px){
-  .site-header{
-    height:260px;
-  }
-}
     /* Nav */
     .boxed-nav{
       display:flex;
@@ -543,7 +538,7 @@
   width: 100%;
   margin-top: 32px;
 
-  background: #0b1f3a url("Assets/images/layout-footer/layout-footer.png") center/cover no-repeat;
+  background: #0b1f3a url("https://balancingtheword.org/Assets/images/layout-footer/layout-footer.png") center/cover no-repeat;
 }
 
 /* Kill any old overlay */
@@ -1238,6 +1233,92 @@
   line-height: 1.5;
   text-align: center;
 }
+
+.featured-paths{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  margin:22px 0 8px;
+}
+
+.featured-path{
+  display:flex;
+  flex-direction:column;
+  position:relative;
+  overflow:hidden;
+  padding:22px 18px 18px;
+  background:linear-gradient(145deg,#fffdf7 0%,#f5edda 100%);
+  border:1px solid rgba(202,162,74,.58);
+  border-top:5px solid #CAA24A;
+  border-radius:14px;
+  box-shadow:0 8px 20px rgba(11,31,58,.10);
+  transition:transform .2s ease, box-shadow .2s ease;
+}
+
+.featured-path.companion{
+  border-top-color:#B0122A;
+  border-color:rgba(176,18,42,.30);
+  border-top-color:#B0122A;
+  background:linear-gradient(145deg,#fffafa 0%,#f9e9ec 100%);
+}
+
+.featured-path:hover{
+  transform:translateY(-3px);
+  box-shadow:0 12px 26px rgba(11,31,58,.15);
+}
+
+.featured-path-label{
+  align-self:flex-start;
+  margin:0 0 10px !important;
+  padding:4px 9px;
+  color:#0B1F3A !important;
+  background:rgba(202,162,74,.20);
+  border:1px solid rgba(202,162,74,.50);
+  border-radius:999px;
+  font-size:.72rem !important;
+  font-weight:800;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+
+.featured-path.companion .featured-path-label{
+  align-self:center;
+  color:#8E1023 !important;
+  background:rgba(176,18,42,.09);
+  border-color:rgba(176,18,42,.28);
+}
+
+.featured-path h4{
+  margin:0 0 10px;
+  color:#0B1F3A;
+  font-size:1.18rem;
+  line-height:1.3;
+}
+
+.featured-path p:not(.featured-path-label){
+  margin:0 0 14px;
+  font-size:.92rem;
+  line-height:1.45;
+}
+
+.featured-path .btn{
+  margin-top:auto;
+  padding:10px 14px;
+  font-size:.9rem;
+  text-align:center;
+  border-radius:8px;
+  box-shadow:0 3px 8px rgba(11,31,58,.12);
+}
+
+.featured-path.companion .btn{
+  background:#B0122A;
+  border-color:#B0122A;
+  color:#fff;
+}
+
+@media (max-width:520px){
+  .featured-paths{ grid-template-columns:1fr; }
+}
     #foundations .feature-desc,
 #btwm-action .feature-desc {
   margin: 0 0 24px;
@@ -1833,7 +1914,7 @@ a[href="pages/btwm-in-action.html"].btn.primary{
 
  <header class="site-header">
   <img
-    src=Assets/images/layout/header/layout-website-home.png
+    src="https://balancingtheword.org/Assets/images/layout/header/layout-website-home.png"
     alt="Balancing the Word Ministry - Build - Educate - Disciple"
     class="header-image"
   >
@@ -1879,7 +1960,7 @@ a[href="pages/btwm-in-action.html"].btn.primary{
 
   <article class="intro-panel intro-profile" id="lesli">
     <a href="pages/about.html" class="about-link">
-      <img src="Assets/images/general/head-shot/HS-1.png" alt="Lesli D. Mize" class="headshot">
+      <img src="https://balancingtheword.org/Assets/images/general/head-shot/HS-1.png" alt="Lesli D. Mize" class="headshot">
       <h2 class="lesli-name">Lesli D. Mize</h2>
     </a>
 
@@ -1919,7 +2000,7 @@ a[href="pages/btwm-in-action.html"].btn.primary{
   <article class="feature-panel" id="featured-book">
     <h2>Featured Book</h2>
 
-    <img src="Assets/images/book-covers/balaam/balaam-ebook-image.png"
+    <img src="https://balancingtheword.org/Assets/images/book-covers/balaam/balaam-ebook-image.png"
          alt="Balaam: Diviner or Prophet? book cover"
          class="featured-book">
 
@@ -1928,7 +2009,7 @@ a[href="pages/btwm-in-action.html"].btn.primary{
     <p class="feature-desc">A biblical message exploring Balaam&rsquo;s divided heart, the danger of compromise, and the importance of obeying God with reverence, humility, and faithfulness. This study invites readers to examine the subtle pull of self-interest, the seriousness of spiritual discernment, and the need to remain fully surrendered to the Lord even when the way forward is difficult.</p>
 
     <div class="featuredButtons">
-      <a href="Assets/samples/balaam-sample.pdf"
+      <a href="https://balancingtheword.org/Assets/samples/balaam-sample.pdf"
          target="_blank"
          rel="noopener"
          class="btn primary">
@@ -1947,7 +2028,7 @@ a[href="pages/btwm-in-action.html"].btn.primary{
   <p>&ldquo;What has the Lord spoken?&rdquo;</p>
   <span>Numbers 23:17</span>
 </div>
-    <img src="Assets/images/logos/publisher-mark/btwm-publisher-mark.png"
+    <img src="https://balancingtheword.org/Assets/images/logos/publisher-mark/btwm-publisher-mark.png"
          alt="BTWM publisher mark"
          class="featured-publisher-mark">
   </article>
@@ -1958,25 +2039,28 @@ a[href="pages/btwm-in-action.html"].btn.primary{
 
     <p class="feature-release">Now Available</p>
 
-    <img src="Assets/images/blog/recognizing-the-enemy-website.png" alt="Recognizing the Enemy, Trusting the Savior message graphic with a Bible, a shadowed enemy figure, and Christ in light." class="article-feature-img">
+    <img src="Assets/images/blog/royal-priesthood-website.webp" alt="An Old Testament priest serving at the altar beside a diverse gathering of believers worshiping together." class="article-feature-img">
 
-<h3 class="featured-main-title"><span>Recognizing the Enemy,<br>Trusting the Savior</span></h3>
-<p class="featured-subtitle">Be Not Ignorant of the Devil&rsquo;s Schemes</p>
+<h3 class="featured-main-title"><span>The Royal Priesthood</span></h3>
+<p class="featured-subtitle">God&rsquo;s Kingdom of Priests</p>
 
-<p class="feature-desc">A biblical message helping believers recognize the enemy&rsquo;s schemes, stand firm in God&rsquo;s Word, and trust in the victory of Jesus Christ.</p>
+<p class="feature-desc">Discover how Israel&rsquo;s priesthood established a biblical foundation for understanding the calling, holiness, and service of God&rsquo;s people.</p>
 
 <div class="message-gold-divider" aria-hidden="true"></div>
 
-<p class="message-included-title">Included with this Featured Message:</p>
-
-<ul class="message-included-list" aria-label="Included with this Featured Message">
-  <li><span class="included-icon" aria-hidden="true">&#128214;</span><span><strong>Read the full article</strong></span></li>
-  <li><span class="included-icon" aria-hidden="true">&#127911;</span><span><strong>Read-Along Podcast</strong> &mdash; Listen as Lesli D. Mize narrates this biblical message.</span></li>
-  <li><span class="included-icon" aria-hidden="true">&#127897;&#65039;</span><span><strong>Go Deeper Podcast</strong> &mdash; Continue the study with Friday&rsquo;s follow-up podcast, where we explore the message in greater depth through additional biblical insight and practical application.</span></li>
-</ul>
-
-<div class="feature-buttons">
-  <a class="btn primary" href="articles/featured-article.html">Read Message + Listen</a>
+<div class="featured-paths" aria-label="Featured message and companion podcast">
+  <section class="featured-path">
+    <p class="featured-path-label">Featured Message</p>
+    <h4>Read-Along</h4>
+    <p>The written message and Read-Along narrated by Lesli D. Mize.</p>
+    <a class="btn primary" href="articles/featured-article.html">The Message</a>
+  </section>
+  <section class="featured-path companion">
+    <p class="featured-path-label">Companion</p>
+    <h4>Go Deeper Podcast</h4>
+    <p>Continue with the New Covenant meaning of the royal priesthood.</p>
+    <a class="btn secondary" href="pages/podcast.html">Coming Friday</a>
+  </section>
 </div>
 
 </div>
@@ -2074,7 +2158,7 @@ a[href="pages/btwm-in-action.html"].btn.primary{
           <!-- Optional icon box (if you want it under Contact) -->
           <!--
           <div class="logo-box">
-            <img class="logo-box-img" src="Assets/images/logos/shield-no-scripture/shield-no-scripture.png" alt="BTWM icon">
+            <img class="logo-box-img" src="https://balancingtheword.org/Assets/images/logos/shield-no-scripture/shield-no-scripture.png" alt="BTWM icon">
           </div>
           -->
 
@@ -2087,7 +2171,7 @@ a[href="pages/btwm-in-action.html"].btn.primary{
 
   <!-- ONE footer, inside body, at the bottom -->
 <footer class="site-footer"
-  style="position:relative; min-height:220px; background:#0b1f3a url(Assets/images/layout-footer/layout-footer.png) center/cover no-repeat;">
+  style="position:relative; min-height:220px; background:#0b1f3a url(https://balancingtheword.org/Assets/images/layout-footer/layout-footer.png) center/cover no-repeat;">
 
   <!-- GUARANTEED VISIBLE TEXT LAYER -->
   <div style="
