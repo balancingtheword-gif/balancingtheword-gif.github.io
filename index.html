@@ -1236,16 +1236,35 @@
 
 .featured-paths{
   display:flex;
+  flex-direction:column;
   justify-content:center;
   align-items:center;
-  gap:18px;
+  gap:16px;
   margin:22px auto 8px;
-  flex-wrap:wrap;
+  width:100%;
+}
+
+.featured-path-prompt{
+  margin:0 0 -6px !important;
+  color:#B0122A !important;
+  font-family:Georgia, "Times New Roman", serif;
+  font-size:1.08rem !important;
+  font-weight:800;
+  line-height:1.25;
+  text-align:center;
+}
+
+.featured-path-prompt span{
+  display:block;
+  margin-top:2px;
+  color:#CAA24A;
+  font-size:1.65rem;
+  line-height:1;
 }
 
 .featured-path{
   display:block;
-  width:min(230px, 43vw);
+  width:min(360px, 88%);
   aspect-ratio:1.55 / 1;
   overflow:hidden;
   border-radius:10px;
@@ -1274,7 +1293,7 @@
 
 @media (max-width:520px){
   .featured-paths{ gap:12px; }
-  .featured-path{ width:min(170px, 43vw); }
+  .featured-path{ width:88%; }
 }
     #foundations .feature-desc,
 #btwm-action .feature-desc {
@@ -2006,6 +2025,7 @@ a[href="pages/btwm-in-action.html"].btn.primary{
 <div class="message-gold-divider" aria-hidden="true"></div>
 
 <div class="featured-paths" aria-label="Featured message and companion podcast">
+  <p class="featured-path-prompt">Read or Listen Here<span aria-hidden="true">&darr;</span></p>
   <a class="featured-path" href="articles/featured-article.html" aria-label="Open the Featured Message and Read-Along Podcast">
     <img src="Assets/images/podcast/read-along/read-along-website.webp" alt="Read-Along Podcast, written and narrated by Lesli D. Mize">
   </a>
