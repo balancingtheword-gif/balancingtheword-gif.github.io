@@ -1245,7 +1245,9 @@
 
 .featured-path{
   display:block;
-  width:min(190px, 42vw);
+  width:min(230px, 43vw);
+  aspect-ratio:1.55 / 1;
+  overflow:hidden;
   border-radius:10px;
   box-shadow:0 8px 20px rgba(11,31,58,.14);
   transition:transform .2s ease, box-shadow .2s ease;
@@ -1254,7 +1256,9 @@
 .featured-path img{
   display:block;
   width:100%;
-  height:auto;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
   border-radius:10px;
 }
 
@@ -1270,7 +1274,7 @@
 
 @media (max-width:520px){
   .featured-paths{ gap:12px; }
-  .featured-path{ width:min(160px, 43vw); }
+  .featured-path{ width:min(170px, 43vw); }
 }
     #foundations .feature-desc,
 #btwm-action .feature-desc {
