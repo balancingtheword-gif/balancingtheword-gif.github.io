@@ -714,35 +714,6 @@ main .card *{
 
   <div class="podcast-column-body">
 
-    <div class="column-subhead">
-      <span></span>
-      <h3>FEATURED</h3>
-      <span></span>
-    </div>
-
-    <div class="featured-podcast-block" id="royal-priesthood">
-      <h3 class="featured-episode-title">
-        The Royal Priesthood
-      </h3>
-
-      <p class="featured-episode-subtitle">Companion Go Deeper Podcast</p>
-
-      <p class="featured-date">Now Available</p>
-
-      <p class="podcast-preview">
-        Explore how Christ fulfilled the Old Testament priesthood and what it means
-        for every believer to live faithfully as part of God&#39;s royal priesthood today.
-      </p>
-
-      <audio id="royal-priesthood-audio" controls preload="metadata" src="../Assets/audio/go-deeper/the-royal-priesthood-godeeper.mp3">
-        Your browser does not support the audio element.
-      </audio>
-
-      <button class="podcast-btn" id="royal-priesthood-listen" type="button">
-        Listen Now &rarr;
-      </button>
-    </div>
-
     <div class="column-subhead archive-subhead">
       <span></span>
       <h3>ARCHIVE</h3>
@@ -750,6 +721,19 @@ main .card *{
     </div>
 
     <div class="podcast-archive-list">
+
+      <div class="archive-item">
+        <div class="archive-icon">&#127897;</div>
+        <div class="archive-text">
+          <h4>The Royal Priesthood</h4>
+          <p>July 24, 2026</p>
+        </div>
+        <div class="archive-link">
+          <a href="https://balancingtheword.org/Assets/audio/go-deeper/the-royal-priesthood-godeeper.mp3" target="_blank" rel="noopener noreferrer">
+            Listen Now &rarr;
+          </a>
+        </div>
+      </div>
 
       <div class="archive-item">
         <div class="archive-icon">&#127897;</div>
@@ -946,11 +930,6 @@ main .card *{
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
-    document.getElementById("royal-priesthood-listen").addEventListener("click", function () {
-      const audio = document.getElementById("royal-priesthood-audio");
-      audio.play();
-      audio.scrollIntoView({ behavior: "smooth", block: "center" });
-    });
   </script>
 </body>
 </html>
