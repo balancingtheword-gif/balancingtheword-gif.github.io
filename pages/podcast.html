@@ -330,6 +330,12 @@
   text-decoration:underline;
 }
 
+.archive-inline-audio{
+  grid-column:1 / -1;
+  width:100%;
+  margin:8px 0 0;
+}
+
 .commentary-featured-block{
   text-align:center;
   padding:18px 10px 24px;
@@ -956,6 +962,35 @@ main .card *{
       const audio = document.getElementById("tongues-of-fire-audio");
       audio.play();
       audio.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+
+    document.querySelectorAll(".podcast-archive-list .archive-link a").forEach(function (link) {
+      const audioUrl = link.getAttribute("href");
+      if (!audioUrl || !audioUrl.toLowerCase().includes(".mp3")) return;
+
+      link.removeAttribute("target");
+      link.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        const item = link.closest(".archive-item");
+        let audio = item.querySelector(".archive-inline-audio");
+
+        if (!audio) {
+          audio = document.createElement("audio");
+          audio.className = "archive-inline-audio";
+          audio.controls = true;
+          audio.preload = "metadata";
+          audio.src = audioUrl;
+          item.appendChild(audio);
+        }
+
+        document.querySelectorAll(".archive-inline-audio").forEach(function (otherAudio) {
+          if (otherAudio !== audio) otherAudio.pause();
+        });
+
+        audio.play();
+        audio.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
     });
   </script>
 </body>
