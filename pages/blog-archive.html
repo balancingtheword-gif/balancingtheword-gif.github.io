@@ -289,6 +289,12 @@ footer .small {
   color: #7f0d1d;
   border-bottom-color: #B0122A;
 }
+
+.library-inline-audio {
+  display: block;
+  width: 100%;
+  margin: 16px 0 0;
+}
     body {
   background: #f8f6f1;
 }
@@ -566,6 +572,37 @@ footer .small {
     </p>
     <p class="small">&copy; Balancing the Word Ministry</p>
   </footer>
+
+<script>
+  document.querySelectorAll(".archive-card .archive-links a").forEach(function (link) {
+    const audioUrl = link.getAttribute("href");
+    if (!audioUrl || !audioUrl.toLowerCase().includes(".mp3")) return;
+
+    link.removeAttribute("target");
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+
+      const card = link.closest(".archive-card");
+      let audio = card.querySelector(".library-inline-audio");
+
+      if (!audio) {
+        audio = document.createElement("audio");
+        audio.className = "library-inline-audio";
+        audio.controls = true;
+        audio.preload = "metadata";
+        audio.src = audioUrl;
+        card.appendChild(audio);
+      }
+
+      document.querySelectorAll(".library-inline-audio").forEach(function (otherAudio) {
+        if (otherAudio !== audio) otherAudio.pause();
+      });
+
+      audio.play();
+      audio.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+  });
+</script>
 
 </body>
 </html>
