@@ -714,6 +714,28 @@ main .card *{
 
   <div class="podcast-column-body">
 
+    <div class="column-subhead">
+      <span></span>
+      <h3>FEATURED</h3>
+      <span></span>
+    </div>
+
+    <div class="featured-podcast-block" id="tongues-of-fire-words-of-order">
+      <h3 class="featured-episode-title">Tongues of Fire, Words of Order</h3>
+      <p class="featured-episode-subtitle">Companion Go Deeper Podcast</p>
+      <p class="featured-date">Available August 7, 2026</p>
+      <p class="podcast-preview">
+        Go deeper into 1 Corinthians 14 as we examine tongues, interpretation, prophecy,
+        edification, and the biblical order Paul gives for spiritual gifts when believers gather.
+      </p>
+      <audio id="tongues-of-fire-audio" controls preload="metadata" src="../Assets/audio/go-deeper/tongues-of-fire-go-deeper.mp3">
+        Your browser does not support the audio element.
+      </audio>
+      <button class="podcast-btn" id="tongues-of-fire-listen" type="button">
+        Listen Now &rarr;
+      </button>
+    </div>
+
     <div class="column-subhead archive-subhead">
       <span></span>
       <h3>ARCHIVE</h3>
@@ -721,19 +743,6 @@ main .card *{
     </div>
 
     <div class="podcast-archive-list">
-
-      <div class="archive-item">
-        <div class="archive-icon">&#127897;</div>
-        <div class="archive-text">
-          <h4>Tongues of Fire, Words of Order</h4>
-          <p>August 7, 2026</p>
-        </div>
-        <div class="archive-link">
-          <a href="https://balancingtheword.org/Assets/audio/go-deeper/tongues-of-fire-go-deeper.mp3" target="_blank" rel="noopener noreferrer">
-            Listen Now &rarr;
-          </a>
-        </div>
-      </div>
 
       <div class="archive-item">
         <div class="archive-icon">&#127897;</div>
@@ -943,6 +952,11 @@ main .card *{
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
+    document.getElementById("tongues-of-fire-listen").addEventListener("click", function () {
+      const audio = document.getElementById("tongues-of-fire-audio");
+      audio.play();
+      audio.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
   </script>
 </body>
 </html>
