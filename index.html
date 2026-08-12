@@ -1905,6 +1905,62 @@ a[href="pages/btwm-in-action.html"].btn.primary{
   font-weight: 800;
 }
        .boxed-nav .nav-note{display:block;margin-top:2px;color:#B0122A;font-size:.72rem;font-style:italic;line-height:1.1;}
+
+    /* BTWM Shop launch announcement */
+    .shop-launch{
+      margin:24px 0;
+      padding:30px 28px;
+      border:2px solid var(--gold);
+      border-left:6px solid var(--red);
+      border-radius:16px;
+      background:linear-gradient(135deg, #0b1f3a 0%, #132f52 100%);
+      color:#fff;
+      text-align:center;
+      box-shadow:0 12px 28px rgba(11,31,58,.16);
+    }
+    .shop-launch .launch-label{
+      margin:0 0 6px;
+      color:#f4d06f;
+      font-size:.86rem;
+      font-weight:800;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+    .shop-launch h2{
+      margin:0 0 10px;
+      color:#fff;
+      font-size:1.85rem;
+      line-height:1.25;
+    }
+    .shop-launch .launch-date{
+      margin:0 0 12px;
+      color:#f4d06f;
+      font-weight:800;
+    }
+    .shop-launch .launch-copy{
+      max-width:62ch;
+      margin:0 auto 20px;
+      color:#fff;
+      line-height:1.6;
+    }
+    .shop-launch .launch-discount{
+      color:#f4d06f;
+      font-weight:800;
+    }
+    .shop-launch .btn{
+      background:var(--red);
+      border:2px solid var(--gold);
+      color:#fff;
+    }
+    .shop-launch .btn:hover{
+      background:#fff;
+      border-color:#fff;
+      color:var(--navy);
+    }
+    @media (max-width:640px){
+      .shop-launch{padding:24px 18px;}
+      .shop-launch h2{font-size:1.55rem;}
+    }
 </style>
 </head>
 
@@ -1991,6 +2047,15 @@ a[href="pages/btwm-in-action.html"].btn.primary{
   <span>Growing in Christ.</span>
 </p>
   </article>
+</section>
+
+
+<section class="shop-launch" aria-labelledby="shop-launch-title">
+  <p class="launch-label">Grand Opening</p>
+  <h2 id="shop-launch-title">The BTWM Shop Launches Friday, August 14!</h2>
+  <p class="launch-date">Celebrate the launch with 10% off eligible products.</p>
+  <p class="launch-copy">Wear and share the mission while supporting the work of Balancing the Word Ministry. Explore faith-inspired apparel, drinkware, accessories, and more.</p>
+  <a href="pages/shop.html" class="btn" aria-label="Visit the BTWM Shop">Visit the BTWM Shop</a>
 </section>
 
 <section class="home-feature-grid">
