@@ -179,6 +179,55 @@
 
     .shop-card .btn{ width:100%; margin-top:auto; }
 
+    .monthly-feature{
+      margin:4px 0 22px;
+      padding:18px 14px;
+      border:1px solid rgba(202,162,74,.55);
+      border-radius:12px;
+      background:var(--cream);
+    }
+
+    .monthly-feature-label{
+      margin:0 0 12px !important;
+      color:var(--scarlet) !important;
+      font-size:.78rem !important;
+      font-weight:800;
+      letter-spacing:.07em;
+      text-transform:uppercase;
+    }
+
+    .featured-book-cover{
+      display:block;
+      width:125px;
+      max-height:180px;
+      margin:0 auto 14px;
+      border-radius:5px;
+      object-fit:contain;
+      box-shadow:0 8px 18px rgba(11,31,58,.16);
+    }
+
+    .monthly-feature h3{
+      margin:0 0 8px;
+      color:var(--navy);
+      font-size:1.14rem;
+      line-height:1.25;
+    }
+
+    .monthly-feature .book-description{
+      margin:0;
+      color:var(--muted);
+      font-size:.92rem;
+      line-height:1.5;
+    }
+
+    .book-actions{
+      display:grid;
+      gap:10px;
+      margin-top:auto;
+    }
+
+    .book-actions .btn{ margin:0; }
+
     .shop-card .primary{
       border-color:var(--gold);
       background:var(--scarlet);
@@ -287,7 +336,16 @@
         <span class="card-label">Read &amp; Grow</span>
         <h2>Books &amp; Resources</h2>
         <p>Discover books, eBooks, teaching resources, free samples, and downloads created to help believers grow in biblical understanding.</p>
-        <a class="btn" href="books.html">Explore Books &amp; Resources</a>
+        <div class="monthly-feature">
+          <p class="monthly-feature-label">Monthly Featured Book</p>
+          <img class="featured-book-cover" src="https://balancingtheword.org/Assets/images/book-covers/eternal-question/eternal-question.png" alt="The Eternal Question book cover" loading="lazy">
+          <h3>The Eternal Question</h3>
+          <p class="book-description">A gospel-centered message that confronts life&rsquo;s most important question and points readers to the truth found in Christ.</p>
+        </div>
+        <div class="book-actions">
+          <a class="btn primary" href="https://www.amazon.com/author/lesli-d-mize_balancingtheword" target="_blank" rel="noopener noreferrer">Buy the Book</a>
+          <a class="btn" href="books.html">Explore Books &amp; Resources</a>
+        </div>
       </article>
 
       <article class="shop-card">
