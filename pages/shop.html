@@ -247,7 +247,7 @@
 
     .product-pair{
       display:grid;
-      grid-template-columns:repeat(2, minmax(0, 1fr));
+      grid-template-columns:repeat(3, minmax(0, 1fr));
       gap:10px;
       margin-bottom:14px;
     }
@@ -372,6 +372,11 @@
       .shop-intro{ padding:32px 18px 28px; }
       .top-actions .btn{ flex:1 1 145px; }
     }
+
+    @media (max-width:440px){
+      .product-pair{ grid-template-columns:1fr; }
+      .product-pair img{ max-width:220px; margin:0 auto; }
+    }
   </style>
 </head>
 
@@ -428,6 +433,10 @@
             <figure>
               <img src="../Assets/images/store/signature-btwm-mug.jpg" alt="Signature BTWM logo mug" loading="lazy">
               <figcaption>Signature BTWM Mug</figcaption>
+            </figure>
+            <figure>
+              <img src="../Assets/images/store/signature-btwm-hat.jpg" alt="Signature BTWM logo gray hat" loading="lazy">
+              <figcaption>Signature BTWM Hat</figcaption>
             </figure>
           </div>
           <h3>Signature BTWM Collection</h3>
