@@ -2035,7 +2035,119 @@ a[href="pages/btwm-in-action.html"].btn.primary{
       .shop-launch{padding:24px 18px;}
       .shop-launch h2{font-size:1.55rem;}
     }
-</style>
+
+    /* ===== GO DEEPER WITH LESLI FEATURE ===== */
+#foundations{
+  position:relative;
+  overflow:hidden;
+  cursor:pointer;
+  padding:32px 28px 30px;
+  border:2px solid #CAA24A;
+  border-left:6px solid #B0122A;
+  background:
+    radial-gradient(circle at top right, rgba(202,162,74,.22), transparent 38%),
+    linear-gradient(145deg, #0B1F3A 0%, #102D50 100%);
+  box-shadow:0 14px 30px rgba(11,31,58,.18);
+  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+#foundations:hover,
+#foundations:focus-visible{
+  transform:translateY(-4px);
+  border-color:#D8B85B;
+  box-shadow:0 18px 38px rgba(11,31,58,.25);
+}
+
+#foundations:focus-visible{
+  outline:3px solid #B0122A;
+  outline-offset:4px;
+}
+
+#foundations::after{
+  content:"";
+  position:absolute;
+  right:-42px;
+  bottom:-56px;
+  width:150px;
+  height:150px;
+  border:2px solid rgba(202,162,74,.18);
+  border-radius:50%;
+  pointer-events:none;
+}
+
+#foundations .go-deeper-label{
+  margin:0 0 12px;
+  color:#F3D989;
+  font-family:Georgia, "Times New Roman", serif;
+  font-size:.78rem;
+  font-weight:800;
+  letter-spacing:.16em;
+  text-align:center;
+}
+
+#foundations .go-deeper-icon{
+  width:58px;
+  height:58px;
+  margin:0 auto 14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border:2px solid #CAA24A;
+  border-radius:50%;
+  background:rgba(255,255,255,.08);
+  color:#F3D989;
+  font-size:1.65rem;
+  box-shadow:0 6px 16px rgba(0,0,0,.18);
+}
+
+#foundations h2{
+  margin:0 0 10px;
+  color:#FFFFFF;
+  font-size:1.65rem;
+  line-height:1.25;
+}
+
+#foundations h2::after{
+  content:"";
+  display:block;
+  width:76px;
+  height:3px;
+  margin:14px auto 0;
+  border-radius:999px;
+  background:linear-gradient(90deg, #B0122A, #CAA24A);
+}
+
+#foundations .go-deeper-description{
+  max-width:38ch;
+  margin:0 auto 24px;
+  color:#F8FAFC;
+  line-height:1.65;
+  text-align:center;
+}
+
+#foundations a.btn.primary{
+  position:relative;
+  z-index:1;
+  margin-top:auto !important;
+  padding:11px 18px;
+  border:2px solid #CAA24A !important;
+  background:#CAA24A !important;
+  color:#0B1F3A !important;
+  box-shadow:0 6px 14px rgba(0,0,0,.18);
+}
+
+#foundations a.btn.primary:hover{
+  border-color:#B0122A !important;
+  background:#B0122A !important;
+  color:#FFFFFF !important;
+}
+
+@media (max-width:650px){
+  #foundations{ padding:28px 20px 26px; }
+  #foundations h2{ font-size:1.5rem; }
+}
+
+  </style>
 </head>
 
 <body>
@@ -2206,16 +2318,18 @@ a[href="pages/btwm-in-action.html"].btn.primary{
 </div>
 </article>
 
-  <article class="feature-panel" id="foundations" role="link" tabindex="0" aria-label="Open the Go Deeper with Lesli podcast page" onclick="window.location.href='pages/podcast.html'" onkeydown="if(event.key==='Enter' || event.key===' '){ event.preventDefault(); window.location.href='pages/podcast.html'; }" style="cursor:pointer;">
+  <article class="feature-panel" id="foundations" role="link" tabindex="0" aria-label="Open the Go Deeper with Lesli podcast page" onclick="window.location.href='pages/podcast.html'" onkeydown="if(event.key==='Enter' || event.key===' '){ event.preventDefault(); window.location.href='pages/podcast.html'; }">
+    <p class="go-deeper-label">PODCAST TEACHING</p>
+    <div class="go-deeper-icon" aria-hidden="true">&#127897;</div>
     <h2>Go Deeper with Lesli</h2>
 
-    <p>
-  Biblical messages and practical applications to help you grow in understanding,
-  discernment, and spiritual maturity as you walk faithfully in God&rsquo;s Word daily.
-</p>
+    <p class="go-deeper-description">
+      Go beyond the Featured Message through biblical teaching, timely conversations,
+      and reflections on whatever the Lord is pressing upon my heart.
+    </p>
 
     <a href="pages/podcast.html" class="btn primary">
-      Explore Go Deeper
+      Visit the Podcast Page &rarr;
     </a>
   </article>
 
