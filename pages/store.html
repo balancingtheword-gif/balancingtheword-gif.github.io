@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BTWM Store | Balancing the Word Ministry</title>
+  <meta name="description" content="Wear and share the mission with faith-inspired apparel, drinkware, beanies, and more from the Balancing the Word Ministry store.">
+  <style>
+    :root{
+      --navy:#0b1f3a;
+      --scarlet:#b0122a;
+      --gold:#caa24a;
+      --paper:#eaf2fa;
+      --cream:#fffaf0;
+      --text:#172033;
+      --border:rgba(11,31,58,.16);
+    }
+
+    *{ box-sizing:border-box; }
+
+    body{
+      margin:0;
+      color:var(--text);
+      background:var(--paper);
+      font-family:Georgia, "Times New Roman", serif;
+      line-height:1.65;
+    }
+
+    .site-header{
+      width:100%;
+      background:var(--navy);
+    }
+
+    .site-header img{
+      display:block;
+      width:100%;
+      height:auto;
+    }
+
+    .wrap{
+      width:min(100% - 36px, 1000px);
+      margin:0 auto;
+      padding:24px 0 50px;
+    }
+
+    .top-actions{
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:24px;
+    }
+
+    .btn{
+      display:inline-block;
+      padding:11px 18px;
+      border:2px solid var(--navy);
+      border-radius:999px;
+      background:#fff;
+      color:var(--navy);
+      text-align:center;
+      text-decoration:none;
+      font-weight:800;
+      line-height:1.2;
+      box-shadow:0 8px 16px rgba(11,31,58,.10);
+      transition:background .2s ease, color .2s ease, transform .2s ease;
+    }
+
+    .btn:hover,
+    .btn:focus-visible{
+      background:var(--scarlet);
+      border-color:var(--scarlet);
+      color:#fff;
+      transform:translateY(-1px);
+    }
+
+    .btn.support{
+      border-color:var(--scarlet);
+      color:var(--scarlet);
+    }
+
+    .store-card{
+      overflow:hidden;
+      border:1px solid var(--border);
+      border-top:5px solid var(--gold);
+      border-left:5px solid var(--scarlet);
+      border-radius:18px;
+      background:#fff;
+      box-shadow:0 12px 28px rgba(11,31,58,.10);
+    }
+
+    .store-hero{
+      padding:42px 28px 34px;
+      text-align:center;
+      background:linear-gradient(145deg, #fff 0%, var(--cream) 100%);
+    }
+
+    .eyebrow{
+      margin:0 0 8px;
+      color:var(--scarlet);
+      font-size:.85rem;
+      font-weight:800;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    h1{
+      margin:0;
+      color:var(--navy);
+      font-size:clamp(2rem, 5vw, 3rem);
+      line-height:1.15;
+    }
+
+    .tagline{
+      margin:12px 0 0;
+      color:var(--scarlet);
+      font-size:clamp(1.2rem, 3vw, 1.55rem);
+      font-style:italic;
+      font-weight:800;
+    }
+
+    .gold-divider{
+      width:90px;
+      height:3px;
+      margin:22px auto;
+      border-radius:999px;
+      background:var(--gold);
+    }
+
+    .intro{
+      max-width:740px;
+      margin:0 auto;
+      color:var(--navy);
+      font-size:1.08rem;
+    }
+
+    .shop-button{
+      margin-top:26px;
+      padding:14px 28px;
+      border-color:var(--gold);
+      background:var(--scarlet);
+      color:#fff;
+      font-size:1.05rem;
+    }
+
+    .shop-button:hover,
+    .shop-button:focus-visible{
+      background:var(--navy);
+      border-color:var(--gold);
+    }
+
+    .collections{
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:18px;
+      padding:28px;
+      background:#f8fbff;
+    }
+
+    .collection{
+      padding:20px;
+      border:1px solid var(--border);
+      border-radius:12px;
+      background:#fff;
+      text-align:center;
+    }
+
+    .collection h2{
+      margin:0 0 8px;
+      color:var(--navy);
+      font-size:1.25rem;
+      line-height:1.25;
+    }
+
+    .collection p{
+      margin:0;
+      color:#3f4b5f;
+      font-size:.96rem;
+    }
+
+    .mission-note{
+      padding:28px;
+      border-top:1px solid rgba(202,162,74,.55);
+      text-align:center;
+      background:var(--navy);
+      color:#fff;
+    }
+
+    .mission-note h2{
+      margin:0 0 10px;
+      color:#f4d06f;
+      font-size:1.45rem;
+    }
+
+    .mission-note p{
+      max-width:760px;
+      margin:0 auto;
+    }
+
+    .mission-words{
+      margin-top:14px !important;
+      color:#f4d06f;
+      font-weight:800;
+      letter-spacing:.04em;
+    }
+
+    .mission-words span{ color:#ef6675; }
+
+    .site-footer{
+      position:relative;
+      min-height:220px;
+      background:#0b1f3a url("https://balancingtheword.org/Assets/images/layout-footer/layout-pages-footer.png") center/cover no-repeat;
+    }
+
+    .footer-text{
+      position:absolute;
+      inset:0;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      padding:16px;
+      background:rgba(0,0,0,.25);
+      color:#fff;
+      text-align:center;
+      font:14px/1.6 Georgia, "Times New Roman", serif;
+    }
+
+    .footer-tagline{
+      color:#d4af37;
+      font-weight:700;
+    }
+
+    .footer-tagline span{
+      color:#b11226;
+      font-weight:800;
+    }
+
+    .footer-policy{ color:#fff; }
+
+    @media (max-width:700px){
+      .wrap{ width:min(100% - 24px, 1000px); }
+      .store-hero{ padding:32px 18px 28px; }
+      .collections{ grid-template-columns:1fr; padding:20px; }
+      .mission-note{ padding:26px 20px; }
+      .top-actions .btn{ flex:1 1 145px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <img src="https://balancingtheword.org/Assets/images/layout/header/layout-pages-header.png" alt="Balancing the Word Ministry">
+  </header>
+
+  <main class="wrap">
+    <nav class="top-actions" aria-label="Store page navigation">
+      <a class="btn" href="../index.html">Back to Home</a>
+      <a class="btn" href="books.html">Book &amp; Gift Parlor</a>
+      <a class="btn support" href="support.html">Support the Ministry</a>
+    </nav>
+
+    <article class="store-card">
+      <section class="store-hero">
+        <p class="eyebrow">Balancing the Word Ministry</p>
+        <h1>BTWM Store</h1>
+        <p class="tagline">Wear and share the mission.</p>
+        <div class="gold-divider" aria-hidden="true"></div>
+        <p class="intro">
+          Explore faith-inspired apparel, drinkware, beanies, and more created to help you share biblical truth and represent the mission of Balancing the Word Ministry wherever you go.
+        </p>
+        <a class="btn shop-button" href="https://www.bonfire.com/store/balancing-the-word-ministry/" target="_blank" rel="noopener noreferrer">Shop the BTWM Store</a>
+      </section>
+
+      <section class="collections" aria-label="BTWM store collections">
+        <div class="collection">
+          <h2>Faith-Inspired Apparel</h2>
+          <p>Shirts and hoodies designed to carry messages of biblical truth, faith, and purpose.</p>
+        </div>
+        <div class="collection">
+          <h2>Little Lights</h2>
+          <p>Faith-filled apparel created to encourage children to let the light of Christ shine.</p>
+        </div>
+        <div class="collection">
+          <h2>Drinkware</h2>
+          <p>Everyday pieces that help you carry and share the BTWM mission throughout your day.</p>
+        </div>
+        <div class="collection">
+          <h2>BTWM Beanies</h2>
+          <p>Comfortable ministry-branded beanies that combine warmth, faith, and purpose.</p>
+        </div>
+      </section>
+
+      <section class="mission-note">
+        <h2>Your Purchase Supports the Mission</h2>
+        <p>
+          Store proceeds help fund BTWM discipleship workshops, social media outreach, general outreach events, and other ministry efforts designed to spread God&rsquo;s Word and help believers grow in Christ.
+        </p>
+        <p class="mission-words">Build &bull; <span>Educate</span> &bull; Disciple</p>
+      </section>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-text">
+      <div>&copy; <span id="year"></span> Balancing the Word Ministry</div>
+      <div>Colossians 1:28</div>
+      <div class="footer-tagline">Build &bull; <span>Educate</span> &bull; Disciple</div>
+      <div><a class="footer-policy" href="privacy-policy.html">Privacy Policy</a></div>
+    </div>
+  </footer>
+
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
