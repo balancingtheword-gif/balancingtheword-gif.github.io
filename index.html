@@ -1906,6 +1906,58 @@ a[href="pages/btwm-in-action.html"].btn.primary{
 }
        .boxed-nav .nav-note{display:block;margin-top:2px;color:#B0122A;font-size:.72rem;font-style:italic;line-height:1.1;}
 
+/* Enhanced homepage navigation */
+.boxed-nav{
+  gap:16px !important;
+  margin:20px auto 22px !important;
+  padding:0 16px !important;
+}
+.boxed-nav a{
+  min-width:128px !important;
+  padding:13px 22px !important;
+  border:2px solid #CAA24A !important;
+  border-radius:10px !important;
+  background:#0B1F3A !important;
+  color:#ffffff !important;
+  font-size:1.05rem !important;
+  line-height:1.2 !important;
+  text-align:center !important;
+  letter-spacing:.2px !important;
+  box-shadow:0 6px 14px rgba(11,31,58,.18) !important;
+  transition:transform .18s ease, box-shadow .18s ease, background-color .18s ease !important;
+}
+.boxed-nav a:hover,
+.boxed-nav a:focus-visible{
+  transform:translateY(-2px) !important;
+  background:#B0122A !important;
+  border-color:#B0122A !important;
+  color:#ffffff !important;
+  box-shadow:0 9px 18px rgba(11,31,58,.24) !important;
+}
+.boxed-nav a.support-btn{
+  background:#B0122A !important;
+  border-color:#CAA24A !important;
+  border-radius:10px !important;
+  padding:13px 22px !important;
+}
+.boxed-nav a.support-btn:hover,
+.boxed-nav a.support-btn:focus-visible{
+  background:#ffffff !important;
+  border-color:#B0122A !important;
+  color:#B0122A !important;
+}
+@media (max-width:640px){
+  .boxed-nav{
+    gap:10px !important;
+    padding:0 10px !important;
+  }
+  .boxed-nav a{
+    min-width:140px !important;
+    padding:12px 16px !important;
+    font-size:1rem !important;
+  }
+}
+
     /* BTWM Shop launch announcement */
     .shop-launch{
       margin:24px 0;
