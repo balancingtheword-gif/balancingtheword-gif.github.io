@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Balancing the Word Ministry</title>
+  <title>Balancing the Word Ministry | Biblical Teaching &amp; Discipleship</title>
+  <meta name="description" content="Grow through Scripture-centered teaching, Read-Along messages, Go Deeper podcasts, Christian books, and discipleship resources from BTWM." />
 
   <style>
     :root{
@@ -84,7 +85,7 @@
       color:#fff;
       border-color:#b11226;
     }
-    .boxed-nav a[href="blog.html"]{
+    .boxed-nav a[href="pages/blog-archive.html"]{
       background-color:#0b2c4d;
       color:#fff;
       border-color:#0b2c4d;
@@ -1517,13 +1518,13 @@ a[href="pages/podcast.html"].btn.primary:hover{
   border-color:#B0122A !important;
 }
     /* BTWM in Action button */
-a[href="pages/btwm-in-action.html"].btn.primary{
+a[data-btwm-action="coming-soon"].btn.primary{
   background:#0B1F3A !important;
   color:#ffffff !important;
   border:2px solid #0B1F3A !important;
 }
 
-a[href="pages/btwm-in-action.html"].btn.primary:hover{
+a[data-btwm-action="coming-soon"].btn.primary:hover{
   background:#B0122A !important;
   color:#ffffff !important;
   border-color:#B0122A !important;
@@ -1693,13 +1694,13 @@ a[href="pages/podcast.html"].btn.primary{
 }
     /* Balance Foundations + BTWM in Action containers */
 a[href="pages/podcast.html"].btn.primary,
-a[href="pages/btwm-in-action.html"].btn.primary{
+a[data-btwm-action="coming-soon"].btn.primary{
   margin-top:18px !important;
 }
 
 /* Target the cards that contain these two buttons */
 .card:has(a[href="pages/podcast.html"]),
-.card:has(a[href="pages/btwm-in-action.html"]){
+.card:has(a[data-btwm-action="coming-soon"]){
   min-height:270px !important;
   padding:30px 30px 26px !important;
   display:flex !important;
@@ -1711,7 +1712,7 @@ a[href="pages/btwm-in-action.html"].btn.primary{
 
 /* Enhance titles */
 .card:has(a[href="pages/podcast.html"]) h2,
-.card:has(a[href="pages/btwm-in-action.html"]) h2{
+.card:has(a[data-btwm-action="coming-soon"]) h2{
   font-family:Georgia, "Times New Roman", serif !important;
   color:#0B1F3A !important;
   font-size:1.55rem !important;
@@ -1721,7 +1722,7 @@ a[href="pages/btwm-in-action.html"].btn.primary{
 
 /* Gold title divider */
 .card:has(a[href="pages/podcast.html"]) h2::after,
-.card:has(a[href="pages/btwm-in-action.html"]) h2::after{
+.card:has(a[data-btwm-action="coming-soon"]) h2::after{
   content:"" !important;
   display:block !important;
   width:72px !important;
@@ -1733,7 +1734,7 @@ a[href="pages/btwm-in-action.html"].btn.primary{
 
 /* Body text */
 .card:has(a[href="pages/podcast.html"]) p,
-.card:has(a[href="pages/btwm-in-action.html"]) p{
+.card:has(a[data-btwm-action="coming-soon"]) p{
   max-width:36ch !important;
   margin:0 auto 20px !important;
   line-height:1.6 !important;
@@ -1741,7 +1742,7 @@ a[href="pages/btwm-in-action.html"].btn.primary{
 
 /* Small branded accent at bottom */
 .card:has(a[href="pages/podcast.html"])::after,
-.card:has(a[href="pages/btwm-in-action.html"])::after{
+.card:has(a[data-btwm-action="coming-soon"])::after{
   content:"" !important;
   display:block !important;
   width:44px !important;
@@ -1753,7 +1754,7 @@ a[href="pages/btwm-in-action.html"].btn.primary{
 }
     /* Align Foundations + BTWM in Action buttons */
 .card:has(a[href="pages/podcast.html"]),
-.card:has(a[href="pages/btwm-in-action.html"]){
+.card:has(a[data-btwm-action="coming-soon"]){
   min-height:280px !important;
   display:flex !important;
   flex-direction:column !important;
@@ -1763,14 +1764,14 @@ a[href="pages/btwm-in-action.html"].btn.primary{
 }
 
 .card:has(a[href="pages/podcast.html"]) p,
-.card:has(a[href="pages/btwm-in-action.html"]) p{
+.card:has(a[data-btwm-action="coming-soon"]) p{
   max-width:38ch !important;
   margin:0 auto 20px !important;
   line-height:1.6 !important;
 }
 
 .card:has(a[href="pages/podcast.html"]) .btn,
-.card:has(a[href="pages/btwm-in-action.html"]) .btn{
+.card:has(a[data-btwm-action="coming-soon"]) .btn{
   margin-top:auto !important;
 }
     /* Contact + Stay Connected balance */
@@ -2165,6 +2166,20 @@ a[href="pages/btwm-in-action.html"].btn.primary{
     }
 
   </style>
+
+  <link rel="canonical" href="https://balancingtheword.org/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Balancing the Word Ministry" />
+  <meta property="og:title" content="Balancing the Word Ministry | Biblical Teaching &amp; Discipleship" />
+  <meta property="og:description" content="Grow through Scripture-centered teaching, Read-Along messages, Go Deeper podcasts, Christian books, and discipleship resources from BTWM." />
+  <meta property="og:url" content="https://balancingtheword.org/" />
+  <meta property="og:image" content="https://balancingtheword.org/Assets/images/layout/header/layout-website-home.png" />
+  <meta property="og:image:alt" content="Balancing the Word Ministry | Biblical Teaching &amp; Discipleship" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Balancing the Word Ministry | Biblical Teaching &amp; Discipleship" />
+  <meta name="twitter:description" content="Grow through Scripture-centered teaching, Read-Along messages, Go Deeper podcasts, Christian books, and discipleship resources from BTWM." />
+  <meta name="twitter:image" content="https://balancingtheword.org/Assets/images/layout/header/layout-website-home.png" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Balancing the Word Ministry | Biblical Teaching & Discipleship","url":"https://balancingtheword.org/","description":"Grow through Scripture-centered teaching, Read-Along messages, Go Deeper podcasts, Christian books, and discipleship resources from BTWM.","image":"https://balancingtheword.org/Assets/images/layout/header/layout-website-home.png","publisher":{"@type":"Organization","name":"Balancing the Word Ministry","url":"https://balancingtheword.org/","logo":{"@type":"ImageObject","url":"https://balancingtheword.org/Assets/images/logos/shield-no-scripture/shield-no-scripture.png"}},"inLanguage":"en-US"}</script>
 </head>
 
 <body>
@@ -2361,7 +2376,7 @@ a[href="pages/btwm-in-action.html"].btn.primary{
   through Scripture-centered work.
 </p>
 
-    <a href="pages/btwm-in-action.html" class="btn primary">
+    <a data-btwm-action="coming-soon" aria-disabled="true" class="btn primary">
       View Updates
     </a>
   </article>
@@ -2460,7 +2475,7 @@ a[href="pages/btwm-in-action.html"].btn.primary{
       Build &bull; <span style="color:#b11226; font-weight:800;">Educate</span> &bull; Disciple
     </div>
   <div class="small legal">
-      <a href="pages/privacy.html" class="footer-policy">Privacy Policy</a>
+      <a href="pages/privacy-policy.html" class="footer-policy">Privacy Policy</a>
     </div>
 </footer>
 
