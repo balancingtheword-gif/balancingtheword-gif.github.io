@@ -1410,12 +1410,26 @@
 }
 
 .featured-direction{
-  margin-top:auto !important;
+  display:block;
+  margin:0 0 14px !important;
   padding:12px 14px;
-  border-top:2px solid #CAA24A;
+  border:2px solid #CAA24A;
+  border-radius:10px;
+  background:#FDF9EE;
   color:#B0122A !important;
   font-weight:800;
   line-height:1.45 !important;
+  text-align:center;
+  text-decoration:none !important;
+  box-shadow:0 5px 14px rgba(11,31,58,.1);
+}
+
+.featured-direction:hover,
+.featured-direction:focus{
+  border-color:#B0122A;
+  background:#fff;
+  color:#0B1F3A !important;
+  transform:translateY(-1px);
 }
 
 .featured-direction::after{
@@ -2505,7 +2519,7 @@ a[data-btwm-action="coming-soon"].btn.primary{
 
       <p class="feature-desc">Discover how true biblical revival begins when the Light of Christ exposes darkness, leads us to repentance, and transforms a surrendered heart.</p>
 
-      <p class="featured-direction">View the Read-Along Podcast</p>
+      <a class="featured-direction" href="articles/featured-article.html" aria-label="View the Revival Begins in the Heart Read-Along Podcast">View the Read-Along Podcast</a>
     </section>
 
     <section class="featured-message-column read-along-column" aria-labelledby="read-along-title">
