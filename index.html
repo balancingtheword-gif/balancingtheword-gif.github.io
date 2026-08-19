@@ -1509,6 +1509,41 @@
   line-height:1;
 }
 
+.featured-scripture-divider{
+  width:min(88%, 920px);
+  height:2px;
+  margin:34px auto 24px;
+  background:linear-gradient(to right, transparent, #CAA24A 15%, #CAA24A 85%, transparent);
+}
+
+.featured-scripture-box{
+  width:min(92%, 820px);
+  margin:0 auto;
+  padding:22px 26px;
+  border:2px solid #CAA24A;
+  border-radius:12px;
+  background:#0B1F3A;
+  text-align:center;
+  box-shadow:0 8px 20px rgba(11,31,58,.14);
+}
+
+.featured-scripture-text{
+  margin:0 0 9px;
+  color:#F5E6A8;
+  font-family:Georgia, "Times New Roman", serif;
+  font-size:1.08rem;
+  font-style:italic;
+  line-height:1.6;
+}
+
+.featured-scripture-reference{
+  margin:0;
+  color:#FFD966;
+  font-size:.95rem;
+  font-weight:800;
+  letter-spacing:.05em;
+}
+
 #featured-book{
   grid-column:1 / -1;
 }
@@ -2556,6 +2591,12 @@ a[data-btwm-action="coming-soon"].btn.primary{
       </a>
     </section>
   </div>
+
+  <div class="featured-scripture-divider" aria-hidden="true"></div>
+  <aside class="featured-scripture-box" aria-label="Matthew 5:16">
+    <p class="featured-scripture-text">&ldquo;Let your light so shine before men, that they may see your good works, and glorify your Father which is in heaven.&rdquo;</p>
+    <p class="featured-scripture-reference">Matthew 5:16</p>
+  </aside>
 </article>
 
   <article class="feature-panel" id="featured-book">
