@@ -1325,6 +1325,153 @@
   .featured-paths{ gap:12px; }
   .featured-path{ width:88%; }
 }
+
+/* Three-part Featured Message layout */
+#articles-audio{
+  grid-column:1 / -1;
+  padding:0;
+  overflow:hidden;
+}
+
+.featured-message-heading{
+  width:100%;
+  margin:0 !important;
+  padding:18px 24px;
+  background:#0B1F3A;
+  color:#ffffff !important;
+  border-bottom:3px solid #CAA24A;
+  letter-spacing:.08em;
+}
+
+.featured-message-columns{
+  display:grid;
+  grid-template-columns:repeat(3, minmax(0, 1fr));
+  width:100%;
+}
+
+.featured-message-column{
+  min-width:0;
+  padding:26px 24px 28px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+}
+
+.featured-message-column + .featured-message-column{
+  border-left:2px solid rgba(202,162,74,.55);
+}
+
+.featured-column-label{
+  margin:0 0 10px !important;
+  color:#B0122A !important;
+  font-size:.8rem !important;
+  font-weight:800;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+}
+
+.featured-message-column h3{
+  margin:0 0 8px;
+  color:#0B1F3A;
+  font-size:1.3rem;
+  line-height:1.25;
+}
+
+.featured-message-column .featured-subtitle,
+.featured-message-column .go-deeper-subtitle{
+  margin:0 0 10px;
+  color:#B0122A !important;
+  font-size:.96rem;
+  font-weight:700;
+  line-height:1.35;
+}
+
+.featured-message-column .feature-release,
+.featured-message-column .next-message,
+.featured-message-column .featured-availability{
+  margin:0 0 12px !important;
+  font-size:.92rem !important;
+  line-height:1.35;
+}
+
+.featured-message-column .article-feature-img{
+  width:100%;
+  max-width:310px;
+  aspect-ratio:4 / 5;
+  object-fit:cover;
+  margin:4px auto 16px;
+}
+
+.featured-message-column .feature-desc{
+  margin:0 0 14px;
+  font-size:.96rem;
+  line-height:1.55;
+}
+
+.featured-direction{
+  margin-top:auto !important;
+  padding:12px 14px;
+  border-top:2px solid #CAA24A;
+  color:#B0122A !important;
+  font-weight:800;
+  line-height:1.45 !important;
+}
+
+.featured-podcast-brand{
+  display:block;
+  width:100%;
+  max-width:310px;
+  margin:4px auto 14px;
+  overflow:hidden;
+  border-radius:10px;
+  box-shadow:0 8px 20px rgba(11,31,58,.14);
+}
+
+.featured-podcast-brand img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+.featured-column-button{
+  margin-top:auto;
+}
+
+.go-deeper-art-space{
+  width:100%;
+  max-width:310px;
+  aspect-ratio:16 / 9;
+  margin:4px auto 14px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+  border:2px dashed #CAA24A;
+  border-radius:10px;
+  background:#FDF9EE;
+  color:#0B1F3A;
+  font-size:.9rem;
+  font-weight:700;
+  box-sizing:border-box;
+}
+
+.go-deeper-brand-link{
+  margin-top:auto;
+}
+
+#featured-book{
+  grid-column:1 / -1;
+}
+
+@media (max-width:850px){
+  .featured-message-columns{ grid-template-columns:1fr; }
+  .featured-message-column + .featured-message-column{
+    border-left:0;
+    border-top:2px solid rgba(202,162,74,.55);
+  }
+  .featured-message-column{ padding:26px 22px 30px; }
+}
     #foundations .feature-desc,
 #btwm-action .feature-desc {
   margin: 0 0 24px;
@@ -2303,6 +2450,52 @@ a[data-btwm-action="coming-soon"].btn.primary{
 </section>
 
 <section class="home-feature-grid">
+<article class="feature-panel article-podcast-panel" id="articles-audio">
+  <h2 class="featured-message-heading">FEATURED MESSAGE</h2>
+
+  <div class="featured-message-columns">
+    <section class="featured-message-column message-column" aria-labelledby="featured-message-title">
+      <p class="featured-column-label">Message</p>
+      <h3 id="featured-message-title">Revival Begins in the Heart</h3>
+      <p class="featured-subtitle">How the Light of Christ Transforms Us</p>
+      <p class="feature-release">Now Available</p>
+      <p class="next-message">Next Release: <strong>September 2</strong></p>
+
+      <img src="Assets/images/blog/revival-begins-in-the-heart.webp" alt="Jesus shining with divine light before a kneeling believer in a church setting." class="article-feature-img">
+
+      <p class="feature-desc">Discover how true biblical revival begins when the Light of Christ exposes darkness, leads us to repentance, and transforms a surrendered heart.</p>
+
+      <p class="featured-direction">To read the complete message or listen to the narration, click the Read-Along Podcast.</p>
+    </section>
+
+    <section class="featured-message-column read-along-column" aria-labelledby="read-along-title">
+      <p class="featured-column-label">Read-Along Podcast</p>
+      <h3 id="read-along-title">Read or Listen</h3>
+      <p class="feature-desc">Read the complete Featured Message or listen as Lesli D. Mize narrates it for you.</p>
+
+      <a class="featured-podcast-brand" href="articles/featured-article.html" aria-label="Open the Revival Begins in the Heart Read-Along Podcast">
+        <img src="Assets/images/podcast/read-along/read-along-website.webp" alt="Read-Along Podcast, written and narrated by Lesli D. Mize">
+      </a>
+
+      <a class="btn primary featured-column-button" href="articles/featured-article.html">Read or Listen &rarr;</a>
+    </section>
+
+    <section class="featured-message-column go-deeper-column" aria-labelledby="go-deeper-feature-title">
+      <p class="featured-column-label">Go Deeper Podcast</p>
+      <h3 id="go-deeper-feature-title">Guard the Flame, Shine the Light</h3>
+      <p class="go-deeper-subtitle">Reflecting Christ in a Darkened World</p>
+      <p class="featured-availability">Available Friday, August 21</p>
+
+      <div class="go-deeper-art-space" aria-label="Reserved space for episode artwork">Episode artwork will appear here.</div>
+
+      <p class="feature-desc">Explore how to live openly as a follower of Christ, guard the flame God has placed within you, and let His Light shine through your character, conduct, love, and witness.</p>
+
+      <a class="featured-podcast-brand go-deeper-brand-link" href="pages/podcast.html#revival-begins-in-the-heart" aria-label="Open the Guard the Flame, Shine the Light Go Deeper Podcast">
+        <img src="Assets/images/podcast/go-deeper/go-deeper-website.webp" alt="Go Deeper Podcast">
+      </a>
+    </section>
+  </div>
+</article>
 
   <article class="feature-panel" id="featured-book">
     <h2>FEATURED BOOK</h2>
@@ -2316,62 +2509,16 @@ a[data-btwm-action="coming-soon"].btn.primary{
     <p class="feature-desc">A gospel-centered message that confronts life&rsquo;s most important question and points readers to the truth, hope, and eternal life found in Jesus Christ.</p>
 
     <div class="featuredButtons">
-      <a href="pages/books.html"
-         class="btn primary">
-        Explore Books &amp; Resources
-      </a>
-
-      <a href="https://www.amazon.com/author/lesli-d-mize_balancingtheword"
-         target="_blank"
-         rel="noopener"
-         class="btn secondary">
-        Buy the Book
-      </a>
+      <a href="pages/books.html" class="btn primary">Explore Books &amp; Resources</a>
+      <a href="https://www.amazon.com/author/lesli-d-mize_balancingtheword" target="_blank" rel="noopener" class="btn secondary">Buy the Book</a>
     </div>
     <div class="featured-book-divider" aria-hidden="true"></div>
     <div class="featured-scripture">
-  <p>&ldquo;What will it profit a man if he gains the whole world, and loses his own soul?&rdquo;</p>
-  <span>Mark 8:36</span>
-</div>
-    <img src="https://balancingtheword.org/Assets/images/logos/publisher-mark/btwm-publisher-mark.png"
-         alt="BTWM publisher mark"
-         class="featured-publisher-mark">
+      <p>&ldquo;What will it profit a man if he gains the whole world, and loses his own soul?&rdquo;</p>
+      <span>Mark 8:36</span>
+    </div>
+    <img src="https://balancingtheword.org/Assets/images/logos/publisher-mark/btwm-publisher-mark.png" alt="BTWM publisher mark" class="featured-publisher-mark">
   </article>
-
-<article class="feature-panel article-podcast-panel" id="articles-audio">
-  <div class="article-half">
-    <h2>FEATURED MESSAGE</h2>
-
-    <p class="feature-release">Now Available</p>
-    <p class="next-message">New Message: <strong>September 2</strong></p>
-
-    <img src="Assets/images/blog/revival-begins-in-the-heart.webp" alt="Jesus shining with divine light before a kneeling believer in a church setting." class="article-feature-img">
-
-<h3 class="featured-main-title"><span>Revival Begins in the Heart</span></h3>
-<p class="featured-subtitle">How the Light of Christ Transforms Us</p>
-
-<p class="feature-desc">Discover how true biblical revival begins when the Light of Christ exposes darkness, leads us to repentance, and transforms a surrendered heart.</p>
-
-<div class="message-gold-divider" aria-hidden="true"></div>
-
-<div class="featured-paths" aria-label="Featured message and companion podcast">
-  <p class="featured-path-prompt">Read or Listen Here<span aria-hidden="true">&darr;</span></p>
-  <a class="featured-path" href="articles/featured-article.html" aria-label="Open the Featured Message and Read-Along Podcast">
-    <img src="Assets/images/podcast/read-along/read-along-website.webp" alt="Read-Along Podcast, written and narrated by Lesli D. Mize">
-  </a>
-  <p class="featured-path-prompt">Follow Up Here<span aria-hidden="true">&darr;</span></p>
-  <p class="featured-availability">
-    Available Friday, August 21
-    <span class="featured-podcast-title">Guard the Flame, Shine the Light</span>
-    <span class="featured-podcast-subtitle">Reflecting Christ in a Darkened World</span>
-  </p>
-  <a class="featured-path companion" href="pages/podcast.html#revival-begins-in-the-heart" aria-label="Learn about the companion Go Deeper Podcast">
-    <img src="Assets/images/podcast/go-deeper/go-deeper-website.webp" alt="Go Deeper Podcast">
-  </a>
-</div>
-
-</div>
-</article>
 
   <article class="feature-panel" id="foundations" role="link" tabindex="0" aria-label="Open the Go Deeper with Lesli podcast page" onclick="window.location.href='pages/podcast.html'" onkeydown="if(event.key==='Enter' || event.key===' '){ event.preventDefault(); window.location.href='pages/podcast.html'; }">
     <p class="go-deeper-label">PODCAST TEACHING</p>
