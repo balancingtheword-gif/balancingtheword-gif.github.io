@@ -757,21 +757,15 @@ main .card *{
       <span></span>
     </div>
 
-    <div class="featured-podcast-block" id="tongues-of-fire-words-of-order">
-      <h3 class="featured-episode-title">Tongues of Fire, Words of Order</h3>
+    <div class="featured-podcast-block" id="revival-begins-in-the-heart">
+      <h3 class="featured-episode-title">Guard the Flame, Shine the Light</h3>
       <p class="featured-episode-subtitle">Companion Go Deeper Podcast</p>
-      <p class="featured-date">Available Now</p>
+      <p class="featured-date">Available Friday, August 21</p>
       <a class="featured-readalong-link" href="../articles/featured-article.html">Begin with the Read-Along Message &rarr;</a>
       <p class="podcast-preview">
-        Go deeper into 1 Corinthians 14 as we examine tongues, interpretation, prophecy,
-        edification, and the biblical order Paul gives for spiritual gifts when believers gather.
+        Reflecting Christ in a Darkened World: explore how to live openly as a follower of Christ,
+        guard the flame God has placed within you, and let His Light shine through your character, conduct, love, and witness.
       </p>
-      <audio id="tongues-of-fire-audio" controls preload="metadata" src="../Assets/audio/go-deeper/tongues-of-fire-go-deeper.mp3">
-        Your browser does not support the audio element.
-      </audio>
-      <button class="podcast-btn" id="tongues-of-fire-listen" type="button">
-        Listen Now &rarr;
-      </button>
     </div>
 
 
@@ -838,12 +832,6 @@ main .card *{
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
-    document.getElementById("tongues-of-fire-listen").addEventListener("click", function () {
-      const audio = document.getElementById("tongues-of-fire-audio");
-      audio.play();
-      audio.scrollIntoView({ behavior: "smooth", block: "center" });
-    });
-
     document.querySelectorAll(".podcast-archive-list .archive-link a").forEach(function (link) {
       const audioUrl = link.getAttribute("href");
       if (!audioUrl || !audioUrl.toLowerCase().includes(".mp3")) return;
