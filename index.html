@@ -1418,6 +1418,16 @@
   line-height:1.45 !important;
 }
 
+.featured-direction::after{
+  content:"\2192";
+  display:inline-block;
+  margin-left:10px;
+  color:#CAA24A;
+  font-size:1.65rem;
+  line-height:1;
+  vertical-align:middle;
+}
+
 .featured-podcast-brand{
   display:block;
   width:100%;
@@ -1471,6 +1481,11 @@
     border-top:2px solid rgba(202,162,74,.55);
   }
   .featured-message-column{ padding:26px 22px 30px; }
+  .featured-direction::after{
+    content:"\2193";
+    display:block;
+    margin:8px auto 0;
+  }
 }
     #foundations .feature-desc,
 #btwm-action .feature-desc {
@@ -2465,7 +2480,7 @@ a[data-btwm-action="coming-soon"].btn.primary{
 
       <p class="feature-desc">Discover how true biblical revival begins when the Light of Christ exposes darkness, leads us to repentance, and transforms a surrendered heart.</p>
 
-      <p class="featured-direction">To read the complete message or listen to the narration, click the Read-Along Podcast.</p>
+      <p class="featured-direction">View the Read-Along Podcast</p>
     </section>
 
     <section class="featured-message-column read-along-column" aria-labelledby="read-along-title">
