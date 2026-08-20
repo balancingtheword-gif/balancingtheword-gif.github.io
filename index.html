@@ -1411,25 +1411,16 @@
 
 .featured-direction{
   display:block;
-  margin:0 0 14px !important;
+  margin:0 0 14px;
   padding:12px 14px;
   border:2px solid #CAA24A;
   border-radius:10px;
   background:#FDF9EE;
   color:#B0122A !important;
   font-weight:800;
-  line-height:1.45 !important;
+  line-height:1.45;
   text-align:center;
-  text-decoration:none !important;
   box-shadow:0 5px 14px rgba(11,31,58,.1);
-}
-
-.featured-direction:hover,
-.featured-direction:focus{
-  border-color:#B0122A;
-  background:#fff;
-  color:#0B1F3A !important;
-  transform:translateY(-1px);
 }
 
 .featured-direction::after{
@@ -1462,12 +1453,55 @@
   margin-top:0;
 }
 
+.read-along-note-divider{
+  width:82%;
+  height:2px;
+  margin:28px auto 20px;
+  background:linear-gradient(to right, transparent, #CAA24A 15%, #CAA24A 85%, transparent);
+}
+
+.read-along-host-note{
+  margin:0 auto;
+  padding:18px 16px;
+  border-left:4px solid #CAA24A;
+  border-radius:0 10px 10px 0;
+  background:#FDF9EE;
+  color:#0B1F3A;
+  text-align:left;
+  box-shadow:0 5px 14px rgba(11,31,58,.08);
+}
+
+.read-along-host-note p{
+  margin:0 0 10px !important;
+  color:#0B1F3A !important;
+  font-family:Georgia, "Times New Roman", serif;
+  font-size:.98rem;
+  font-style:italic;
+  line-height:1.55;
+}
+
+.read-along-host-note cite{
+  display:block;
+  color:#B0122A;
+  font-size:.9rem;
+  font-style:normal;
+  font-weight:800;
+  text-align:right;
+}
+
+.read-along-icon-divider{
+  width:82%;
+  height:2px;
+  margin:28px auto 42px;
+  background:linear-gradient(to right, transparent, #CAA24A 15%, #CAA24A 85%, transparent);
+}
+
 .read-along-publisher-icon{
   display:block;
-  width:150px;
-  max-width:48%;
+  width:270px;
+  max-width:82%;
   height:auto;
-  margin:28px auto 0;
+  margin:0 auto;
 }
 
 .go-deeper-episode-artwork{
@@ -1529,7 +1563,7 @@
 
 .featured-scripture-text{
   margin:0 0 9px;
-  color:#F5E6A8;
+  color:#F5E6A8 !important;
   font-family:Georgia, "Times New Roman", serif;
   font-size:1.08rem;
   font-style:italic;
@@ -1538,7 +1572,7 @@
 
 .featured-scripture-reference{
   margin:0;
-  color:#FFD966;
+  color:#FFD966 !important;
   font-size:.95rem;
   font-weight:800;
   letter-spacing:.05em;
@@ -2554,7 +2588,7 @@ a[data-btwm-action="coming-soon"].btn.primary{
 
       <p class="feature-desc">Discover how true biblical revival begins when the Light of Christ exposes darkness, leads us to repentance, and transforms a surrendered heart.</p>
 
-      <a class="featured-direction" href="articles/featured-article.html" aria-label="View the Revival Begins in the Heart Read-Along Podcast">View the Read-Along Podcast</a>
+      <div class="featured-direction">View the Read-Along Podcast</div>
 
       <div class="featured-scripture-divider" aria-hidden="true"></div>
       <aside class="featured-scripture-box" aria-label="Matthew 5:16, New American Standard Bible">
@@ -2574,6 +2608,13 @@ a[data-btwm-action="coming-soon"].btn.primary{
 
       <a class="btn primary featured-column-button" href="articles/featured-article.html">Read or Listen &rarr;</a>
 
+      <div class="read-along-note-divider" aria-hidden="true"></div>
+      <blockquote class="read-along-host-note">
+        <p>&ldquo;Created for quiet study, busy moments, and anyone who learns best by listening.&rdquo;</p>
+        <cite>&mdash; Lesli D. Mize</cite>
+      </blockquote>
+
+      <div class="read-along-icon-divider" aria-hidden="true"></div>
       <img class="read-along-publisher-icon" src="Assets/images/logos/podcast-publisher-art/podcast-publisher-art.png" alt="BTWM scales with an open Bible">
     </section>
 
