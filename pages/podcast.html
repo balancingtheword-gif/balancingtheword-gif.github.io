@@ -219,6 +219,17 @@
   text-align:center;
 }
 
+.featured-episode-artwork{
+  display:block;
+  width:100%;
+  max-width:420px;
+  height:auto;
+  margin:0 auto 20px;
+  border:3px solid #caa24a;
+  border-radius:10px;
+  box-shadow:0 8px 20px rgba(11,31,58,.14);
+}
+
 .featured-episode-title{
   color:#0b1f3a;
   font-size:2rem;
@@ -758,6 +769,7 @@ main .card *{
     </div>
 
     <div class="featured-podcast-block" id="revival-begins-in-the-heart">
+      <img class="featured-episode-artwork" src="../Assets/images/podcast/go-deeper/guard-the-flame.png" alt="A glowing lantern beside a path illuminated by golden light, artwork for Guard the Flame, Shine the Light">
       <h3 class="featured-episode-title">Guard the Flame, Shine the Light</h3>
       <p class="featured-episode-subtitle">Companion Go Deeper Podcast</p>
       <p class="featured-date">August 21, 2026</p>
@@ -766,9 +778,10 @@ main .card *{
         Reflecting Christ in a Darkened World: explore how to live openly as a follower of Christ,
         guard the flame God has placed within you, and let His Light shine through your character, conduct, love, and witness.
       </p>
-      <a class="podcast-btn" href="../Assets/audio/go-deeper/guard-the-flame-go-deeper.mp3" target="_blank" rel="noopener noreferrer">
-        Listen Now &rarr;
-      </a>
+      <audio controls preload="metadata" aria-label="Guard the Flame, Shine the Light podcast audio">
+        <source src="../Assets/audio/go-deeper/guard-the-flame-go-deeper.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
     </div>
 
 
