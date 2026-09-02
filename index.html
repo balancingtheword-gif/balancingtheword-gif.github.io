@@ -1166,6 +1166,9 @@
   border: 2px solid var(--gold);
   box-shadow: 0 6px 14px rgba(0,0,0,.15);
 }
+#featured-book .featured-book{
+  max-width:560px;
+}
     .article-podcast-panel {
   align-items: center;
   gap: 0;
@@ -1265,7 +1268,7 @@
 
 .featured-availability{
   margin:-10px 0 -8px !important;
-  color:#B0122A !important;
+  color:#0B1F3A !important;
   font-family:Georgia, "Times New Roman", serif;
   font-size:1.05rem !important;
   font-weight:800;
@@ -1401,6 +1404,12 @@
   aspect-ratio:4 / 5;
   object-fit:cover;
   margin:4px auto 16px;
+}
+
+.featured-message-column.message-column .article-feature-img{
+  height:auto;
+  aspect-ratio:auto;
+  object-fit:contain;
 }
 
 .featured-message-column .feature-desc{
@@ -2092,6 +2101,21 @@ a[data-btwm-action="coming-soon"].btn.primary{
   background:#fff !important;
 }
 
+.newsletter-home-image{
+  display:block;
+  width:100%;
+  max-width:560px;
+  margin:0 auto 20px;
+  border:2px solid #CAA24A;
+  border-radius:12px;
+  box-shadow:0 10px 22px rgba(11,31,58,.14);
+}
+
+.newsletter-home-action{
+  display:flex;
+  justify-content:center;
+}
+
 .scripture-box{
   max-width:100% !important;
   margin-top:16px !important;
@@ -2139,7 +2163,7 @@ a[data-btwm-action="coming-soon"].btn.primary{
   margin: 6px auto 18px;
   font-size: 0.88rem;
   line-height: 1.35;
-  color: #b0122a !important;
+  color: #0B1F3A !important;
   text-align: center;
   font-weight: 700;
 }
@@ -2246,8 +2270,9 @@ a[data-btwm-action="coming-soon"].btn.primary{
 
     /* BTWM Shop launch announcement */
     .shop-launch{
-      margin:24px 0;
-      padding:30px 28px;
+      width:min(100%, 860px);
+      margin:20px auto;
+      padding:20px 22px;
       border:2px solid var(--gold);
       border-left:6px solid var(--red);
       border-radius:16px;
@@ -2267,7 +2292,7 @@ a[data-btwm-action="coming-soon"].btn.primary{
     .shop-launch h2{
       margin:0 0 10px;
       color:#fff;
-      font-size:1.85rem;
+      font-size:1.6rem;
       line-height:1.25;
     }
     .shop-launch .launch-date{
@@ -2277,8 +2302,8 @@ a[data-btwm-action="coming-soon"].btn.primary{
     }
     .shop-launch .shop-promo-image-link{
       display:block;
-      max-width:560px;
-      margin:18px auto 22px;
+      max-width:420px;
+      margin:14px auto 16px;
       border:2px solid var(--gold);
       border-radius:12px;
       overflow:hidden;
@@ -2291,14 +2316,14 @@ a[data-btwm-action="coming-soon"].btn.primary{
     }
     .shop-launch .launch-copy{
       max-width:62ch;
-      margin:0 auto 20px;
+      margin:0 auto 16px;
       color:#fff;
       line-height:1.6;
     }
     .shop-launch .launch-offers{
-      max-width:620px;
-      margin:0 auto 14px;
-      padding:14px 18px;
+      max-width:560px;
+      margin:0 auto 12px;
+      padding:10px 16px;
       border-top:1px solid rgba(202,162,74,.65);
       border-bottom:1px solid rgba(202,162,74,.65);
     }
@@ -2501,6 +2526,7 @@ a[data-btwm-action="coming-soon"].btn.primary{
   <a href="pages/about.html">About</a>
   <a href="pages/shop.html">Shop</a>
   <a href="pages/blog-archive.html">Library</a>
+  <a href="pages/newsletter.html">Newsletter</a>
   <a href="pages/support.html" class="nav-link support-btn">Support</a>
   <a href="index.html#contact">Contact</a>
 </nav>
@@ -2509,7 +2535,7 @@ a[data-btwm-action="coming-soon"].btn.primary{
   <main class="wrap">
 
   <section class="top-cta" aria-label="Featured Message invitation">
-    <p>Join us in exploring the depth of biblical truth through the two-part series accompanying each <strong>Featured Message</strong>: the <strong>Read-Along Podcast</strong> and the <strong>Go Deeper Podcast</strong>. Share your thoughts, questions, or testimonies through our <a href="#contact">Contact Form</a>. To stay up to date, subscribe to our <a href="#email-list">newsletter below</a>.</p>
+    <p>Join us in exploring the depth of biblical truth through the two-part series accompanying each <strong>Featured Message</strong>: the <strong>Read-Along Podcast</strong> and the <strong>Go Deeper Podcast</strong>. Share your thoughts, questions, or testimonies through our <a href="#contact">Contact Form</a>. To stay up to date, visit our <a href="pages/newsletter.html">Newsletter page</a>.</p>
   </section>
 
   <section class="home-intro-grid">
@@ -2570,15 +2596,15 @@ a[data-btwm-action="coming-soon"].btn.primary{
 <section class="shop-launch" aria-labelledby="shop-launch-title">
   <p class="launch-label">Grand Opening Celebration</p>
   <h2 id="shop-launch-title">The BTWM Shop Is Now Open!</h2>
-  <p class="launch-date">Celebrate with special savings across BTWM.</p>
+  <p class="launch-date">The 10% discount has been extended through September 6th.</p>
   <a class="shop-promo-image-link" href="pages/shop.html" aria-label="Shop the BTWM Store grand opening promotion">
     <img class="shop-promo-image" src="Assets/images/homepage/shop/btwm-store-grand-opening.png" alt="BTWM Store Grand Opening promotion featuring a ministry T-shirt, hat, and mug with 10% off eligible products.">
   </a>
   <div class="launch-offers">
     <p><span class="launch-discount">Save 10%</span> on eligible products in the BTWM Shop.</p>
-    <p><span class="launch-discount">Save 10%</span> on eligible BTWM print books on Amazon.</p>
+    <p>Use code <span class="launch-discount">BTWMLAUNCH10</span> at checkout.</p>
   </div>
-  <p class="launch-copy">Wear, share, read, and support the mission of Balancing the Word Ministry. Workshop books are excluded from the Amazon promotion.</p>
+  <p class="launch-copy">Wear, share, read, and support the mission of Balancing the Word Ministry.</p>
   <div class="launch-actions">
     <a href="pages/shop.html" class="btn" aria-label="Visit the BTWM Shop">Visit the BTWM Shop</a>
     <a href="https://www.amazon.com/author/lesli-d-mize_balancingtheword" target="_blank" rel="noopener" class="btn amazon-btn" aria-label="Shop BTWM print books on Amazon">Shop Print Books on Amazon</a>
@@ -2592,21 +2618,20 @@ a[data-btwm-action="coming-soon"].btn.primary{
   <div class="featured-message-columns">
     <section class="featured-message-column message-column" aria-labelledby="featured-message-title">
       <p class="featured-column-label">Message</p>
-      <h3 id="featured-message-title">Revival Begins in the Heart</h3>
-      <p class="featured-subtitle">How the Light of Christ Transforms Us</p>
+      <h3 id="featured-message-title">Work Out Your Salvation</h3>
+      <p class="featured-subtitle">When Genuine Faith Becomes Visible</p>
       <p class="feature-release">Now Available</p>
-      <p class="next-message">Next Release: <strong>September 2</strong></p>
 
-      <img src="Assets/images/homepage/revival-begins-in-the-heart.png" alt="Revival Begins in the Heart artwork showing believers praying beneath a beam of light." class="article-feature-img">
+      <img src="Assets/images/homepage/work-out-your-salvation.png" alt="Work Out Your Salvation artwork showing a woman studying Scripture and a man holding a Bible in prayer." class="article-feature-img">
 
-      <p class="feature-desc">Discover how true biblical revival begins when the Light of Christ exposes darkness, leads us to repentance, and transforms a surrendered heart.</p>
+      <p class="feature-desc">Learn what Paul meant by working out your salvation and how genuine faith becomes visible through obedience, perseverance, repentance, and Christlike fruit.</p>
 
       <div class="featured-direction">View the Read-Along Podcast</div>
 
       <div class="featured-scripture-divider" aria-hidden="true"></div>
-      <aside class="featured-scripture-box" aria-label="Matthew 5:16, New American Standard Bible">
-        <p class="featured-scripture-text">&ldquo;Your light must shine before people in such a way that they may see your good works, and glorify your Father who is in heaven.&rdquo;</p>
-        <p class="featured-scripture-reference">Matthew 5:16 (NASB)</p>
+      <aside class="featured-scripture-box" aria-label="Philippians 2:12-13">
+        <p class="featured-scripture-text">&ldquo;Work out your salvation with fear and trembling; for it is God who is at work in you, both to desire and to work for His good pleasure.&rdquo;</p>
+        <p class="featured-scripture-reference">Philippians 2:12-13</p>
       </aside>
     </section>
 
@@ -2615,12 +2640,12 @@ a[data-btwm-action="coming-soon"].btn.primary{
       <h3 id="read-along-title">Read or Listen</h3>
       <p class="feature-desc">For your convenience, if you don&rsquo;t have time to read, you can listen while you&rsquo;re busy&mdash;or simply sit back and relax as Lesli narrates the message for you.</p>
 
-      <a class="go-deeper-click-cue" href="articles/featured-article.html" aria-label="Click here to open the Revival Begins in the Heart Read-Along Podcast">
+      <a class="go-deeper-click-cue" href="articles/featured-article.html" aria-label="Click here to open the Work Out Your Salvation Read-Along Podcast">
         Click Here
         <span class="go-deeper-click-arrow" aria-hidden="true">&darr;</span>
       </a>
 
-      <a class="featured-podcast-brand" href="articles/featured-article.html" aria-label="Open the Revival Begins in the Heart Read-Along Podcast">
+      <a class="featured-podcast-brand" href="articles/featured-article.html" aria-label="Open the Work Out Your Salvation Read-Along Podcast">
         <img src="Assets/images/podcast/read-along/read-along-website.webp" alt="Read-Along Podcast, written and narrated by Lesli D. Mize">
       </a>
 
@@ -2636,20 +2661,11 @@ a[data-btwm-action="coming-soon"].btn.primary{
 
     <section class="featured-message-column go-deeper-column" aria-labelledby="go-deeper-feature-title">
       <p class="featured-column-label">Go Deeper Podcast</p>
-      <h3 id="go-deeper-feature-title">Guard the Flame, Shine the Light</h3>
-      <p class="go-deeper-subtitle">Reflecting Christ in a Darkened World</p>
-      <p class="featured-availability">Now Available</p>
+      <h3 id="go-deeper-feature-title">Test Every Voice</h3>
+      <p class="go-deeper-subtitle">Biblical Discernment in an Age of Deception</p>
+      <p class="featured-availability">Available September 4th</p>
 
-      <img class="go-deeper-episode-artwork" src="Assets/images/homepage/guard-the-flame-shine-the-light.png" alt="Guard the Flame, Shine the Light artwork showing believers carrying lanterns through the darkness.">
-
-      <p class="feature-desc">Explore how to live openly as a follower of Christ, guard the flame God has placed within you, and let His Light shine through your character, conduct, love, and witness.</p>
-
-      <a class="go-deeper-click-cue" href="pages/podcast.html#revival-begins-in-the-heart" aria-label="Open the Guard the Flame, Shine the Light episode on the Go Deeper Podcast page">
-        Click Here
-        <span class="go-deeper-click-arrow" aria-hidden="true">&darr;</span>
-      </a>
-
-      <a class="featured-podcast-brand go-deeper-brand-link" href="pages/podcast.html#revival-begins-in-the-heart" aria-label="Open the Guard the Flame, Shine the Light episode on the Go Deeper Podcast page">
+      <a class="featured-podcast-brand go-deeper-brand-link" href="pages/podcast.html" aria-label="Visit the Go Deeper Podcast page">
         <img src="Assets/images/podcast/go-deeper/go-deeper-website.webp" alt="Go Deeper Podcast">
       </a>
     </section>
@@ -2658,25 +2674,20 @@ a[data-btwm-action="coming-soon"].btn.primary{
 </article>
 
   <article class="feature-panel" id="featured-book">
-    <h2>FEATURED BOOK</h2>
+    <h2>FEATURED BOOKLETS</h2>
 
-    <img src="https://balancingtheword.org/Assets/images/book-covers/eternal-question/eternal-question.png"
-         alt="The Eternal Question book cover"
+    <img src="Assets/images/homepage/tongues-revival-booklets.png"
+         alt="Tongues of Fire, Words of Order and Revival Begins in the Heart booklets by Lesli D. Mize"
          class="featured-book">
 
-    <h3 class="featuredTitle">The Eternal Question</h3>
+    <h3 class="featuredTitle">Tongues of Fire, Words of Order &amp; Revival Begins in the Heart</h3>
 
-    <p class="feature-desc">A gospel-centered message that confronts life&rsquo;s most important question and points readers to the truth, hope, and eternal life found in Jesus Christ.</p>
+    <p class="feature-desc">Two Scripture-centered booklets exploring biblical order in the gift of tongues and the transforming work of Christ that brings genuine revival to the heart.</p>
 
     <div class="featuredButtons">
-      <a href="pages/books.html" class="btn primary">Explore Books &amp; Resources</a>
-      <a href="https://www.amazon.com/author/lesli-d-mize_balancingtheword" target="_blank" rel="noopener" class="btn secondary">Buy the Book</a>
+      <a href="pages/books.html" class="btn primary">Explore Booklets &amp; Resources</a>
     </div>
     <div class="featured-book-divider" aria-hidden="true"></div>
-    <div class="featured-scripture">
-      <p>&ldquo;What will it profit a man if he gains the whole world, and loses his own soul?&rdquo;</p>
-      <span>Mark 8:36</span>
-    </div>
     <img src="https://balancingtheword.org/Assets/images/logos/publisher-mark/btwm-publisher-mark.png" alt="BTWM publisher mark" class="featured-publisher-mark">
   </article>
 
@@ -2759,13 +2770,16 @@ a[data-btwm-action="coming-soon"].btn.primary{
 </div>
 
 <div class="card subscribe-card" id="email-list">
-  <h2 class="connect-title">Stay Connected</h2>
+  <h2 class="connect-title">BTWM Newsletter</h2>
 
   <p class="connect-note">
-    Receive biblical messages, ministry updates, and encouragement to help you grow in God&rsquo;s Word.
+    Subscribe for biblical messages, ministry updates, and encouragement&mdash;then browse previous issues in the Newsletter Library.
   </p>
 
-  <script async data-uid="d93bc58dff" src="https://btwm.kit.com/d93bc58dff/index.js"></script>
+  <img class="newsletter-home-image" src="Assets/images/homepage/btwm-newsletter.png" alt="BTWM Newsletter with an open Bible, envelope, and fountain pen">
+  <div class="newsletter-home-action">
+    <a class="btn primary" href="pages/newsletter.html">Visit the Newsletter Page &rarr;</a>
+  </div>
 </div>
 
 </div>
