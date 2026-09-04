@@ -1548,6 +1548,49 @@
   line-height:1;
 }
 
+.go-deeper-column .go-deeper-click-cue,
+.go-deeper-column .go-deeper-click-cue:visited{
+  display:inline-flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:2px;
+  min-width:220px;
+  margin:8px auto 6px;
+  padding:10px 20px 7px;
+  border:1px solid #CAA24A;
+  border-radius:11px;
+  background:#FFF8EE;
+  color:#B0122A;
+  font-size:1.3rem;
+  line-height:1.2;
+  box-shadow:0 7px 14px rgba(11,31,58,.12);
+  text-decoration:none;
+}
+
+.go-deeper-column .go-deeper-click-cue:hover,
+.go-deeper-column .go-deeper-click-cue:focus{
+  background:#FFFFFF;
+  color:#0B1F3A;
+  text-decoration:none;
+}
+
+.go-deeper-column .go-deeper-click-arrow{
+  display:block;
+  font-size:1.5rem;
+}
+
+.go-deeper-cue-divider{
+  width:82%;
+  height:2px;
+  margin:16px auto 14px;
+  background:linear-gradient(to right, transparent, #CAA24A 15%, #CAA24A 85%, transparent);
+}
+
+.go-deeper-column .go-deeper-brand-link{
+  margin-top:8px;
+}
+
 .featured-scripture-divider{
   width:88%;
   height:2px;
@@ -2667,12 +2710,14 @@ a[data-btwm-action="coming-soon"].btn.primary{
 
       <img class="go-deeper-episode-artwork" src="Assets/images/podcast/go-deeper/testing-every-voice.png" alt="Testing Every Voice: Biblical Discernment in an Age of Deception, based on 1 John 4:1-6">
 
-      <p class="feature-desc">Learn to test spiritual claims against Scripture, recognize deception, and practice biblical discernment through 1 John 4:1-6.</p>
+      <p class="feature-desc">Learn how to test spiritual claims against Scripture, recognize voices that distort biblical truth, and practice faithful discernment through 1 John 4:1-6. This episode offers practical guidance for remaining grounded in God&rsquo;s Word when persuasive messages, cultural pressure, and spiritual deception compete for our attention.</p>
 
       <a class="go-deeper-click-cue" href="pages/podcast.html#testing-every-voice" aria-label="Open the Testing Every Voice episode on the Go Deeper Podcast page">
         Click Here
         <span class="go-deeper-click-arrow" aria-hidden="true">&darr;</span>
       </a>
+
+      <div class="go-deeper-cue-divider" aria-hidden="true"></div>
 
       <a class="featured-podcast-brand go-deeper-brand-link" href="pages/podcast.html#testing-every-voice" aria-label="Open the Testing Every Voice Go Deeper Podcast">
         <img src="Assets/images/podcast/go-deeper/go-deeper-website.webp" alt="Go Deeper Podcast">
