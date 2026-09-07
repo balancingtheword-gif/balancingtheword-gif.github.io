@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Shop Books, Apparel &amp; Gifts | Balancing the Word Ministry</title>
-  <meta name="description" content="Explore BTWM books, biblical resources, faith-inspired apparel, drinkware, beanies, and gifts that help support the ministry." />
+  <title>Shop Books &amp; Apparel | Balancing the Word Ministry</title>
+  <meta name="description" content="Explore BTWM books, biblical resources, faith-inspired apparel, drinkware, and beanies that help support the ministry." />
   <style>
     :root{
       --navy:#0b1f3a;
@@ -123,22 +123,43 @@
 
     .shop-grid{
       display:grid;
-      grid-template-columns:repeat(3, minmax(0, 1fr));
-      gap:20px;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:26px;
     }
 
     .shop-card{
       display:flex;
       flex-direction:column;
       min-height:100%;
-      padding:26px 22px;
+      position:relative;
+      overflow:hidden;
+      padding:34px 30px 30px;
       border:1px solid var(--border);
       border-top:4px solid var(--gold);
       border-left:4px solid var(--scarlet);
       border-radius:16px;
       background:#fff;
       text-align:center;
-      box-shadow:0 10px 24px rgba(11,31,58,.08);
+      box-shadow:0 14px 32px rgba(11,31,58,.10);
+      transition:transform .2s ease, box-shadow .2s ease;
+    }
+
+    .shop-card::before{
+      content:"";
+      position:absolute;
+      top:0;
+      right:0;
+      width:110px;
+      height:5px;
+      background:var(--scarlet);
+    }
+
+    .shop-card:nth-child(2){ border-left-color:var(--gold); border-top-color:var(--scarlet); }
+    .shop-card:nth-child(2)::before{ background:var(--gold); }
+
+    .shop-card:hover{
+      transform:translateY(-4px);
+      box-shadow:0 20px 42px rgba(11,31,58,.15);
     }
 
     .card-label{
@@ -157,7 +178,7 @@
     .shop-card h2{
       margin:0;
       color:var(--navy);
-      font-size:1.38rem;
+      font-size:clamp(1.55rem, 3vw, 2rem);
       line-height:1.25;
     }
 
@@ -174,14 +195,15 @@
     .shop-card p{
       margin:0 0 22px;
       color:var(--muted);
-      font-size:.98rem;
+      font-size:1.04rem;
+      line-height:1.65;
     }
 
     .shop-card .btn{ width:100%; margin-top:auto; }
 
     .monthly-feature{
       margin:4px 0 22px;
-      padding:18px 14px;
+      padding:22px 18px;
       border:1px solid rgba(202,162,74,.55);
       border-radius:12px;
       background:var(--cream);
@@ -231,7 +253,7 @@
 
     .store-feature{
       margin:4px 0 22px;
-      padding:18px 14px;
+      padding:22px 18px;
       border:1px solid rgba(202,162,74,.55);
       border-radius:12px;
       background:var(--cream);
@@ -307,26 +329,6 @@
       border-color:var(--gold);
     }
 
-    .coming-soon{
-      opacity:.92;
-      background:#fffdf8;
-    }
-
-    .coming-soon .btn{
-      cursor:default;
-      border-color:#9aa2af;
-      background:#eef0f3;
-      color:#5d6674;
-      box-shadow:none;
-    }
-
-    .coming-soon .btn:hover{
-      transform:none;
-      border-color:#9aa2af;
-      background:#eef0f3;
-      color:#5d6674;
-    }
-
     .mission-note{
       max-width:900px;
       margin:28px auto 0;
@@ -383,16 +385,16 @@
   <link rel="canonical" href="https://balancingtheword.org/pages/shop.html" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Balancing the Word Ministry" />
-  <meta property="og:title" content="Shop Books, Apparel &amp; Gifts | Balancing the Word Ministry" />
-  <meta property="og:description" content="Explore BTWM books, biblical resources, faith-inspired apparel, drinkware, beanies, and gifts that help support the ministry." />
+  <meta property="og:title" content="Shop Books &amp; Apparel | Balancing the Word Ministry" />
+  <meta property="og:description" content="Explore BTWM books, biblical resources, faith-inspired apparel, drinkware, and beanies that help support the ministry." />
   <meta property="og:url" content="https://balancingtheword.org/pages/shop.html" />
   <meta property="og:image" content="https://balancingtheword.org/Assets/images/store/signature-btwm-shirt.jpg" />
-  <meta property="og:image:alt" content="Shop Books, Apparel &amp; Gifts | Balancing the Word Ministry" />
+  <meta property="og:image:alt" content="Shop Books &amp; Apparel | Balancing the Word Ministry" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Shop Books, Apparel &amp; Gifts | Balancing the Word Ministry" />
-  <meta name="twitter:description" content="Explore BTWM books, biblical resources, faith-inspired apparel, drinkware, beanies, and gifts that help support the ministry." />
+  <meta name="twitter:title" content="Shop Books &amp; Apparel | Balancing the Word Ministry" />
+  <meta name="twitter:description" content="Explore BTWM books, biblical resources, faith-inspired apparel, drinkware, and beanies that help support the ministry." />
   <meta name="twitter:image" content="https://balancingtheword.org/Assets/images/store/signature-btwm-shirt.jpg" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Shop Books, Apparel & Gifts | Balancing the Word Ministry","url":"https://balancingtheword.org/pages/shop.html","description":"Explore BTWM books, biblical resources, faith-inspired apparel, drinkware, beanies, and gifts that help support the ministry.","image":"https://balancingtheword.org/Assets/images/store/signature-btwm-shirt.jpg","isPartOf":{"@type":"WebSite","name":"Balancing the Word Ministry","url":"https://balancingtheword.org/"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Shop Books & Apparel | Balancing the Word Ministry","url":"https://balancingtheword.org/pages/shop.html","description":"Explore BTWM books, biblical resources, faith-inspired apparel, drinkware, and beanies that help support the ministry.","image":"https://balancingtheword.org/Assets/images/store/signature-btwm-shirt.jpg","isPartOf":{"@type":"WebSite","name":"Balancing the Word Ministry","url":"https://balancingtheword.org/"}}</script>
 </head>
 
 <body>
@@ -413,7 +415,7 @@
       <p class="tagline">Wear, read, and share the mission.</p>
       <div class="gold-divider" aria-hidden="true"></div>
       <p class="intro-copy">
-        Explore books, ministry merchandise, and thoughtful resources that encourage faith while helping support the work of Balancing the Word Ministry.
+        Explore books and ministry merchandise that encourage faith while helping support the work of Balancing the Word Ministry.
       </p>
     </section>
 
@@ -461,13 +463,6 @@
           <a class="btn primary" href="https://www.bonfire.com/store/balancing-the-word-ministry/" target="_blank" rel="noopener noreferrer">Shop the Featured Collection</a>
           <a class="btn" href="store.html">Explore the BTWM Store</a>
         </div>
-      </article>
-
-      <article class="shop-card coming-soon">
-        <span class="card-label">Coming Soon</span>
-        <h2>Curated Gifts</h2>
-        <p>Faith-inspired gifts and carefully selected recommendations will be added as BTWM&rsquo;s affiliate partnerships are established.</p>
-        <span class="btn" aria-disabled="true">Coming Soon</span>
       </article>
     </section>
 
