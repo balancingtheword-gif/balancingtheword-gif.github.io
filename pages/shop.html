@@ -70,17 +70,66 @@
     .btn.support{ border-color:var(--scarlet); color:var(--scarlet); }
 
     .shop-intro{
-      max-width:900px;
+      position:relative;
+      overflow:hidden;
+      max-width:1080px;
       margin:0 auto 28px;
-      padding:38px 28px 34px;
-      border:1px solid var(--border);
-      border-top:5px solid var(--gold);
-      border-left:5px solid var(--scarlet);
-      border-radius:18px;
-      background:linear-gradient(145deg, #fff 0%, var(--cream) 100%);
+      padding:18px 18px 0;
+      border:3px solid var(--gold);
+      border-radius:20px;
+      background:linear-gradient(145deg, #06182e 0%, var(--navy) 72%, #17385f 100%);
       text-align:center;
-      box-shadow:0 12px 28px rgba(11,31,58,.10);
+      box-shadow:0 22px 46px rgba(11,31,58,.24);
     }
+
+    .shop-intro::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      background:radial-gradient(circle at 50% -15%, rgba(255,255,255,.24), transparent 42%);
+    }
+
+    .storefront-sign{ position:relative; padding:12px 16px 18px; }
+    .storefront-sign .eyebrow{ color:#f4d06f; }
+    .storefront-sign h1{ color:#fff; font-size:clamp(2rem,5vw,3.4rem); }
+    .storefront-sign .tagline{ color:#f4d06f; }
+
+    .storefront-window{
+      position:relative;
+      display:block;
+      overflow:hidden;
+      border:5px solid #d5ad4e;
+      border-bottom-width:9px;
+      border-radius:12px 12px 4px 4px;
+      background:#fff;
+      box-shadow:inset 0 0 0 2px rgba(255,255,255,.75),0 12px 30px rgba(0,0,0,.38);
+    }
+
+    .storefront-window img{ display:block; width:100%; height:auto; }
+    .storefront-window::after{
+      content:"";
+      position:absolute;
+      inset:0;
+      pointer-events:none;
+      background:linear-gradient(118deg, transparent 8%, rgba(255,255,255,.19) 23%, transparent 39%, transparent 68%, rgba(255,255,255,.10) 81%, transparent 92%);
+    }
+
+    .storefront-sill{
+      position:relative;
+      margin:0 -18px;
+      padding:22px 22px 24px;
+      border-top:1px solid rgba(255,255,255,.24);
+      background:linear-gradient(180deg,#17385f 0%,#071a31 100%);
+      color:#fff;
+      box-shadow:inset 0 5px 0 var(--gold);
+    }
+
+    .storefront-sill p{ margin:0 auto 16px; max-width:780px; font-size:1.04rem; }
+    .storefront-actions{ display:flex; justify-content:center; gap:12px; flex-wrap:wrap; }
+    .storefront-actions .btn{ min-width:210px; }
+    .storefront-actions .primary{ border-color:var(--gold); background:var(--scarlet); color:#fff; }
+    .storefront-actions .primary:hover{ background:#fff; border-color:#fff; color:var(--navy); }
 
     .eyebrow{
       margin:0 0 8px;
@@ -372,7 +421,10 @@
 
     @media (max-width:700px){
       .wrap{ width:min(100% - 24px, 1080px); }
-      .shop-intro{ padding:32px 18px 28px; }
+      .shop-intro{ padding:12px 12px 0; }
+      .storefront-sign{ padding:10px 10px 15px; }
+      .storefront-sill{ margin:0 -12px; padding:22px 16px 24px; }
+      .storefront-actions .btn{ width:100%; }
       .top-actions .btn{ flex:1 1 145px; }
     }
 
@@ -410,13 +462,21 @@
     </nav>
 
     <section class="shop-intro">
-      <p class="eyebrow">Balancing the Word Ministry</p>
-      <h1>Shop</h1>
-      <p class="tagline">Wear, read, and share the mission.</p>
-      <div class="gold-divider" aria-hidden="true"></div>
-      <p class="intro-copy">
-        Explore books and ministry merchandise that encourage faith while helping support the work of Balancing the Word Ministry.
-      </p>
+      <div class="storefront-sign">
+        <p class="eyebrow">Balancing the Word Ministry</p>
+        <h1>Welcome to the BTWM Shop</h1>
+        <p class="tagline">Wear, read, and share the mission.</p>
+      </div>
+      <a class="storefront-window" href="https://www.bonfire.com/store/balancing-the-word-ministry/" target="_blank" rel="noopener noreferrer" aria-label="Visit the BTWM Store and view the new subscriber discount">
+        <img src="../Assets/images/store/new-subscriber-perk.png" alt="New BTWM subscribers receive 10% off eligible logo-based apparel and drinkware">
+      </a>
+      <div class="storefront-sill">
+        <p>Step into the BTWM storefront to find meaningful apparel and drinkware that share your faith. New newsletter subscribers receive 10% off eligible logo-based items.</p>
+        <div class="storefront-actions">
+          <a class="btn primary" href="https://www.bonfire.com/store/balancing-the-word-ministry/" target="_blank" rel="noopener noreferrer">Shop the BTWM Store</a>
+          <a class="btn" href="newsletter.html">Get the Subscriber Perk</a>
+        </div>
+      </div>
     </section>
 
     <section class="shop-grid" aria-label="Shopping options">
