@@ -397,6 +397,32 @@
   max-width:none;
 }
 
+.newsletter-stack{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+  width:100%;
+}
+
+.newsletter-shield-box{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-height:260px;
+  padding:22px;
+  overflow:hidden;
+  background:#ffffff;
+  border:1px solid rgba(11,31,58,.14);
+  border-radius:14px;
+  box-shadow:0 8px 20px rgba(11,31,58,.12);
+}
+
+.newsletter-shield-image{
+  display:block;
+  width:min(100%, 360px);
+  height:auto;
+}
+
 .connect-card{
   width:100%;
 }
@@ -1626,7 +1652,7 @@
   letter-spacing:.05em;
 }
 
-#featured-book{
+#subscriber-perk{
   grid-column:1 / -1;
 }
 
@@ -2636,21 +2662,6 @@ a[href="pages/btwm-in-action.html"].btn.primary{
 </section>
 
 
-<section class="shop-launch" aria-labelledby="shop-launch-title">
-  <p class="launch-label">Newsletter Subscriber Benefit</p>
-  <h2 id="shop-launch-title">New Subscriber Perk</h2>
-  <a class="shop-promo-image-link" href="pages/shop.html" aria-label="View the BTWM Store new subscriber promotion">
-    <img class="shop-promo-image" src="Assets/images/store/new-subscriber-perk.png" alt="New BTWM newsletter subscribers receive 10% off eligible logo-based apparel and drinkware.">
-  </a>
-  <div class="launch-offers">
-    <p><span class="launch-discount">Save 10%</span> on eligible logo-based products.</p>
-  </div>
-  <p class="launch-copy">Wear, share, read, and support the mission of Balancing the Word Ministry.</p>
-  <div class="launch-actions">
-    <a href="pages/newsletter.html" class="btn">Get Subscriber Perk</a>
-  </div>
-</section>
-
 <section class="home-feature-grid">
   <article class="feature-panel article-podcast-panel" id="articles-audio">
     <h2 class="featured-message-heading">FEATURED MESSAGE</h2>
@@ -2682,33 +2693,31 @@ a[href="pages/btwm-in-action.html"].btn.primary{
       </section>
       <section class="featured-message-column go-deeper-column" aria-labelledby="go-deeper-feature-title">
         <p class="featured-column-label">Go Deeper Podcast</p>
-        <h3 id="go-deeper-feature-title">Go Deeper with This Message</h3>
-        <p class="go-deeper-subtitle">Proverbs 29:18</p>
-        <p class="featured-availability">Coming Friday</p>
-        <p class="feature-desc">Continue the study with a closer look at how the meaning of vision in Proverbs 29:18 has often been misunderstood, along with Lesli&rsquo;s personal story about correction, discipline, humility, and self-control.</p>
-        <a class="go-deeper-click-cue" href="pages/podcast.html" aria-label="Open the Go Deeper podcast page">Click Here<span class="go-deeper-click-arrow" aria-hidden="true">&darr;</span></a>
+        <h3 id="go-deeper-feature-title">Beyond Dreams and Vision Boards</h3>
+        <p class="go-deeper-subtitle">What Proverbs 29:18 Really Means</p>
+        <p class="featured-availability">Now Available</p>
+        <img class="go-deeper-episode-artwork" src="Assets/images/podcast/go-deeper/beyond-dreams.png" alt="Beyond Dreams and Vision Boards Go Deeper Podcast artwork">
+        <p class="feature-desc">Go beyond personal dreams and ambition to examine what Proverbs 29:18 teaches about prophetic revelation, biblical restraint, correction, discipline, humility, and self-control.</p>
+        <a class="go-deeper-click-cue" href="podcasts/beyond-dreams-and-vision-boards.html" aria-label="Open Beyond Dreams and Vision Boards">Listen Now<span class="go-deeper-click-arrow" aria-hidden="true">&darr;</span></a>
         <div class="go-deeper-cue-divider" aria-hidden="true"></div>
         <a class="featured-podcast-brand go-deeper-brand-link" href="pages/podcast.html" aria-label="Open the Go Deeper podcast page"><img src="Assets/images/podcast/go-deeper/go-deeper-website.webp" alt="Go Deeper Podcast"></a>
       </section>
     </div>
   </article>
 
-  <article class="feature-panel" id="featured-book">
-    <h2>FEATURED BOOKLETS</h2>
-
-    <img src="Assets/images/homepage/tongues-revival-booklets.png"
-         alt="Tongues of Fire, Words of Order and Revival Begins in the Heart booklets by Lesli D. Mize"
-         class="featured-book">
-
-    <h3 class="featuredTitle">Tongues of Fire, Words of Order &amp; Revival Begins in the Heart</h3>
-
-    <p class="feature-desc">Two Scripture-centered booklets exploring biblical order in the gift of tongues and the transforming work of Christ that brings genuine revival to the heart.</p>
-
-    <div class="featuredButtons">
-      <a href="pages/books.html" class="btn primary">Explore Booklets &amp; Resources</a>
+  <article class="feature-panel shop-launch" id="subscriber-perk" aria-labelledby="shop-launch-title">
+    <p class="launch-label">Newsletter Subscriber Benefit</p>
+    <h2 id="shop-launch-title">New Subscriber Perk</h2>
+    <a class="shop-promo-image-link" href="pages/shop.html" aria-label="View the BTWM Store new subscriber promotion">
+      <img class="shop-promo-image" src="Assets/images/store/new-subscriber-perk.png" alt="New BTWM newsletter subscribers receive 10% off eligible logo-based apparel and drinkware.">
+    </a>
+    <div class="launch-offers">
+      <p><span class="launch-discount">Save 10%</span> on eligible logo-based products.</p>
     </div>
-    <div class="featured-book-divider" aria-hidden="true"></div>
-    <img src="https://balancingtheword.org/Assets/images/logos/publisher-mark/btwm-publisher-mark.png" alt="BTWM publisher mark" class="featured-publisher-mark">
+    <p class="launch-copy">Wear, share, read, and support the mission of Balancing the Word Ministry.</p>
+    <div class="launch-actions">
+      <a href="pages/newsletter.html" class="btn">Get Subscriber Perk</a>
+    </div>
   </article>
 
   <article class="feature-panel" id="foundations" role="link" tabindex="0" aria-label="Open the Go Deeper with Lesli podcast page" onclick="window.location.href='pages/podcast.html'" onkeydown="if(event.key==='Enter' || event.key===' '){ event.preventDefault(); window.location.href='pages/podcast.html'; }">
@@ -2789,10 +2798,15 @@ a[href="pages/btwm-in-action.html"].btn.primary{
 
 </div>
 
-<div class="card subscribe-card" id="email-list">
-  <img class="newsletter-home-image" src="Assets/images/homepage/btwm-newsletter.png" alt="BTWM Newsletter with an open Bible, envelope, and fountain pen">
-  <div class="newsletter-home-action">
-    <a class="btn primary" href="pages/newsletter.html">Newsletter &amp; Archive &rarr;</a>
+<div class="newsletter-stack">
+  <div class="card subscribe-card" id="email-list">
+    <img class="newsletter-home-image" src="Assets/images/homepage/btwm-newsletter.png" alt="BTWM Newsletter with an open Bible, envelope, and fountain pen">
+    <div class="newsletter-home-action">
+      <a class="btn primary" href="pages/newsletter.html">Newsletter &amp; Archive &rarr;</a>
+    </div>
+  </div>
+  <div class="newsletter-shield-box">
+    <img class="newsletter-shield-image" src="Assets/images/logos/shield-without-tagline-trans.png" alt="Balancing the Word Ministry shield logo">
   </div>
 </div>
 
