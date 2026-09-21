@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Shop Books &amp; Apparel | Balancing the Word Ministry</title>
-  <meta name="description" content="Explore BTWM books, biblical resources, faith-inspired apparel, drinkware, and beanies that help support the ministry." />
+  <title>Christian Books, Gifts &amp; Apparel | BTWM Shop</title>
+  <meta name="description" content="Shop Christian books, the Bible Characters series, biblical resources, BTWM apparel, drinkware, hats, and gifts. New subscribers save 10% on eligible logo items." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
   <style>
     :root{
       --navy:#0b1f3a;
@@ -95,26 +96,6 @@
     .storefront-sign h1{ color:#fff; font-size:clamp(2rem,5vw,3.4rem); }
     .storefront-sign .tagline{ color:#f4d06f; }
 
-    .storefront-window{
-      position:relative;
-      display:block;
-      overflow:hidden;
-      border:5px solid #d5ad4e;
-      border-bottom-width:9px;
-      border-radius:12px 12px 4px 4px;
-      background:#fff;
-      box-shadow:inset 0 0 0 2px rgba(255,255,255,.75),0 12px 30px rgba(0,0,0,.38);
-    }
-
-    .storefront-window img{ display:block; width:100%; height:auto; }
-    .storefront-window::after{
-      content:"";
-      position:absolute;
-      inset:0;
-      pointer-events:none;
-      background:linear-gradient(118deg, transparent 8%, rgba(255,255,255,.19) 23%, transparent 39%, transparent 68%, rgba(255,255,255,.10) 81%, transparent 92%);
-    }
-
     .storefront-sill{
       position:relative;
       margin:0 -18px;
@@ -168,6 +149,60 @@
       font-size:1.06rem;
     }
 
+    .series-announcement{
+      max-width:1080px;
+      margin:0 auto 28px;
+      padding:26px;
+      border:2px solid var(--gold);
+      border-left:6px solid var(--scarlet);
+      border-radius:16px;
+      background:linear-gradient(135deg, #07192f 0%, #12365c 100%);
+      color:#fff;
+      text-align:center;
+      box-shadow:0 14px 32px rgba(11,31,58,.16);
+    }
+    .series-announcement .series-label{
+      margin:0 0 6px;
+      color:#f4d06f;
+      font-size:.82rem;
+      font-weight:800;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+    .series-announcement h2{
+      margin:0 0 14px;
+      color:#fff;
+      font-size:clamp(1.55rem, 4vw, 2.25rem);
+      line-height:1.25;
+    }
+    .series-announcement .series-image-link{
+      display:block;
+      max-width:760px;
+      margin:0 auto 16px;
+      overflow:hidden;
+      border:2px solid var(--gold);
+      border-radius:12px;
+      box-shadow:0 10px 24px rgba(0,0,0,.3);
+    }
+    .series-announcement img{display:block;width:100%;height:auto;}
+    .series-announcement .series-copy{
+      max-width:68ch;
+      margin:0 auto 18px;
+      color:#fff;
+      line-height:1.65;
+    }
+    .series-announcement .btn{
+      border-color:var(--gold);
+      background:var(--scarlet);
+      color:#fff;
+    }
+    .series-announcement .btn:hover,
+    .series-announcement .btn:focus-visible{
+      border-color:#fff;
+      background:#fff;
+      color:var(--navy);
+    }
+
     .shop-grid{
       display:grid;
       grid-template-columns:repeat(2, minmax(0, 1fr));
@@ -180,12 +215,12 @@
       min-height:100%;
       position:relative;
       overflow:hidden;
-      padding:34px 30px 30px;
+      padding:0 30px 30px;
       border:1px solid var(--border);
       border-top:4px solid var(--gold);
       border-left:4px solid var(--scarlet);
       border-radius:16px;
-      background:#fff;
+      background:radial-gradient(circle at 100% 100%, rgba(202,162,74,.10), transparent 34%),linear-gradient(180deg,#fff 0%,#fffdf8 100%);
       text-align:center;
       box-shadow:0 14px 32px rgba(11,31,58,.10);
       transition:transform .2s ease, box-shadow .2s ease;
@@ -196,8 +231,8 @@
       position:absolute;
       top:0;
       right:0;
-      width:110px;
-      height:5px;
+      width:42%;
+      height:4px;
       background:var(--scarlet);
     }
 
@@ -209,13 +244,57 @@
       box-shadow:0 20px 42px rgba(11,31,58,.15);
     }
 
+    .shop-card-heading{
+      position:relative;
+      overflow:hidden;
+      margin:0 -30px 26px;
+      padding:28px 28px 26px;
+      border-bottom:3px solid var(--gold);
+      background:radial-gradient(circle at 88% 12%, rgba(202,162,74,.26), transparent 28%),linear-gradient(145deg,#071a31 0%,#12365c 100%);
+      color:#fff;
+    }
+
+    .shop-card:nth-child(2) .shop-card-heading{background:radial-gradient(circle at 12% 12%, rgba(176,18,42,.24), transparent 28%),linear-gradient(145deg,#12365c 0%,#071a31 100%);}
+
+    .shop-card-heading::after{
+      content:"";
+      position:absolute;
+      right:-34px;
+      bottom:-42px;
+      width:135px;
+      height:135px;
+      border:1px solid rgba(244,208,111,.32);
+      border-radius:50%;
+      box-shadow:0 0 0 16px rgba(244,208,111,.06),0 0 0 32px rgba(244,208,111,.04);
+    }
+
+    .shop-card-icon{
+      position:relative;
+      z-index:1;
+      display:grid;
+      place-items:center;
+      width:58px;
+      height:58px;
+      margin:0 auto 12px;
+      border:1px solid rgba(244,208,111,.75);
+      border-radius:50%;
+      background:rgba(255,255,255,.08);
+      color:#f4d06f;
+      box-shadow:0 8px 20px rgba(0,0,0,.22),inset 0 0 0 4px rgba(255,255,255,.04);
+    }
+
+    .shop-card-icon svg{width:30px;height:30px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+
     .card-label{
+      position:relative;
+      z-index:1;
       width:fit-content;
       margin:0 auto 14px;
       padding:4px 10px;
       border-radius:999px;
-      background:rgba(202,162,74,.16);
-      color:var(--scarlet);
+      border:1px solid rgba(244,208,111,.5);
+      background:rgba(244,208,111,.12);
+      color:#f4d06f;
       font-size:.75rem;
       font-weight:800;
       letter-spacing:.05em;
@@ -223,8 +302,10 @@
     }
 
     .shop-card h2{
+      position:relative;
+      z-index:1;
       margin:0;
-      color:var(--navy);
+      color:#fff;
       font-size:clamp(1.55rem, 3vw, 2rem);
       line-height:1.25;
     }
@@ -236,7 +317,7 @@
       height:3px;
       margin:14px auto;
       border-radius:999px;
-      background:var(--gold);
+      background:#f4d06f;
     }
 
     .shop-card p{
@@ -246,14 +327,25 @@
       line-height:1.65;
     }
 
+    .shop-card-heading .card-intro{
+      position:relative;
+      z-index:1;
+      max-width:42ch;
+      margin:0 auto;
+      color:#eef4fb;
+      font-size:1rem;
+      line-height:1.6;
+    }
+
     .shop-card .btn{ width:100%; margin-top:auto; }
 
     .monthly-feature{
       margin:4px 0 22px;
       padding:22px 18px;
-      border:1px solid rgba(202,162,74,.55);
-      border-radius:12px;
-      background:var(--cream);
+      border:1px solid rgba(202,162,74,.62);
+      border-radius:14px;
+      background:linear-gradient(145deg,#fffdf7 0%,#f7f0df 100%);
+      box-shadow:inset 0 1px 0 #fff,0 10px 24px rgba(11,31,58,.08);
     }
 
     .monthly-feature-label{
@@ -301,9 +393,10 @@
     .store-feature{
       margin:4px 0 22px;
       padding:22px 18px;
-      border:1px solid rgba(202,162,74,.55);
-      border-radius:12px;
-      background:var(--cream);
+      border:1px solid rgba(202,162,74,.62);
+      border-radius:14px;
+      background:linear-gradient(145deg,#fffdf7 0%,#f7f0df 100%);
+      box-shadow:inset 0 1px 0 #fff,0 10px 24px rgba(11,31,58,.08);
     }
 
     .store-feature-label{
@@ -368,6 +461,7 @@
       border-color:var(--gold);
       background:var(--scarlet);
       color:#fff;
+      box-shadow:0 8px 18px rgba(176,18,42,.18);
     }
 
     .shop-card .primary:hover,
@@ -435,16 +529,19 @@
   <link rel="canonical" href="https://balancingtheword.org/pages/shop.html" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Balancing the Word Ministry" />
-  <meta property="og:title" content="Shop Books &amp; Apparel | Balancing the Word Ministry" />
-  <meta property="og:description" content="Explore BTWM books, biblical resources, faith-inspired apparel, drinkware, and beanies that help support the ministry." />
+  <meta property="og:title" content="Christian Books, Gifts &amp; Apparel | BTWM Shop" />
+  <meta property="og:description" content="Explore Christian books, the Bible Characters series, BTWM apparel and gifts, plus a 10% benefit for new subscribers on eligible logo items." />
   <meta property="og:url" content="https://balancingtheword.org/pages/shop.html" />
-  <meta property="og:image" content="https://balancingtheword.org/Assets/images/store/signature-btwm-shirt.jpg" />
-  <meta property="og:image:alt" content="Shop Books &amp; Apparel | Balancing the Word Ministry" />
+  <meta property="og:image" content="https://balancingtheword.org/Assets/images/book-covers/bible-characters-series.png" />
+  <meta property="og:image:width" content="970" />
+  <meta property="og:image:height" content="600" />
+  <meta property="og:image:alt" content="Bible Characters book series available through the BTWM Shop" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Shop Books &amp; Apparel | Balancing the Word Ministry" />
-  <meta name="twitter:description" content="Explore BTWM books, biblical resources, faith-inspired apparel, drinkware, and beanies that help support the ministry." />
-  <meta name="twitter:image" content="https://balancingtheword.org/Assets/images/store/signature-btwm-shirt.jpg" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Shop Books & Apparel | Balancing the Word Ministry","url":"https://balancingtheword.org/pages/shop.html","description":"Explore BTWM books, biblical resources, faith-inspired apparel, drinkware, and beanies that help support the ministry.","image":"https://balancingtheword.org/Assets/images/store/signature-btwm-shirt.jpg","isPartOf":{"@type":"WebSite","name":"Balancing the Word Ministry","url":"https://balancingtheword.org/"}}</script>
+  <meta name="twitter:title" content="Christian Books, Gifts &amp; Apparel | BTWM Shop" />
+  <meta name="twitter:description" content="Explore Christian books, the Bible Characters series, BTWM apparel and gifts, plus a 10% benefit for new subscribers." />
+  <meta name="twitter:image" content="https://balancingtheword.org/Assets/images/book-covers/bible-characters-series.png" />
+  <meta name="twitter:image:alt" content="Bible Characters book series available through the BTWM Shop" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Christian Books, Gifts & Apparel | BTWM Shop","url":"https://balancingtheword.org/pages/shop.html","description":"Shop Christian books, the Bible Characters series, biblical resources, BTWM apparel and gifts, with a 10% benefit for new subscribers on eligible logo items.","image":"https://balancingtheword.org/Assets/images/book-covers/bible-characters-series.png","isPartOf":{"@type":"WebSite","@id":"https://balancingtheword.org/#website","name":"Balancing the Word Ministry","url":"https://balancingtheword.org/"},"mainEntity":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"name":"Books & Resources","url":"https://balancingtheword.org/pages/books.html"},{"@type":"ListItem","position":2,"name":"BTWM Store","url":"https://www.bonfire.com/store/balancing-the-word-ministry/"}]}}</script>
 </head>
 
 <body>
@@ -465,9 +562,6 @@
         <h1>New Newsletter Subscriber Perk</h1>
         <p class="tagline">Wear and share the mission</p>
       </div>
-      <a class="storefront-window" href="https://www.bonfire.com/store/balancing-the-word-ministry/" target="_blank" rel="noopener noreferrer" aria-label="Visit the BTWM Store and view the new subscriber discount">
-        <img src="../Assets/images/store/new-subscriber-perk.png" alt="New BTWM subscribers receive 10% off eligible logo-based apparel and drinkware">
-      </a>
       <div class="storefront-sill">
         <p>Step into the BTWM storefront to find meaningful apparel and drinkware that share your faith. New newsletter subscribers receive 10% off eligible logo-based items.</p>
         <div class="storefront-actions">
@@ -476,11 +570,26 @@
       </div>
     </section>
 
+    <section class="series-announcement" aria-labelledby="bible-characters-title">
+      <p class="series-label">New Book Series</p>
+      <h2 id="bible-characters-title">Bible Characters: Timeless Lessons for Today</h2>
+      <a class="series-image-link" href="https://www.amazon.com/author/lesli-d-mize_balancingtheword" target="_blank" rel="noopener noreferrer" aria-label="Explore the Bible Characters series on Amazon">
+        <img src="../Assets/images/book-covers/bible-characters-series.png" alt="Unexpected Answers, Balaam: Diviner or Prophet, and The Eternal Question by Lesli D. Mize">
+      </a>
+      <p class="series-copy">Meet familiar and unexpected people from Scripture, revisit the choices that shaped their stories, and discover enduring biblical lessons for faith and life today.</p>
+      <a class="btn" href="https://www.amazon.com/author/lesli-d-mize_balancingtheword" target="_blank" rel="noopener noreferrer">Explore the Series</a>
+    </section>
+
     <section class="shop-grid" aria-label="Shopping options">
       <article class="shop-card">
-        <span class="card-label">Read &amp; Grow</span>
-        <h2>Books &amp; Resources</h2>
-        <p>Discover books, eBooks, teaching resources, free samples, and downloads created to help believers grow in biblical understanding.</p>
+        <div class="shop-card-heading">
+          <div class="shop-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32"><path d="M4 6.5c4.5-.8 8.5.1 12 2.7v17c-3.5-2.6-7.5-3.5-12-2.7z"/><path d="M28 6.5c-4.5-.8-8.5.1-12 2.7v17c3.5-2.6 7.5-3.5 12-2.7z"/><path d="M16 9.2v17"/></svg>
+          </div>
+          <span class="card-label">Read &amp; Grow</span>
+          <h2>Books &amp; Resources</h2>
+          <p class="card-intro">Discover books, eBooks, teaching resources, free samples, and downloads created to help believers grow in biblical understanding.</p>
+        </div>
         <div class="monthly-feature">
           <p class="monthly-feature-label">Monthly Featured Booklets</p>
           <img class="featured-book-cover" src="../Assets/images/homepage/tongues-revival-booklets.png" alt="Tongues of Fire, Words of Order and Revival Begins in the Heart booklets by Lesli D. Mize" loading="lazy">
@@ -488,15 +597,19 @@
           <p class="book-description">Two Scripture-centered booklets exploring biblical order in the gift of tongues and the transforming work of Christ that brings genuine revival to the heart.</p>
         </div>
         <div class="book-actions">
-          <a class="btn primary" href="https://www.amazon.com/author/lesli-d-mize_balancingtheword" target="_blank" rel="noopener noreferrer">Shop the Booklets</a>
-          <a class="btn" href="books.html">Explore Books &amp; Resources</a>
+          <a class="btn primary" href="books.html">Explore Books &amp; Resources</a>
         </div>
       </article>
 
       <article class="shop-card">
-        <span class="card-label">Wear &amp; Share</span>
-        <h2>BTWM Store</h2>
-        <p>Shop faith-inspired apparel, Little Lights designs, drinkware, beanies, and more from the official BTWM Bonfire store.</p>
+        <div class="shop-card-heading">
+          <div class="shop-card-icon" aria-hidden="true">
+            <svg viewBox="0 0 32 32"><path d="M7 11h18l-1.3 15H8.3z"/><path d="M11.5 12V9a4.5 4.5 0 0 1 9 0v3"/><path d="M12 17h8"/></svg>
+          </div>
+          <span class="card-label">Wear &amp; Share</span>
+          <h2>BTWM Store</h2>
+          <p class="card-intro">Shop faith-inspired apparel, Little Lights designs, drinkware, beanies, and more from the official BTWM Bonfire store.</p>
+        </div>
         <div class="store-feature">
           <p class="store-feature-label">Featured Collection</p>
           <div class="product-pair">
@@ -517,8 +630,7 @@
           <p class="collection-description">Wear and share the mission with everyday pieces featuring the Balancing the Word Ministry shield.</p>
         </div>
         <div class="store-actions">
-          <a class="btn primary" href="https://www.bonfire.com/store/balancing-the-word-ministry/" target="_blank" rel="noopener noreferrer">Shop the Featured Collection</a>
-          <a class="btn" href="store.html">Explore the BTWM Store</a>
+          <a class="btn primary" href="https://www.bonfire.com/store/balancing-the-word-ministry/" target="_blank" rel="noopener noreferrer">Explore the BTWM Store</a>
         </div>
       </article>
     </section>

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://balancingtheword.org/</loc></url>
+  <url><loc>https://balancingtheword.org/</loc><lastmod>2026-09-21</lastmod></url>
   <url><loc>https://balancingtheword.org/pages/about.html</loc></url>
   <url><loc>https://balancingtheword.org/pages/blog-archive.html</loc></url>
   <url><loc>https://balancingtheword.org/pages/newsletter.html</loc></url>
-  <url><loc>https://balancingtheword.org/pages/books.html</loc></url>
+  <url><loc>https://balancingtheword.org/pages/books.html</loc><lastmod>2026-09-21</lastmod></url>
   <url><loc>https://balancingtheword.org/pages/podcast.html</loc></url>
   <url><loc>https://balancingtheword.org/pages/privacy-policy.html</loc></url>
-  <url><loc>https://balancingtheword.org/pages/shop.html</loc></url>
+  <url><loc>https://balancingtheword.org/pages/shop.html</loc><lastmod>2026-09-21</lastmod></url>
   <url><loc>https://balancingtheword.org/pages/store.html</loc></url>
   <url><loc>https://balancingtheword.org/pages/support.html</loc></url>
   <url><loc>https://balancingtheword.org/pages/what-we-teach.html</loc></url>

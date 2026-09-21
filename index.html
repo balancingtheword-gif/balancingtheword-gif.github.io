@@ -3,8 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Balancing the Word Ministry | Biblical Teaching &amp; Discipleship</title>
-  <meta name="description" content="Grow through Scripture-centered teaching, Read-Along messages, Go Deeper podcasts, Christian books, and discipleship resources from BTWM." />
+  <title>Bible Teaching, Christian Books &amp; Podcasts | BTWM</title>
+  <meta name="description" content="Explore Scripture-centered teaching, Christian books, Read-Along messages, Go Deeper podcasts, and the Bible Characters series from Balancing the Word Ministry." />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
 
   <style>
     :root{
@@ -2340,6 +2341,106 @@ a[href="pages/btwm-in-action.html"].btn.primary{
   }
 }
 
+    /* Bible Characters series announcement */
+    .series-announcement{
+      width:min(100%, 860px);
+      margin:20px auto;
+      padding:24px 22px;
+      border:2px solid var(--gold);
+      border-left:6px solid var(--red);
+      border-radius:16px;
+      background:linear-gradient(135deg, #07192f 0%, #12365c 100%);
+      color:#fff;
+      text-align:center;
+      box-shadow:0 12px 28px rgba(11,31,58,.16);
+    }
+    .series-announcement .series-label{
+      margin:0 0 6px;
+      color:#f4d06f;
+      font-size:.86rem;
+      font-weight:800;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+    .series-announcement h2{
+      margin:0 0 14px;
+      color:#fff;
+      font-size:clamp(1.55rem, 4vw, 2.15rem);
+      line-height:1.25;
+    }
+    .series-announcement .series-image-link{
+      display:block;
+      max-width:720px;
+      margin:0 auto 16px;
+      border:2px solid var(--gold);
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow:0 10px 24px rgba(0,0,0,.28);
+    }
+    .series-announcement .series-image{display:block;width:100%;height:auto;}
+    .series-announcement .series-copy{
+      max-width:62ch;
+      margin:0 auto 16px;
+      color:#fff;
+      line-height:1.6;
+    }
+    .series-announcement .btn{
+      background:var(--red);
+      border:2px solid var(--gold);
+      color:#fff;
+    }
+    .series-announcement .btn:hover,
+    .series-announcement .btn:focus-visible{
+      background:#fff;
+      border-color:#fff;
+      color:var(--navy);
+    }
+
+    .homepage-promotions{
+      grid-column:1 / -1;
+      display:grid;
+      grid-template-columns:repeat(2, minmax(0, 1fr));
+      gap:22px;
+      align-items:stretch;
+      width:100%;
+    }
+    .homepage-promotions .series-announcement,
+    .homepage-promotions .shop-launch{
+      display:flex;
+      flex-direction:column;
+      width:100%;
+      height:100%;
+      margin:0;
+      padding:24px 22px;
+    }
+    .homepage-promotions #subscriber-perk{
+      grid-column:auto;
+    }
+    .homepage-promotions .series-image-link{
+      width:100%;
+      max-width:none;
+      aspect-ratio:970 / 600;
+      margin:14px 0 16px;
+      background:#07192f;
+    }
+    .homepage-promotions .shop-promo-image-link{
+      width:100%;
+      max-width:none;
+      aspect-ratio:970 / 600;
+      margin:14px 0 16px;
+      background:#07192f;
+    }
+    .homepage-promotions .series-image,
+    .homepage-promotions .shop-promo-image{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+    }
+    .homepage-promotions .series-announcement > .btn{
+      align-self:center;
+      margin-top:auto;
+    }
+    .homepage-promotions .shop-launch .launch-actions{margin-top:auto;}
     /* BTWM Shop launch announcement */
     .shop-launch{
       width:min(100%, 860px);
@@ -2563,16 +2664,19 @@ a[href="pages/btwm-in-action.html"].btn.primary{
   <link rel="canonical" href="https://balancingtheword.org/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Balancing the Word Ministry" />
-  <meta property="og:title" content="Balancing the Word Ministry | Biblical Teaching &amp; Discipleship" />
-  <meta property="og:description" content="Grow through Scripture-centered teaching, Read-Along messages, Go Deeper podcasts, Christian books, and discipleship resources from BTWM." />
+  <meta property="og:title" content="Bible Teaching, Christian Books &amp; Podcasts | BTWM" />
+  <meta property="og:description" content="Explore Scripture-centered teaching, Christian books, podcasts, and Bible Characters: Timeless Lessons for Today from Balancing the Word Ministry." />
   <meta property="og:url" content="https://balancingtheword.org/" />
-  <meta property="og:image" content="https://balancingtheword.org/Assets/images/layout/header/layout-website-home.png" />
-  <meta property="og:image:alt" content="Balancing the Word Ministry | Biblical Teaching &amp; Discipleship" />
+  <meta property="og:image" content="https://balancingtheword.org/Assets/images/book-covers/bible-characters-series.png" />
+  <meta property="og:image:width" content="970" />
+  <meta property="og:image:height" content="600" />
+  <meta property="og:image:alt" content="Bible Characters: Timeless Lessons for Today by Lesli D. Mize" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Balancing the Word Ministry | Biblical Teaching &amp; Discipleship" />
-  <meta name="twitter:description" content="Grow through Scripture-centered teaching, Read-Along messages, Go Deeper podcasts, Christian books, and discipleship resources from BTWM." />
-  <meta name="twitter:image" content="https://balancingtheword.org/Assets/images/layout/header/layout-website-home.png" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Balancing the Word Ministry | Biblical Teaching & Discipleship","url":"https://balancingtheword.org/","description":"Grow through Scripture-centered teaching, Read-Along messages, Go Deeper podcasts, Christian books, and discipleship resources from BTWM.","image":"https://balancingtheword.org/Assets/images/layout/header/layout-website-home.png","publisher":{"@type":"Organization","name":"Balancing the Word Ministry","url":"https://balancingtheword.org/","logo":{"@type":"ImageObject","url":"https://balancingtheword.org/Assets/images/logos/shield-no-scripture/shield-no-scripture.png"}},"inLanguage":"en-US"}</script>
+  <meta name="twitter:title" content="Bible Teaching, Christian Books &amp; Podcasts | BTWM" />
+  <meta name="twitter:description" content="Explore Scripture-centered teaching, Christian books, podcasts, and Bible Characters: Timeless Lessons for Today." />
+  <meta name="twitter:image" content="https://balancingtheword.org/Assets/images/book-covers/bible-characters-series.png" />
+  <meta name="twitter:image:alt" content="Bible Characters: Timeless Lessons for Today by Lesli D. Mize" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://balancingtheword.org/#website","name":"Balancing the Word Ministry","url":"https://balancingtheword.org/","description":"Scripture-centered Bible teaching, Christian books, podcasts, and discipleship resources.","publisher":{"@id":"https://balancingtheword.org/#organization"},"inLanguage":"en-US"},{"@type":"Organization","@id":"https://balancingtheword.org/#organization","name":"Balancing the Word Ministry","url":"https://balancingtheword.org/","logo":{"@type":"ImageObject","url":"https://balancingtheword.org/Assets/images/logos/shield-no-scripture/shield-no-scripture.png"}},{"@type":"CollectionPage","@id":"https://balancingtheword.org/#bible-characters-series","name":"Bible Characters: Timeless Lessons for Today","url":"https://balancingtheword.org/#bible-characters-series","description":"A Christian book series by Lesli D. Mize exploring timeless biblical lessons through the lives and choices of Bible characters.","image":"https://balancingtheword.org/Assets/images/book-covers/bible-characters-series.png","isPartOf":{"@id":"https://balancingtheword.org/#website"}}]}</script>
 </head>
 
 <body>
@@ -2663,6 +2767,33 @@ a[href="pages/btwm-in-action.html"].btn.primary{
 
 
 <section class="home-feature-grid">
+  <div class="homepage-promotions">
+    <article class="feature-panel series-announcement" id="bible-characters-series" aria-labelledby="bible-characters-title">
+      <p class="series-label">New Book Series</p>
+      <h2 id="bible-characters-title">Bible Characters: Timeless Lessons for Today</h2>
+      <a class="series-image-link" href="pages/shop.html" aria-label="Explore the Bible Characters series in the BTWM Shop">
+        <img class="series-image" src="Assets/images/book-covers/bible-characters-series.png" alt="Unexpected Answers, Balaam: Diviner or Prophet, and The Eternal Question by Lesli D. Mize">
+      </a>
+      <p class="series-copy">Meet familiar and unexpected people from Scripture, revisit the choices that shaped their stories, and discover enduring biblical lessons for faith and life today.</p>
+      <a class="btn" href="pages/shop.html">Explore the Series</a>
+    </article>
+
+    <article class="feature-panel shop-launch" id="subscriber-perk" aria-labelledby="shop-launch-title">
+      <p class="launch-label">Newsletter Subscriber Benefit</p>
+      <h2 id="shop-launch-title">New Subscriber Perk</h2>
+      <a class="shop-promo-image-link" href="pages/shop.html" aria-label="View the BTWM Store new subscriber promotion">
+        <img class="shop-promo-image" src="Assets/images/store/new-subscriber-perk.png?v=20260921-2" alt="New BTWM newsletter subscribers receive 10% off eligible logo-based apparel and drinkware.">
+      </a>
+      <div class="launch-offers">
+        <p><span class="launch-discount">Save 10%</span> on eligible logo-based products.</p>
+      </div>
+      <p class="launch-copy">Wear, share, read, and support the mission of Balancing the Word Ministry.</p>
+      <div class="launch-actions">
+        <a href="pages/newsletter.html" class="btn">Get Subscriber Perk</a>
+      </div>
+    </article>
+  </div>
+
   <article class="feature-panel article-podcast-panel" id="articles-audio">
     <h2 class="featured-message-heading">FEATURED MESSAGE</h2>
     <div class="featured-message-columns">
@@ -2702,21 +2833,6 @@ a[href="pages/btwm-in-action.html"].btn.primary{
         <div class="go-deeper-cue-divider" aria-hidden="true"></div>
         <a class="featured-podcast-brand go-deeper-brand-link" href="pages/podcast.html" aria-label="Open the Go Deeper podcast page"><img src="Assets/images/podcast/go-deeper/go-deeper-website.webp" alt="Go Deeper Podcast"></a>
       </section>
-    </div>
-  </article>
-
-  <article class="feature-panel shop-launch" id="subscriber-perk" aria-labelledby="shop-launch-title">
-    <p class="launch-label">Newsletter Subscriber Benefit</p>
-    <h2 id="shop-launch-title">New Subscriber Perk</h2>
-    <a class="shop-promo-image-link" href="pages/shop.html" aria-label="View the BTWM Store new subscriber promotion">
-      <img class="shop-promo-image" src="Assets/images/store/new-subscriber-perk.png" alt="New BTWM newsletter subscribers receive 10% off eligible logo-based apparel and drinkware.">
-    </a>
-    <div class="launch-offers">
-      <p><span class="launch-discount">Save 10%</span> on eligible logo-based products.</p>
-    </div>
-    <p class="launch-copy">Wear, share, read, and support the mission of Balancing the Word Ministry.</p>
-    <div class="launch-actions">
-      <a href="pages/newsletter.html" class="btn">Get Subscriber Perk</a>
     </div>
   </article>
 
