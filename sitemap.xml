@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://balancingtheword.org/</loc><lastmod>2026-09-21</lastmod></url>
+  <url><loc>https://balancingtheword.org/</loc><lastmod>2026-09-30</lastmod></url>
   <url><loc>https://balancingtheword.org/pages/about.html</loc></url>
   <url><loc>https://balancingtheword.org/pages/blog-archive.html</loc></url>
   <url><loc>https://balancingtheword.org/pages/newsletter.html</loc></url>
@@ -11,7 +11,8 @@
   <url><loc>https://balancingtheword.org/pages/store.html</loc></url>
   <url><loc>https://balancingtheword.org/pages/support.html</loc></url>
   <url><loc>https://balancingtheword.org/pages/what-we-teach.html</loc></url>
-  <url><loc>https://balancingtheword.org/articles/featured-article.html</loc></url>
+  <url><loc>https://balancingtheword.org/articles/featured-article.html</loc><lastmod>2026-09-30</lastmod></url>
+  <url><loc>https://balancingtheword.org/archive/when-people-run-wild.html</loc></url>
   <url><loc>https://balancingtheword.org/archive/answering-the-call-build-disciples-not-empires.html</loc></url>
   <url><loc>https://balancingtheword.org/archive/building-gods-kingdom.html</loc></url>
   <url><loc>https://balancingtheword.org/archive/recognizing-the-enemy.html</loc></url>
