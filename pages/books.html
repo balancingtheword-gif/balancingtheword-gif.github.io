@@ -149,10 +149,10 @@
     }
     .parlor-columns{
       display:grid;
-      grid-template-columns:repeat(2, minmax(0, 1fr));
+      grid-template-columns:repeat(3, minmax(0, 1fr));
       gap:24px;
       align-items:start;
-      max-width:880px;
+      max-width:1180px;
       margin:0 auto;
     }
 
@@ -291,10 +291,13 @@
       font-weight:800;
     }
 
+    @media (max-width:900px){
+      .parlor-columns{ grid-template-columns:1fr; }
+    }
+
     @media (max-width:700px){
       .books-intro h1{ font-size:2rem; }
-      .books-shop-row,
-      .parlor-columns{ grid-template-columns:1fr; }
+      .books-shop-row{ grid-template-columns:1fr; }
 .book-card{
         grid-template-columns:1fr;
         text-align:center;
@@ -333,7 +336,7 @@
   <meta name="twitter:description" content="Discover the Bible Characters series, Christian books, Scripture studies, and free Bible resources." />
   <meta name="twitter:image" content="https://balancingtheword.org/Assets/images/book-covers/bible-characters-series.png" />
   <meta name="twitter:image:alt" content="Bible Characters: Timeless Lessons for Today by Lesli D. Mize" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Christian Books & Free Bible Resources | Lesli D. Mize","url":"https://balancingtheword.org/pages/books.html","description":"Explore Christian books by Lesli D. Mize, including the Bible Characters series, Scripture studies, free eBooks, and Bible resources.","image":"https://balancingtheword.org/Assets/images/book-covers/bible-characters-series.png","isPartOf":{"@type":"WebSite","@id":"https://balancingtheword.org/#website","name":"Balancing the Word Ministry","url":"https://balancingtheword.org/"},"mainEntity":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Book","name":"Unexpected Answers: When Faith Is Tested","author":{"@type":"Person","name":"Lesli D. Mize"}}},{"@type":"ListItem","position":2,"item":{"@type":"Book","name":"Balaam: Diviner or Prophet","author":{"@type":"Person","name":"Lesli D. Mize"}}},{"@type":"ListItem","position":3,"item":{"@type":"Book","name":"The Eternal Question: What Good Thing Must I Do?","author":{"@type":"Person","name":"Lesli D. Mize"}}},{"@type":"ListItem","position":4,"item":{"@type":"Book","name":"Tongues of Fire, Words of Order","author":{"@type":"Person","name":"Lesli D. Mize"}}},{"@type":"ListItem","position":5,"item":{"@type":"Book","name":"Revival Begins in the Heart","author":{"@type":"Person","name":"Lesli D. Mize"}}},{"@type":"ListItem","position":6,"item":{"@type":"Book","name":"The Fast Track to Bible History","author":{"@type":"Person","name":"Lesli D. Mize"}}}]}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"CollectionPage","name":"Christian Books & Free Bible Resources | Lesli D. Mize","url":"https://balancingtheword.org/pages/books.html","description":"Explore Christian books by Lesli D. Mize, including the Bible Characters series, Scripture studies, free eBooks, and Bible resources.","image":"https://balancingtheword.org/Assets/images/book-covers/bible-characters-series.png","isPartOf":{"@type":"WebSite","@id":"https://balancingtheword.org/#website","name":"Balancing the Word Ministry","url":"https://balancingtheword.org/"},"mainEntity":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"Book","name":"Tongues of Fire, Words of Order","author":{"@type":"Person","name":"Lesli D. Mize"}}},{"@type":"ListItem","position":2,"item":{"@type":"Book","name":"Revival Begins in the Heart","author":{"@type":"Person","name":"Lesli D. Mize"}}},{"@type":"ListItem","position":3,"item":{"@type":"Book","name":"When the Tempter Speaks","author":{"@type":"Person","name":"Lesli D. Mize"}}},{"@type":"ListItem","position":4,"item":{"@type":"Book","name":"Work Out Your Salvation","author":{"@type":"Person","name":"Lesli D. Mize"}}},{"@type":"ListItem","position":5,"item":{"@type":"Book","name":"Balaam: Diviner or Prophet","author":{"@type":"Person","name":"Lesli D. Mize"}}},{"@type":"ListItem","position":6,"item":{"@type":"Book","name":"Unexpected Answers: When Faith Is Tested","author":{"@type":"Person","name":"Lesli D. Mize"}}},{"@type":"ListItem","position":7,"item":{"@type":"Book","name":"The Eternal Question: What Good Thing Must I Do?","author":{"@type":"Person","name":"Lesli D. Mize"}}},{"@type":"ListItem","position":8,"item":{"@type":"Book","name":"The Fast Track to Bible History","author":{"@type":"Person","name":"Lesli D. Mize"}}}]}}</script>
 </head>
 
 <body>
@@ -365,28 +368,52 @@
         Shop All Books on Amazon
       </a>
     </div>
-    <section class="parlor-columns" aria-label="The Book and Gift Parlor categories">
-      <article class="parlor-column" id="print-books">
-        <h2>Books &amp; eBooks</h2>
-        <p class="column-intro">Printed books and eBook editions currently available online.</p>
+    <section class="parlor-columns" aria-label="Books, eBooks, and gifts">
+      <article class="parlor-column" id="companion-booklets">
+        <h2>Companion Booklets</h2>
+        <p class="column-intro">Balancing the Word Ministry Message Series booklets accompany featured messages and related Go Deeper podcast episodes, with personal reflection sheets and workbook-style prompts to help readers reflect on each message and apply its principles in daily life.</p>
 
         <div class="parlor-item">
           <div class="parlor-cover">
-            <img src="../Assets/images/book-covers/tongues-of-fire/tongues-of-fire.jpg?v=20260826" alt="Tongues of Fire, Words of Order cover" loading="lazy">
+            <img src="../Assets/images/book-covers/tongues-of-fire/tongues-of-fire.jpg?v=20261012" alt="Tongues of Fire, Words of Order: The Gift of Tongues from Pentecost to Corinth cover by Lesli D. Mize" loading="lazy">
           </div>
           <h3>Tongues of Fire, Words of Order</h3>
           <span class="item-tag">Print + eBook</span>
-          <p>A Scripture-centered study of the gift of tongues from Pentecost to Corinth, emphasizing biblical understanding and order.</p>
+          <p>Companion booklet to: Featured Message—Tongues of Fire, Words of Order &amp; the Go Deeper Podcast—Gifted to Build.</p>
         </div>
 
         <div class="parlor-item">
           <div class="parlor-cover">
-            <img src="../Assets/images/book-covers/revival-begins-in-the-heart/revival-begins-in-the-heart.png" alt="Revival Begins in the Heart cover" loading="lazy">
+            <img src="../Assets/images/book-covers/revival-begins-in-the-heart/revival-begins-in-the-heart.jpg?v=20261012" alt="Revival Begins in the Heart: How the Light of Christ Transforms Us cover by Lesli D. Mize" loading="lazy">
           </div>
           <h3>Revival Begins in the Heart</h3>
           <span class="item-tag">Print + eBook</span>
-          <p>A Christ-centered booklet exploring how the light of Christ transforms the inner life and awakens genuine revival in the heart.</p>
+          <p>How the Light of Christ Transforms Us, including the companion message—Guard the Flame, Shine the Light.</p>
         </div>
+
+        <div class="parlor-item">
+          <div class="parlor-cover">
+            <img src="../Assets/images/book-covers/when-the-tempter-speaks/when-the-tempter-speaks.jpg?v=20261012" alt="When the Tempter Speaks: Whose Voice Will You Follow? cover by Lesli D. Mize" loading="lazy">
+          </div>
+          <h3>When the Tempter Speaks</h3>
+          <span class="item-tag">Print + eBook</span>
+          <p>Featured Message—When the Tempter Speaks: Whose Voice Will You Follow? &amp; the Go Deeper Podcast—Tempted but Not Trapped.</p>
+        </div>
+
+        <div class="parlor-item">
+          <div class="parlor-cover">
+            <img src="../Assets/images/book-covers/work-out-your-salvation/work-out-your-salvation.jpg?v=20261012" alt="Work Out Your Salvation: When Genuine Faith Becomes Visible cover by Lesli D. Mize" loading="lazy">
+          </div>
+          <h3>Work Out Your Salvation</h3>
+          <span class="item-tag">Print + eBook</span>
+          <p>When Genuine Faith Becomes Visible, including the companion message—Test Every Voice: Biblical Discernment in an Age of Deception.</p>
+        </div>
+
+      </article>
+
+      <article class="parlor-column" id="character-building-books">
+        <h2>Character-Building Books</h2>
+        <p class="column-intro">Printed books and eBook editions focused on biblical character, faith, obedience, and everyday Christian growth.</p>
 
         <div class="parlor-item">
           <div class="parlor-cover">
